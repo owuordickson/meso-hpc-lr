@@ -19,6 +19,7 @@ Description:
 import sys
 from optparse import OptionParser
 # from src import HandleData, GradACO
+from algorithms.handle_data.multiprocess import InitParallel
 from algorithms.handle_data.handle_data import HandleData
 from algorithms.ant_colony.aco_grad import GradACO
 
@@ -39,7 +40,8 @@ def init_algorithm(f_path, min_supp, eq=False):
             wr_line = "Algorithm: ACO-GRAANK \n"
             wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
             wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
-            wr_line += "Number of cores: " + str(ac.cores) + '\n\n'
+            wr_line += "Minimum support: " + str(min_supp) + '\n'
+            wr_line += "Number of cores: " + str(InitParallel.get_num_cores()) + '\n\n'
 
             for txt in titles:
                 wr_line += (str(txt[0]) + '. ' + str(txt[1]) + '\n')
@@ -75,7 +77,11 @@ if __name__ == "__main__":
         optparser.add_option('-f', '--inputFile',
                              dest='file',
                              help='path to file containing csv',
-                             default=None,
+                             # default=None,
+                             # default='../data/DATASET.csv',
+                             default='../data/Omnidir.csv',
+                             # default='../data/FluTopicData-testsansdate-blank.csv',
+                             # default='../data/FARSmiss.csv',
                              type='string')
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
@@ -90,7 +96,7 @@ if __name__ == "__main__":
         (options, args) = optparser.parse_args()
 
         if options.file is None:
-            print("Usage: $python init_acograd.py -f filename.csv -s minSup ")
+            print("Usage: $python init_acograd.py -f filename.csv ")
             sys.exit('System will exit')
         else:
             filePath = options.file
