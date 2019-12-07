@@ -1,2 +1,0 @@
-Run-time: 1.7527740001678467 seconds
-None
