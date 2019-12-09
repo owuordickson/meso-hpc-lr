@@ -6,7 +6,7 @@
 @version: "1.0"
 @email: "owuordickson@gmail.com"
 @created: "10 October 2019"
-@modified: "30 October 2019"
+@modified: "09 December 2019"
 
 Usage:
     $python3 init_fuzztx_csv.py -a 0 -f file1.csv,file2.csv,file3.csv -c 4
@@ -17,7 +17,8 @@ Description:
 """
 import sys
 from optparse import OptionParser
-# from src import FuzzTX
+# from src import FuzzTX, InitParallel
+from algorithms.datastream.multiprocess import InitParallel
 from algorithms.tx_csv import FuzzTX
 
 
@@ -26,16 +27,21 @@ def init_algorithm(allow_char, f_paths, cores):
         obj = FuzzTX(allow_char, f_paths)
         x_data = obj.cross_data()
         FuzzTX.write_csv(x_data)
-        # print(obj.data_streams)
-        # print(obj.time_list)
         # print(x_data)
 
+        if cores > 1:
+            num_cores = cores
+        else:
+            num_cores = InitParallel.get_num_cores()
+
         wr_line = "Algorithm: FuzzTX \n"
-        wr_line += ("Number of cores: " + str(cores) + '\n\n')
+        wr_line += ("Number of cores: " + str(num_cores) + '\n\n')
         wr_line += ("\nFiles: " + f_paths + '\n')
         return wr_line
     except Exception as error:
+        wr_line = "Failed: " + str(error)
         print(error)
+        return wr_line
 
 
 # ------------------------- main method ---------------------------------------------
@@ -56,17 +62,7 @@ if __name__ == "__main__":
         optparser.add_option('-f', '--inputFile',
                              dest='files',
                              help='path to file containing csv',
-                             # default=None,
-                             default='../data/oreme/GPS.csv,'
-                                     # '../data/oreme/Directio.csv,'
-                                     '../data/oreme/Omnidir.csv',
-                             # default='../data/puechabon/puechabon_rainfall.csv,'
-                             #        '../data/puechabon/puechabon_evapotranspiration.csv,'
-                             #        '../data/puechabon/puechabon_global_radiation.csv,'
-                             #        '../data/puechabon/puechabon_gross_primary_production_ecosystem_respiration.csv,'
-                             #        '../data/puechabon/puechabon_net.csv,'
-                             #        '../data/puechabon/puechabon_photosynthetic_active_radiation.csv,'
-                             #        '../data/puechabon/puechabon_temperature.csv',
+                             default=None,
                              type='string')
         optparser.add_option('-c', '--coresCount',
                              dest='numCores',
