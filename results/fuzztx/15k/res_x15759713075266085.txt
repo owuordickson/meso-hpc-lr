@@ -1,0 +1,8 @@
+Run-time: 295.2593071460724 seconds
+Algorithm: FuzzTX 
+No. of (crossed data) attributes: 30
+No. of (crossed data) tuples: 15401
+Number of cores: 56
+
+
+Files: data/Omnidir_site8.csv,data/Directio_site8.csv
