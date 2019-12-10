@@ -34,8 +34,8 @@ if __name__ == "__main__":
     optparser.add_option('-f', '--inputFile',
                          dest='file',
                          help='path to file containing csv',
-                         default=None,
-                         # default='../data/oreme/GPS.csv',
+                         # default=None,
+                         default='../data/oreme/GPS.csv',
                          type='string')
     optparser.add_option('-n', '--siteId',
                          dest='siteId',
