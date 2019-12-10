@@ -9,25 +9,27 @@
 
 """
 import csv
-from dateutil.parser import parse
 import time
+import multiprocessing as mp
+from dateutil.parser import parse
 
 
 class DataStream:
 
-    def __init__(self, _id, path, allow_char):
+    def __init__(self, _id, path, allow_char, cores):
         self.id = _id
         self.path = path
         self.allow_char = allow_char
+        self.cores = cores
         self.raw_data = DataStream.read_csv(path)
         if len(self.raw_data) == 0:
-            self.data = False
             print("csv file read error")
             raise Exception("Unable to read csv file: " + path)
         else:
             self.data = self.raw_data
             self.titles = self.get_titles()
-            self.time_col, self.allowed_cols, self.timestamps = self.get_timestamps()
+            self.time_col = False
+            self.allowed_cols, self.timestamps = self.init_ds()
             self.fetched_tuples = list()
 
     def get_titles(self):
@@ -46,56 +48,57 @@ class DataStream:
                 del self.data[0]
                 return titles
 
-    def get_timestamps(self):
-        temp_timestamps = list()
-        temp_allowed_cols = list()
-        ds = self.data
+    def init_ds(self):
+        data = self.data
         # test for time from any row
-        t_index, stamp = DataStream.get_time_col(ds[1])
-        if not stamp:
+        t_index, allowed_cols = self.test_ds_data(data[1])
+        if t_index is None:
             raise Exception("No time found in file: " + str(self.path))
             # return False
         else:
-            for row in ds:
-                size = len(row)
-                for i in range(size):
-                    if i == t_index:
-                        # test for time
-                        t_value = row[t_index]
-                        try:
-                            time_ok, t_stamp = DataStream.test_time(t_value)
-                            if time_ok:
-                                temp_timestamps.append(t_stamp)
-                            else:
-                                raise Exception(str(t_value) + ' : time is invalid for '
-                                                + str(self.path))
-                        except ValueError:
-                            raise Exception(str(t_value) + ' : time is invalid for '
-                                            + str(self.path))
-                    else:
-                        # test for digits
-                        if self.allow_char:
-                            temp_allowed_cols.append(i)
-                        else:
-                            col_value = row[i]
-                            if col_value.replace('.', '', 1).isdigit() or col_value.isdigit():
-                                temp_allowed_cols.append(i)
-                    # return False
-            temp_timestamps.sort()
-        return t_index, temp_allowed_cols, temp_timestamps
+            self.time_col = t_index
 
-    @staticmethod
-    def get_time_col(row):
+            # fetch timestamp from every row through parallel processors
+            size = len(data)
+            tasks = range(size)
+            pool = mp.Pool(self.cores)
+            timestamps = pool.map(self.get_time_stamp, tasks)
+            timestamps.sort()
+            allowed_cols.sort()
+            print("Finished fetching timestamps")
+        return allowed_cols, timestamps
+
+    def get_time_stamp(self, i):
+        # print("fetching time stamp")
+        row = self.data[i]
+        t_value = row[self.time_col]
+        time_ok, t_stamp = DataStream.test_time(t_value)
+        if time_ok:
+            return t_stamp
+        else:
+            raise Exception(str(t_value) + ' : time is invalid for ' + str(self.path))
+
+    def test_ds_data(self, row):
+        print("testing data stream data")
+        time_index = None
+        allowed_cols = list()
         size = len(row)
         for col_index in range(size):
             col_value = row[col_index]
-            try:
-                time_ok, t_stamp = DataStream.test_time(col_value)
-                if time_ok:
-                    return col_index, t_stamp
-            except ValueError:
-                continue
-        return False, False
+            time_ok, t_stamp = DataStream.test_time(col_value)
+            if time_ok:
+                # return col_index, t_stamp
+                if time_index is None:
+                    time_index = col_index
+            else:
+                # continue
+                # test for digits
+                if self.allow_char:
+                    allowed_cols.append(col_index)
+                else:
+                    if col_value.replace('.', '', 1).isdigit() or col_value.isdigit():
+                        allowed_cols.append(col_index)
+        return time_index, allowed_cols
 
     @staticmethod
     def test_time(date_str):
@@ -113,7 +116,8 @@ class DataStream:
                     t_stamp = time.mktime(date_time.timetuple())
                     return True, t_stamp
                 except ValueError:
-                    raise ValueError('Python Error: no valid date-time format found')
+                    # raise ValueError('Python Error: no valid date-time format found')
+                    return False, False
 
     @staticmethod
     def read_csv(file_path):
