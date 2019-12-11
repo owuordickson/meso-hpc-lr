@@ -2,11 +2,11 @@
 #
 #SBATCH --job-name=graank
 #SBATCH --output=res_graank.txt
-#SBATCH --cpus-per-task=28
-#SBATCH --time=1:00:00
+#SBATCH -n 28
+#SBATCH --time=03:00:00
 #SBATCH --partition=lirmm
 #SBATCH --account=pgpm
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 ant/src/init_graank.py -f data/Omnidir_site8.csv
+python3 ant/src/init_graank.py -f data/x_data15k.csv -c 28
