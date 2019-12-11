@@ -1,7 +1,9 @@
 Run-time: 1608.7797181606293 seconds
-Algorithm: ACO-TGRAANK 
+Algorithm: ACO-TGRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 3000
+Minimum Support: 0.5
+Minimum representativity: 0.98
 Multi-core execution: True
 Number of cores: 60
 Number of tasks: 60

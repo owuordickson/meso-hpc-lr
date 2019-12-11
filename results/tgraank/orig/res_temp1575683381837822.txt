@@ -1,7 +1,9 @@
 Run-time: 2718.5322921276093 seconds
-Algorithm: T-GRAANK 
+Algorithm: T-GRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 3000
+Minimum Support: 0.5
+Minimum representativity: 0.98
 Multi-core execution: True
 Number of cores: 84
 Number of tasks: 60
