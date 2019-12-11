@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#SBATCH --job-name=aco-graank
+#SBATCH --job-name=aco-grad
 #SBATCH --output=res_acograd.txt
 #SBATCH --cpus-per-task=28
 #SBATCH --time=1:00:00

@@ -1,7 +1,8 @@
 Run-time: 617.4714090824127 seconds
-Algorithm: ACO-GRAANK 
+Algorithm: ACO-GRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 15404
+Minimum support: 0.5
 Number of cores: 20
 
 1. date_time
