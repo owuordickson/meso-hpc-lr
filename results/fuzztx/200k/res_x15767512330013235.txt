@@ -1,7 +1,8 @@
-Run-time: 398.75604701042175 seconds
+Run-time: 334.1597876548767 seconds
 Algorithm: FuzzTX 
 No. of (crossed data) attributes: 30
-No. of (crossed data) tuples: 109245
+No. of (crossed data) tuples: 109154
+Parallel multi-core execution: True
 Number of cores: 15
 
 
