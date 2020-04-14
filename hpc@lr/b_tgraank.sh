@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 trenc/init_bordertgraank.py -f data/Omnidir_site81.csv
+python3 trenc/init_bordertgraank.py -f data/Omnidir_site81.csv -m 28
