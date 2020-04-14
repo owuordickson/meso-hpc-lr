@@ -132,7 +132,7 @@ if __name__ == "__main__":
         optparser.add_option('-r', '--minRepresentativity',
                              dest='minRep',
                              help='minimum representativity',
-                             default=0.5,
+                             default=0.98,
                              type='float')
         optparser.add_option('-m', '--cores',
                              dest='numCores',
