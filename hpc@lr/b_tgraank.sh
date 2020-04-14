@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-#SBATCH --job-name=temporal
-#SBATCH --output=res_temp.txt
+#SBATCH --job-name=border
+#SBATCH --output=res_border.txt
 #SBATCH -n 28
 #SBATCH --time=03:00:00
 #SBATCH --partition=lirmm

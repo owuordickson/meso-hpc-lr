@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-#SBATCH --job-name=aco-temporal
-#SBATCH --output=res_acot.txt
+#SBATCH --job-name=trenc
+#SBATCH --output=res_trenc.txt
 #SBATCH -n 28
 #SBATCH --time=03:00:00
 #SBATCH --partition=lirmm
