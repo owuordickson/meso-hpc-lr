@@ -15,6 +15,10 @@ def init_trenc(paths, minSup, ref_item, cores, allow_para, minRep):
         wr_line = "Algorithm: TRENC \n"
         wr_line += "No. of data sets: " + str(len(ep_set.d_sets)) + '\n'
         wr_line += "No. of (data set) attributes: " + str(len(ep_set.titles)) + '\n'
+        if ep_set.temporal:
+            wr_line += "Size of 1st data set: " + str(ep_set.d_sets[0][0].size) + '\n'
+        else:
+            wr_line += "Size of 1st data set: " + str(ep_set.d_sets[0].size) + '\n'
         wr_line += "Minimum support: " + str(minSup) + '\n'
         wr_line += "Minimum representativity: " + str(minRep) + '\n'
         wr_line += "Multi-core execution: " + str(ep_set.msg_para) + '\n'
@@ -70,12 +74,12 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             default='data/DATASET.csv',
+                             default='../data/DATASET.csv',
                              type='string')
         optparser.add_option('-c', '--refColumn',
                              dest='refCol',
                              help='reference column',
-                             default=1,
+                             default=2,
                              type='int')
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
@@ -85,7 +89,7 @@ if __name__ == "__main__":
         optparser.add_option('-r', '--minRepresentativity',
                              dest='minRep',
                              help='minimum representativity',
-                             default=0.98,
+                             default=0.9998,
                              type='float')
         optparser.add_option('-p', '--allowMultiprocessing',
                              dest='allowPara',
