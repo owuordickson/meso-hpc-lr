@@ -1,4 +1,4 @@
-Run-time: 1049.42986536026 seconds
+Run-time: 808.5224483013153 seconds
 Algorithm: TRENC 
 No. of data sets: 5
 No. of (data set) attributes: 9
@@ -33,15 +33,11 @@ Patterns
         },
         {
             "time_lag": "~ +0.0 seconds : 1.0",
-            "growth_rate": 1.0
-        },
-        {
-            "time_lag": "~ +0.0 seconds : 1.0",
             "growth_rate": 0.7991954386663181
         },
         {
             "time_lag": "~ +0.0 seconds : 1.0",
-            "growth_rate": 1.0
+            "growth_rate": 0.7991954386663181
         }
     ]
 }
