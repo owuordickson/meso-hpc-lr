@@ -1,0 +1,44 @@
+Run-time: 3310.9866242408752 seconds
+Algorithm: TRENC 
+No. of data sets: 10
+No. of (data set) attributes: 9
+Size of 1st data set: 10000
+Minimum support: 0.5
+Minimum representativity: 0.999
+Multi-core execution: False
+Number of cores: 25
+
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/ICU_household_power_consumption10k.csv
+Patterns
+
+{
+    "pattern": "{'4-', '5+'}",
+    "type": "Emerging TGP",
+    "time_lag": "~ +0.0 seconds : 1.0",
+    "emergence": [
+        {
+            "time_lag": "~ +0.0 seconds : 1.0",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +0.0 seconds : 1.0",
+            "growth_rate": 1.0
+        }
+    ]
+}
+
+
+ --- end --- 
+
+ 
