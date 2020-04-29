@@ -1,5 +1,5 @@
 Run-time: 3460.9215030670166 seconds
-Algorithm: TRENC 
+Algorithm: TRENC
 No. of data sets: 10
 No. of (data set) attributes: 9
 Size of 1st data set: 10000
@@ -25,6 +25,4 @@ Patterns
 No emerging patterns found
 
 
- --- end --- 
-
- 
+ --- end ---

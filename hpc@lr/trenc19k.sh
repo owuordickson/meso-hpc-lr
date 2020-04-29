@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 trenc/init_trenc.py -f data/ICU_household_power_consumption15k.csv -m 28
+python3 trenc/init_trenc.py -f data/ICU_household_power_consumption19k.csv -m 28

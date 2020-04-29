@@ -1,12 +1,12 @@
-Run-time: 1029.8955619335175 seconds
+Run-time: 10937.77762389183 seconds
 Algorithm: TRENC 
-No. of data sets: 5
+No. of data sets: 15
 No. of (data set) attributes: 9
-Size of 1st data set: 5000
+Size of 1st data set: 15000
 Minimum support: 0.5
 Minimum representativity: 0.999
 Multi-core execution: False
-Number of cores: 15
+Number of cores: 28
 
 
 0. Date
@@ -19,11 +19,11 @@ Number of cores: 15
 7. Sub_metering_2
 8. Sub_metering_3
 
-File: data/ICU_household_power_consumption5k.csv
+File: data/ICU_household_power_consumption15k.csv
 Patterns
 
 {
-    "pattern": "{'5-', '3-'}",
+    "pattern": "{'4+', '5-'}",
     "type": "Emerging TGP",
     "time_lag": "~ +0.0 seconds : 1.0",
     "emergence": [
@@ -33,11 +33,15 @@ Patterns
         },
         {
             "time_lag": "~ +0.0 seconds : 1.0",
-            "growth_rate": 0.7991954386663181
+            "growth_rate": 1.0
         },
         {
             "time_lag": "~ +0.0 seconds : 1.0",
-            "growth_rate": 0.7991954386663181
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +0.0 seconds : 1.0",
+            "growth_rate": 1.0
         }
     ]
 }
