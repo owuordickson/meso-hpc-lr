@@ -1,4 +1,4 @@
-Run-time: 3819.2736279964447 seconds
+Run-time: 3819.2736279964447 seconds -
 Algorithm: T-GRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 3000

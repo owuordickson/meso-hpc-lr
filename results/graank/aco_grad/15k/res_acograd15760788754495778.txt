@@ -1,5 +1,5 @@
-Run-time: 596.0096070766449 seconds
-Algorithm: ACO-GRAANK 
+Run-time: 596.0096070766449 seconds -
+Algorithm: ACO-GRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 15404
 Minimum support: 0.5

@@ -1,5 +1,5 @@
-Run-time: 1927.5310807228088 seconds
-Algorithm: ACO-TGRAANK 
+Run-time: 1927.5310807228088 seconds -
+Algorithm: ACO-TGRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 3000
 Multi-core execution: True

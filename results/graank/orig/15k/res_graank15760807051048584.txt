@@ -1,5 +1,5 @@
-Run-time: 638.5548141002655 seconds
-Algorithm: GRAANK 
+Run-time: 638.5548141002655 seconds -
+Algorithm: GRAANK
 No. of (dataset) attributes: 11
 No. of (dataset) tuples: 15404
 Minimum support: 0.5
