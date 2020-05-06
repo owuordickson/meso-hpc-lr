@@ -1,0 +1,29 @@
+Run-time: 6237.312272787094 seconds
+Algorithm: GRAANK 
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 50000
+Minimum support: 0.75
+Number of cores: 28
+
+1. date_time
+2. id_site
+3. Rx
+4. Hmax
+5. Thmax
+6. H1/3
+7. Th1/3
+8. Hmoy
+9. Tmoy
+10. Cambrure
+11. Nb_Vagues
+
+File: data/Omnidir_site50k.csv
+
+Pattern : Support
+{'4+', '10+'} : 0.7609412876257525
+{'10+', '6+'} : 0.7556580995619913
+{'10+', '8+'} : 0.7534737014740295
+{'4+', '8+', '6+'} : 0.936749885397708
+{'9+', '7+', '5+'} : 0.8008538858777176
+{'11-', '9+', '5+'} : 0.7572905786115722
+{'11-', '9+', '7+'} : 0.8806959339186784
