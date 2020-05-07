@@ -1,0 +1,31 @@
+Run-time: 1245.3758571147919 seconds
+Algorithm: T-GRAANK 
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 3000
+Multi-core execution: True
+Number of cores: 28
+Number of tasks: 1
+
+1. date_time
+2. id_site**
+3. Rx
+4. Hmax
+5. Thmax
+6. H1/3
+7. Th1/3
+8. Hmoy
+9. Tmoy
+10. Cambrure
+11. Nb_Vagues
+
+File: data/Omnidir_site3k.csv
+
+Pattern : Support
+{'10+', '11+'} : 0.5802200911533553 | ~ +30.0 minutes : 1.0
+{'7+', '5+', '10-'} : 0.503679567638846 | ~ +30.0 minutes : 1.0
+{'5+', '4+', '6+', '8+'} : 0.5028712038991872 | ~ +30.0 minutes : 1.0
+{'4+', '10+', '6+', '8+'} : 0.7246386998912913 | ~ +30.0 minutes : 1.0
+{'11-', '7+', '5+', '9+'} : 0.7768348844767247 | ~ +30.0 minutes : 1.0
+{'11-', '7+', '10-', '9+'} : 0.556531741401014 | ~ +30.0 minutes : 1.0
+{'8+', '9+', '11-', '7+', '6+'} : 0.5446803370747777 | ~ +30.0 minutes : 1.0
+{'4+', '8+', '9+', '11-', '7+', '6+'} : 0.5168505134355437 | ~ +30.0 minutes : 1.0
