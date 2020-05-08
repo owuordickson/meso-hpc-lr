@@ -1,0 +1,32 @@
+Run-time: 12525.362716436386 seconds
+Algorithm: ACO-TGRAANK 
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 15404
+Minimum support: 0.5
+Minimum representativity: 0.9995
+Multi-core execution: True
+Number of cores: 28
+Number of tasks: 7
+
+1. date_time
+2. id_site**
+3. Rx
+4. Hmax
+5. Thmax
+6. H1/3
+7. Th1/3
+8. Hmoy
+9. Tmoy
+10. Cambrure
+11. Nb_Vagues
+
+File: data/Omnidir_site15k.csv
+
+Pattern : Support
+[('8', '+'), ('6', '+')] : 0.968354408329039 | ~ +3.0 hours : 1.0
+[('10', '+'), ('4', '+')] : 0.7378535898133842 | ~ +2.5 hours : 1.0
+[('8', '+'), ('10', '+')] : 0.7281755359869952 | ~ +30.0 minutes : 1.0
+[('4', '-'), ('11', '+')] : 0.6182426845279907 | ~ +1.5 hours : 1.0
+[('10', '+'), ('7', '-')] : 0.5738501319448134 | ~ +2.0 hours : 1.0
+[('8', '+'), ('6', '+'), ('5', '+')] : 0.5705698877848902 | ~ +3.5 hours : 1.0
+[('8', '-'), ('4', '-'), ('9', '-'), ('7', '-')] : 0.5545417568803702 | ~ +1.0 hours : 1.0
