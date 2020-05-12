@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 ant/src/init_acotgrad.py -f data/Omnidir_site20k.csv
+python3 ant/src/init_acotgrad.py -f data/Omnidir_site20k.csv -r 0.9999
