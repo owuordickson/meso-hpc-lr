@@ -89,12 +89,12 @@ if __name__ == "__main__":
         optparser.add_option('-r', '--minRepresentativity',
                              dest='minRep',
                              help='minimum representativity',
-                             default=0.9998,
+                             default=0.999,
                              type='float')
         optparser.add_option('-p', '--allowMultiprocessing',
                              dest='allowPara',
                              help='allow multiprocessing',
-                             default=0,
+                             default=1,
                              type='int')
         optparser.add_option('-m', '--cores',
                              dest='numCores',
