@@ -1,4 +1,4 @@
-Run-time: 273.61789417266846 seconds
+Run-time: 226.59592390060425 seconds
 Algorithm: TRENC 
 No. of data sets: 5
 No. of (data set) attributes: 9
@@ -23,15 +23,9 @@ File: data/ICU_household_power_consumption5k.csv
 Patterns
 
 {
-    "pattern": "{'3+', '4+', '5+'}",
-    "type": "Emerging TGP",
-    "time_lag": "~ +0.0 seconds : 1.0",
-    "emergence": [
-        {
-            "time_lag": "~ +0.0 seconds : 1.0",
-            "growth_rate": 1.000376445086242
-        }
-    ]
+    "pattern": "{'3+', '4-', '5+'}",
+    "type": "Jumping Emerging TGP",
+    "time_lag": "~ +0.0 seconds : 1.0"
 }
 
 
