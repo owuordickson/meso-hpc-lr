@@ -1,0 +1,35 @@
+Run-time: 165.34736275672913 seconds
+Algorithm: ACO-GRAANK 
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 10000
+Minimum support: 0.5
+Number of cores: 28
+
+1. Date
+2. Time
+3. Global_active_power
+4. Global_reactive_power
+5. Voltage
+6. Global_intensity
+7. Sub_metering_1
+8. Sub_metering_2
+9. Sub_metering_3
+
+File: data/ICU_household_power_consumption10k.csv
+
+Pattern : Support
+[('6', '+'), ('3', '+')] : 0.9697051505150515
+[('4', '-'), ('3', '-')] : 0.5435312731273128
+[('6', '+'), ('5', '-')] : 0.7508148614861486
+[('4', '+'), ('3', '+')] : 0.5435312731273128
+
+Pheromone Matrix
+[[1 1 1]
+ [1 1 1]
+ [3 2 2]
+ [2 2 3]
+ [1 2 4]
+ [3 1 3]
+ [1 1 5]
+ [1 1 5]
+ [1 1 5]]
