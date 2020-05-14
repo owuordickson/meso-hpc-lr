@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 ant/src/init_acograd.py -f data/ICU_household_power_consumption5k.csv -c 10
+python3 ant/src/init_acograd.py -f data/x_data3k.csv -c 10
