@@ -1,0 +1,1 @@
+slurmstepd: error: *** JOB 1472656 ON muse029 CANCELLED AT 2020-05-13T13:29:04 ***

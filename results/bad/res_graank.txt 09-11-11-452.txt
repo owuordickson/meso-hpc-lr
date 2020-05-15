@@ -1,0 +1,29 @@
+Data fetched from csv file
+Run-time: 4004.5060851573944 seconds
+Algorithm: GRAANK 
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 50000
+Minimum support: 0.5
+Number of cores: 10
+
+1. Date
+2. Time
+3. Global_active_power
+4. Global_reactive_power
+5. Voltage
+6. Global_intensity
+7. Sub_metering_1
+8. Sub_metering_2
+9. Sub_metering_3
+
+File: data/ICU_household_power_consumption50k.csv
+
+Pattern : Support
+{'5+', '6-'} : 0.7196539122782456
+{'4+', '6+', '3+'} : 0.5231017524350488
+{'6+', '3+', '5-'} : 0.714820248404968
+
+Data fetched from csv file
+
+Run-time: 17879.755099773407 seconds
+Failed: 

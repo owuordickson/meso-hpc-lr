@@ -1,0 +1,11 @@
+Data fetched from csv file
+Traceback (most recent call last):
+  File "ant/src/init_graank.py", line 105, in <module>
+    res_text = init_algorithm(filePath, minSup, numCores)
+  File "ant/src/init_graank.py", line 32, in init_algorithm
+    D1, S1 = graank(d_set.attr_data, min_supp)
+  File "/nfs/work/pgpm/meso/ant/src/algorithms/ant_colony/graank.py", line 107, in graank
+    G = gen_apriori_candidates(G, a, n)
+  File "/nfs/work/pgpm/meso/ant/src/algorithms/ant_colony/graank.py", line 86, in gen_apriori_candidates
+    m = R[i][1] * R[j][1]
+MemoryError
