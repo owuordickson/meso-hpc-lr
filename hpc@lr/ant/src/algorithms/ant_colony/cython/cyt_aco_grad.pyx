@@ -12,34 +12,49 @@
 
 import numpy as np
 from numpy import random as rand
+import cython
 # import random as rand
 import matplotlib.pyplot as plt
-from src.algorithms.common.fuzzy_mf import calculate_time_lag
-from src.algorithms.common.gp import GI, GP, TGP
-from src.algorithms.common.dataset import Dataset
-#from src.algorithms.common.cython.cyt_dataset import Dataset
+cimport numpy as np
+
+from src.algorithms.common.cython.cyt_fuzzy_mf_v2 import calculate_time_lag
+from src.algorithms.common.cython.cyt_dataset cimport Dataset
+from src.algorithms.common.cython.cyt_dataset import Dataset
+from src.algorithms.common.cython.cyt_gp cimport GI, GP, TGP, TimeLag
+from src.algorithms.common.cython.cyt_gp import GI, GP, TGP, TimeLag
 
 
-class GradACO:
+@cython.boundscheck(False)
+@cython.wraparound(False)
+@cython.cdivision(True)
+@cython.profile(True)
+cdef class GradACO:
 
-    def __init__(self, f_path=None, min_supp=None, eq=None, d_set=None):
-        if d_set is None:
-            self.data = Dataset(f_path, min_sup=min_supp, eq=eq)
-        else:
-            self.data = d_set
+    cdef public Dataset data
+    cdef public np.ndarray attr_index, p_matrix
+    cdef public float e_factor
+    cdef dict __dict__
+
+    def __cinit__(self, Dataset d_set):
+        self.data = d_set
         self.attr_index = self.data.attr_cols
         self.e_factor = 0.1  # evaporation factor
         self.p_matrix = np.ones((self.data.column_size, 3), dtype=float)
 
-    def init_pheromones(self):
+    cpdef void init_pheromones(self):
+        cdef GP invalid_pats
+        cdef GI gi
         invalid_pats = GP()
         for obj_gi in self.data.invalid_bins:
             gi = GI(obj_gi[0], obj_gi[1])
             invalid_pats.add_gradual_item(gi)
         self.vaporize_pheromone(invalid_pats, self.e_factor)
 
-    def deposit_pheromone(self, pattern):
-        lst_attr = []
+    cdef void deposit_pheromone(self, GP pattern):
+        cdef list lst_attr
+        cdef int attr, i
+        cdef str symbol
+        lst_attr = list()
         for obj in pattern.gradual_items:
             # print(obj.attribute_col)
             attr = obj.attribute_col
@@ -55,8 +70,11 @@ class GradACO:
                 i = int(index)
                 self.p_matrix[i][2] += 1
 
-    def vaporize_pheromone(self, pattern, e_factor):
-        lst_attr = []
+    cdef void vaporize_pheromone(self, GP pattern, float e_factor):
+        cdef list lst_attr
+        cdef int attr, i
+        cdef str symbol
+        lst_attr = list()
         for obj in pattern.gradual_items:
             attr = obj.attribute_col
             symbol = obj.symbol
@@ -67,13 +85,19 @@ class GradACO:
             elif symbol == '-':
                 self.p_matrix[i][1] *= e_factor
 
-    def run_ant_colony(self, min_supp, time_diffs=None):
+    cpdef list run_ant_colony(self, float min_supp, np.ndarray time_diffs=None):
+        cdef list patterns
         if time_diffs is None:
-            return self.fetch_gps(min_supp)
+            patterns = self.fetch_gps(min_supp)
         else:
-            return self.fetch_tgps(min_supp, time_diffs)
+            patterns = self.fetch_tgps(min_supp, time_diffs)
+        return patterns
 
-    def fetch_gps(self, min_supp):
+    cdef list fetch_gps(self, float min_supp):
+        cdef list winner_gps, loser_gps
+        cdef int repeated
+        cdef GP rand_gp, gen_gp
+        cdef bint exits, is_super, is_sub, is_present
         winner_gps = list()  # subsets
         loser_gps = list()  # supersets
         repeated = 0
@@ -106,7 +130,12 @@ class GradACO:
                     repeated += 1
         return winner_gps
 
-    def fetch_tgps(self, min_supp, time_diffs):
+    cdef list fetch_tgps(self, float min_supp, np.ndarray time_diffs):
+        cdef list winner_gps, loser_gps
+        cdef int repeated
+        cdef GP rand_gp
+        cdef TGP gen_gp
+        cdef bint exits, is_super, is_sub, is_present
         winner_gps = list()  # subsets
         loser_gps = list()  # supersets
         repeated = 0
@@ -139,7 +168,13 @@ class GradACO:
                     repeated += 1
         return winner_gps
 
-    def generate_rand_pattern(self):
+    cdef GP generate_rand_pattern(self):
+        cdef np.ndarray p
+        cdef int n, max_extreme
+        cdef GP pattern
+        cdef GI temp
+        cdef np.ndarray attrs
+        cdef float x, pos, neg
         p = self.p_matrix
         n = len(self.attr_index)
         pattern = GP()
@@ -159,8 +194,14 @@ class GradACO:
             pattern.add_gradual_item(temp)
         return pattern
 
-    def validate_gp(self, pattern, min_supp):
+    cdef GP validate_gp(self, GP pattern, float min_supp):
         # pattern = [('2', '+'), ('4', '+')]
+        cdef GP gen_pattern, bad_pattern
+        cdef GI gi
+        cdef np.ndarray bin_data, gi_obj, arg, valid_gi, temp_bin
+        cdef int i
+        cdef dict bin_obj
+        cdef float supp
         gen_pattern = GP()
         bin_data = np.array([])
 
@@ -200,8 +241,17 @@ class GradACO:
         else:
             return gen_pattern
 
-    def validate_tgp(self, pattern, min_supp, t_diffs):
+    cdef TGP validate_tgp(self, GP pattern, float min_supp, np.ndarray t_diffs):
         # pattern = [('2', '+'), ('4', '+')]
+        cdef GP gen_pattern, bad_pattern
+        cdef GI gi
+        cdef TGP tgp
+        cdef TimeLag t_lag
+        cdef np.ndarray bin_data, gi_obj, arg, valid_gi, temp_bin
+        cdef int i
+        cdef dict bin_obj
+        cdef float supp
+
         gen_pattern = GP()
         bin_data = np.array([])
 
@@ -241,12 +291,15 @@ class GradACO:
             return tgp
         else:
             # t_lag = FuzzyMF.calculate_time_lag(FuzzyMF.get_patten_indices(bin_data[0]), t_diffs, min_supp)
-            t_lag = calculate_time_lag(bin_data[0], t_diffs)
+            t_lag = calculate_time_lag(bin_data[0], t_diffs, min_supp)
             tgp = TGP(gp=gen_pattern, t_lag=t_lag)
             return tgp
 
-    def plot_pheromone_matrix(self):
-        x_plot = np.array(self.p_matrix)
+    cpdef void plot_pheromone_matrix(self):
+        cdef np.ndarray x_plot
+        cdef list x, y
+
+        x_plot = self.p_matrix
         print(x_plot)
         # Figure size (width, height) in inches
         # plt.figure(figsize=(4, 4))
@@ -297,7 +350,7 @@ class GradACO:
 
     @staticmethod
     def bin_and(bins, n):
-        temp_bin = np.array(bins[0]) * np.array(bins[1])
-        # temp_bin = np.logical_and(bins[0], bins[1])
+        # temp_bin = bins[0] & bins[1]
+        temp_bin = np.logical_and(bins[0], bins[1])
         supp = float(np.sum(temp_bin)) / float(n * (n - 1.0) / 2.0)
         return temp_bin, supp
