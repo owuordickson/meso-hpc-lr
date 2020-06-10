@@ -121,3 +121,4 @@ if __name__ == "__main__":
     f_name = str('res_graank' + str(end).replace('.', '', 1) + '.txt')
     write_file(wr_text, f_name)
     print(wr_text)
+

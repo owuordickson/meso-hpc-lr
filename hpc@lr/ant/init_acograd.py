@@ -31,7 +31,7 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
         #    titles = d_set.title
         #    d_set.init_attributes(min_supp, eq)
         ac = GradACO(f_path, min_supp, eq)
-        ac.init_pheromones()
+        # ac.init_pheromones()
         list_gp = ac.run_ant_colony(min_supp)
 
         if cores > 1:
@@ -47,7 +47,10 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
         wr_line += "Number of cores: " + str(num_cores) + '\n\n'
 
         for txt in d_set.title:
-            wr_line += (str(txt.key) + '. ' + str(txt.value) + '\n')
+            try:
+                wr_line += (str(txt.key) + '. ' + str(txt.value.decode()) + '\n')
+            except AttributeError:
+                wr_line += (str(txt[0]) + '. ' + str(txt[1].decode()) + '\n')
 
         wr_line += str("\nFile: " + f_path + '\n')
         wr_line += str("\nPattern : Support" + '\n')
@@ -58,9 +61,8 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
         wr_line += "\nPheromone Matrix\n"
         wr_line += str(ac.p_matrix)
         # ac.plot_pheromone_matrix()
-        d_set.clean_memory()
         return wr_line
-    except Exception as error:
+    except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line
@@ -87,10 +89,10 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             default='../data/DATASET.csv',
+                             #default='../data/DATASET.csv',
                              #default='../data/DATASET3.csv',
                              #default='../data/Omnidir.csv',
-                             #default='../data/FluTopicData-testsansdate-blank.csv',
+                             default='../data/FluTopicData-testsansdate-blank.csv',
                              #default='data/FluTopicData-testsansdate-blank.csv',
                              #default='../data/FARSmiss.csv',
                              type='string')
@@ -134,5 +136,6 @@ if __name__ == "__main__":
     # wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_acograd' + str(end).replace('.', '', 1) + '.txt')
-    write_file(wr_text, f_name)
+    # write_file(wr_text, f_name)
     print(wr_text)
+

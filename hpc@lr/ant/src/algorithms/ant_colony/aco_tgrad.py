@@ -34,6 +34,8 @@ class TgradACO:
             self.time_cols = cols
             self.min_sup = min_sup
             self.ref_item = ref_item
+            self.d_set.data = self.d_set.read_h5_dataset('dataset/data')
+            self.d_set.data = np.array(self.d_set.data).astype('U')
             self.max_step = self.get_max_step(min_rep)
             self.orig_attr_data = self.d_set.data.copy().T
             self.cores = cores
@@ -76,11 +78,10 @@ class TgradACO:
         # 2. Execute aco-graank for each transformation
         d_set.update_attributes(attr_data)
         ac = GradACO(d_set=d_set)
-        ac.init_pheromones()
+        # ac.init_pheromones()
         list_gp = ac.run_ant_colony(self.min_sup, time_diffs)
         # print("\nPheromone Matrix")
         # print(ac.p_matrix)
-        d_set.clean_memory()
         if len(list_gp) > 0:
             return list_gp
         return False
