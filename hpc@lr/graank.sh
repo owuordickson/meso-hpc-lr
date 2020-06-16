@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 ant/init_graank.py -f data/Omnidir_site100k.csv -c 10
+python3 ant/src/init_graank.py -f data/Omnidir_site100k.csv -c 10

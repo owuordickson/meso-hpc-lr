@@ -3,10 +3,10 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler and Anne Laurent,"
 @license: "MIT"
-@version: "2.4"
+@version: "3.0"
 @email: "owuordickson@gmail.com"
 @created: "19 November 2019"
-@modified: "11 June 2020"
+@modified: "15 June 2020"
 
 Description: updated version that uses aco-graank and parallel multi-processing
 
@@ -14,48 +14,47 @@ Description: updated version that uses aco-graank and parallel multi-processing
 
 
 import numpy as np
-import h5py
-from pathlib import Path
-import os
-import multiprocessing as mp
-from .aco_grad import GradACO
-from ..common.fuzzy_mf import calculate_time_lag
-from ..common.gp import GP, TGP
-from ..common.dataset import Dataset
+import gc
+from ..aco_grad import GradACO
+from ...common.fuzzy_mf import calculate_time_lag
+from ...common.gp import GP, TGP
+from ...common.dataset import Dataset
 #from src.algorithms.ant_colony.cython.cyt_aco_grad import GradACO
 #from src.algorithms.common.cython.cyt_dataset import Dataset
-from src.algorithms.common.profile_cpu import Profile
 
 
 class Dataset_t(Dataset):
 
-    def __init__(self, file_path, min_sup=0, eq=False):
-        self.h5_file = str(Path(file_path).stem) + str('.h5')
-        if os.path.exists(self.h5_file):
+    def __init__(self, file_path=None, min_sup=None, eq=False, h5f=None):
+        if h5f is not None:
             print("Fetching data from h5 file")
-            h5f = h5py.File(self.h5_file, 'r')
+
+            self.thd_supp = min_sup
+            self.equal = eq
             self.title = h5f['dataset/title'][:]
             self.time_cols = h5f['dataset/time_cols'][:]
             self.attr_cols = h5f['dataset/attr_cols'][:]
             size = h5f['dataset/size'][:]
             self.column_size = size[0]
             self.size = size[1]
-            self.attr_size = size[2]
-            self.step_name = 'step_' + str(int(self.size - self.attr_size))
-            self.invalid_bins = h5f['dataset/' + self.step_name + '/invalid_bins'][:]
-            h5f.close()
-            self.thd_supp = min_sup
-            self.equal = eq
-            self.data = None
+            self.attr_size = 0
+            self.step_name = ''
+            self.invalid_bins = np.array([])  # to be removed
+
+            self.data = h5f['dataset/data'][:]
+            self.data = np.array(self.data).astype('U')
         else:
             data = Dataset.read_csv(file_path)
             if len(data) <= 1:
                 self.data = np.array([])
+                data = None
                 print("csv file read error")
                 raise Exception("Unable to read csv file or file has no data")
             else:
                 print("Data fetched from csv file")
                 self.data = np.array([])
+                self.thd_supp = min_sup
+                self.equal = eq
                 self.title = self.get_title(data)  # optimized (numpy)
                 self.time_cols = self.get_time_cols()  # optimized (numpy)
                 self.attr_cols = self.get_attributes()  # optimized (numpy)
@@ -63,41 +62,64 @@ class Dataset_t(Dataset):
                 self.size = self.get_size()  # optimized (numpy)
                 self.attr_size = 0
                 self.step_name = ''
-                self.thd_supp = min_sup
-                self.equal = eq
                 self.invalid_bins = np.array([])
                 data = None
-
-    def init_h5_groups(self, f=None):
-        if os.path.exists(self.h5_file):
-            pass
-        else:
-            if f is None:
-                h5f = h5py.File(self.h5_file, 'w')
-            else:
-                h5f = f
-            grp = h5f.require_group('dataset')
-            grp.create_dataset('title', data=self.title)
-            data = np.array(self.data.copy()).astype('S')
-            grp.create_dataset('data', data=data)
-            grp.create_dataset('time_cols', data=self.time_cols)
-            grp.create_dataset('attr_cols', data=self.attr_cols)
-            if f is None:
-                h5f.close()
-            data = None
-            self.data = None
 
 
 class GradACOt (GradACO):
 
-    def __init__(self, d_set, attr_data, t_diffs):
+    def __init__(self, d_set, t_diffs, h5f):
         self.d_set = d_set
         self.time_diffs = t_diffs
+        self.h5f = h5f
         self.attr_index = self.d_set.attr_cols
-        self.p_matrix = np.ones((self.d_set.column_size, 3), dtype=float)
-        self.d_set.update_attributes(attr_data)
+        grp = 'dataset/' + self.d_set.step_name + '/p_matrix'
+        if grp in h5f:
+            p_matrix = h5f[grp][:]
+        else:
+            p_matrix = np.array([])
+        if np.sum(p_matrix) > 0:
+            self.p_matrix = p_matrix
+        else:
+            self.p_matrix = np.ones((self.d_set.column_size, 3), dtype=float)
 
-    def validate_gp(self, pattern):
+    def run_ant_colony(self):
+        min_supp = self.d_set.thd_supp
+        winner_gps = list()  # subsets
+        loser_gps = list()  # supersets
+        repeated = 0
+        while repeated < 1:
+            rand_gp = self.generate_random_gp()
+            if len(rand_gp.gradual_items) > 1:
+                # print(rand_gp.get_pattern())
+                exits = GradACO.is_duplicate(rand_gp, winner_gps, loser_gps)
+                if not exits:
+                    repeated = 0
+                    # check for anti-monotony
+                    is_super = GradACO.check_anti_monotony(loser_gps, rand_gp, subset=False)
+                    is_sub = GradACO.check_anti_monotony(winner_gps, rand_gp, subset=True)
+                    if is_super or is_sub:
+                        continue
+                    gen_gp = self.validate_gp(rand_gp)
+                    if gen_gp.support >= min_supp:
+                        self.deposit_pheromone(gen_gp)
+                        is_present = GradACO.is_duplicate(gen_gp, winner_gps, loser_gps)
+                        is_sub = GradACO.check_anti_monotony(winner_gps, gen_gp, subset=True)
+                        if is_present or is_sub:
+                            repeated += 1
+                        else:
+                            winner_gps.append(gen_gp)
+                    else:
+                        loser_gps.append(gen_gp)
+                        # update pheromone as irrelevant with loss_sols
+                        # self.vaporize_pheromone(gen_gp, self.e_factor)
+                    if set(gen_gp.get_pattern()) != set(rand_gp.get_pattern()):
+                        loser_gps.append(rand_gp)
+                else:
+                    repeated += 1
+        return winner_gps
+
+    def validate_gp(self, pattern):  # needs to read from h5 file
         # pattern = [('2', '+'), ('4', '+')]
         min_supp = self.d_set.thd_supp
         gen_pattern = GP()
@@ -107,10 +129,18 @@ class GradACOt (GradACO):
             if self.d_set.invalid_bins.size > 0 and np.any(np.isin(self.d_set.invalid_bins, gi.gradual_item)):
                 continue
             else:
-                grp = 'dataset/' + self.d_set.step_name + '/valid_bins/' + gi.as_string()
-                temp = self.d_set.read_h5_dataset(grp)
+                ds = 'dataset/' + self.d_set.step_name + '/valid_bins'# + gi.as_string()
+                if ds in self.h5f:
+                    temp = self.h5f[ds][int(gi.attribute_col)][:]
+                else:
+                    continue
+                    # temp = np.array([])
+                # for obj in self.d_set.valid_bins:
+                #    if obj[0] == gi.gradual_item:
+                #        temp = obj[1]
+                #        break
                 if bin_data.size <= 0:
-                    bin_data = np.array([temp, temp])
+                    bin_data = np.array([temp, np.array([])])
                     gen_pattern.add_gradual_item(gi)
                 else:
                     bin_data[1] = temp
@@ -119,6 +149,7 @@ class GradACOt (GradACO):
                         bin_data[0] = temp_bin
                         gen_pattern.add_gradual_item(gi)
                         gen_pattern.set_support(supp)
+        gc.collect()
         if len(gen_pattern.gradual_items) <= 1:
             tgp = TGP(gp=pattern)
             return tgp
@@ -133,23 +164,20 @@ class GradACOt (GradACO):
 
 class T_GradACO:
 
-    def __init__(self, f_path, eq, ref_item, min_sup, min_rep, cores):
+    def __init__(self, d_set, ref_item, min_rep):
         # For tgraank
-        # self.d_set = d_set
-        self.d_set = Dataset_t(f_path, min_sup=min_sup, eq=eq)
-        self.d_set.init_h5_groups()
-        cols = self.d_set.time_cols
+        cols = d_set.time_cols
         if len(cols) > 0:
             print("Dataset Ok")
             self.time_ok = True
+            self.d_set = d_set
             self.time_cols = cols
-            self.min_sup = min_sup
+            self.min_sup = d_set.thd_supp
             self.ref_item = ref_item
-            self.d_set.data = self.d_set.read_h5_dataset('dataset/data')
-            self.d_set.data = np.array(self.d_set.data).astype('U')
             self.max_step = self.get_max_step(min_rep)
-            self.orig_attr_data = self.d_set.data.copy().T
-            self.cores = cores
+            self.attr_data = d_set.data.copy().T
+            # self.d_set.data = self.d_set.read_h5_dataset('dataset/data')
+            # self.d_set.data = np.array(self.d_set.data).astype('U')
         else:
             print("Dataset Error")
             self.time_ok = False
@@ -159,45 +187,6 @@ class T_GradACO:
     def get_max_step(self, min_rep):  # optimized
         all_rows = len(self.d_set.data)
         return all_rows - int(min_rep * all_rows)
-
-    def run_tgraank(self, parallel=False):
-        if parallel:
-            # implement parallel multi-processing
-            if self.cores > 1:
-                num_cores = self.cores
-            else:
-                num_cores = Profile.get_num_cores()
-
-            self.cores = num_cores
-            steps = range(self.max_step)
-            # pool = mp.Pool(num_cores)
-            with mp.Pool(num_cores) as pool:
-                patterns = pool.map(self.fetch_patterns, steps)
-                # pool.close()
-                # pool.join()
-            return patterns
-        else:
-            patterns = list()
-            for step in range(self.max_step):
-                t_pattern = self.fetch_patterns(step)
-                if t_pattern:
-                    patterns.append(t_pattern)
-            return patterns
-
-    def fetch_patterns(self, step):
-        step += 1  # because for-loop is not inclusive from range: 0 - max_step
-        # 1. Transform data
-        d_set = self.d_set
-        attr_data, time_diffs = self.transform_data(step)
-
-        # 2. Execute aco-graank for each transformation
-        ac = GradACOt(d_set, attr_data, time_diffs)
-        list_gp = ac.run_ant_colony()
-        # print("\nPheromone Matrix")
-        # print(ac.p_matrix)
-        if len(list_gp) > 0:
-            return list_gp
-        return False
 
     def transform_data(self, step):  # optimized
         # NB: Restructure dataset based on reference item
@@ -219,7 +208,7 @@ class T_GradACO:
                     raise Exception(msg)
                 else:
                     # 1. Split the transpose data set into column-tuples
-                    attr_data = self.orig_attr_data
+                    attr_data = self.attr_data
 
                     # 2. Transform the data using (row) n+step
                     new_attr_data = list()
@@ -265,3 +254,15 @@ class T_GradACO:
                 # time_diffs.append([time_diff, index])
                 time_diffs.append([time_diff, i])
         return True, np.array(time_diffs)
+
+    def construct_bins(self, col, n, col_data):
+        # execute binary rank to calculate support of pattern
+        incr = np.array((col, '+'), dtype='i, S1')
+        decr = np.array((col, '-'), dtype='i, S1')
+        temp_pos = Dataset.bin_rank(col_data, equal=self.d_set.equal)
+        supp = float(np.sum(temp_pos)) / float(n * (n - 1.0) / 2.0)
+
+        if supp < self.min_sup:
+            return False, [incr, decr]
+        else:
+            return True, temp_pos
