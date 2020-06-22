@@ -1,80 +1,32 @@
 # -*- coding: utf-8 -*-
 """
 @author: "Dickson Owuor"
-@credits: "Thomas Runkler and Anne Laurent,"
+@credits: "Anne Laurent and Joseph Orero"
 @license: "MIT"
-@version: "2.4"
+@version: "2.0"
 @email: "owuordickson@gmail.com"
 @created: "19 November 2019"
-@modified: "11 June 2020"
+
+
 
 Description: updated version that uses aco-graank and parallel multi-processing
 
 """
 
-
+# from joblib import Parallel, delayed
 import numpy as np
-import multiprocessing as mp
-from .aco_grad import GradACO
-from ..common.fuzzy_mf import calculate_time_lag
-from ..common.gp import GP, TGP
-from ..common.dataset import Dataset
-#from src.algorithms.ant_colony.cython.cyt_aco_grad import GradACO
-#from src.algorithms.common.cython.cyt_dataset import Dataset
-from src.algorithms.common.profile_cpu import Profile
+from ...common.hdf5.dataset_h5 import Dataset_h5
+from ...common.profile_cpu import Profile
+from .graank_h5 import graank_h5
 
 
-class GradACOt (GradACO):
-
-    def __init__(self, d_set, attr_data, t_diffs):
-        self.d_set = d_set
-        self.time_diffs = t_diffs
-        self.attr_index = self.d_set.attr_cols
-        self.p_matrix = np.ones((self.d_set.column_size, 3), dtype=float)
-        self.d_set.update_attributes(attr_data)
-
-    def validate_gp(self, pattern):
-        # pattern = [('2', '+'), ('4', '+')]
-        min_supp = self.d_set.thd_supp
-        gen_pattern = GP()
-        bin_data = np.array([])
-
-        for gi in pattern.gradual_items:
-            if self.d_set.invalid_bins.size > 0 and np.any(np.isin(self.d_set.invalid_bins, gi.gradual_item)):
-                continue
-            else:
-                arg = np.argwhere(np.isin(self.d_set.valid_bins[:, 0], gi.gradual_item))
-                if len(arg) > 0:
-                    i = arg[0][0]
-                    bin_obj = self.d_set.valid_bins[i]
-                    if bin_data.size <= 0:
-                        bin_data = np.array([bin_obj[1], bin_obj[1]])
-                        gen_pattern.add_gradual_item(gi)
-                    else:
-                        bin_data[1] = bin_data[1]
-                        temp_bin, supp = self.bin_and(bin_data, self.d_set.attr_size)
-                        if supp >= min_supp:
-                            bin_data[0] = temp_bin
-                            gen_pattern.add_gradual_item(gi)
-                            gen_pattern.set_support(supp)
-        if len(gen_pattern.gradual_items) <= 1:
-            tgp = TGP(gp=pattern)
-            return tgp
-        else:
-            # t_lag = FuzzyMF.calculate_time_lag(FuzzyMF.get_patten_indices(bin_data[0]), t_diffs, min_supp)
-            t_lag = calculate_time_lag(bin_data[0], self.time_diffs)
-            if t_lag.support <= 0:
-                gen_pattern.set_support(0)
-            tgp = TGP(gp=gen_pattern, t_lag=t_lag)
-            return tgp
-
-
-class T_GradACO:
+class Tgrad_5:
 
     def __init__(self, f_path, eq, ref_item, min_sup, min_rep, cores):
         # For tgraank
         # self.d_set = d_set
-        self.d_set = Dataset(f_path, min_sup=min_sup, eq=eq)
+        self.d_set = Dataset_h5(f_path, min_sup=min_sup, eq=eq)
+        self.d_set.init_h5_groups()
         cols = self.d_set.time_cols
         if len(cols) > 0:
             print("Dataset Ok")
@@ -82,9 +34,14 @@ class T_GradACO:
             self.time_cols = cols
             self.min_sup = min_sup
             self.ref_item = ref_item
+            self.d_set.data = self.d_set.read_h5_dataset('dataset/data')
+            self.d_set.data = np.array(self.d_set.data).astype('U')
             self.max_step = self.get_max_step(min_rep)
             self.orig_attr_data = self.d_set.data.copy().T
-            self.cores = cores
+            if cores > 1:
+                self.cores = cores
+            else:
+                self.cores = Profile.get_num_cores()
         else:
             print("Dataset Error")
             self.time_ok = False
@@ -95,30 +52,13 @@ class T_GradACO:
         all_rows = len(self.d_set.data)
         return all_rows - int(min_rep * all_rows)
 
-    def run_tgraank(self, parallel=False):
-        if parallel:
-            # implement parallel multi-processing
-            if self.cores > 1:
-                num_cores = self.cores
-            else:
-                num_cores = Profile.get_num_cores()
-                self.cores = num_cores
-
-            self.cores = num_cores
-            steps = range(self.max_step)
-            # pool = mp.Pool(num_cores)
-            with mp.Pool(num_cores) as pool:
-                patterns = pool.map(self.fetch_patterns, steps)
-                # pool.close()
-                # pool.join()
-            return patterns
-        else:
-            patterns = list()
-            for step in range(self.max_step):
-                t_pattern = self.fetch_patterns(step)
-                if t_pattern:
-                    patterns.append(t_pattern)
-            return patterns
+    def run_tgraank(self):
+        patterns = list()
+        for step in range(self.max_step):
+            t_pattern = self.fetch_patterns(step)
+            if t_pattern:
+                patterns.append(t_pattern)
+        return patterns
 
     def fetch_patterns(self, step):
         step += 1  # because for-loop is not inclusive from range: 0 - max_step
@@ -126,13 +66,12 @@ class T_GradACO:
         d_set = self.d_set
         attr_data, time_diffs = self.transform_data(step)
 
-        # 2. Execute aco-graank for each transformation
-        ac = GradACOt(d_set, attr_data, time_diffs)
-        list_gp = ac.run_ant_colony()
-        # print("\nPheromone Matrix")
-        # print(ac.p_matrix)
-        if len(list_gp) > 0:
-            return list_gp
+        # 2. Execute t-graank for each transformation
+        d_set.update_attributes(attr_data)
+        tgps = graank_h5(t_diffs=time_diffs, d_set=d_set)
+
+        if len(tgps) > 0:
+            return tgps
         return False
 
     def transform_data(self, step):  # optimized
@@ -192,8 +131,8 @@ class T_GradACO:
                 col = self.time_cols[0]  # use only the first date-time value
                 temp_1 = str(data[i][int(col)])
                 temp_2 = str(data[i + step][int(col)])
-                stamp_1 = Dataset.get_timestamp(temp_1)
-                stamp_2 = Dataset.get_timestamp(temp_2)
+                stamp_1 = Dataset_h5.get_timestamp(temp_1)
+                stamp_2 = Dataset_h5.get_timestamp(temp_2)
                 if (not stamp_1) or (not stamp_2):
                     return False, [i + 1, i + step + 1]
                 time_diff = (stamp_2 - stamp_1)

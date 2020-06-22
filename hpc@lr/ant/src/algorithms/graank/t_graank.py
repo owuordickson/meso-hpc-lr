@@ -24,74 +24,12 @@ from ..common.profile_cpu import Profile
 from .graank_v2 import graank
 
 
-class Dataset_t(Dataset):
-
-    def __init__(self, file_path, min_sup=0, eq=False):
-        self.h5_file = str(Path(file_path).stem) + str('.h5')
-        if os.path.exists(self.h5_file):
-            print("Fetching data from h5 file")
-            h5f = h5py.File(self.h5_file, 'r')
-            self.title = h5f['dataset/title'][:]
-            self.time_cols = h5f['dataset/time_cols'][:]
-            self.attr_cols = h5f['dataset/attr_cols'][:]
-            size = h5f['dataset/size'][:]
-            self.column_size = size[0]
-            self.size = size[1]
-            self.attr_size = size[2]
-            self.step_name = 'step_' + str(int(self.size - self.attr_size))
-            self.invalid_bins = h5f['dataset/' + self.step_name + '/invalid_bins'][:]
-            h5f.close()
-            self.thd_supp = min_sup
-            self.equal = eq
-            self.data = None
-        else:
-            data = Dataset.read_csv(file_path)
-            if len(data) <= 1:
-                self.data = np.array([])
-                print("csv file read error")
-                raise Exception("Unable to read csv file or file has no data")
-            else:
-                print("Data fetched from csv file")
-                self.data = np.array([])
-                self.title = self.get_title(data)  # optimized (numpy)
-                self.time_cols = self.get_time_cols()  # optimized (numpy)
-                self.attr_cols = self.get_attributes()  # optimized (numpy)
-                self.column_size = self.get_attribute_no()  # optimized (numpy)
-                self.size = self.get_size()  # optimized (numpy)
-                self.attr_size = 0
-                self.step_name = ''
-                self.thd_supp = min_sup
-                self.equal = eq
-                self.invalid_bins = np.array([])
-                data = None
-
-    def init_h5_groups(self, f=None):
-        if os.path.exists(self.h5_file):
-            pass
-        else:
-            if f is None:
-                h5f = h5py.File(self.h5_file, 'w')
-            else:
-                h5f = f
-            grp = h5f.require_group('dataset')
-            grp.create_dataset('title', data=self.title)
-            data = np.array(self.data.copy()).astype('S')
-            grp.create_dataset('data', data=data)
-            grp.create_dataset('time_cols', data=self.time_cols)
-            grp.create_dataset('attr_cols', data=self.attr_cols)
-            if f is None:
-                h5f.close()
-            data = None
-            self.data = None
-
-
 class Tgrad:
 
     def __init__(self, f_path, eq, ref_item, min_sup, min_rep, cores):
         # For tgraank
         # self.d_set = d_set
-        self.d_set = Dataset_t(f_path, min_sup=min_sup, eq=eq)
-        self.d_set.init_h5_groups()
+        self.d_set = Dataset(f_path, min_sup=min_sup, eq=eq)
         cols = self.d_set.time_cols
         if len(cols) > 0:
             print("Dataset Ok")
@@ -99,8 +37,6 @@ class Tgrad:
             self.time_cols = cols
             self.min_sup = min_sup
             self.ref_item = ref_item
-            self.d_set.data = self.d_set.read_h5_dataset('dataset/data')
-            self.d_set.data = np.array(self.d_set.data).astype('U')
             self.max_step = self.get_max_step(min_rep)
             self.orig_attr_data = self.d_set.data.copy().T
             self.cores = cores

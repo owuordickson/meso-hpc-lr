@@ -1,0 +1,44 @@
+Run-time: 35.197941303253174 seconds
+Algorithm: ACO-GRAANK (2.2)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 20000
+Minimum support: 0.5
+Number of cores: 10
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site20k.csv
+
+Pattern : Support
+['8+', '5+', '7+', '6+'] : 0.688
+['9+', '6+', '7+'] : 0.507
+['7+', '3+', '9+', '6+'] : 0.5
+['5+', '4+'] : 0.677
+['10+', '8-'] : 0.849
+['10-', '6+', '7+', '5+'] : 0.548
+['4+', '8+'] : 0.83
+['8-', '9-'] : 0.534
+['10+', '9+'] : 0.58
+
+Pheromone Matrix
+[[ 1.  1.  1.]
+ [ 1.  1. 20.]
+ [ 1.  1. 20.]
+ [ 4.  2. 16.]
+ [ 6.  1. 15.]
+ [ 9.  1. 12.]
+ [11.  1. 10.]
+ [ 7.  2. 13.]
+ [ 8.  3. 11.]
+ [ 6.  2. 14.]
+ [ 4.  3. 15.]]

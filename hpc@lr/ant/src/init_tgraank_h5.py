@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 @author: "Dickson Owuor"
-@credits: "Thomas Runkler and Anne Laurent,"
+@credits: "Anne Laurent and Joseph Orero"
 @license: "MIT"
 @version: "2.0"
 @email: "owuordickson@gmail.com"
 @created: "19 November 2019"
-@modified: "20 June 2020"
 
 Usage:
-    $python3 init_acotgrad.py -f ../data/DATASET.csv -c 0 -s 0.5 -r 0.5 -p 1
+    $python3 init_tgraank.py -f ../data/DATASET.csv -c 0 -s 0.5 -r 0.5 -p 1
 
 Description:
     f -> file path (CSV)
@@ -19,16 +18,14 @@ Description:
 
 """
 
-
 import sys
 from optparse import OptionParser
-from algorithms.ant_colony.aco_tgrad import T_GradACO
+from algorithms.graank.hdf5.t_graank_h5 import Tgrad_5
 
 
 def init_algorithm(f_path, refItem, minSup, minRep, allowPara, eq=False):
     try:
-        # tgp = TgradACO(f_path, eq, refItem, minSup, minRep, allowPara)
-        tgp = T_GradACO(f_path, eq, refItem, minSup, minRep, allowPara)
+        tgp = Tgrad_5(f_path, eq, refItem, minSup, minRep, allowPara)
         if allowPara >= 1:
             msg_para = "True"
             list_tgp = tgp.run_tgraank(parallel=True)
@@ -37,14 +34,15 @@ def init_algorithm(f_path, refItem, minSup, minRep, allowPara, eq=False):
             list_tgp = tgp.run_tgraank()
 
         d_set = tgp.d_set
-        wr_line = "Algorithm: ACO-TGRAANK (2.0) \n"
+        wr_line = "Algorithm: T-GRAANK \n"
+        wr_line += "   - H5Py implementation \n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(minSup) + '\n'
         wr_line += "Minimum representativity: " + str(minRep) + '\n'
         wr_line += "Multi-core execution: " + str(msg_para) + '\n'
         wr_line += "Number of cores: " + str(tgp.cores) + '\n'
-        wr_line += "Number of tasks: " + str(tgp.max_step) + '\n'
+        wr_line += "Number of tasks: " + str(tgp.max_step) + '\n\n'
 
         for txt in d_set.title:
             col = int(txt[0])
@@ -92,9 +90,9 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             #default='../data/DATASET2.csv',
-                             # default='../data/rain_temp2013-2015.csv',
-                             default='../data/Directio.csv',
+                             # default='../data/DATASET2.csv',
+                             default='../../../data/rain_temp2013-2015.csv',
+                             # default='../data/Directio.csv',
                              type='string')
         optparser.add_option('-c', '--refColumn',
                              dest='refCol',
@@ -114,13 +112,13 @@ if __name__ == "__main__":
         optparser.add_option('-p', '--allowMultiprocessing',
                              dest='allowPara',
                              help='allow multiprocessing',
-                             default=1,
+                             default=0,
                              type='int')
         (options, args) = optparser.parse_args()
         inFile = None
         if options.file is None:
             print('No data-set filename specified, system with exit')
-            print("Usage: $python3 init_acotgrad.py -f filename.csv -c refColumn -s minSup  -r minRep")
+            print("Usage: $python3 init_tgraank.py -f filename.csv -c refColumn -s minSup  -r minRep")
             sys.exit('System will exit')
         else:
             inFile = options.file
@@ -142,6 +140,7 @@ if __name__ == "__main__":
     wr_text = ("Run-time: " + str(end - start) + " seconds\n")
     # wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
-    f_name = str('res_aco_t' + str(end).replace('.', '', 1) + '.txt')
-    write_file(wr_text, f_name)
+    f_name = str('res_temp' + str(end).replace('.', '', 1) + '.txt')
+    # write_file(wr_text, f_name)
     print(wr_text)
+

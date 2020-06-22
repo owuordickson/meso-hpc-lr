@@ -3,13 +3,14 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
 @license: "MIT"
-@version: "2.0"
+@version: "3.0"
 @email: "owuordickson@gmail.com"
-@created: "18 November 2019"
-@modified: "20 June 2020"
+@created: "20 June 2020"
+
+Optimized using HDF5
 
 Usage:
-    $python init_acograd.py -f ../data/DATASET.csv -s 0.5
+    $python init_acograd_h5.py -f ../data/DATASET.csv -s 0.5
 
 Description:
     f -> file path (CSV)
@@ -20,12 +21,12 @@ Description:
 import sys
 from optparse import OptionParser
 from algorithms.common.profile_cpu import Profile
-from algorithms.ant_colony.aco_grad import GradACO
+from algorithms.ant_colony.hdf5.aco_grad_h5 import GradACO_h5
 
 
 def init_algorithm(f_path, min_supp, cores, eq=False):
     try:
-        ac = GradACO(f_path, min_supp, eq)
+        ac = GradACO_h5(f_path, min_supp, eq)
         list_gp = ac.run_ant_colony()
 
         if cores > 1:
@@ -34,7 +35,8 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
             num_cores = Profile.get_num_cores()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK (2.0)\n"
+        wr_line = "Algorithm: ACO-GRAANK (3.0)\n"
+        wr_line += "   - H5Py implementation \n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'

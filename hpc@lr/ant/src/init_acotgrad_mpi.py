@@ -3,9 +3,11 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler and Anne Laurent,"
 @license: "MIT"
-@version: "3.0"
+@version: "3.2"
 @email: "owuordickson@gmail.com"
 @created: "15 June 2020"
+
+Optimized using MPI and Parallel HDF5
 
 Usage:
     $mpirun -n 4 python init_acotgrad_mpi.py -f ../data/DATASET.csv -c 0 -s 0.5 -r 0.5
@@ -159,14 +161,14 @@ if __name__ == "__main__":
             ds = step_name + '/valid_bins'
             n = (d_set.size - st)
             dt = np.dtype("({0}, {0})bool".format(n, n))
-            grp.create_dataset(ds, (d_set.column_size,), dtype=dt)
+            grp.create_dataset(ds, (d_set.column_size,), dtype=dt, chunks=True)
 
             ds = step_name + '/time_diffs'
-            grp.create_dataset(ds, (n, 2), dtype='f')
+            grp.create_dataset(ds, (n, 2), dtype='f', chunks=True)
             # grp.create_dataset(ds, (n, 2), dtype='f4, i4')
 
             ds = step_name + '/p_matrix'
-            grp.create_dataset(ds, (d_set.column_size, 3), dtype='f4')
+            grp.create_dataset(ds, (d_set.column_size, 3), dtype='f4', chunks=True)
 
             ds = step_name + '/attr_size'
             grp.create_dataset(ds, (1,), dtype='i4')
@@ -241,15 +243,15 @@ if __name__ == "__main__":
     # display results and save to file
     if rank == 0:
         d_set = t_aco.d_set
-        wr_line = "Algorithm: ACO-TGRAANK (3.0) \n"
-        wr_line = "   - MPI4Py & H5Py implementation \n"
+        wr_line = "Algorithm: ACO-TGRAANK (3.2) \n"
+        wr_line += "   - MPI4Py & H5Py implementation \n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(min_sup) + '\n'
         wr_line += "Minimum representativity: " + str(min_rep) + '\n'
         wr_line += "Multi-core execution: True" + '\n'
         wr_line += "Number of cores: " + str(nprocs) + '\n'
-        wr_line += "Number of tasks: " + str(t_aco.max_step) + '\n\n'
+        wr_line += "Number of tasks: " + str(t_aco.max_step) + '\n'
 
         for txt in d_set.title:
             col = int(txt[0])
@@ -262,17 +264,20 @@ if __name__ == "__main__":
         wr_line += str("\nPattern : Support" + '\n')
 
         # lst_tgp is gathered from all processes
+        count = 0
         for obj in lst_tgp:
             for pats in obj:
                 if pats:
                     for tgp in pats:
+                        count += 1
                         wr_line += (str(tgp.to_string()) + ' : ' + str(tgp.support) +
                                     ' | ' + str(tgp.time_lag.to_string()) + '\n')
+        wr_line += "\n\n Number of patterns: " + str(count) + '\n'
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
         wr_text += str(wr_line)
         f_name = str('res_aco_t' + str(end).replace('.', '', 1) + '.txt')
-        # write_file(wr_text, f_name)
+        write_file(wr_text, f_name)
         print(wr_text)
 
     h5f.close()

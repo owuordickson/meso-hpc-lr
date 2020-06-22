@@ -35,6 +35,7 @@ def init_algorithm(f_path, refItem, minSup, minRep, allowPara, eq=False):
 
         d_set = tgp.d_set
         wr_line = "Algorithm: T-GRAANK \n"
+        wr_line += "   - H5Py implementation \n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(minSup) + '\n'
@@ -42,21 +43,26 @@ def init_algorithm(f_path, refItem, minSup, minRep, allowPara, eq=False):
         wr_line += "Multi-core execution: " + str(msg_para) + '\n'
         wr_line += "Number of cores: " + str(tgp.cores) + '\n'
         wr_line += "Number of tasks: " + str(tgp.max_step) + '\n\n'
+
         for txt in d_set.title:
             col = int(txt[0])
             if col == refItem:
-                wr_line += (str(txt[0]) + '. ' + str(txt[1]) + '**' + '\n')
+                wr_line += (str(txt[0]) + '. ' + str(txt[1].decode()) + '**' + '\n')
             else:
-                wr_line += (str(txt[0]) + '. ' + str(txt[1]) + '\n')
+                wr_line += (str(txt[0]) + '. ' + str(txt[1].decode()) + '\n')
 
         wr_line += str("\nFile: " + f_path + '\n')
         wr_line += str("\nPattern : Support" + '\n')
 
+        count = 0
         for obj in list_tgp:
             if obj:
                 for tgp in obj:
+                    count += 1
                     wr_line += (str(tgp.to_string()) + ' : ' + str(tgp.support) +
                                 ' | ' + str(tgp.time_lag.to_string()) + '\n')
+
+        wr_line += "\n\n Number of patterns: " + str(count) + '\n'
         return wr_line
     except Exception as error:
         wr_line = "Failed: " + str(error)
@@ -85,7 +91,7 @@ if __name__ == "__main__":
                              help='path to file containing csv',
                              # default=None,
                              # default='../data/DATASET2.csv',
-                             default='../data/rain_temp2013-2015.csv',
+                             default='../../../data/rain_temp2013-2015.csv',
                              # default='../data/Directio.csv',
                              type='string')
         optparser.add_option('-c', '--refColumn',
@@ -106,7 +112,7 @@ if __name__ == "__main__":
         optparser.add_option('-p', '--allowMultiprocessing',
                              dest='allowPara',
                              help='allow multiprocessing',
-                             default=0,
+                             default=1,
                              type='int')
         (options, args) = optparser.parse_args()
         inFile = None

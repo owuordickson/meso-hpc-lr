@@ -33,6 +33,7 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n\n'
+        wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
 
         for txt in d_set.title:
             wr_line += (str(txt[0]) + '. ' + str(txt[1].decode()) + '\n')
@@ -44,7 +45,7 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
             wr_line += (str(gp.to_string()) + ' : ' + str(gp.support) + '\n')
 
         return wr_line
-    except Exception as error:
+    except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line
@@ -69,7 +70,7 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             default='../data/DATASET.csv',
+                             default='../../../data/DATASET.csv',
                              #default='../data/Omnidir.csv',
                              #default='../data/FARSmiss.csv',
                              #default='../data/FluTopicData-testsansdate-blank.csv',

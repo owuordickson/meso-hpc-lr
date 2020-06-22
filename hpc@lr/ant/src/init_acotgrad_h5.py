@@ -3,13 +3,12 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler and Anne Laurent,"
 @license: "MIT"
-@version: "2.0"
+@version: "3.0"
 @email: "owuordickson@gmail.com"
-@created: "19 November 2019"
-@modified: "20 June 2020"
+@created: "20 June 2020"
 
 Usage:
-    $python3 init_acotgrad.py -f ../data/DATASET.csv -c 0 -s 0.5 -r 0.5 -p 1
+    $python3 init_acotgrad_h5.py -f ../data/DATASET.csv -c 0 -s 0.5 -r 0.5 -p 1
 
 Description:
     f -> file path (CSV)
@@ -22,27 +21,23 @@ Description:
 
 import sys
 from optparse import OptionParser
-from algorithms.ant_colony.aco_tgrad import T_GradACO
+from algorithms.ant_colony.hdf5.aco_tgrad_h5 import T_GradACO_h5
 
 
-def init_algorithm(f_path, refItem, minSup, minRep, allowPara, eq=False):
+def init_algorithm(f_path, refItem, minSup, minRep, cores, eq=False):
     try:
         # tgp = TgradACO(f_path, eq, refItem, minSup, minRep, allowPara)
-        tgp = T_GradACO(f_path, eq, refItem, minSup, minRep, allowPara)
-        if allowPara >= 1:
-            msg_para = "True"
-            list_tgp = tgp.run_tgraank(parallel=True)
-        else:
-            msg_para = "False"
-            list_tgp = tgp.run_tgraank()
+        tgp = T_GradACO_h5(f_path, eq, refItem, minSup, minRep, cores)
+        list_tgp = tgp.run_tgraank()
 
         d_set = tgp.d_set
-        wr_line = "Algorithm: ACO-TGRAANK (2.0) \n"
+        wr_line = "Algorithm: ACO-TGRAANK (3.0) \n"
+        wr_line += "   - H5Py implementation \n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(minSup) + '\n'
         wr_line += "Minimum representativity: " + str(minRep) + '\n'
-        wr_line += "Multi-core execution: " + str(msg_para) + '\n'
+        wr_line += "Multi-core execution: False" + '\n'
         wr_line += "Number of cores: " + str(tgp.cores) + '\n'
         wr_line += "Number of tasks: " + str(tgp.max_step) + '\n'
 
@@ -85,7 +80,7 @@ if __name__ == "__main__":
         ref_col = sys.argv[2]
         min_sup = sys.argv[3]
         min_rep = sys.argv[4]
-        allow_p = sys.argv[5]
+        cores = sys.argv[5]
     else:
         optparser = OptionParser()
         optparser.add_option('-f', '--inputFile',
@@ -114,7 +109,7 @@ if __name__ == "__main__":
         optparser.add_option('-p', '--allowMultiprocessing',
                              dest='allowPara',
                              help='allow multiprocessing',
-                             default=1,
+                             default=0,
                              type='int')
         (options, args) = optparser.parse_args()
         inFile = None
@@ -128,14 +123,14 @@ if __name__ == "__main__":
         ref_col = options.refCol
         min_sup = options.minSup
         min_rep = options.minRep
-        allow_p = options.allowPara
+        cores = options.allowPara
 
     import time
     # import tracemalloc
 
     start = time.time()
     # tracemalloc.start()
-    res_text = init_algorithm(file_path, ref_col, min_sup, min_rep, allow_p)
+    res_text = init_algorithm(file_path, ref_col, min_sup, min_rep, cores)
     # snapshot = tracemalloc.take_snapshot()
     end = time.time()
 
