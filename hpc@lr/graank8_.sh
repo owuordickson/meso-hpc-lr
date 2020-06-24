@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.7.2
-python3 ant/src/init_graank.py -f data/Directio_site32k.csv -c 112 -s 0.5
+python3 ant/src/init_graank.py -f data/ICU_household_power_consumption116k.csv -c 112 -s 0.8
