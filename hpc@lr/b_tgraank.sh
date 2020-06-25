@@ -10,3 +10,7 @@
 
 module load python/3.7.2
 python3 emerging/src/init_bordertgraank.py -f  data/Directio_site6k.csv -m 56 -s 0.5
+python3 emerging/src/init_bordertgraank.py -f  data/Directio_site6k.csv -m 56 -s 0.6
+python3 emerging/src/init_bordertgraank.py -f  data/Directio_site6k.csv -m 56 -s 0.7
+python3 emerging/src/init_bordertgraank.py -f  data/Directio_site6k.csv -m 56 -s 0.8
+python3 emerging/src/init_bordertgraank.py -f  data/Directio_site6k.csv -m 56 -s 0.9
