@@ -18,7 +18,7 @@ Usage:
 """
 
 
-from src.border_ep.algorithms.border_diff import gen_set
+from .border_diff import gen_set
 
 
 def check_for_pattern(ref_item, R):
@@ -51,4 +51,3 @@ def get_maximal_items(init_list, tlag_list):
                 except Exception:
                     continue
     return comb
-

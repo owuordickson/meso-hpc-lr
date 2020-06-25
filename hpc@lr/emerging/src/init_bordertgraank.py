@@ -94,7 +94,7 @@ def algorithm_ep_init(filename, ref_item, minsup, minrep, cores, allow_para):
                 wr_line += "Oops! no relevant emerging pattern was found\n\n"
                 # wr_line += "---------------------------------------------------------"
         return wr_line
-    except Exception as error:
+    except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line

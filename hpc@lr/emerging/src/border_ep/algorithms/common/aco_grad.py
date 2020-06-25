@@ -48,6 +48,8 @@ class GradACO:
         winner_gps = list()  # subsets
         loser_gps = list()  # supersets
         repeated = 0
+        if len(self.d_set.valid_bins) < 2:
+            return []
         while repeated < 1:
             rand_gp = self.generate_random_gp()
             if len(rand_gp.gradual_items) > 1:
@@ -119,7 +121,7 @@ class GradACO:
                         bin_data = np.array([bin_obj[1], bin_obj[1]])
                         gen_pattern.add_gradual_item(gi)
                     else:
-                        bin_data[1] = bin_data[1]
+                        bin_data[1] = bin_obj[1]
                         temp_bin, supp = self.bin_and(bin_data, self.d_set.attr_size)
                         if supp >= min_supp:
                             bin_data[0] = temp_bin

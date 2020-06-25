@@ -13,7 +13,7 @@ import gc
 import sys
 import ntpath
 
-from src.border_ep.algorithms.mbdll_border import *
+from .mbdll_border import *
 
 
 def Trad(fileName):
@@ -308,4 +308,3 @@ def algorithm_ep_gradual(file_path_1, file_path_2, min_sup):
 
 
 algorithm_ep_gradual('../../../data/FluTopicData.csv', '../../../data/FluTopicData.csv', .1)
-

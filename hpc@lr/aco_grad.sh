@@ -9,4 +9,4 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.8.2
-python3 ant/src/init_acograd.py -f data/Directio.csv -c 112 -s 0.5
+python3 ant/src/init_acograd.py -f data/Directio_site32k.csv -c 112 -s 0.5

@@ -77,7 +77,7 @@ def init_trenc(paths, minSup, ref_item, ref_dset, cores, allow_para, minRep):
                     wr_line += str(ep.jsonify()) + '\n'
         wr_line += '\n\n --- end --- \n\n '
         return wr_line
-    except Exception as error:
+    except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line
