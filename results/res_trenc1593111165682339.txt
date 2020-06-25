@@ -1,0 +1,36 @@
+Run-time: 175.24124908447266 seconds
+Algorithm: TRENC 
+Pattern Type: Temporal Gradual Emerging Patterns
+No. of data sets: 100
+Size of 1st data set: 10000
+No. of (data set) attributes: 9
+Minimum support: 0.9
+Minimum representativity: 0.99
+Multi-core execution: True
+Number of cores: 56
+Number of patterns: 1
+
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+Files: data/UCI_household_power_consumption10k.csv
+Patterns
+
+{
+    "pattern": "[(2, '+'), (5, '+')]",
+    "type": "Jumping Emerging TGP",
+    "time_lag": "~ +24.0 hours : 0.001"
+}
+
+
+ --- end --- 
+
+ 

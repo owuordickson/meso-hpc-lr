@@ -1,0 +1,258 @@
+Run-time: 204.86429381370544 seconds
+Algorithm: TRENC 
+Pattern Type: Temporal Gradual Emerging Patterns
+No. of data sets: 100
+Size of 1st data set: 10000
+No. of (data set) attributes: 9
+Minimum support: 0.6
+Minimum representativity: 0.99
+Multi-core execution: True
+Number of cores: 56
+Number of patterns: 1
+
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+Files: data/UCI_household_power_consumption10k.csv
+Patterns
+
+{
+    "pattern": "[(2, '+'), (4, '+')]",
+    "type": "Emerging TGP",
+    "time_lag": "~ +24.0 hours : 0.001",
+    "emergence": [
+        {
+            "time_lag": "~ +24.0 hours : 0.001",
+            "growth_rate": 1.0121786197564278
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.002",
+            "growth_rate": 1.0149253731343282
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.003",
+            "growth_rate": 1.0121786197564278
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.004",
+            "growth_rate": 1.010810810810811
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.004",
+            "growth_rate": 1.016304347826087
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.005",
+            "growth_rate": 1.0232558139534886
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.006",
+            "growth_rate": 1.0246575342465754
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.006",
+            "growth_rate": 1.0232558139534886
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.007",
+            "growth_rate": 1.0246575342465754
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.008",
+            "growth_rate": 1.0303030303030303
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.008",
+            "growth_rate": 1.0331491712707184
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.009",
+            "growth_rate": 1.0374479889042996
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.01",
+            "growth_rate": 1.038888888888889
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.011",
+            "growth_rate": 1.040333796940195
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.011",
+            "growth_rate": 1.041782729805014
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.012",
+            "growth_rate": 1.0461538461538464
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.013",
+            "growth_rate": 1.0476190476190477
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.013",
+            "growth_rate": 1.0490883590462832
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.014",
+            "growth_rate": 1.0490883590462832
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.015",
+            "growth_rate": 1.0520393811533053
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.015",
+            "growth_rate": 1.0550070521861776
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.016",
+            "growth_rate": 1.056497175141243
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.017",
+            "growth_rate": 1.056497175141243
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.018",
+            "growth_rate": 1.057991513437058
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.018",
+            "growth_rate": 1.0609929078014184
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.019",
+            "growth_rate": 1.0609929078014184
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.02",
+            "growth_rate": 1.0625
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.02",
+            "growth_rate": 1.0640113798008537
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.021",
+            "growth_rate": 1.0640113798008537
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.022",
+            "growth_rate": 1.0655270655270657
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.022",
+            "growth_rate": 1.0670470756062767
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.023",
+            "growth_rate": 1.0685714285714287
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.024",
+            "growth_rate": 1.0701001430615167
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.025",
+            "growth_rate": 1.0716332378223496
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.025",
+            "growth_rate": 1.0716332378223496
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.026",
+            "growth_rate": 1.073170731707317
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.027",
+            "growth_rate": 1.0747126436781609
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.027",
+            "growth_rate": 1.0747126436781609
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.028",
+            "growth_rate": 1.0762589928057555
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.029",
+            "growth_rate": 1.0762589928057555
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.03",
+            "growth_rate": 1.0778097982708934
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.03",
+            "growth_rate": 1.0793650793650793
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.031",
+            "growth_rate": 1.0809248554913296
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.032",
+            "growth_rate": 1.0824891461649786
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.032",
+            "growth_rate": 1.0840579710144929
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.033",
+            "growth_rate": 1.0856313497822931
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.034",
+            "growth_rate": 1.0856313497822931
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.034",
+            "growth_rate": 1.0872093023255816
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.035",
+            "growth_rate": 1.0903790087463558
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.036",
+            "growth_rate": 1.0903790087463558
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.037",
+            "growth_rate": 1.0903790087463558
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.037",
+            "growth_rate": 1.091970802919708
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.038",
+            "growth_rate": 1.093567251461988
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.039",
+            "growth_rate": 1.0967741935483872
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.039",
+            "growth_rate": 1.0967741935483872
+        }
+    ]
+}
+
+
+ --- end --- 
+
+ 

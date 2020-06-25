@@ -1,0 +1,37 @@
+Run-time: 9350.183907747269 seconds
+Algorithm: Border-TGRAANK 
+No. of data sets: 62
+No. of (dataset) attributes: 21
+Minimum support: 0.5
+Minimum representativity: 0.99
+Multi-core execution: True
+Number of cores: 56
+
+
+0. date_time
+1. id_site**
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+Emerging Pattern | Time Lags: (Transformation n, Transformation m)
+
+
+Total: 0 FtGEPs found!
+Oops! no relevant emerging pattern was found
+

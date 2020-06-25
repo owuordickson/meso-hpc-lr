@@ -1,0 +1,465 @@
+Run-time: 148.30513668060303 seconds
+Algorithm: TRENC 
+Pattern Type: Temporal Gradual Emerging Patterns
+No. of data sets: 62
+Size of 1st data set: 6120
+No. of (data set) attributes: 21
+Minimum support: 0.8
+Minimum representativity: 0.99
+Multi-core execution: True
+Number of cores: 112
+Number of patterns: 2
+
+
+0. date_time
+1. id_site**
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+Files: data/Directio_site6k.csv
+Patterns
+
+{
+    "pattern": "[(5, '+'), (7, '+'), (8, '+'), (9, '+'), (10, '+'), (13, '+')]",
+    "type": "Emerging TGP",
+    "time_lag": "~ +30.0 minutes : 1.0",
+    "emergence": [
+        {
+            "time_lag": "~ +60.0 minutes : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +1.0 hours : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +2.0 hours : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +4.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +5.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +5.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +6.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +6.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +8.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +8.0 hours : 0.994",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +14.0 hours : 0.991",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +15.0 hours : 0.991",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +15.0 hours : 0.991",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +16.0 hours : 0.991",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +16.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +17.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +17.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +18.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +18.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +19.0 hours : 0.99",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +19.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +21.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +22.0 hours : 0.989",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +22.0 hours : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +23.0 hours : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +23.0 hours : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.988",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9987980769230771
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.985",
+            "growth_rate": 0.9987980769230771
+        }
+    ]
+}
+{
+    "pattern": "[(8, '+'), (9, '+')]",
+    "type": "Emerging TGP",
+    "time_lag": "~ +30.0 minutes : 1.0",
+    "emergence": [
+        {
+            "time_lag": "~ +60.0 minutes : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +1.0 hours : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +2.0 hours : 0.999",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +3.0 hours : 0.998",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +4.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +5.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +5.0 hours : 0.997",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +6.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +6.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.996",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +8.0 hours : 0.995",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +8.0 hours : 0.994",
+            "growth_rate": 0.9993846153846154
+        },
+        {
+            "time_lag": "~ +14.0 hours : 0.991",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +15.0 hours : 0.991",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +15.0 hours : 0.991",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +16.0 hours : 0.991",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +16.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +17.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +17.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +18.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +18.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +19.0 hours : 0.99",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +19.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +20.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +21.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +22.0 hours : 0.989",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +22.0 hours : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +23.0 hours : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +23.0 hours : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.988",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.985",
+            "growth_rate": 1.0
+        }
+    ]
+}
+
+
+ --- end --- 
+
+ 
