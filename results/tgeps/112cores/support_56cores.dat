@@ -1,34 +1,45 @@
 Cores: 56
 Minimum represenativity: 0.99
+------------------------------------------
+------------------------------------------
 
-TRENC: UCI (10k)
-Support Runtime Patterns
-0.5
-0.6
-0.7
-0.8
-0.9
 
-TRENC: Directio (6k)
-Support Runtime Patterns
-0.5
-0.6
-0.7
-0.8
-0.9
+TRENC: UCI (10k, 9 attributes)
+Sup Time(s) Patterns
+0.5 202.62 2
+0.6 204.86 1
+0.7 173.70 2
+0.8 157.35 1
+0.9 175.24 1
 
-Border: UCI (10k)
-Support Runtime Patterns
-0.5
-0.6
-0.7
-0.8
-0.9
+Border: UCI (10k, 9 attributes)
+Sup Time(s) Patterns
+0.5 157.86 107416
+0.6 119.52 91523
+0.7 73.61 33699
+0.8 28.92 231
+0.9 27.30 1
 
-Border: Directio (6k)
-Support Runtime Patterns
-0.5
-0.6
-0.7
-0.8
-0.9
+
+------------------------------------------
+------------------------------------------
+
+
+TRENC: Directio (6k, 21 attributes)
+Sup Time(s) Patterns
+0.5 175.40 3
+0.6 149.69 1
+0.7 159.22 2
+0.8 158.67 2
+0.9 163.87 2
+
+Border: Directio (6k, 21 attributes)
+Sup Time(s) Patterns
+0.5 9350.18 0
+0.6 4070.72 0
+0.7 1339.52 0
+0.8 469.51 0
+0.9 143.28 0
+
+------------------------------------------
+------------------------------------------
