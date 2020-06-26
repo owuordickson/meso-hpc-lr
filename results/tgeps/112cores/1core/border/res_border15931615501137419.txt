@@ -1,0 +1,2 @@
+Run-time: 14258.229225873947 seconds
+Oops! no frequent patterns were found

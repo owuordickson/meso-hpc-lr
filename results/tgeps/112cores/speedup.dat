@@ -18,7 +18,7 @@ Cores Time(s)
 
 Border: UCI (10k, 9 attributes)
 Cores Time(s)
-1
+1 1138.15
 2 602.87
 5 247.91
 10 122.23
@@ -47,7 +47,7 @@ Cores Time(s)
 
 Border: Directio (6k, 21 attributes)
 Cores Time(s)
-1
+1 14258.23
 2 7339.01
 5 3058.03
 10 1852.28
