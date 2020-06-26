@@ -1,5 +1,5 @@
 Run-time: 1844.6852712631226 seconds
-Algorithm: TRENC 
+Algorithm: TRENC
 Pattern Type: Temporal Gradual Emerging Patterns
 No. of data sets: 100
 Size of 1st data set: 10000
@@ -7,7 +7,7 @@ No. of (data set) attributes: 9
 Minimum support: 0.8
 Minimum representativity: 0.99
 Multi-core execution: False
-Number of cores: 112
+Number of cores: 1
 Number of patterns: 1
 
 
@@ -65,6 +65,4 @@ Patterns
 }
 
 
- --- end --- 
-
- 
+ --- end ---

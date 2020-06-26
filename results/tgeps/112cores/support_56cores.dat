@@ -1,0 +1,34 @@
+Cores: 56
+Minimum represenativity: 0.99
+
+TRENC: UCI (10k)
+Support Runtime Patterns
+0.5
+0.6
+0.7
+0.8
+0.9
+
+TRENC: Directio (6k)
+Support Runtime Patterns
+0.5
+0.6
+0.7
+0.8
+0.9
+
+Border: UCI (10k)
+Support Runtime Patterns
+0.5
+0.6
+0.7
+0.8
+0.9
+
+Border: Directio (6k)
+Support Runtime Patterns
+0.5
+0.6
+0.7
+0.8
+0.9
