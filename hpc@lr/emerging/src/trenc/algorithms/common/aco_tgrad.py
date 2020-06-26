@@ -98,7 +98,7 @@ class T_GradACO:
     def run_tgraank(self, parallel=False):
         if parallel:
             # implement parallel multi-processing
-            if self.cores > 1:
+            if self.cores > 0:
                 num_cores = self.cores
             else:
                 num_cores = Profile.get_num_cores()

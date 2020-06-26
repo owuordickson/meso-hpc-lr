@@ -1,0 +1,102 @@
+Run-time: 1717.0705127716064 seconds
+Algorithm: TRENC 
+Pattern Type: Temporal Gradual Emerging Patterns
+No. of data sets: 62
+Size of 1st data set: 6120
+No. of (data set) attributes: 21
+Minimum support: 0.8
+Minimum representativity: 0.99
+Multi-core execution: False
+Number of cores: 112
+Number of patterns: 1
+
+
+0. date_time
+1. id_site**
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+Files: data/Directio_site6k.csv
+Patterns
+
+{
+    "pattern": "[(13, '-'), (14, '-')]",
+    "type": "Emerging TGP",
+    "time_lag": "~ +30.0 minutes : 1.0",
+    "emergence": [
+        {
+            "time_lag": "~ +1.0 hours : 0.999",
+            "growth_rate": 0.9824970828471413
+        },
+        {
+            "time_lag": "~ +6.0 hours : 0.996",
+            "growth_rate": 0.9882629107981223
+        },
+        {
+            "time_lag": "~ +7.0 hours : 0.996",
+            "growth_rate": 1.0132370637785801
+        },
+        {
+            "time_lag": "~ +15.0 hours : 0.991",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +18.0 hours : 0.99",
+            "growth_rate": 1.0014867677668748
+        },
+        {
+            "time_lag": "~ +19.0 hours : 0.989",
+            "growth_rate": 0.9911712772218955
+        },
+        {
+            "time_lag": "~ +23.0 hours : 0.988",
+            "growth_rate": 0.9905882352941177
+        },
+        {
+            "time_lag": "~ +24.0 hours : 0.988",
+            "growth_rate": 1.012019230769231
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0077797725912627
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 1.0
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.987",
+            "growth_rate": 0.9386845039018953
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.996449704142012
+        },
+        {
+            "time_lag": "~ +1.0 days : 0.986",
+            "growth_rate": 0.9844115354637568
+        }
+    ]
+}
+
+
+ --- end --- 
+
+ 

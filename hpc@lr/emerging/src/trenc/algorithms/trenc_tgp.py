@@ -30,7 +30,7 @@ class Trenc_TGP(Trenc_GP):
             self.min_rep = min_rep
             self.min_sup = min_sup
             self.ref_ds_id = ref_dset_id
-            if cores > 1:
+            if cores > 0:
                 self.cores = cores
             else:
                 self.cores = Profile.get_num_cores()
