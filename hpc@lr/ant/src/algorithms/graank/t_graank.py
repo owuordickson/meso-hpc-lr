@@ -19,7 +19,7 @@ import multiprocessing as mp
 import os
 from pathlib import Path
 import h5py
-from ..common.dataset import Dataset
+from ..common.dataset_bfs import Dataset
 from ..common.profile_cpu import Profile
 from .graank_v2 import graank
 
@@ -80,7 +80,7 @@ class Tgrad:
         attr_data, time_diffs = self.transform_data(step)
 
         # 2. Execute t-graank for each transformation
-        d_set.update_attributes(attr_data)
+        d_set.update_gp_attributes(attr_data)
         tgps = graank(t_diffs=time_diffs, d_set=d_set)
 
         if len(tgps) > 0:

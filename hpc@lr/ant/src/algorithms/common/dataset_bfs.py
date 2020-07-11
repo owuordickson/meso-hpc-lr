@@ -40,6 +40,7 @@ class Dataset:
             self.attr_cols = self.get_attributes()  # optimized (numpy)
             self.column_size = self.get_attribute_no()  # optimized (numpy)
             self.size = self.get_size()  # optimized (numpy)
+            self.no_bins = False
             self.attr_size = 0
             self.step_name = ''
             self.thd_supp = min_sup
@@ -107,7 +108,7 @@ class Dataset:
         else:
             return np.array([])
 
-    def init_attributes(self):
+    def init_gp_attributes(self):
         # (check) implement parallel multiprocessing
         # transpose csv array data
         attr_data = self.data.copy().T
@@ -117,7 +118,7 @@ class Dataset:
         attr_data = None
         gc.collect()
 
-    def update_attributes(self, attr_data):
+    def update_gp_attributes(self, attr_data):
         self.attr_size = len(attr_data[self.attr_cols[0]])
         # self.construct_bins_v1(attr_data)
         self.construct_bins(attr_data)
@@ -144,6 +145,8 @@ class Dataset:
                 valid_bins.append(np.array([decr.tolist(), temp_pos.T]))
         self.valid_bins = np.array(valid_bins)
         self.invalid_bins = np.array(invalid_bins)
+        if len(self.valid_bins) < 2:
+            self.no_bins = True
 
     @staticmethod
     def bin_rank(arr, equal=False):

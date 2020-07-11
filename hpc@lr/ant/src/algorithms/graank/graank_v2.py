@@ -10,7 +10,7 @@
 import numpy as np
 import gc
 from ..common.fuzzy_mf import calculate_time_lag
-from ..common.dataset import Dataset
+from ..common.dataset_bfs import Dataset
 from ..common.gp import GI, GP, TGP
 
 
@@ -70,7 +70,7 @@ def gen_apriori_candidates(R, sup, n):
 def graank(f_path=None, min_sup=None, eq=False, t_diffs=None, d_set=None):
     if d_set is None:
         d_set = Dataset(f_path, min_sup, eq)
-        d_set.init_attributes()
+        d_set.init_gp_attributes()
     else:
         d_set = d_set
         min_sup = d_set.thd_supp

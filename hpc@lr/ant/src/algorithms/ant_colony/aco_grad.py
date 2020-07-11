@@ -8,13 +8,15 @@
 @created: "12 July 2019"
 @modified: "16 June 2020"
 
+Breath-First Search for gradual patterns (ACO-GRAANK)
+
 """
 
 import numpy as np
 from numpy import random as rand
 import matplotlib.pyplot as plt
 from ..common.gp import GI, GP
-from ..common.dataset import Dataset
+from ..common.dataset_bfs import Dataset
 #from src.algorithms.common.cython.cyt_dataset import Dataset
 
 
@@ -22,7 +24,7 @@ class GradACO:
 
     def __init__(self, f_path, min_supp, eq):
         self.d_set = Dataset(f_path, min_supp, eq)
-        self.d_set.init_attributes()
+        self.d_set.init_gp_attributes()
         self.attr_index = self.d_set.attr_cols
         # self.e_factor = 0.1  # evaporation factor
         self.p_matrix = np.ones((self.d_set.column_size, 3), dtype=float)
@@ -49,7 +51,7 @@ class GradACO:
         winner_gps = list()  # subsets
         loser_gps = list()  # supersets
         repeated = 0
-        if len(self.d_set.valid_bins) < 2:
+        if self.d_set.no_bins:
             return []
         while repeated < 1:
             rand_gp = self.generate_random_gp()
@@ -112,8 +114,6 @@ class GradACO:
             if self.d_set.invalid_bins.size > 0 and np.any(np.isin(self.d_set.invalid_bins, gi.gradual_item)):
                 continue
             else:
-                #grp = 'dataset/' + self.d_set.step_name + '/valid_bins/' + gi.as_string()
-                #temp = self.d_set.read_h5_dataset(grp)
                 arg = np.argwhere(np.isin(self.d_set.valid_bins[:, 0], gi.gradual_item))
                 if len(arg) > 0:
                     i = arg[0][0]

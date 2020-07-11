@@ -23,7 +23,7 @@ from pathlib import Path
 import h5py
 import gc
 import os
-from ..dataset import Dataset
+from ..dataset_bfs import Dataset
 
 # import tables
 # from src.algorithms.common.gp import GI, GP
@@ -73,7 +73,7 @@ class Dataset_h5(Dataset):
                 data = None
             #    self.init_attributes()
 
-    def init_attributes(self):
+    def init_gp_attributes(self):
         # (check) implement parallel multiprocessing
         if self.data is not None:
             # transpose csv array data

@@ -18,7 +18,7 @@ import multiprocessing as mp
 from .aco_grad import GradACO
 from ..common.fuzzy_mf import calculate_time_lag
 from ..common.gp import GP, TGP
-from ..common.dataset import Dataset
+from ..common.dataset_bfs import Dataset
 #from src.algorithms.ant_colony.cython.cyt_aco_grad import GradACO
 #from src.algorithms.common.cython.cyt_dataset import Dataset
 from src.algorithms.common.profile_cpu import Profile
@@ -31,7 +31,7 @@ class GradACOt (GradACO):
         self.time_diffs = t_diffs
         self.attr_index = self.d_set.attr_cols
         self.p_matrix = np.ones((self.d_set.column_size, 3), dtype=float)
-        self.d_set.update_attributes(attr_data)
+        self.d_set.update_gp_attributes(attr_data)
 
     def validate_gp(self, pattern):
         # pattern = [('2', '+'), ('4', '+')]
@@ -51,7 +51,7 @@ class GradACOt (GradACO):
                         bin_data = np.array([bin_obj[1], bin_obj[1]])
                         gen_pattern.add_gradual_item(gi)
                     else:
-                        bin_data[1] = bin_obj[1]
+                        bin_data[1] = bin_data[1]
                         temp_bin, supp = self.bin_and(bin_data, self.d_set.attr_size)
                         if supp >= min_supp:
                             bin_data[0] = temp_bin
