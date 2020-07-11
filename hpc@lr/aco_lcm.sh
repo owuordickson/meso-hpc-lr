@@ -12,3 +12,5 @@ module load python/3.7.2
 python3 ant/src/init_acolcm.py -f data/breast_cancer.csv -c 10 -s 0.5
 
 python3 ant/src/init_acolcm.py -f data/c2k.csv -c 10 -s 0.5
+
+python3 ant/src/init_acolcm.py -f data/Directio100k.csv -c 10 -s 0.5
