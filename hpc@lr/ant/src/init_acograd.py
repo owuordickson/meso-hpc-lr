@@ -20,7 +20,6 @@ Description:
 
 import sys
 from optparse import OptionParser
-import tracemalloc
 from algorithms.common.profile_mem import Profile
 from algorithms.ant_colony.aco_grad import GradACO
 
@@ -31,17 +30,12 @@ def init_algorithm(f_path, min_supp, cores, eq=False):
             num_cores = cores
         else:
             num_cores = Profile.get_num_cores()
-        tracemalloc.start()
-        ac = GradACO(f_path, min_supp, eq)
-        snapshot = tracemalloc.take_snapshot()
-        wr_line = "Initialization: " + str(Profile.get_quick_mem_use(snapshot)) + "\n"
 
+        ac = GradACO(f_path, min_supp, eq)
         list_gp = ac.run_ant_colony()
-        snapshot = tracemalloc.take_snapshot()
-        wr_line += "Mining: " + str(Profile.get_quick_mem_use(snapshot)) + "\n"
 
         d_set = ac.d_set
-        wr_line += "Algorithm: ACO-GRAANK (2.0)\n"
+        wr_line = "Algorithm: ACO-GRAANK (2.0)\n"
         wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'
@@ -91,8 +85,8 @@ if __name__ == "__main__":
                              help='path to file containing csv',
                              # default=None,
                              #default='../data/DATASET.csv',
-                             #default='../data/DATASET3.csv',
-                             default='../data/Omnidir.csv',
+                             default='../data/DATASET3.csv',
+                             #default='../data/Omnidir.csv',
                              #default='../data/FluTopicData-testsansdate-blank.csv',
                              #default='../data/vehicle_silhouette_dataset.csv',
                              #default='../data/FARSmiss.csv',
@@ -100,7 +94,7 @@ if __name__ == "__main__":
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
                              help='minimum support value',
-                             default=0.5,
+                             default=0.9,
                              type='float')
         optparser.add_option('-e', '--allowEqual',
                              dest='allowEq',
