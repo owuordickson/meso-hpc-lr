@@ -1,0 +1,61 @@
+Run-time: 332.69440817832947 seconds
+Algorithm: ACO-GRAANK (2.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 32445
+Minimum support: 0.7
+Number of cores: 112
+Number of patterns: 5
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site32k.csv
+
+Pattern : Support
+['14+', '8+', '7+', '10+'] : 0.801
+['13+', '7+', '2+'] : 0.706
+['10+', '9+', '8+'] : 0.795
+['8-', '11-'] : 0.877
+['14+', '13+'] : 0.847
+
+Pheromone Matrix
+[[1. 1. 1.]
+ [1. 1. 7.]
+ [2. 1. 6.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [3. 1. 5.]
+ [4. 2. 3.]
+ [2. 1. 6.]
+ [3. 1. 5.]
+ [2. 2. 5.]
+ [1. 1. 7.]
+ [3. 1. 5.]
+ [3. 1. 5.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 7.]
+ [1. 1. 1.]]
