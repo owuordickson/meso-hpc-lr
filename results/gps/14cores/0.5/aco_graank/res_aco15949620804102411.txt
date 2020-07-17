@@ -1,0 +1,44 @@
+Run-time: 0.10192489624023438 seconds
+Total allocated memory size: 106.4 KiB
+Algorithm: ACO-GRAANK (2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 9
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['4+', '8+'] : 0.533
+['2+', '6-'] : 0.508
+['0+', '4+'] : 0.507
+['7+', '6-'] : 0.593
+['0+', '6-'] : 0.539
+['4-', '5-'] : 0.659
+['8-', '0+'] : 0.513
+['8+', '7+'] : 0.672
+['3+', '2+'] : 0.637
+
+Pheromone Matrix
+[[ 4.  1.  8.]
+ [ 1.  1. 11.]
+ [ 3.  1.  9.]
+ [ 2.  1. 10.]
+ [ 3.  2.  8.]
+ [ 1.  2. 10.]
+ [ 1.  4.  8.]
+ [ 4.  1.  8.]
+ [ 4.  2.  7.]
+ [ 1.  1. 11.]]
