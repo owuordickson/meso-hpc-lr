@@ -103,16 +103,16 @@ if __name__ == "__main__":
         numCores = options.numCores
 
     import time
-    # import tracemalloc
+    import tracemalloc
 
     start = time.time()
-    # tracemalloc.start()
+    tracemalloc.start()
     res_text = init_algorithm(filePath, minSup, numCores)
-    # snapshot = tracemalloc.take_snapshot()
+    snapshot = tracemalloc.take_snapshot()
     end = time.time()
 
     wr_text = ("Run-time: " + str(end - start) + " seconds\n")
-    # wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
+    wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_graank' + str(end).replace('.', '', 1) + '.txt')
     write_file(wr_text, f_name)
