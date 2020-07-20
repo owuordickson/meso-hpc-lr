@@ -13,6 +13,6 @@ python3 ant/src/init_acograd.py -f data/c2k.csv -c 14 -s 0.9
 python3 ant/src/init_acograd.py -f data/Directio_site15k.csv -c 14 -s 0.9
 python3 ant/src/init_acograd.py -f data/UCI_household_power_consumption50k.csv -c 14 -s 0.9
 
-python3 ant/src/init_acograd.py -f data/c2k_06k.csv -c 14 -s 0.9
+python3 ant/src/init_acograd.py -f data/c2k_02k.csv -c 14 -s 0.9
 python3 ant/src/init_acograd.py -f data/Directio_site02k.csv -c 14 -s 0.9
 python3 ant/src/init_acograd.py -f data/UCI_household_power_consumption1k.csv -c 14 -s 0.9
