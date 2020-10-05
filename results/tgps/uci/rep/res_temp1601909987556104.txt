@@ -1,0 +1,29 @@
+Run-time: 1937.9502291679382 seconds
+Algorithm: T-GRAANK 
+   - H5Py implementation 
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 10000
+Minimum support: 0.9
+Minimum representativity: 0.7
+Multi-core execution: True
+Number of cores: 14
+Number of tasks: 3000
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption10k.csv
+
+Pattern : Support
+['2+', '5+'] : 0.901 | ~ +24.0 hours : 0.001
+['2-', '5-'] : 0.901 | ~ +24.0 hours : 0.001
+
+
+ Number of patterns: 2

@@ -1,0 +1,49 @@
+Run-time: 801.8289685249329 seconds
+Algorithm: T-GRAANK 
+   - H5Py implementation 
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 10000
+Minimum support: 0.8
+Minimum representativity: 0.9
+Multi-core execution: True
+Number of cores: 14
+Number of tasks: 1000
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption10k.csv
+
+Pattern : Support
+['5+', '2+'] : 0.901 | ~ +24.0 hours : 0.001
+['2-', '5-'] : 0.901 | ~ +24.0 hours : 0.001
+['5+', '2+'] : 0.865 | ~ +24.0 hours : 0.001
+['2-', '5-'] : 0.865 | ~ +24.0 hours : 0.001
+['5+', '2+'] : 0.851 | ~ +24.0 hours : 0.002
+['2-', '5-'] : 0.851 | ~ +24.0 hours : 0.002
+['5+', '2+'] : 0.855 | ~ +24.0 hours : 0.003
+['2-', '5-'] : 0.855 | ~ +24.0 hours : 0.003
+['5+', '2+'] : 0.857 | ~ +24.0 hours : 0.004
+['2-', '5-'] : 0.857 | ~ +24.0 hours : 0.004
+['5+', '2+'] : 0.838 | ~ +24.0 hours : 0.004
+['2-', '5-'] : 0.838 | ~ +24.0 hours : 0.004
+['5+', '2+'] : 0.821 | ~ +24.0 hours : 0.005
+['2-', '5-'] : 0.821 | ~ +24.0 hours : 0.005
+['5+', '2+'] : 0.817 | ~ +24.0 hours : 0.006
+['2-', '5-'] : 0.817 | ~ +24.0 hours : 0.006
+['5+', '2+'] : 0.815 | ~ +24.0 hours : 0.006
+['2-', '5-'] : 0.815 | ~ +24.0 hours : 0.006
+['5+', '2+'] : 0.811 | ~ +24.0 hours : 0.007
+['2-', '5-'] : 0.811 | ~ +24.0 hours : 0.007
+['5+', '2+'] : 0.8 | ~ +24.0 hours : 0.008
+['2-', '5-'] : 0.8 | ~ +24.0 hours : 0.008
+
+
+ Number of patterns: 22
