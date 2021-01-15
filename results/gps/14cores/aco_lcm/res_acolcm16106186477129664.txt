@@ -1,0 +1,28 @@
+Run-time: 0.4604470729827881 seconds
+Total allocated memory size: 373.1 KiB
+Algorithm: ACO-LCM (1.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Minimum support: 0.8
+Number of cores: 14
+Number of patterns: 3
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['0+', '1-', '2+', '3+', '4+', '6-', '7-', '8+', '5-'] : 0.828
+['2+', '3+', '4+', '6-', '7-', '5-', '8-', '1+', '0-'] : 0.828
+['4+', '5+', '7-', '8-', '1+', '2-', '0-', '3-', '6+'] : 0.828
+
+Pheromone Matrix

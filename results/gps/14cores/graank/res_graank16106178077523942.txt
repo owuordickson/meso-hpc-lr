@@ -1,0 +1,25 @@
+Run-time: 0.4554610252380371 seconds
+Total allocated memory size: 46.4 KiB
+Algorithm: GRAANK 
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Minimum support: 0.8
+Number of cores: 14
+Number of patterns: 2
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['4+', '3+'] : 0.94
+['4-', '3-'] : 0.94
