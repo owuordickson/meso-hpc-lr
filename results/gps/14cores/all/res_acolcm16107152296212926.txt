@@ -1,0 +1,25 @@
+Run-time: 19.62063980102539 seconds
+Total allocated memory size: 1233.2 KiB
+Algorithm: ACO-LCM (1.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 1000
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption1k.csv
+
+Pattern : Support
+['4-', '2-', '5-', '3-'] : 0.622
+
+Pheromone Matrix

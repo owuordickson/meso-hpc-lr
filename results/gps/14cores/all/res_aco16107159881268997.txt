@@ -1,0 +1,35 @@
+Run-time: 0.20043659210205078 seconds
+Total allocated memory size: 200.1 KiB
+Algorithm: ACO-GRAANK (2.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 1000
+Minimum support: 0.6
+Number of cores: 14
+Number of patterns: 2
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption1k.csv
+
+Pattern : Support
+['4-', '5+'] : 0.746
+['4+', '2-'] : 0.743
+
+Pheromone Matrix
+[[1.00000000e+00 1.00000000e+00 1.00000000e+00]
+ [1.00000000e+00 1.00000000e+00 1.00000000e+00]
+ [1.25000000e-01 1.17187500e-02 2.00000000e+00]
+ [1.56250000e-02 3.12500000e-02 3.00000000e+00]
+ [5.00000000e-01 9.37500000e-02 1.00000000e+00]
+ [2.00000000e+00 5.00000000e-01 2.00000000e+00]
+ [2.44140625e-04 1.25000000e-01 3.00000000e+00]
+ [1.95312500e-03 1.56250000e-02 3.00000000e+00]
+ [5.00000000e-01 6.25000000e-02 3.00000000e+00]]
