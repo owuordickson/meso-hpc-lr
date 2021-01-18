@@ -1,0 +1,41 @@
+Run-time: 3.0197441577911377 seconds
+Total allocated memory size: 435.6 KiB
+Algorithm: ACO-LCM (1.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 200
+Minimum support: 0.9
+Number of cores: 14
+Number of patterns: 5
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site02k.csv
+
+Pattern : Support
+['4-', '5-', '6+', '7-', '8-', '9-', '10-', '11-', '12+', '14-', '16+', '15+', '13-', '2-', '3+'] : 0.91
+['5-', '6+', '7-', '8-', '10-', '11-', '14-', '16+', '15+', '13-', '9+', '2-', '3+', '18-', '4+'] : 0.91
+['6+', '7-', '8-', '10-', '11-', '14-', '16+', '15+', '13-', '5+', '9+', '2-', '3+', '4+'] : 0.915
+['4-', '5-', '6+', '7-', '8-', '10-', '11-', '14-', '16+', '15+', '13-', '9+', '2-', '3+', '18-'] : 0.91
+['5-', '7-', '8-', '10-', '11-', '12+', '14-', '16+', '15+', '13-', '9+', '2-', '3+', '4+'] : 0.91
+
+Pheromone Matrix

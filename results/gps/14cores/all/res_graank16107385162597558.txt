@@ -1,0 +1,25 @@
+Run-time: 0.18761634826660156 seconds
+Total allocated memory size: 67.3 KiB
+Algorithm: GRAANK 
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 1000
+Minimum support: 0.7
+Number of cores: 14
+Number of patterns: 3
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption1k.csv
+
+Pattern : Support
+['4-', '5+'] : 0.746
+['2+', '4-', '5+'] : 0.733
+['5-', '2-', '4+'] : 0.733

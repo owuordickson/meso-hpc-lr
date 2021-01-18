@@ -1,0 +1,38 @@
+Run-time: 1.4980828762054443 seconds
+Total allocated memory size: 65.9 KiB
+Algorithm: GRAANK 
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 200
+Minimum support: 0.9
+Number of cores: 14
+Number of patterns: 4
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site02k.csv
+
+Pattern : Support
+['8+', '5+'] : 0.942
+['8-', '5-'] : 0.942
+['10+', '8+'] : 0.925
+['10-', '8-'] : 0.925
