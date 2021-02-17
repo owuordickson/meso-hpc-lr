@@ -14,8 +14,8 @@ import os
 import h5py
 import numpy as np
 from itertools import combinations
-from common.gp import GI, GP
-from common.dataset import Dataset
+from ..common.gp import GI, GP
+from ..common.dataset import Dataset
 
 
 class GradACO:
