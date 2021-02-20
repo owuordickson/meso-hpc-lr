@@ -91,6 +91,7 @@ class Dataset:
                     valid_bins.append(np.array([incr.tolist(), temp_pos], dtype=object))
                     valid_bins.append(np.array([decr.tolist(), temp_pos.T], dtype=object))
         self.valid_bins = np.array(valid_bins)
+        print(self.valid_bins)
         if len(self.valid_bins) < 3:
             self.no_bins = True
         gc.collect()

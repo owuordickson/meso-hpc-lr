@@ -34,6 +34,7 @@ class Dataset:
             print("Fetching data from h5 file")
             h5f = h5py.File(self.h5_file, 'r')
             self.titles = h5f['dataset/titles'][:]
+            self.attr_data = h5f['dataset/attr_data'][:]
             self.time_cols = h5f['dataset/time_cols'][:]
             self.attr_cols = h5f['dataset/attr_cols'][:]
             size = h5f['dataset/size_arr'][:]
@@ -48,16 +49,20 @@ class Dataset:
                 self.no_bins = True
             else:
                 self.no_bins = False
+            self.valid_gis = []
         else:
             self.thd_supp = min_sup
             self.titles, self.data = Dataset.read_csv(file_path)
             self.row_count, self.col_count = self.data.shape
             self.time_cols = self.get_time_cols()
             self.attr_cols = self.get_attr_cols()
+            self.attr_data = self.data.T.copy()
+            self.data = None
             self.no_bins = False
+            self.valid_gis = []
             self.step_name = ''  # For T-GRAANK
             self.attr_size = 0  # For T-GRAANK
-            self.init_gp_attributes()
+            # self.init_gp_attributes()
 
     def get_attr_cols(self):
         all_cols = np.arange(self.col_count)
@@ -82,7 +87,7 @@ class Dataset:
         # (check) implement parallel multiprocessing
         # 1. Transpose csv array data
         if attr_data is None:
-            attr_data = self.data.T
+            attr_data = self.attr_data
             self.attr_size = self.row_count
         else:
             self.attr_size = len(attr_data[self.attr_cols[0]])
@@ -98,13 +103,16 @@ class Dataset:
         valid_count = 0
         for col in self.attr_cols:
             col_data = np.array(attr_data[col], dtype=float)
-            incr = np.array((col, '+'), dtype='i, S1')
-            decr = np.array((col, '-'), dtype='i, S1')
+            incr = str(col) + '_pos'
+            decr = str(col) + '_neg'
+            # incr = np.array((col, '+'), dtype='i, S1')
+            # decr = np.array((col, '-'), dtype='i, S1')
 
             # 3a. Generate 1-itemset gradual items
             with np.errstate(invalid='ignore'):
                 # temp_pos = col_data < col_data[:, np.newaxis]
-                grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_pos'
+                # grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_pos'
+                grp = 'dataset/' + self.step_name + '/temp_bin'
                 temp_pos = h5f.create_dataset(grp, data=col_data > col_data[:, np.newaxis], chunks=True)
 
                 # 3b. Check support of each generated itemset
@@ -112,12 +120,17 @@ class Dataset:
                 for s in temp_pos.iter_chunks():
                     bin_sum += np.sum(temp_pos[s])
                 supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
-                if supp < self.thd_supp:
-                    del h5f[grp]
-                else:
-                    grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_neg'
-                    h5f.create_dataset(grp, data=col_data < col_data[:, np.newaxis], chunks=True)
+                if supp >= self.thd_supp:
+                    self.valid_gis.append(incr)
+                    self.valid_gis.append(decr)
                     valid_count += 2
+                del h5f[grp]
+                # if supp < self.thd_supp:
+                #    del h5f[grp]
+                # else:
+                    # grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_neg'
+                    # h5f.create_dataset(grp, data=col_data < col_data[:, np.newaxis], chunks=True)
+                #    valid_count += 2
         h5f.close()
         data_size = np.array([self.col_count, self.row_count, self.attr_size, valid_count])
         self.add_h5_dataset('dataset/size_arr', data_size)
@@ -132,12 +145,11 @@ class Dataset:
             h5f = h5py.File(self.h5_file, 'w')
             grp = h5f.require_group('dataset')
             grp.create_dataset('titles', data=self.titles)
-            grp.create_dataset('data', data=np.array(self.data.copy()).astype('S'), compression="gzip",
+            grp.create_dataset('attr_data', data=self.attr_data.astype('S'), compression="gzip",
                                compression_opts=9)
             grp.create_dataset('time_cols', data=self.time_cols)
             grp.create_dataset('attr_cols', data=self.attr_cols)
             h5f.close()
-            self.data = None
 
     def read_h5_dataset(self, group):
         temp = np.array([])
