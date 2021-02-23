@@ -3,24 +3,24 @@
 @author: "Dickson Owuor"
 @credits: "Anne Laurent"
 @license: "MIT"
-@version: "4.0"
+@version: "5.0"
 @email: "owuordickson@gmail.com"
-@created: "12 July 2019"
-@modified: "17 Feb 2021"
+@created: "22 Feb 2021"
+@modified: "22 Feb 2021"
 
 Changes
 -------
-1. save attribute gradual item sets binaries as json file and retrieve them as dicts
-   - this frees primary memory from storing nxn matrices
-2. Fetch all binaries during initialization
-3. Replaced loops for fetching binary rank with numpy function
+1. uses an nxm matrix to store binary matrices (where n=size/2 * size - 1 && m = attributes * 2).
+2. introduces fuzzy classification of gradual states
 
 """
 import csv
 from dateutil.parser import parse
+from itertools import combinations
 import time
 import numpy as np
 import gc
+from common.gp_v4 import GI
 
 
 class Dataset:
@@ -32,9 +32,9 @@ class Dataset:
         self.row_count, self.col_count = self.data.shape
         self.time_cols = self.get_time_cols()
         self.attr_cols = self.get_attr_cols()
-        self.valid_bins = np.array([])
+        self.valid_items = []
+        self.rank_matrix = None
         self.no_bins = False
-        self.seg_sums = np.array([])
         self.step_name = ''  # For T-GRAANK
         self.attr_size = 0  # For T-GRAANK
         # self.init_attributes()
@@ -59,7 +59,6 @@ class Dataset:
         return np.array(time_cols)
 
     def init_gp_attributes(self, attr_data=None):
-        # (check) implement parallel multiprocessing
         # 1. Transpose csv array data
         if attr_data is None:
             attr_data = self.data.T
@@ -67,33 +66,45 @@ class Dataset:
         else:
             self.attr_size = len(attr_data[self.attr_cols[0]])
 
-        # 2. Construct and store 1-item_set valid bins
-        # execute binary rank to calculate support of pattern
+        # 2. Initialize (k x attr) matrix
         n = self.attr_size
-        valid_bins = list()
+        m = self.col_count
+        r_combs = list(combinations(np.arange(n), 2))
+        k = len(r_combs)  # r_combs.shape[0]
+        self.rank_matrix = np.zeros((k, m), dtype=float)
+
+        # 3. Determine binary rank (fuzzy: 0, 0.5, 1) and calculate support of pattern
+        valid_count = 0
         for col in self.attr_cols:
             col_data = np.array(attr_data[col], dtype=float)
-            incr = np.array((col, '+'), dtype='i, S1')
-            decr = np.array((col, '-'), dtype='i, S1')
-            # temp_pos = Dataset.bin_rank(col_data, equal=self.equal)
+            incr = GI(col, '+')  # np.array((col, '+'), dtype='i, S1')
+            decr = GI(col, '-')  # np.array((col, '-'), dtype='i, S1')
 
-            # 2a. Generate 1-itemset gradual items
-            with np.errstate(invalid='ignore'):
-                if not self.equal:
-                    temp_pos = col_data < col_data[:, np.newaxis]
-                else:
-                    temp_pos = col_data <= col_data[:, np.newaxis]
-                    np.fill_diagonal(temp_pos, 0)
+            # 3a. Determine gradual ranks
+            bin_sum = 0
+            for i in range(len(r_combs)):
+                r = r_combs[i]
+                if col_data[r[0]] > col_data[r[1]]:
+                    self.rank_matrix[i][col] = 1
+                    bin_sum += 1
+                elif col_data[r[1]] > col_data[r[0]]:
+                    self.rank_matrix[i][col] = 0.5
+                    bin_sum += 1
 
-                # 2b. Check support of each generated itemset
-                supp = float(np.sum(temp_pos)) / float(n * (n - 1.0) / 2.0)
-                if supp >= self.thd_supp:
-                    valid_bins.append(np.array([incr.tolist(), temp_pos], dtype=object))
-                    valid_bins.append(np.array([decr.tolist(), temp_pos.T], dtype=object))
-        self.valid_bins = np.array(valid_bins)
-        # print(self.valid_bins)
-        if len(self.valid_bins) < 3:
+            # 3b. Check support of each generated item-set
+            supp = float(np.sum(bin_sum)) / float(n * (n - 1.0) / 2.0)
+            if supp >= self.thd_supp:
+                self.valid_items.append(incr.as_string())
+                self.valid_items.append(decr.as_string())
+                valid_count += 2
+
+        # print(self.rank_matrix)
+        # print(self.valid_items)
+        # print("***\n")
+        if valid_count < 3:
             self.no_bins = True
+        del self.data
+        del attr_data
         gc.collect()
 
     @staticmethod

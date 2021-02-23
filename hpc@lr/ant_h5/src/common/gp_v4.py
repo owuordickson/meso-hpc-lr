@@ -2,7 +2,7 @@
 """
 @author: "Dickson OWUOR"
 @credits: "Anne LAURENT and Joseph ORERO"
-@version: "4.0"
+@version: "4.2"
 @email: "owuordickson@gmail.com"
 @created: "20 May 2020"
 @modified: "17 Feb 2021"
@@ -53,6 +53,12 @@ class GI:
 
     def to_string(self):
         return str(self.attribute_col) + self.symbol
+
+    def is_decrement(self):
+        if self.symbol == '-':
+            return True
+        else:
+            return False
 
     @staticmethod
     def parse_gi(gi_str):

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 @author: "Dickson Owuor"
-@credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
+@credits: "Anne Laurent,"
 @license: "MIT"
-@version: "4.0"
+@version: "5.0"
 @email: "owuordickson@gmail.com"
-@created: "12 July 2019"
-@modified: "17 Feb 2021"
+@created: "22 Feb 2021"
+@modified: "22 Feb 2021"
 
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
@@ -14,7 +14,7 @@ Breath-First Search for gradual patterns (ACO-GRAANK)
 import numpy as np
 from itertools import combinations
 from common.gp_v4 import GI, GP
-from common.dataset_bfs_v4 import Dataset
+from common.dataset_v5 import Dataset
 
 
 class GradACO:
@@ -28,23 +28,35 @@ class GradACO:
         self.d, self.attr_keys = self.generate_d()  # distance matrix (d) & attributes corresponding to d
 
     def generate_d(self):
-        v_bins = self.d_set.valid_bins
+        # v_items = self.d_set.valid_items
         # 1. Fetch valid bins group
-        attr_keys = [GI(x[0], x[1].decode()).as_string() for x in v_bins[:, 0]]
+        attr_keys = self.d_set.valid_items  # [GI(x[0], x[1].decode()).as_string() for x in v_items[:, 0]]
+        ranks = self.d_set.rank_matrix
 
         # 2. Initialize an empty d-matrix
         n = len(attr_keys)
         d = np.zeros((n, n), dtype=float)  # cumulative sum of all segments
         for i in range(n):
             for j in range(n):
-                if GI.parse_gi(attr_keys[i]).attribute_col == GI.parse_gi(attr_keys[j]).attribute_col:
+                gi_1 = GI.parse_gi(attr_keys[i])
+                gi_2 = GI.parse_gi(attr_keys[j])
+                if gi_1.attribute_col == gi_2.attribute_col:
                     # Ignore similar attributes (+ or/and -)
                     continue
                 else:
-                    bin_1 = v_bins[i][1]
-                    bin_2 = v_bins[j][1]
+                    bin_1 = ranks[:, gi_1.attribute_col].copy()
+                    bin_2 = ranks[:, gi_2.attribute_col].copy()
+
+                    # 2b. Reconstruct if negative (swap 0.5 and 1, leave 0 as 0)
+                    if gi_1.is_decrement():
+                        bin_1 = np.where(bin_1 == 0.5, 1, np.where(bin_1 == 1, 0.5, 0))
+
+                    if gi_2.is_decrement():
+                        bin_2 = np.where(bin_2 == 0.5, 1, np.where(bin_2 == 1, 0.5, 0))
+
                     # Cumulative sum of all segments for 2x2 (all attributes) gradual items
-                    d[i][j] += np.sum(np.multiply(bin_1, bin_2))
+                    temp_bin = np.where(bin_1 == bin_2, 1, 0)
+                    d[i][j] += np.sum(temp_bin)
         # print(d)
         return d, attr_keys
 
@@ -144,28 +156,33 @@ class GradACO:
         return p_matrix
 
     def validate_gp(self, pattern):
-        # pattern = [('2', '+'), ('4', '+')]
         min_supp = self.d_set.thd_supp
         n = self.d_set.attr_size
         gen_pattern = GP()
-        bin_arr = np.array([])
+        ranks = self.d_set.rank_matrix
 
-        for gi in pattern.gradual_items:
-            arg = np.argwhere(np.isin(self.d_set.valid_bins[:, 0], gi.gradual_item))
-            if len(arg) > 0:
-                i = arg[0][0]
-                valid_bin = self.d_set.valid_bins[i]
-                if bin_arr.size <= 0:
-                    bin_arr = np.array([valid_bin[1], valid_bin[1]])
+        main_bin = ranks[:, pattern.gradual_items[0].attribute_col].copy()
+        for i in range(len(pattern.gradual_items)):
+            gi = pattern.gradual_items[i]
+            if i == 0:
+                if gi.is_decrement():
+                    main_bin = np.where(main_bin == 0.5, 1, np.where(main_bin == 1, 0.5, 0))
+                gen_pattern.add_gradual_item(gi)
+                continue
+            else:
+                bin_2 = ranks[:, gi.attribute_col].copy()
+                if gi.is_decrement():
+                    bin_2 = np.where(bin_2 == 0.5, 1, np.where(bin_2 == 1, 0.5, 0))
+
+                # Rank multiplication
+                temp_bin = np.where(main_bin == bin_2, main_bin, 0)
+                # print(str(main_bin) + ' + ' + str(bin_2) + ' = ' + str(temp_bin))
+                supp = float(np.count_nonzero(temp_bin)) / float(n * (n - 1.0) / 2.0)
+                if supp >= min_supp:
+                    main_bin = temp_bin.copy()
                     gen_pattern.add_gradual_item(gi)
-                else:
-                    bin_arr[1] = valid_bin[1].copy()
-                    temp_bin = np.multiply(bin_arr[0], bin_arr[1])
-                    supp = float(np.sum(temp_bin)) / float(n * (n - 1.0) / 2.0)
-                    if supp >= min_supp:
-                        bin_arr[0] = temp_bin.copy()
-                        gen_pattern.add_gradual_item(gi)
-                        gen_pattern.set_support(supp)
+                    gen_pattern.set_support(supp)
+
         if len(gen_pattern.gradual_items) <= 1:
             return pattern
         else:
