@@ -3,17 +3,15 @@
 @author: "Dickson Owuor"
 @credits: "Anne Laurent"
 @license: "MIT"
-@version: "5.4"
+@version: "5.5"
 @email: "owuordickson@gmail.com"
-@created: "12 July 2019"
-@modified: "17 Feb 2021"
+@created: "22 Feb 2021"
+@modified: "22 Feb 2021"
 
 Changes
 -------
-1. save attribute gradual item sets binaries as json file and retrieve them as dicts
-   - this frees primary memory from storing nxn matrices
-2. Fetch all binaries during initialization
-3. Replaced loops for fetching binary rank with numpy function
+1. uses an nxm matrix to store binary matrices (where n=size/2 * size - 1 && m = attributes * 2).
+2. introduces fuzzy classification of gradual states
 
 """
 import csv
@@ -24,17 +22,17 @@ import numpy as np
 import gc
 import os
 from pathlib import Path
+from algorithms.common.gp_v4 import GI
 
 
 class Dataset:
 
-    def __init__(self, file_path, min_sup=0.5):
-        self.h5_file = str(Path(file_path).stem) + str('.h5')
+    def __init__(self, file_path, min_sup=0.5, eq=False):
+        self.h5_file = 'app_data/' + str(Path(file_path).stem) + str('.h5')
         if os.path.exists(self.h5_file):
             print("Fetching data from h5 file")
             h5f = h5py.File(self.h5_file, 'r')
             self.titles = h5f['dataset/titles'][:]
-            self.attr_data = h5f['dataset/attr_data'][:]
             self.time_cols = h5f['dataset/time_cols'][:]
             self.attr_cols = h5f['dataset/attr_cols'][:]
             size = h5f['dataset/size_arr'][:]
@@ -49,20 +47,20 @@ class Dataset:
                 self.no_bins = True
             else:
                 self.no_bins = False
-            self.valid_gis = []
+            # self.valid_items = []
         else:
             self.thd_supp = min_sup
+            self.equal = eq
             self.titles, self.data = Dataset.read_csv(file_path)
             self.row_count, self.col_count = self.data.shape
             self.time_cols = self.get_time_cols()
             self.attr_cols = self.get_attr_cols()
-            self.attr_data = self.data.T.copy()
-            self.data = None
+            # self.valid_items = []
+            # self.rank_matrix = None
             self.no_bins = False
-            self.valid_gis = []
             self.step_name = ''  # For T-GRAANK
             self.attr_size = 0  # For T-GRAANK
-            # self.init_gp_attributes()
+            self.init_gp_attributes()
 
     def get_attr_cols(self):
         all_cols = np.arange(self.col_count)
@@ -84,10 +82,9 @@ class Dataset:
         return np.array(time_cols)
 
     def init_gp_attributes(self, attr_data=None):
-        # (check) implement parallel multiprocessing
         # 1. Transpose csv array data
         if attr_data is None:
-            attr_data = self.attr_data
+            attr_data = self.data.T
             self.attr_size = self.row_count
         else:
             self.attr_size = len(attr_data[self.attr_cols[0]])
@@ -97,45 +94,61 @@ class Dataset:
         self.init_h5_groups()
         h5f = h5py.File(self.h5_file, 'r+')
 
-        # 3. Construct and store 1-item_set valid bins
-        # execute binary rank to calculate support of pattern
+        # 3. Initialize (k x attr) matrix
         n = self.attr_size
+        m = self.col_count
+        k = int(n * (n - 1) / 2)
+        # if k > 10000:
+        #    ch = 10000
+        # else:
+        #    ch = k
+
+        grp_name = 'dataset/' + self.step_name + '/rank_matrix'
+        rank_matrix = h5f.create_dataset(grp_name, (k, m), dtype=np.float16, chunks=True,
+                                         compression="gzip", compression_opts=9, shuffle=True)
+        # rank_matrix = np.memmap(self.np_file, dtype=float, mode='w+', shape=(k, m))
+
+        # 4. Determine binary rank (fuzzy: 0, 0.5, 1) and calculate support of pattern
         valid_count = 0
+        valid_items = []
         for col in self.attr_cols:
             col_data = np.array(attr_data[col], dtype=float)
-            incr = str(col) + '_pos'
-            decr = str(col) + '_neg'
-            # incr = np.array((col, '+'), dtype='i, S1')
-            # decr = np.array((col, '-'), dtype='i, S1')
+            incr = GI(col, '+')
+            decr = GI(col, '-')
 
-            # 3a. Generate 1-itemset gradual items
-            with np.errstate(invalid='ignore'):
-                # temp_pos = col_data < col_data[:, np.newaxis]
-                # grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_pos'
-                grp = 'dataset/' + self.step_name + '/temp_bin'
-                temp_pos = h5f.create_dataset(grp, data=col_data > col_data[:, np.newaxis], chunks=True)
+            # 4a. Determine gradual ranks
+            tmp_rank = np.zeros(k, dtype=np.float16)
+            bin_sum = 0
+            row = 0
+            for i in range(n):
+                for j in range(i + 1, n):
+                    if col_data[i] > col_data[j]:
+                        tmp_rank[row] = 1
+                        bin_sum += 1
+                    elif col_data[j] > col_data[i]:
+                        tmp_rank[row] = 0.5
+                        bin_sum += 1
+                    row += 1
+            rank_matrix[:, col] = tmp_rank[:]
 
-                # 3b. Check support of each generated itemset
-                bin_sum = 0
-                for s in temp_pos.iter_chunks():
-                    bin_sum += np.sum(temp_pos[s])
-                supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
-                if supp >= self.thd_supp:
-                    self.valid_gis.append(incr)
-                    self.valid_gis.append(decr)
-                    valid_count += 2
-                del h5f[grp]
-                # if supp < self.thd_supp:
-                #    del h5f[grp]
-                # else:
-                    # grp = 'dataset/' + self.step_name + '/valid_bins/' + str(col) + '_neg'
-                    # h5f.create_dataset(grp, data=col_data < col_data[:, np.newaxis], chunks=True)
-                #    valid_count += 2
+            # 4b. Check support of each generated item-set
+            supp = float(np.sum(bin_sum)) / float(n * (n - 1.0) / 2.0)
+            if supp >= self.thd_supp:
+                valid_items.append(incr.as_string())
+                valid_items.append(decr.as_string())
+                valid_count += 2
+
         h5f.close()
+        grp_name = 'dataset/' + self.step_name + '/valid_items'
+        self.add_h5_dataset(grp_name, np.array(valid_items).astype('S'))
         data_size = np.array([self.col_count, self.row_count, self.attr_size, valid_count])
         self.add_h5_dataset('dataset/size_arr', data_size)
         if valid_count < 3:
             self.no_bins = True
+        # rank_matrix.flush()
+        del self.data
+        del attr_data
+        del valid_items
         gc.collect()
 
     def init_h5_groups(self):
@@ -145,10 +158,10 @@ class Dataset:
             h5f = h5py.File(self.h5_file, 'w')
             grp = h5f.require_group('dataset')
             grp.create_dataset('titles', data=self.titles)
-            grp.create_dataset('attr_data', data=self.attr_data.astype('S'), compression="gzip",
-                               compression_opts=9)
-            grp.create_dataset('time_cols', data=self.time_cols)
-            grp.create_dataset('attr_cols', data=self.attr_cols)
+            # grp.create_dataset('attr_data', data=self.attr_data.astype('S'), compression="gzip",
+            #                   compression_opts=9)
+            grp.create_dataset('time_cols', data=self.time_cols.astype('u1'))
+            grp.create_dataset('attr_cols', data=self.attr_cols.astype('u1'))
             h5f.close()
 
     def read_h5_dataset(self, group):
@@ -159,11 +172,14 @@ class Dataset:
         h5f.close()
         return temp
 
-    def add_h5_dataset(self, group, data):
+    def add_h5_dataset(self, group, data, compress=False):
         h5f = h5py.File(self.h5_file, 'r+')
         if group in h5f:
             del h5f[group]
-        h5f.create_dataset(group, data=data, compression="gzip", compression_opts=9)
+        if compress:
+            h5f.create_dataset(group, data=data, chunks=True, compression="gzip", compression_opts=9, shuffle=True)
+        else:
+            h5f.create_dataset(group, data=data)
         h5f.close()
 
     @staticmethod

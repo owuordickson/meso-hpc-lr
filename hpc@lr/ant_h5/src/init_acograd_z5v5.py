@@ -1,45 +1,48 @@
 # -*- coding: utf-8 -*-
 """
 @author: "Dickson Owuor"
-@credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
+@credits: "Anne Laurent,"
 @license: "MIT"
-@version: "3.0"
+@version: "5.5"
 @email: "owuordickson@gmail.com"
-@created: "06 July 2020"
+@created: "22 Feb 2021"
+
 Breath-First Search for gradual patterns (ACO-GRAANK)
+
 Usage:
-    $python init_acograd_v5.py -f ../data/DATASET.csv -s 0.5
+    $python init_acograd_h5v5.py -f ../data/DATASET.csv -s 0.5
+
 Description:
     f -> file path (CSV)
     s -> minimum support
+
 """
 
 import sys
 from optparse import OptionParser
-# from common.profile_mem import Profile
-from ant_colony.aco_grad_v3 import GradACO
+from algorithms.ant_colony.aco_grad_z5v5 import GradACO
 
 
-def init_algorithm(f_path, min_supp, cores, eq=False):
+def init_algorithm(f_path, min_supp, cores):
     try:
         if cores > 1:
             num_cores = cores
         else:
             num_cores = Profile.get_num_cores()
 
-        ac = GradACO(f_path, min_supp, eq)
+        ac = GradACO(f_path, min_supp)
         list_gp = ac.run_ant_colony()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK (3.0)\n"
-        wr_line += "No. of (dataset) attributes: " + str(ac.d_set.column_size) + '\n'
-        wr_line += "No. of (dataset) tuples: " + str(ac.d_set.size) + '\n'
+        wr_line = "Algorithm: ACO-GRAANK HF5 (v5.0)\n"
+        wr_line += "No. of (dataset) attributes: " + str(ac.d_set.col_count) + '\n'
+        wr_line += "No. of (dataset) tuples: " + str(ac.d_set.row_count) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
         wr_line += "Number of iterations: " + str(ac.iteration_count) + '\n\n'
 
-        for txt in d_set.title:
+        for txt in d_set.titles:
             try:
                 wr_line += (str(txt.key) + '. ' + str(txt.value.decode()) + '\n')
             except AttributeError:
@@ -73,8 +76,7 @@ if __name__ == "__main__":
     if not sys.argv:
         filePath = sys.argv[1]
         minSup = sys.argv[2]
-        allowEq = sys.argv[3]
-        numCores = sys.argv[4]
+        numCores = sys.argv[3]
     else:
         optparser = OptionParser()
         optparser.add_option('-f', '--inputFile',
@@ -82,6 +84,7 @@ if __name__ == "__main__":
                              help='path to file containing csv',
                              # default=None,
                              # default='../data/DATASET.csv',
+                             # default='../data/DATASET2.csv',
                              # default='../data/DATASET3.csv',
                              # default='../data/Omnidir.csv',
                              # default='../data/FluTopicData-testsansdate-blank.csv',
@@ -95,11 +98,6 @@ if __name__ == "__main__":
                              help='minimum support value',
                              default=0.5,
                              type='float')
-        optparser.add_option('-e', '--allowEqual',
-                             dest='allowEq',
-                             help='allow equal',
-                             default=None,
-                             type='int')
         optparser.add_option('-c', '--cores',
                              dest='numCores',
                              help='number of cores',
@@ -113,16 +111,15 @@ if __name__ == "__main__":
         else:
             filePath = options.file
         minSup = options.minSup
-        allowEq = options.allowEq
         numCores = options.numCores
 
     import time
     import tracemalloc
-    from common.profile_mem import Profile
+    from algorithms.common.profile_mem import Profile
 
     start = time.time()
     tracemalloc.start()
-    res_text = init_algorithm(filePath, minSup, numCores, allowEq)
+    res_text = init_algorithm(filePath, minSup, numCores)
     snapshot = tracemalloc.take_snapshot()
     end = time.time()
 

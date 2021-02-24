@@ -21,7 +21,7 @@ Description:
 import sys
 from optparse import OptionParser
 # from common.profile_mem import Profile
-from ant_colony.aco_grad_v4 import GradACO
+from algorithms.ant_colony import GradACO
 
 
 def init_algorithm(f_path, min_supp, cores):
@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     import time
     import tracemalloc
-    from common.profile_mem import Profile
+    from algorithms.common.profile_mem import Profile
 
     start = time.time()
     tracemalloc.start()

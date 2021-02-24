@@ -3,7 +3,7 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
 @license: "MIT"
-@version: "5.4"
+@version: "4.0"
 @email: "owuordickson@gmail.com"
 @created: "12 July 2019"
 @modified: "17 Feb 2021"
@@ -11,12 +11,9 @@
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
 """
-import os
-import h5py
 import numpy as np
-from itertools import combinations
-from common.gp_v4 import GI, GP
-from common.dataset_h5v4 import Dataset
+from algorithms.common.gp_v4 import GI, GP
+from algorithms.common.dataset_v4 import Dataset
 
 
 class GradACO:
@@ -27,63 +24,30 @@ class GradACO:
         self.attr_index = self.d_set.attr_cols
         self.e_factor = 0.5  # evaporation factor
         self.iteration_count = 0
-        self.attr_keys = self.d_set.valid_gis
-        self.d = self.generate_d()  # distance matrix (d) & attributes corresponding to d
+        self.d, self.attr_keys = self.generate_d()  # distance matrix (d) & attributes corresponding to d
 
     def generate_d(self):
-        # 1a. Retrieve/Generate distance matrix (d)
-        grp_name = 'dataset/' + self.d_set.step_name + '/d_matrix'
-        d = self.d_set.read_h5_dataset(grp_name)
-        if d.size > 0:
-            return d
+        v_bins = self.d_set.valid_bins
+        # 1. Fetch valid bins group
+        attr_keys = [GI(x[0], x[1].decode()).as_string() for x in v_bins[:, 0]]
 
         # 2. Initialize an empty d-matrix
-        attr_keys = self.attr_keys
         n = len(attr_keys)
         d = np.zeros((n, n), dtype=float)  # cumulative sum of all segments
-        attr_combs = list(combinations(attr_keys, 2))
-        h5f = h5py.File(self.d_set.h5_file, 'r+')
-
-        for str_i, str_j in attr_combs:
-            gi_1 = GI.parse_gi(str_i)
-            gi_2 = GI.parse_gi(str_j)
-            if gi_1.attribute_col == gi_2.attribute_col:
-                # Ignore similar attributes (+ or/and -)
-                continue
-            else:
-                # Cumulative sum of all segments for 2x2 (all attributes) gradual items
-                col_data_1 = self.d_set.attr_data[gi_1.attribute_col]
-                col_data_2 = self.d_set.attr_data[gi_2.attribute_col]
-
-                grp1 = 'dataset/' + self.d_set.step_name + '/temp_bin1'
-                if gi_1.symbol == '+':
-                    bin_1 = h5f.create_dataset(grp1, data=col_data_1 > col_data_1[:, np.newaxis], chunks=True)
+        for i in range(n):
+            for j in range(n):
+                if GI.parse_gi(attr_keys[i]).attribute_col == GI.parse_gi(attr_keys[j]).attribute_col:
+                    # Ignore similar attributes (+ or/and -)
+                    continue
                 else:
-                    bin_1 = h5f.create_dataset(grp1, data=col_data_1 < col_data_1[:, np.newaxis], chunks=True)
-
-                grp2 = 'dataset/' + self.d_set.step_name + '/temp_bin2'
-                if gi_2.symbol == '+':
-                    bin_2 = h5f.create_dataset(grp2, data=col_data_2 > col_data_2[:, np.newaxis], chunks=True)
-                else:
-                    bin_2 = h5f.create_dataset(grp2, data=col_data_2 < col_data_2[:, np.newaxis], chunks=True)
-
-                for k in bin_1.iter_chunks():
-                    i = attr_keys.index(gi_1.as_string())
-                    j = attr_keys.index(gi_2.as_string())
-                    bin_sum = np.sum(np.multiply(bin_1[k], bin_2[k]))
-                    d[i][j] += bin_sum
-                    d[j][i] += bin_sum
-                del h5f[grp1]
-                del h5f[grp2]
-
-        # 3. Save d_matrix in HDF5 file
-        h5f.close()
-        grp_name = 'dataset/' + self.d_set.step_name + '/d_matrix'
-        self.d_set.add_h5_dataset(grp_name, d)
-        return d
+                    bin_1 = v_bins[i][1]
+                    bin_2 = v_bins[j][1]
+                    # Cumulative sum of all segments for 2x2 (all attributes) gradual items
+                    d[i][j] += np.sum(np.multiply(bin_1, bin_2))
+        # print(d)
+        return d, attr_keys
 
     def run_ant_colony(self):
-        pass
         min_supp = self.d_set.thd_supp
         d = self.d
         a = self.d_set.attr_size
@@ -172,56 +136,37 @@ class GradACO:
 
     def update_pheromones(self, pattern, p_matrix):
         idx = [self.attr_keys.index(x.as_string()) for x in pattern.gradual_items]
-        combs = list(combinations(idx, 2))
-        for i, j in combs:
-            p_matrix[i][j] += 1
-            p_matrix[j][i] += 1
+        for n in range(len(idx)):
+            for m in range(n + 1, len(idx)):
+                i = idx[n]
+                j = idx[m]
+                p_matrix[i][j] += 1
+                p_matrix[j][i] += 1
         return p_matrix
 
     def validate_gp(self, pattern):
         # pattern = [('2', '+'), ('4', '+')]
-        n = self.d_set.attr_size
-        attr_data = self.d_set.attr_data
         min_supp = self.d_set.thd_supp
+        n = self.d_set.attr_size
         gen_pattern = GP()
+        bin_arr = np.array([])
 
-        h5f = h5py.File(self.d_set.h5_file, 'r+')
-
-        if len(pattern.gradual_items) >= 2:
-            temp_file = 'temp.dat'
-            gi = pattern.gradual_items[0]
-            col_data = attr_data[gi.attribute_col]
-            grp1 = 'dataset/' + self.d_set.step_name + '/temp_bin1'
-            if gi.symbol == '+':
-                bin_1 = h5f.create_dataset(grp1, data=col_data > col_data[:, np.newaxis], chunks=True)
-            else:
-                bin_1 = h5f.create_dataset(grp1, data=col_data < col_data[:, np.newaxis], chunks=True)
-            gen_pattern.add_gradual_item(gi)
-            temp_bin = np.memmap(temp_file, dtype=bool, mode='w+', shape=bin_1.shape)
-
-            for i in range(1, len(pattern.gradual_items)):
-                bin_sum = 0
-                gi = pattern.gradual_items[i]
-                col_data = attr_data[gi.attribute_col]
-                grp2 = 'dataset/' + self.d_set.step_name + '/temp_bin2'
-                if gi.symbol == '+':
-                    bin_2 = h5f.create_dataset(grp2, data=col_data > col_data[:, np.newaxis], chunks=True)
-                else:
-                    bin_2 = h5f.create_dataset(grp2, data=col_data < col_data[:, np.newaxis], chunks=True)
-
-                for k in bin_1.iter_chunks():
-                    temp_bin[k] = np.multiply(bin_1[k], bin_2[k])
-                    bin_sum += np.sum(temp_bin[k])
-                supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
-                if supp >= min_supp:
+        for gi in pattern.gradual_items:
+            arg = np.argwhere(np.isin(self.d_set.valid_bins[:, 0], gi.gradual_item))
+            if len(arg) > 0:
+                i = arg[0][0]
+                valid_bin = self.d_set.valid_bins[i]
+                if bin_arr.size <= 0:
+                    bin_arr = np.array([valid_bin[1], valid_bin[1]])
                     gen_pattern.add_gradual_item(gi)
-                    gen_pattern.set_support(supp)
-                    for s in bin_1.iter_chunks():
-                        bin_1[s] = temp_bin[s]
-                del h5f[grp2]
-            os.remove(temp_file)
-            del h5f[grp1]
-        h5f.close()
+                else:
+                    bin_arr[1] = valid_bin[1].copy()
+                    temp_bin = np.multiply(bin_arr[0], bin_arr[1])
+                    supp = float(np.sum(temp_bin)) / float(n * (n - 1.0) / 2.0)
+                    if supp >= min_supp:
+                        bin_arr[0] = temp_bin.copy()
+                        gen_pattern.add_gradual_item(gi)
+                        gen_pattern.set_support(supp)
         if len(gen_pattern.gradual_items) <= 1:
             return pattern
         else:

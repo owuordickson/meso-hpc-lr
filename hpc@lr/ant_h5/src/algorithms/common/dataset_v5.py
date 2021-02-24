@@ -16,11 +16,10 @@ Changes
 """
 import csv
 from dateutil.parser import parse
-from itertools import combinations
 import time
 import numpy as np
 import gc
-from common.gp_v4 import GI
+from algorithms.common.gp_v4 import GI
 
 
 class Dataset:
@@ -69,27 +68,28 @@ class Dataset:
         # 2. Initialize (k x attr) matrix
         n = self.attr_size
         m = self.col_count
-        r_combs = list(combinations(np.arange(n), 2))
-        k = len(r_combs)  # r_combs.shape[0]
-        self.rank_matrix = np.zeros((k, m), dtype=float)
+        k = int(n * (n - 1) / 2)
+        self.rank_matrix = np.zeros((k, m), dtype=np.float16)
 
         # 3. Determine binary rank (fuzzy: 0, 0.5, 1) and calculate support of pattern
         valid_count = 0
         for col in self.attr_cols:
             col_data = np.array(attr_data[col], dtype=float)
-            incr = GI(col, '+')  # np.array((col, '+'), dtype='i, S1')
-            decr = GI(col, '-')  # np.array((col, '-'), dtype='i, S1')
+            incr = GI(col, '+')
+            decr = GI(col, '-')
 
             # 3a. Determine gradual ranks
             bin_sum = 0
-            for i in range(len(r_combs)):
-                r = r_combs[i]
-                if col_data[r[0]] > col_data[r[1]]:
-                    self.rank_matrix[i][col] = 1
-                    bin_sum += 1
-                elif col_data[r[1]] > col_data[r[0]]:
-                    self.rank_matrix[i][col] = 0.5
-                    bin_sum += 1
+            row = 0
+            for i in range(n):
+                for j in range(i + 1, n):
+                    if col_data[i] > col_data[j]:
+                        self.rank_matrix[row][col] = 1
+                        bin_sum += 1
+                    elif col_data[j] > col_data[i]:
+                        self.rank_matrix[row][col] = 0.5
+                        bin_sum += 1
+                    row += 1
 
             # 3b. Check support of each generated item-set
             supp = float(np.sum(bin_sum)) / float(n * (n - 1.0) / 2.0)
@@ -98,9 +98,6 @@ class Dataset:
                 self.valid_items.append(decr.as_string())
                 valid_count += 2
 
-        # print(self.rank_matrix)
-        # print(self.valid_items)
-        # print("***\n")
         if valid_count < 3:
             self.no_bins = True
         del self.data

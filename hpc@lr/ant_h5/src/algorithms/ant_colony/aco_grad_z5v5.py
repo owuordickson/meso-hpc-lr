@@ -11,10 +11,11 @@
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
 """
-import h5py
 import numpy as np
-from common.gp_v4 import GI, GP
-from common.dataset_h5v5 import Dataset
+import zarr
+
+from algorithms.common.gp_v4 import GI, GP
+from algorithms.common.dataset_z5v5 import Dataset
 
 
 class GradACO:
@@ -28,29 +29,23 @@ class GradACO:
 
     def generate_d(self):
         # 1a. Retrieve/Generate distance matrix (d)
-        grp_name = 'dataset/' + self.d_set.step_name + '/valid_items/'
-        attr_keys = [x.decode() for x in self.d_set.read_h5_dataset(grp_name)]
+        grp_name = 'dataset/' + self.d_set.step_name + '/valid_items'
+        attr_keys = [x.decode() for x in self.d_set.read_zarr_dataset(grp_name)]
 
         grp_name = 'dataset/' + self.d_set.step_name + '/d_matrix'
-        d = self.d_set.read_h5_dataset(grp_name)
+        d = self.d_set.read_zarr_dataset(grp_name)
         if d.size > 0:
             # 1b. Fetch valid bins group
             return d, attr_keys
 
         # 1b. Fetch valid bins group
-        ranks = self.d_set.read_h5_dataset('dataset/' + self.d_set.step_name + '/rank_matrix/')
-        # m = self.d_set.col_count
-        # n = self.d_set.attr_size
-        # k = int(n * (n - 1) / 2)
-        # ranks = np.memmap(self.d_set.np_file, dtype=float, mode='r', shape=(k, m))
-
-        # 1. Fetch valid bins group
-        # attr_keys = self.d_set.valid_items
-        # ranks = self.d_set.rank_matrix
+        z_root = zarr.open(self.d_set.z_file, 'r')
+        grp_name = 'dataset/' + self.d_set.step_name + '/rank_matrix'
+        ranks = z_root[grp_name][:]  # [:] TO BE REMOVED
 
         # 2. Initialize an empty d-matrix
         n = len(attr_keys)
-        d = np.zeros((n, n), dtype=float)  # cumulative sum of all segments
+        d = np.zeros((n, n), dtype=np.dtype('i8'))  # cumulative sum of all segments
         for i in range(n):
             for j in range(n):
                 gi_1 = GI.parse_gi(attr_keys[i])
@@ -59,6 +54,7 @@ class GradACO:
                     # Ignore similar attributes (+ or/and -)
                     continue
                 else:
+                    # for s in ranks.iter_chunks():
                     bin_1 = ranks[:, gi_1.attribute_col].copy()
                     bin_2 = ranks[:, gi_2.attribute_col].copy()
 
@@ -74,7 +70,7 @@ class GradACO:
                     d[i][j] += np.sum(temp_bin)
         # print(d)
         grp_name = 'dataset/' + self.d_set.step_name + '/d_matrix'
-        self.d_set.add_h5_dataset(grp_name, d)
+        self.d_set.add_zarr_dataset(grp_name, d, compress=True)
         return d, attr_keys
 
     def run_ant_colony(self):
@@ -179,13 +175,12 @@ class GradACO:
         min_supp = self.d_set.thd_supp
         n = self.d_set.attr_size
         gen_pattern = GP()
-        ranks = self.d_set.read_h5_dataset('dataset/' + self.d_set.step_name + '/rank_matrix/')
-        # m = self.d_set.col_count
-        # n = self.d_set.attr_size
-        # k = int(n * (n - 1) / 2)
-        # ranks = np.memmap(self.d_set.np_file, dtype=float, mode='r', shape=(k, m))
 
-        main_bin = ranks[:, pattern.gradual_items[0].attribute_col].copy()
+        z_root = zarr.open(self.d_set.z_file, 'r')
+        grp_name = 'dataset/' + self.d_set.step_name + '/rank_matrix'
+        ranks = z_root[grp_name][:]  # [:] TO BE REMOVED
+
+        main_bin = ranks[:, pattern.gradual_items[0].attribute_col]
         for i in range(len(pattern.gradual_items)):
             gi = pattern.gradual_items[i]
             if i == 0:
