@@ -90,8 +90,8 @@ if __name__ == "__main__":
                              # default='../data/FluTopicData-testsansdate-blank.csv',
                              # default='../data/vehicle_silhouette_dataset.csv',
                              # default='../data/FARSmiss.csv',
-                             default='../data/c2k_02k.csv',
-                             # default='../data/Directio_site15k.csv',
+                             # default='../data/c2k_02k.csv',
+                             default='../data/Directio_site15k.csv',
                              type='string')
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',

@@ -8,7 +8,7 @@
 @created: "12 July 2019"
 @modified: "17 Feb 2021"
 
-Changes
+Changes (Similar to v4.0)
 -------
 1. Fetch all binaries during initialization
 2. Replaced loops for fetching binary rank with numpy function
@@ -88,7 +88,8 @@ class Dataset:
                         tmp_bin = col_segs[i] > col_segs[j][:, np.newaxis]
                         bin_sum += np.sum(tmp_bin)
                         col_bins_pos.append(tmp_bin)
-                        col_bins_neg.append(col_segs[i] < col_segs[j][:, np.newaxis])
+                        tmp_bin = col_segs[i] < col_segs[j][:, np.newaxis]
+                        col_bins_neg.append(tmp_bin)
             # print(col_bins_pos)
             # print(bin_sum)
             # print("---\n")

@@ -15,4 +15,4 @@ module load python/3.8.2
 
 # python3 ant_h5/src/init_acograd_v5.py -f data/c2k.csv -c 14 -s 0.6
 # python3 ant_h5/src/init_acograd_v5.py -f data/UCI_household_power_consumption116k.csv -c 14 -s 0.6
-python3 ant_h5/src/init_acograd_v4n5.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.6
+python3 ant_h5/src/init_acograd_h5v6.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.6

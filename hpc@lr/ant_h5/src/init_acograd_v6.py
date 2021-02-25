@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 @author: "Dickson Owuor"
-@credits: "Anne Laurent,"
+@credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
 @license: "MIT"
-@version: "5.5"
+@version: "4.0"
 @email: "owuordickson@gmail.com"
-@created: "22 Feb 2021"
+@created: "17 Feb 2021"
 
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
 Usage:
-    $python init_acograd_h5v5.py -f ../data/DATASET.csv -s 0.5
+    $python init_acograd_v4.py -f ../data/DATASET.csv -s 0.5
 
 Description:
     f -> file path (CSV)
@@ -20,26 +20,28 @@ Description:
 
 import sys
 from optparse import OptionParser
-from algorithms.ant_colony.aco_grad_z5v5 import GradACO
+# from common.profile_mem import Profile
+from algorithms.ant_colony.aco_grad_v6 import GradACO
 
 
-def init_algorithm(f_path, min_supp, cores):
+def init_algorithm(f_path, min_supp, cores, chunks=5):
     try:
         if cores > 1:
             num_cores = cores
         else:
             num_cores = Profile.get_num_cores()
 
-        ac = GradACO(f_path, min_supp)
+        ac = GradACO(f_path, chunks, min_supp)
         list_gp = ac.run_ant_colony()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK HF5 (v5.0)\n"
+        wr_line = "Algorithm: ACO-GRAANK (6.0)\n"
         wr_line += "No. of (dataset) attributes: " + str(ac.d_set.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(ac.d_set.row_count) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
+        wr_line += "Number of chunks: " + str(chunks) + '\n'
         wr_line += "Number of iterations: " + str(ac.iteration_count) + '\n\n'
 
         for txt in d_set.titles:
@@ -83,7 +85,7 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             # default='../data/DATASET.csv',
+                             default='../data/DATASET.csv',
                              # default='../data/DATASET2.csv',
                              # default='../data/DATASET3.csv',
                              # default='../data/Omnidir.csv',
@@ -91,7 +93,7 @@ if __name__ == "__main__":
                              # default='../data/vehicle_silhouette_dataset.csv',
                              # default='../data/FARSmiss.csv',
                              # default='../data/c2k_02k.csv',
-                             default='../data/Directio_site15k.csv',
+                             # default='../data/Directio_site15k.csv',
                              type='string')
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
@@ -106,7 +108,7 @@ if __name__ == "__main__":
         (options, args) = optparser.parse_args()
 
         if options.file is None:
-            print("Usage: $python init_acograd_v5.py -f filename.csv ")
+            print("Usage: $python init_acograd_v4.py -f filename.csv ")
             sys.exit('System will exit')
         else:
             filePath = options.file
