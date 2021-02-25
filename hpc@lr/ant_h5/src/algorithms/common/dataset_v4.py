@@ -10,10 +10,8 @@
 
 Changes
 -------
-1. save attribute gradual item sets binaries as json file and retrieve them as dicts
-   - this frees primary memory from storing nxn matrices
-2. Fetch all binaries during initialization
-3. Replaced loops for fetching binary rank with numpy function
+1. Fetch all binaries during initialization
+2. Replaced loops for fetching binary rank with numpy function
 
 """
 import csv
@@ -34,7 +32,6 @@ class Dataset:
         self.attr_cols = self.get_attr_cols()
         self.valid_bins = np.array([])
         self.no_bins = False
-        self.seg_sums = np.array([])
         self.step_name = ''  # For T-GRAANK
         self.attr_size = 0  # For T-GRAANK
         # self.init_attributes()

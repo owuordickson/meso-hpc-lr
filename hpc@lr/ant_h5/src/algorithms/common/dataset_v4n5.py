@@ -3,15 +3,16 @@
 @author: "Dickson Owuor"
 @credits: "Anne Laurent"
 @license: "MIT"
-@version: "5.0"
+@version: "4.0"
 @email: "owuordickson@gmail.com"
-@created: "22 Feb 2021"
-@modified: "22 Feb 2021"
+@created: "12 July 2019"
+@modified: "17 Feb 2021"
 
 Changes
 -------
-1. uses an nxm matrix to store binary matrices (where n=size/2 * size - 1 && m = attributes * 2).
-2. introduces fuzzy classification of gradual states
+1. Fetch all binaries during initialization
+2. Replaced loops for fetching binary rank with numpy function
+3. Chunks binaries by segmenting length of data set tuples into groups
 
 """
 import csv
@@ -19,20 +20,19 @@ from dateutil.parser import parse
 import time
 import numpy as np
 import gc
-from algorithms.common.gp_v4 import GI
 
 
 class Dataset:
 
-    def __init__(self, file_path, min_sup=0.5, eq=False):
+    def __init__(self, file_path, chunks, min_sup, eq=False):
         self.thd_supp = min_sup
         self.equal = eq
+        self.chunks = chunks
         self.titles, self.data = Dataset.read_csv(file_path)
         self.row_count, self.col_count = self.data.shape
         self.time_cols = self.get_time_cols()
         self.attr_cols = self.get_attr_cols()
-        self.valid_items = []
-        self.rank_matrix = None
+        self.valid_bins = np.array([])
         self.no_bins = False
         self.step_name = ''  # For T-GRAANK
         self.attr_size = 0  # For T-GRAANK
@@ -58,56 +58,59 @@ class Dataset:
         return np.array(time_cols)
 
     def init_gp_attributes(self, attr_data=None):
+        # (check) implement parallel multiprocessing
         # 1. Transpose csv array data
         if attr_data is None:
-            attr_data = self.data.T
+            attr_data = self.data.T.copy()
+            self.data = None
             self.attr_size = self.row_count
         else:
             self.attr_size = len(attr_data[self.attr_cols[0]])
 
-        # 2. Initialize (k x attr) matrix
+        # 2. Construct and store 1-item_set valid bins
+        # execute binary rank to calculate support of pattern
         n = self.attr_size
-        m = self.col_count
-        k = int(n * (n - 1) / 2)
-        self.rank_matrix = np.zeros((k, m), dtype=np.float16)
-
-        # 3. Determine binary rank (fuzzy: 0, 0.5, 1) and calculate support of pattern
-        valid_count = 0
+        valid_bins = list()
         for col in self.attr_cols:
             col_data = np.array(attr_data[col], dtype=float)
-            incr = GI(col, '+')
-            decr = GI(col, '-')
+            incr = np.array((col, '+'), dtype='i, S1')
+            decr = np.array((col, '-'), dtype='i, S1')
 
-            # 3a. Determine gradual ranks
-            tmp_rank = np.where(col_data < col_data[:, np.newaxis], 1,
-                                np.where(col_data > col_data[:, np.newaxis], 0.5, 0))
-            tmp_rank = tmp_rank[np.triu_indices(n, k=1)]
+            # 2a. Chunk col_data into segments
+            col_segs = np.array_split(col_data, self.chunks)
+            col_bins_pos = []
+            col_bins_neg = []
+            bin_sum = 0
+            # print(col_segs)
+            for i in range(self.chunks):
+                for j in range(self.chunks):
+                    with np.errstate(invalid='ignore'):
+                        tmp_bin = col_segs[i] > col_segs[j][:, np.newaxis]
+                        bin_sum += np.sum(tmp_bin)
+                        col_bins_pos.append(tmp_bin)
+                        col_bins_neg.append(col_segs[i] < col_segs[j][:, np.newaxis])
+            # print(col_bins_pos)
+            # print(bin_sum)
+            # print("---\n")
 
-            # 3a. Determine gradual ranks
-            # bin_sum = 0
-            # row = 0
-            # for i in range(n):
-            #    for j in range(i + 1, n):
-            #        if col_data[i] > col_data[j]:
-            #            self.rank_matrix[row][col] = 1
-            #            bin_sum += 1
-            #        elif col_data[j] > col_data[i]:
-            #            self.rank_matrix[row][col] = 0.5
-            #            bin_sum += 1
-            #        row += 1
+            # 2a. Generate 1-itemset gradual items
+            # with np.errstate(invalid='ignore'):
+            #    if not self.equal:
+            #        temp_pos = col_data < col_data[:, np.newaxis]
+            #    else:
+            #        temp_pos = col_data <= col_data[:, np.newaxis]
+            #        np.fill_diagonal(temp_pos, 0)
 
-            # 3b. Check support of each generated item-set
-            supp = float(np.count_nonzero(tmp_rank)) / float(n * (n - 1.0) / 2.0)
+            # 2b. Check support of each generated itemset
+            supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
             if supp >= self.thd_supp:
-                self.rank_matrix[:, col] = tmp_rank
-                self.valid_items.append(incr.as_string())
-                self.valid_items.append(decr.as_string())
-                valid_count += 2
-
-        if valid_count < 3:
+                valid_bins.append(np.array([incr.tolist(), col_bins_pos], dtype=object))
+                valid_bins.append(np.array([decr.tolist(), col_bins_neg], dtype=object))
+        self.valid_bins = np.array(valid_bins)
+        # print(self.valid_bins)
+        if len(self.valid_bins) < 3:
             self.no_bins = True
-        del self.data
-        del attr_data
+        attr_data = None
         gc.collect()
 
     @staticmethod
