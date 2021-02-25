@@ -65,7 +65,7 @@ class GradACO:
 
         h5f.close()
         grp_name = 'dataset/' + self.d_set.step_name + '/d_matrix'
-        #self.d_set.add_h5_dataset(grp_name, d, compress=True)
+        self.d_set.add_h5_dataset(grp_name, d, compress=True)
         return d, attr_keys
 
     def run_ant_colony(self):

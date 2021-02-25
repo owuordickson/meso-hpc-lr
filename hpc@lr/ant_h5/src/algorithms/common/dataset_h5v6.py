@@ -3,7 +3,7 @@
 @author: "Dickson Owuor"
 @credits: "Anne Laurent"
 @license: "MIT"
-@version: "4.0"
+@version: "6.0"
 @email: "owuordickson@gmail.com"
 @created: "12 July 2019"
 @modified: "17 Feb 2021"
@@ -87,18 +87,18 @@ class Dataset:
 
     def init_gp_attributes(self, attr_data=None):
         # (check) implement parallel multiprocessing
-        # 1. Transpose csv array data
+        # 1. Initialize h5 groups to store class attributes
+        self.init_h5_groups()
+        # h5f = h5py.File(self.h5_file, 'r+')
+
+        # 2. Transpose csv array data
         if attr_data is None:
-            attr_data = self.data.T.copy()
-            self.data = None
+            h5f = h5py.File(self.h5_file, 'r+')
+            attr_data = h5f['dataset/attr_data']
             self.attr_size = self.row_count
         else:
             self.attr_size = len(attr_data[self.attr_cols[0]])
         self.step_name = 'step_' + str(int(self.row_count - self.attr_size))
-
-        # 2. Initialize h5 groups to store class attributes
-        self.init_h5_groups()
-        # h5f = h5py.File(self.h5_file, 'r+')
 
         # 3. Construct and store 1-item_set valid bins
         # execute binary rank to calculate support of pattern
@@ -129,9 +129,11 @@ class Dataset:
             supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
             if supp >= self.thd_supp:
                 grp_name = 'dataset/' + self.step_name + '/valid_bins/' + incr.as_string()
-                self.add_h5_dataset(grp_name, col_bins_pos)
+                # self.add_h5_dataset(grp_name, col_bins_pos)
+                h5f.create_dataset(grp_name, data=col_bins_pos)
                 grp_name = 'dataset/' + self.step_name + '/valid_bins/' + decr.as_string()
-                self.add_h5_dataset(grp_name, col_bins_neg)
+                # self.add_h5_dataset(grp_name, col_bins_neg)
+                h5f.create_dataset(grp_name, data=col_bins_neg)
                 valid_count += 2
                 # valid_bins.append(np.array([incr.tolist(), col_bins_pos], dtype=object))
                 # valid_bins.append(np.array([decr.tolist(), col_bins_neg], dtype=object))
@@ -140,12 +142,12 @@ class Dataset:
         # h5f.close()
         # grp_name = 'dataset/' + self.step_name + '/valid_items'
         # self.add_h5_dataset(grp_name, np.array(valid_items).astype('S'))
+        h5f.close()
         data_size = np.array([self.col_count, self.row_count, self.attr_size, valid_count])
         self.add_h5_dataset('dataset/size_arr', data_size)
         if valid_count < 3:
             self.no_bins = True
         # rank_matrix.flush()
-        del self.data
         del attr_data
         # del valid_items
         gc.collect()
@@ -157,10 +159,10 @@ class Dataset:
             h5f = h5py.File(self.h5_file, 'w')
             grp = h5f.require_group('dataset')
             grp.create_dataset('titles', data=self.titles)
-            # grp.create_dataset('attr_data', data=self.attr_data.astype('S'), compression="gzip",
-            #                   compression_opts=9)
+            grp.create_dataset('attr_data', data=self.data.T.astype('S'))
             grp.create_dataset('time_cols', data=self.time_cols.astype('u1'))
             grp.create_dataset('attr_cols', data=self.attr_cols.astype('u1'))
+            del self.data
             h5f.close()
 
     def read_h5_dataset(self, group):
