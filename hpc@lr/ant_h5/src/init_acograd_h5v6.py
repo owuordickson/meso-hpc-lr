@@ -24,7 +24,7 @@ from optparse import OptionParser
 from algorithms.ant_colony.aco_grad_h5v6 import GradACO
 
 
-def init_algorithm(f_path, min_supp, cores, chunks=4):
+def init_algorithm(f_path, min_supp, cores, chunks=1):
     try:
         if cores > 1:
             num_cores = cores
@@ -129,5 +129,5 @@ if __name__ == "__main__":
     wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
-    write_file(wr_text, f_name)
+    # write_file(wr_text, f_name)
     print(wr_text)
