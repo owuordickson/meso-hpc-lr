@@ -23,7 +23,6 @@ import h5py
 import time
 import numpy as np
 import pandas as pd
-
 from algorithms.common.gp_v4 import GI
 
 
@@ -82,11 +81,11 @@ class Dataset:
                     tmp_rank = chunk_1.values > chunk_2.values[:, np.newaxis]
                     bin_sum += np.sum(tmp_rank)
                     grp_name = 'dataset/rank_bins/' + incr.as_string() + '/' + str(chunk_count)
-                    h5f.create_dataset(grp_name, data=tmp_rank)
+                    h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
 
                     tmp_rank = chunk_1.values < chunk_2.values[:, np.newaxis]
                     grp_name = 'dataset/rank_bins/' + decr.as_string() + '/' + str(chunk_count)
-                    h5f.create_dataset(grp_name, data=tmp_rank)
+                    h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
                     chunk_count += 1
                     del tmp_rank
 
