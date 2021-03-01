@@ -3,7 +3,7 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler, Edmond Menya, and Anne Laurent,"
 @license: "MIT"
-@version: "6.0"
+@version: "7.0"
 @email: "owuordickson@gmail.com"
 @created: "12 July 2019"
 @modified: "17 Feb 2021"
@@ -11,7 +11,6 @@
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
 """
-import gc
 import h5py
 import numpy as np
 from algorithms.common.gp_v4 import GI, GP
@@ -95,7 +94,7 @@ class GradACO:
 
         # 4. Iterations for ACO
         # while repeated < 1:
-        while it_count < 10:
+        while it_count < 4:
             rand_gp, pheromones = self.generate_aco_gp(pheromones)
             if len(rand_gp.gradual_items) > 1:
                 # print(rand_gp.get_pattern())
