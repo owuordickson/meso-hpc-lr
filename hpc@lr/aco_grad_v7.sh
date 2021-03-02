@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#SBATCH --job-name=acograd-v7
+#SBATCH --job-name=aco-v7
 #SBATCH --output=res_acogradv7.txt
 #SBATCH -n 28
 #SBATCH --time=72:00:00
