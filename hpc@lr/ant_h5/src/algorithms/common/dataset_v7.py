@@ -6,7 +6,7 @@
 @version: "7.0"
 @email: "owuordickson@gmail.com"
 @created: "26 Feb 2021"
-@modified: "26 Feb 2021"
+@modified: "26 Feb 2021"aco
 
 Changes
 -------
@@ -40,6 +40,8 @@ class Dataset:
             self.col_count = size[0]
             self.row_count = size[1]
             valid_count = size[2]
+            self.used_chunks = size[3]
+            self.skipped_chunks = size[4]
             h5f.close()
             self.thd_supp = min_sup
             if valid_count < 3:
@@ -54,6 +56,8 @@ class Dataset:
             self.titles, self.col_count, self.time_cols = Dataset.read_csv_header(file_path)
             self.attr_cols = self.get_attr_cols()
             self.row_count = 0  # TO BE UPDATED
+            self.used_chunks = 0
+            self.skipped_chunks = 0
             self.no_bins = False
             self.init_gp_attributes()
 
@@ -67,11 +71,13 @@ class Dataset:
         h5f = h5py.File(self.h5_file, 'w')
         # 2. Construct and store 1-item_set valid rank bins
         valid_count = 0
+        used_chunks = 0
+        skipped_chunks = 0
         for col in self.attr_cols:
             incr = GI(col, '+')
             decr = GI(col, '-')
 
-            chunk_count = 0
+            tmp_count = 0
             bin_sum = 0
             n = 0
             # Execute binary rank
@@ -79,14 +85,28 @@ class Dataset:
                 n += chunk_1.values.shape[0]
                 for chunk_2 in self.read_csv_data(col, self.chunk_size):
                     tmp_rank = chunk_1.values > chunk_2.values[:, np.newaxis]
-                    bin_sum += np.sum(tmp_rank)
-                    grp_name = 'dataset/rank_bins/' + incr.as_string() + '/' + str(chunk_count)
-                    h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
+                    tmp_sum = np.sum(tmp_rank)
+                    grp_name = 'dataset/rank_bins/' + incr.as_string() + '/' + str(tmp_count)
+                    if (tmp_sum / self.chunk_size) >= 0.5:
+                        h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
+                        used_chunks += 1
+                    else:
+                        h5f.create_dataset(grp_name, data=np.array([]))
+                        skipped_chunks += 1
 
                     tmp_rank = chunk_1.values < chunk_2.values[:, np.newaxis]
-                    grp_name = 'dataset/rank_bins/' + decr.as_string() + '/' + str(chunk_count)
-                    h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
-                    chunk_count += 1
+                    tmp_sum = np.sum(tmp_rank)
+                    grp_name = 'dataset/rank_bins/' + decr.as_string() + '/' + str(tmp_count)
+                    if (tmp_sum / self.chunk_size) >= 0.5:
+                        h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
+                        bin_sum += tmp_sum
+                        used_chunks += 1
+                    else:
+                        h5f.create_dataset(grp_name, data=np.array([]))
+                        skipped_chunks += 1
+
+                    # bin_sum += tmp_sum
+                    tmp_count += 1
                     del tmp_rank
 
             # Check support of each bin_rank
@@ -104,9 +124,12 @@ class Dataset:
         h5f.create_dataset('dataset/titles', data=self.titles)
         h5f.create_dataset('dataset/time_cols', data=self.time_cols.astype('u1'))
         h5f.create_dataset('dataset/attr_cols', data=self.attr_cols.astype('u1'))
-        h5f.create_dataset('dataset/size_arr', data=np.array([self.col_count, self.row_count, valid_count]))
+        h5f.create_dataset('dataset/size_arr', data=np.array([self.col_count, self.row_count, valid_count, used_chunks,
+                                                              skipped_chunks]))
         h5f.close()
         gc.collect()
+        self.used_chunks = used_chunks
+        self.skipped_chunks = skipped_chunks
         if valid_count < 3:
             self.no_bins = True
 

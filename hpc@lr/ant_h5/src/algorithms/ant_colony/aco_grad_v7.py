@@ -57,7 +57,11 @@ class GradACO:
                     # 2b. calculate sum from bin ranks (in chunks)
                     bin_sum = 0
                     for k in list(bin_1.keys()):
-                        bin_sum += np.sum(np.multiply(bin_1[k][:], bin_2[k][:]))
+                        try:
+                            if bin_1[k][:].size > 0 and bin_2[k][:].size > 0:
+                                bin_sum += np.sum(np.multiply(bin_1[k][:], bin_2[k][:]))
+                        except KeyError:
+                            continue
                     d[i][j] += bin_sum
 
         h5f.create_dataset('dataset/d_matrix', data=d, chunks=True, compression="gzip", compression_opts=9, shuffle=True)
@@ -180,13 +184,17 @@ class GradACO:
                 bin_sum = 0
                 # tmp_bin = []
                 for k in list(bin_2.keys()):
-                    bin_prod = np.multiply(bin_1[k][:], bin_2[k][:])
-                    bin_sum += np.sum(bin_prod)
-                    # tmp_bin.append(bin_prod)
-                    grp = 'dataset/rank_bins/tmp/' + '/' + str(k)
-                    if grp in h5f:
-                        del h5f[grp]
-                    h5f.create_dataset(grp, data=bin_prod)
+                    try:
+                        if bin_1[k][:].size > 0 and bin_2[k][:].size > 0:
+                            bin_prod = np.multiply(bin_1[k][:], bin_2[k][:])
+                            bin_sum += np.sum(bin_prod)
+                            # tmp_bin.append(bin_prod)
+                            grp = 'dataset/rank_bins/tmp/' + '/' + str(k)
+                            if grp in h5f:
+                                del h5f[grp]
+                            h5f.create_dataset(grp, data=bin_prod)
+                    except KeyError:
+                        continue
 
                 supp = float(bin_sum) / float(n * (n - 1.0) / 2.0)
                 if supp >= min_supp:
