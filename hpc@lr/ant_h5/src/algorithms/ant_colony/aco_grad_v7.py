@@ -64,7 +64,8 @@ class GradACO:
                             continue
                     d[i][j] += bin_sum
 
-        h5f.create_dataset('dataset/d_matrix', data=d, chunks=True, compression="gzip", compression_opts=9, shuffle=True)
+        grp = 'dataset/d_matrix'
+        h5f.create_dataset(grp, data=d, chunks=True, compression="gzip", compression_opts=9, shuffle=True)
         h5f.close()
         return d, attr_keys
 

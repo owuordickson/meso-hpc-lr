@@ -2,12 +2,13 @@
 """
 @author: "Dickson OWUOR"
 @credits: "Anne LAURENT and Joseph ORERO"
-@version: "4.2"
+@version: "4.8"
 @email: "owuordickson@gmail.com"
 @created: "20 May 2020"
-@modified: "17 Feb 2021"
+@modified: "10 Mar 2021"
 
-GP: Gradual Pattern
+GI: Gradual Item (0, +)
+GP: Gradual Pattern {(0, +), (1, -), (3, +)}
 TGP: Temporal Gradual Pattern
 
 """
@@ -21,6 +22,7 @@ class GI:
         self.symbol = symbol
         self.gradual_item = np.array((attr_col, symbol), dtype='i, S1')
         self.tuple = tuple([attr_col, symbol])
+        self.rank_sum = 0
 
     def inv(self):
         if self.symbol == '+':
@@ -114,6 +116,13 @@ class GP:
             syms.append(gi[1])
         return attrs, syms
 
+    def get_index(self, gi):
+        for i in range(len(self.gradual_items)):
+            gi_obj = self.gradual_items[i]
+            if (gi.symbol == gi_obj.symbol) and (gi.attribute_col == gi_obj.attribute_col):
+                return i
+        return -1
+
     def inv_pattern(self):
         pattern = list()
         for gi in self.gradual_items:
@@ -123,9 +132,8 @@ class GP:
     def contains(self, gi):
         if gi is None:
             return False
-        for gi_obj in self.gradual_items:
-            if (gi.symbol == gi_obj.symbol) and (gi.attribute_col == gi_obj.attribute_col):
-                return True
+        if gi in self.gradual_items:
+            return True
         return False
 
     def contains_attr(self, gi):
@@ -141,6 +149,12 @@ class GP:
         for item in self.gradual_items:
             pattern.append(item.to_string())
         return pattern
+
+    def to_dict(self):
+        gi_dict = {}
+        for gi in self.gradual_items:
+            gi_dict.update({gi.as_string(): 0})
+        return gi_dict
 
 
 class TimeLag:

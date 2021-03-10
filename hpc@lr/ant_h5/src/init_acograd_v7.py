@@ -24,7 +24,7 @@ from optparse import OptionParser
 from algorithms.ant_colony.aco_grad_v7 import GradACO
 
 
-def init_algorithm(f_path, min_supp, cores, chunk_size=10000):
+def init_algorithm(f_path, min_supp, cores, chunk_size=2):
     try:
         if cores > 1:
             num_cores = cores
@@ -35,22 +35,23 @@ def init_algorithm(f_path, min_supp, cores, chunk_size=10000):
         list_gp = ac.run_ant_colony()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK (7.0)\n"
-        wr_line += "No. of (dataset) attributes: " + str(ac.d_set.col_count) + '\n'
-        wr_line += "No. of (dataset) objects: " + str(ac.d_set.row_count) + '\n'
+        wr_line = "Algorithm: ACO-GRAANK (v7.0)\n"
         wr_line += "Minimum support: " + str(min_supp) + '\n'
-        wr_line += "Number of cores: " + str(num_cores) + '\n'
-        wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
-        wr_line += "Number of chunks: " + str(chunk_size) + '\n'
-        wr_line += "Number of iterations: " + str(ac.iteration_count) + '\n\n'
+        wr_line += "No. of CPU cores: " + str(num_cores) + '\n'
+        wr_line += "No. of (dataset) attributes: " + str(d_set.col_count) + '\n'
+        wr_line += "No. of (dataset) objects: " + str(d_set.row_count) + '\n'
+        wr_line += "No. of (memory) used chunks: " + str(d_set.used_chunks) + '\n'
+        wr_line += "No. of (memory) skipped chunks: " + str(d_set.skipped_chunks) + '\n'
+        wr_line += "No. of (ACO) iterations: " + str(ac.iteration_count) + '\n'
+        wr_line += "No. of gradual patterns: " + str(len(list_gp)) + '\n\n'
 
-        wr_line += ac.d_set.print_header()
+        wr_line += d_set.print_header()
 
         wr_line += str("\nFile: " + f_path + '\n')
         wr_line += str("\nPattern : Support" + '\n')
 
         for gp in list_gp:
-            wr_line += (str(gp.to_string()) + ' : ' + str(gp.support) + '\n')
+            wr_line += (str(gp.to_string()) + ' : >= ' + str(gp.support) + '\n')
 
         # wr_line += "\nPheromone Matrix\n"
         # wr_line += str(ac.p_matrix)
@@ -81,7 +82,7 @@ if __name__ == "__main__":
                              dest='file',
                              help='path to file containing csv',
                              # default=None,
-                             # default='../data/DATASET.csv',
+                             default='../data/DATASET.csv',
                              # default='../data/DATASET2.csv',
                              # default='../data/DATASET3.csv',
                              # default='../data/Omnidir.csv',
@@ -89,7 +90,8 @@ if __name__ == "__main__":
                              # default='../data/vehicle_silhouette_dataset.csv',
                              # default='../data/FARSmiss.csv',
                              # default='../data/c2k_02k.csv',
-                             default='../data/Directio_site15k.csv',
+                             # default='../data/Directio_site15k.csv',
+                             # default='../data/UCI_household_power_consumption500k.csv',
                              type='string')
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
@@ -125,5 +127,5 @@ if __name__ == "__main__":
     wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
-    write_file(wr_text, f_name)
+    # write_file(wr_text, f_name)
     print(wr_text)

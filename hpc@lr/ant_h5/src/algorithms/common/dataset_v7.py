@@ -5,8 +5,8 @@
 @license: "MIT"
 @version: "7.0"
 @email: "owuordickson@gmail.com"
-@created: "26 Feb 2021"
-@modified: "26 Feb 2021"aco
+@created: "12 July 2019"
+@modified: "26 Feb 2021"
 
 Changes
 -------
@@ -86,23 +86,23 @@ class Dataset:
                 for chunk_2 in self.read_csv_data(col, self.chunk_size):
                     tmp_rank = chunk_1.values > chunk_2.values[:, np.newaxis]
                     tmp_sum = np.sum(tmp_rank)
-                    grp_name = 'dataset/rank_bins/' + incr.as_string() + '/' + str(tmp_count)
+                    grp = 'dataset/rank_bins/' + incr.as_string() + '/' + str(tmp_count)
                     if (tmp_sum / self.chunk_size) >= 0.5:
-                        h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
+                        h5f.create_dataset(grp, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
                         used_chunks += 1
                     else:
-                        h5f.create_dataset(grp_name, data=np.array([]))
+                        h5f.create_dataset(grp, data=np.array([]))
                         skipped_chunks += 1
 
                     tmp_rank = chunk_1.values < chunk_2.values[:, np.newaxis]
                     tmp_sum = np.sum(tmp_rank)
-                    grp_name = 'dataset/rank_bins/' + decr.as_string() + '/' + str(tmp_count)
+                    grp = 'dataset/rank_bins/' + decr.as_string() + '/' + str(tmp_count)
                     if (tmp_sum / self.chunk_size) >= 0.5:
-                        h5f.create_dataset(grp_name, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
+                        h5f.create_dataset(grp, data=tmp_rank, compression="gzip", compression_opts=9, shuffle=True)
                         bin_sum += tmp_sum
                         used_chunks += 1
                     else:
-                        h5f.create_dataset(grp_name, data=np.array([]))
+                        h5f.create_dataset(grp, data=np.array([]))
                         skipped_chunks += 1
 
                     # bin_sum += tmp_sum
@@ -116,10 +116,10 @@ class Dataset:
             if supp >= self.thd_supp:
                 valid_count += 2
             else:
-                grp_name = 'dataset/rank_bins/' + incr.as_string() + '/'
-                del h5f[grp_name]
-                grp_name = 'dataset/rank_bins/' + decr.as_string() + '/'
-                del h5f[grp_name]
+                grp = 'dataset/rank_bins/' + incr.as_string() + '/'
+                del h5f[grp]
+                grp = 'dataset/rank_bins/' + decr.as_string() + '/'
+                del h5f[grp]
         # print(h5f['dataset/rank_bins/'].keys())
         h5f.create_dataset('dataset/titles', data=self.titles)
         h5f.create_dataset('dataset/time_cols', data=self.time_cols.astype('u1'))
