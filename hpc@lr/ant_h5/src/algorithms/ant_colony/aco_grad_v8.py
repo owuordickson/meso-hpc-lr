@@ -80,7 +80,7 @@ class GradACO:
 
         # 4. Iterations for ACO
         # while repeated < 1:
-        while it_count < 10:
+        while it_count < 2:
             rand_gp, pheromones = self.generate_aco_gp(pheromones)
             if len(rand_gp.gradual_items) > 1:
                 # print(rand_gp.get_pattern())
@@ -176,6 +176,11 @@ class GradACO:
                 for i in range(len(pattern.gradual_items)):
                     # Get gradual item
                     gi = pattern.gradual_items[i]
+
+                    # Replace invalid values with 0
+                    chunk_1 = chunk_1.replace(to_replace=['?', np.NAN], value='0').astype(np.float)
+                    chunk_2 = chunk_2.replace(to_replace=['?', np.NAN], value='0').astype(np.float)
+                    # print(chunk_1)
 
                     # Get column name
                     col_name = self.d_set.get_col_name(gi)
