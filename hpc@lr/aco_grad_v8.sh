@@ -9,13 +9,13 @@
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
 module load python/3.8.2
-# python3 ant_h5/src/init_acograd_v4.py -f data/c2k.csv -c 14 -s 0.5
-# python3 ant_h5/src/init_acograd_v4.py -f data/UCI_household_power_consumption116k.csv -c 14 -s 0.5
-# python3 ant_h5/src/init_acograd_v4.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.5
+python3 ant_h5/src/init_acograd_v4.py -f data/c2k.csv -c 14 -s 0.1
+python3 ant_h5/src/init_acograd_v4.py -f data/UCI_household_power_consumption116k.csv -c 14 -s 0.1
+python3 ant_h5/src/init_acograd_v4.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.1
 
-# python3 ant_h5/src/init_acograd_v8.py -f data/c2k.csv -c 14 -s 0.1
-# python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption116k.csv -c 14 -s 0.1
-# python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.1
+python3 ant_h5/src/init_acograd_v8.py -f data/c2k.csv -c 14 -s 0.1
+python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption116k.csv -c 14 -s 0.1
+python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption500k.csv -c 14 -s 0.1
 
 python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption1M.csv -c 14 -s 0.1
 python3 ant_h5/src/init_acograd_v8.py -f data/UCI_household_power_consumption2M.csv -c 14 -s 0.1
