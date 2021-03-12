@@ -3,7 +3,7 @@
 #SBATCH --job-name=aco-v8
 #SBATCH --output=res_acogradv8.txt
 #SBATCH -n 14
-#SBATCH --time=72:00:00
+#SBATCH --time=288:00:00
 #SBATCH --partition=lirmm
 #SBATCH --account=pgpm
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
