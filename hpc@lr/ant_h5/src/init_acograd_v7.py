@@ -20,11 +20,10 @@ Description:
 
 import sys
 from optparse import OptionParser
-# from common.profile_mem import Profile
 from algorithms.ant_colony.aco_grad_v7 import GradACO
 
 
-def init_algorithm(f_path, min_supp, cores, chunk_size=2):
+def init_algorithm(f_path, min_supp, cores, chunk_size=100000):
     try:
         if cores > 1:
             num_cores = cores
@@ -35,7 +34,7 @@ def init_algorithm(f_path, min_supp, cores, chunk_size=2):
         list_gp = ac.run_ant_colony()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK (v7.0)\n"
+        wr_line = "Algorithm: ACO-GRAANK HDF5 (v7.0)\n"
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "No. of CPU cores: " + str(num_cores) + '\n'
         wr_line += "No. of (dataset) attributes: " + str(d_set.col_count) + '\n'
@@ -106,7 +105,7 @@ if __name__ == "__main__":
         (options, args) = optparser.parse_args()
 
         if options.file is None:
-            print("Usage: $python init_acograd_v4.py -f filename.csv ")
+            print("Usage: $python init_acograd_v7.py -f filename.csv ")
             sys.exit('System will exit')
         else:
             filePath = options.file
@@ -127,5 +126,5 @@ if __name__ == "__main__":
     wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
-    # write_file(wr_text, f_name)
+    write_file(wr_text, f_name)
     print(wr_text)

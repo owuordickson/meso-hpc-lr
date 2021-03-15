@@ -20,7 +20,6 @@ Description:
 
 import sys
 from optparse import OptionParser
-# from common.profile_mem import Profile
 from algorithms.ant_colony.aco_grad_v4 import GradACO
 
 
@@ -35,7 +34,7 @@ def init_algorithm(f_path, min_supp, cores):
         list_gp = ac.run_ant_colony()
 
         d_set = ac.d_set
-        wr_line = "Algorithm: ACO-GRAANK (4.0)\n"
+        wr_line = "Algorithm: ACO-GRAANK (v4.0)\n"
         wr_line += "No. of (dataset) attributes: " + str(ac.d_set.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(ac.d_set.row_count) + '\n'
         wr_line += "Minimum support: " + str(min_supp) + '\n'
@@ -97,7 +96,7 @@ if __name__ == "__main__":
         optparser.add_option('-s', '--minSupport',
                              dest='minSup',
                              help='minimum support value',
-                             default=0.5,
+                             default=0.1,
                              type='float')
         optparser.add_option('-c', '--cores',
                              dest='numCores',
@@ -128,5 +127,5 @@ if __name__ == "__main__":
     wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
     wr_text += str(res_text)
     f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
-    # write_file(wr_text, f_name)
+    write_file(wr_text, f_name)
     print(wr_text)

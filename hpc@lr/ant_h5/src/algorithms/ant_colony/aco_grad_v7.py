@@ -6,7 +6,7 @@
 @version: "7.0"
 @email: "owuordickson@gmail.com"
 @created: "12 July 2019"
-@modified: "17 Feb 2021"
+@modified: "15 Mar 2021"
 
 Breath-First Search for gradual patterns (ACO-GRAANK)
 
