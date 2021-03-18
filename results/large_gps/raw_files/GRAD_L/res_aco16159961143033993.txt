@@ -1,13 +1,13 @@
-Header titles fetched from CSV file
-Run-time: 3794.937434196472 seconds
-Total allocated memory size: 494.4 KiB
-Algorithm: ACO-GRAANK HDF5 (v7.0)
+Run-time: 16.35351824760437 seconds
+Total allocated memory size: 506.9 KiB
+Algorithm: ACO-GRAANK BD (v8.0)
 Minimum support: 0.1
 No. of CPU cores: 14
 No. of (dataset) attributes: 98
 No. of (dataset) objects: 3943
-No. of (memory) used chunks: 184
-No. of (memory) skipped chunks: 12
+No. of (memory) chunk size: 100000
+No. of (memory) used chunks: 2
+No. of (memory) skipped chunks: 0
 No. of (ACO) iterations: 2
 No. of gradual patterns: 2
 
@@ -115,6 +115,5 @@ Header Columns/Attributes
 File: data/c2k.csv
 
 Pattern : Support
-['27-', '95-', '73+'] : >= 0.23
-['55-', '86+', '32-'] : >= 0.151
-
+['6+', '12+'] : >= 0.21
+['86-', '14+'] : >= 0.155
