@@ -1,5 +1,5 @@
-Run-time: 6.576471567153931 seconds
-Total allocated memory size: 124.3 KiB
+Run-time: 254.4205253124237 seconds
+Total allocated memory size: 413.4 KiB
 Algorithm: ACO-GRAANK HDF5 (v7.0)
 Minimum support: 0.1
 No. of CPU cores: 14
@@ -25,5 +25,5 @@ Header Columns/Attributes
 File: data/UCI_household_power_consumption10k.csv
 
 Pattern : Support
-['8+', '3-', '4-'] : >= 0.18
-['8+', '4+'] : >= 0.211
+['4+', '7-'] : >= 0.264
+['3+', '2-', '4+', '5-'] : >= 0.289
