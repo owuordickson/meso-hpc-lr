@@ -8,7 +8,7 @@
 #SBATCH --account=pgpm
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
-module load python/3.7.2
+module load python/3.8.2
 python3 ant/src/algorithms/aco/init_acograd.py -f data/breast_cancer.csv -c 14 -s 0.5
 python3 ant/src/algorithms/aco/init_acograd.py -f data/c2k.csv -c 14 -s 0.5
 python3 ant/src/algorithms/aco/init_acograd.py -f data/Directio_site15k.csv -c 14 -s 0.5
