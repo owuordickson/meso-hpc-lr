@@ -19,31 +19,21 @@ import gc
 from .dataset_bfs import Dataset
 
 
-class Dataset_dfs(Dataset):
+class DatasetDFS(Dataset):
 
     def __init__(self, file_path, min_sup=0, eq=False):
-        data = Dataset.read_csv(file_path)
-        if len(data) <= 1:
-            self.data = np.array([])
-            data = None
-            print("csv file read error")
-            raise Exception("Unable to read csv file or file has no data")
-        else:
-            print("Data fetched from csv file")
-            self.data = np.array([])
-            self.title = self.get_title(data)  # optimized (numpy)
-            self.time_cols = self.get_time_cols()  # optimized (numpy)
-            self.attr_cols = self.get_attributes()  # optimized (numpy)
-            self.column_size = self.get_attribute_no()  # optimized (numpy)
-            self.size = self.get_size()  # optimized (numpy)
-            self.attr_size = 0
-            self.thd_supp = min_sup
-            self.equal = eq
-            data = None
-            self.cost_matrix = np.ones((self.column_size, 3), dtype=int)
-            # self.no_bins = False
-            # self.step_name = ''
-            # self.encoded_data = np.array([])
+        # super().__init__(file_path, min_sup, eq)
+        self.thd_supp = min_sup
+        self.equal = eq
+        self.titles, self.data = Dataset.read_csv(file_path)
+        self.row_count, self.col_count = self.data.shape
+        self.time_cols = self.get_time_cols()
+        self.attr_cols = self.get_attr_cols()
+        self.cost_matrix = np.ones((self.col_count, 3), dtype=int)
+        self.no_bins = False
+        self.step_name = ''
+        self.attr_size = 0
+        # self.encoded_data = np.array([])
 
     def encode_data(self):
         attr_data = self.data.T

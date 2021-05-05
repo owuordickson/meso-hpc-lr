@@ -16,30 +16,32 @@ from numpy import random as rand
 import gc
 from collections import defaultdict
 
-from .lcm_grad import LCM_g
+from .lcm_gp import LcmGP
 from .shared.gp import GI, GP
-from .shared.dataset_dfs import Dataset_dfs
+from .shared.dataset_dfs import DatasetDFS
+from .shared.profile import Profile
+from .shared import config as cfg
 
 
-class LcmACO(LCM_g):
+class LcmACO(LcmGP):
 
     def __init__(self, f_path, min_supp, n_jobs=1):
+        # super().__init__(file, min_supp, n_jobs)
         print("LcmACO: Version 1.0")
         self.min_supp = min_supp  # provided by user
-        self._min_supp = LCM_g.check_min_supp(self.min_supp)
-        self.n_jobs = 1  # n_jobs
+        self._min_supp = LcmGP.check_min_supp(self.min_supp)
+        self.n_jobs = n_jobs  # n_jobs
 
-        self.d_set = Dataset_dfs(f_path, min_supp, eq=False)
+        self.d_set = DatasetDFS(f_path, min_supp, eq=False)
         self.D = self.d_set.remove_inv_attrs(self.d_set.encode_data())
         self.size = self.d_set.attr_size
         self.c_matrix = np.ones((self.size, self.size), dtype=np.float64)
         self.p_matrix = np.ones((self.size, self.size), dtype=np.float64)
         np.fill_diagonal(self.p_matrix, 0)
-        self.e_factor = 0.5  # evaporation factor
+        self.e_factor = cfg.EVAPORATION_FACTOR  # evaporation factor
         self.item_to_tids = self._fit()
         # self.large_tids = np.array([])
         # self.attr_index = self.d_set.attr_cols
-        # self.e_factor = 0.1  # evaporation factor
         # print(self.d_set.cost_matrix)
         # print(self.d_set.encoded_data)
         # print(self.p_matrix)
@@ -175,13 +177,13 @@ def init(f_path, min_supp, cores):
 
         d_set = ac.d_set
         wr_line = "Algorithm: ACO-LCM (1.0)\n"
-        wr_line += "No. of (dataset) attributes: " + str(d_set.column_size) + '\n'
-        wr_line += "No. of (dataset) tuples: " + str(d_set.size) + '\n'
+        wr_line += "No. of (dataset) attributes: " + str(d_set.col_count) + '\n'
+        wr_line += "No. of (dataset) tuples: " + str(d_set.row_count) + '\n'
         wr_line += "Minimum support: " + str(ac.min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(lst_gp)) + '\n\n'
 
-        for txt in d_set.title:
+        for txt in d_set.titles:
             try:
                 wr_line += (str(txt.key) + '. ' + str(txt.value.decode()) + '\n')
             except AttributeError:

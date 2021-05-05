@@ -3,7 +3,7 @@ import config as cfg
 import time
 import tracemalloc
 from pkg_algorithms.ga_grad import init
-from pkg_algorithms.shared.profile_mem import Profile
+from pkg_algorithms.shared.profile import Profile
 
 # res = init(cfg.DATASET, cfg.MIN_SUPPORT, cfg.CPU_CORES)
 # print(res)
@@ -18,5 +18,5 @@ wr_text = ("Run-time: " + str(end - start) + " seconds\n")
 wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
 wr_text += str(res_text)
 f_name = str('res_ga' + str(end).replace('.', '', 1) + '.txt')
-cfg.write_file(wr_text, f_name)
+Profile.write_file(wr_text, f_name)
 print(wr_text)

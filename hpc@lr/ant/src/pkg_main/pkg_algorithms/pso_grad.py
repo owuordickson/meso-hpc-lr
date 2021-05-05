@@ -17,6 +17,8 @@ from ypstruct import structure
 
 from .shared.gp import GI, GP
 from .shared.dataset_bfs import Dataset
+from .shared.profile import Profile
+from .shared import config as cfg
 
 
 class GradPSO:
@@ -26,13 +28,13 @@ class GradPSO:
         self.d_set.init_gp_attributes()
         self.attr_index = self.d_set.attr_cols
         self.iteration_count = 0
-        self.max_it = 100
-        self.W = 0.5
-        self.c1 = 0.5
-        self.c2 = 0.9
+        self.max_it = cfg.MAX_ITERATIONS
+        self.W = cfg.VELOCITY
+        self.c1 = cfg.PERSONAL_COEFF
+        self.c2 = cfg.GLOBAL_COEFF
         # self.target = 1
         # self.target_error = 1e-6
-        self.n_particles = 50
+        self.n_particles = cfg.N_PARTICLES
         self.d, self.attr_keys = self.generate_d()  # distance matrix (d) & attributes corresponding to d
 
     def generate_d(self):
@@ -78,8 +80,8 @@ class GradPSO:
         gbest_position = np.array([float('inf'), float('inf')])
 
         velocity_vector = ([np.zeros((len(self.attr_keys),)) for _ in range(n_particles)])
-        bestpos = np.empty(max_it)
-        bestpattern = []
+        best_pos = np.empty(max_it)
+        best_patterns = []
         str_plt = ''
 
         while it_count < max_it:
@@ -93,7 +95,7 @@ class GradPSO:
                 if gbest_fitness_value > fitness_candidate:
                     gbest_fitness_value = fitness_candidate
                     gbest_position = particle_position_vector[i]
-            bestpos[it_count] = self.fitness_function(self.decode_gp(gbest_position))
+            best_pos[it_count] = self.fitness_function(self.decode_gp(gbest_position))
             # if abs(gbest_fitness_value - self.target) < self.target_error:
             #    break
 
@@ -105,23 +107,23 @@ class GradPSO:
                 particle_position_vector[i] = new_position
 
             best_gp = self.decode_gp(gbest_position)
-            best_gp.support = float(1 / bestpos[it_count])
-            is_present = GradPSO.is_duplicate(best_gp, bestpattern)
-            is_sub = GradPSO.check_anti_monotony(bestpattern, best_gp, subset=True)
+            best_gp.support = float(1 / best_pos[it_count])
+            is_present = GradPSO.is_duplicate(best_gp, best_patterns)
+            is_sub = GradPSO.check_anti_monotony(best_patterns, best_gp, subset=True)
             if not (is_present or is_sub):
-                bestpattern.append(best_gp)
+                best_patterns.append(best_gp)
 
             # Show Iteration Information
-            # print("Iteration {}: Best Position = {}".format(it_count, bestpos[it_count]))
-            str_plt += "Iteration {}: Best Position: {} \n".format(it_count, bestpos[it_count])
+            # print("Iteration {}: Best Position = {}".format(it_count, best_pos[it_count]))
+            str_plt += "Iteration {}: Best Position: {} \n".format(it_count, best_pos[it_count])
             it_count += 1
 
         # Output
         out = structure()
         out.pop = particle_position_vector
-        out.bestpos = bestpos
+        out.best_pos = best_pos
         out.gbest_position = gbest_position
-        out.bestpattern = bestpattern
+        out.best_patterns = best_patterns
         out.iterations = str_plt
 
         self.iteration_count = it_count
@@ -217,11 +219,11 @@ def init(f_path, min_supp, cores):
 
         pso = GradPSO(f_path, min_supp)
         out = pso.run_particle_swarm()
-        list_gp = out.bestpattern
+        list_gp = out.best_patterns
 
         # Results
-        # plt.plot(out.bestpos)
-        # plt.semilogy(out.bestpos)
+        # plt.plot(out.best_pos)
+        # plt.semilogy(out.best_pos)
         # plt.xlim(0, pso.max_it)
         # plt.xlabel('Iterations')
         # plt.ylabel('Global Best Position')

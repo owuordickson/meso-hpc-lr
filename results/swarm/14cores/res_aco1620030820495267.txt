@@ -1,0 +1,178 @@
+Run-time: 1907.9386999607086 seconds
+Total allocated memory size: 224.4 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Evaporation factor: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 39
+Number of iterations: 100
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site15k.csv
+
+Pattern : Support
+['4+', '13+'] : 0.56
+['8+', '16-', '14+'] : 0.558
+['4+', '11+'] : 0.509
+['3-', '14+', '11+'] : 0.566
+['9+', '11+', '6+', '5+'] : 0.52
+['14+', '8+', '10+', '13+', '15-'] : 0.506
+['4+', '18+'] : 0.522
+['3-', '18+'] : 0.516
+['5+', '9+', '7+', '14+', '10+'] : 0.612
+['14+', '10+', '15-', '5+', '8+'] : 0.511
+['10+', '11+', '8+', '2+', '3-'] : 0.525
+['8+', '2+', '15-'] : 0.505
+['8+', '10+', '9+', '13+', '5+'] : 0.523
+['15-', '9-'] : 0.546
+['8+', '10+', '11+', '5+', '13+'] : 0.602
+['3-', '8+', '13+'] : 0.509
+['11+', '8+', '16-', '10+', '5+'] : 0.513
+['8+', '11+', '9+', '3-'] : 0.505
+['10+', '11+', '6+', '5+'] : 0.519
+['11+', '6+', '9+', '8+'] : 0.51
+['8+', '9+', '10+', '11+', '14+', '5+'] : 0.621
+['8+', '11+', '5+', '12+'] : 0.631
+['8+', '13+', '11+', '14+', '12+', '5+'] : 0.557
+['11+', '8+', '12+', '10+', '5+'] : 0.631
+['11+', '8+', '14+', '3-'] : 0.547
+['3-', '8+', '12+', '14+'] : 0.506
+['8+', '14+', '10+', '3-', '5+'] : 0.574
+['11+', '14+', '5+', '8+', '3-'] : 0.533
+['3-', '11+', '8+', '5+', '10+'] : 0.575
+['11+', '15+'] : 0.52
+['11+', '10+', '8+', '3-', '5+', '14+'] : 0.531
+['8+', '10+', '6+', '11+', '5+'] : 0.519
+['10+', '8+', '11+', '9+', '5+', '12+'] : 0.521
+['8+', '18-', '5+'] : 0.519
+['3-', '8+', '9+', '10+', '5+'] : 0.519
+['15-', '18-'] : 0.559
+['15-', '6-'] : 0.553
+['10+', '8+', '6+', '9+'] : 0.523
+['8+', '9+', '5+', '6+', '11+'] : 0.51
+
+
+Iterations 
+Iteration 0: Best Cost: 1.79 
+Iteration 1: Best Cost: 1.79 
+Iteration 2: Best Cost: 1.96 
+Iteration 3: Best Cost: 1.77 
+Iteration 4: Best Cost: 1.92 
+Iteration 5: Best Cost: 1.98 
+Iteration 6: Best Cost: 1.92 
+Iteration 7: Best Cost: 1.94 
+Iteration 8: Best Cost: 1.94 
+Iteration 9: Best Cost: 1.63 
+Iteration 10: Best Cost: 1.63 
+Iteration 11: Best Cost: 1.96 
+Iteration 12: Best Cost: 1.9 
+Iteration 13: Best Cost: 1.98 
+Iteration 14: Best Cost: 1.91 
+Iteration 15: Best Cost: 1.83 
+Iteration 16: Best Cost: 1.66 
+Iteration 17: Best Cost: 1.96 
+Iteration 18: Best Cost: 1.96 
+Iteration 19: Best Cost: 1.95 
+Iteration 20: Best Cost: 1.98 
+Iteration 21: Best Cost: 1.98 
+Iteration 22: Best Cost: 1.98 
+Iteration 23: Best Cost: 1.98 
+Iteration 24: Best Cost: 1.93 
+Iteration 25: Best Cost: 1.96 
+Iteration 26: Best Cost: 1.96 
+Iteration 27: Best Cost: 1.61 
+Iteration 28: Best Cost: 1.61 
+Iteration 29: Best Cost: 1.61 
+Iteration 30: Best Cost: 1.61 
+Iteration 31: Best Cost: 1.58 
+Iteration 32: Best Cost: 1.58 
+Iteration 33: Best Cost: 1.58 
+Iteration 34: Best Cost: 1.8 
+Iteration 35: Best Cost: 1.8 
+Iteration 36: Best Cost: 1.58 
+Iteration 37: Best Cost: 1.58 
+Iteration 38: Best Cost: 1.83 
+Iteration 39: Best Cost: 1.98 
+Iteration 40: Best Cost: 1.74 
+Iteration 41: Best Cost: 1.74 
+Iteration 42: Best Cost: 1.74 
+Iteration 43: Best Cost: 1.74 
+Iteration 44: Best Cost: 1.74 
+Iteration 45: Best Cost: 1.88 
+Iteration 46: Best Cost: 1.88 
+Iteration 47: Best Cost: 1.88 
+Iteration 48: Best Cost: 1.88 
+Iteration 49: Best Cost: 1.74 
+Iteration 50: Best Cost: 1.92 
+Iteration 51: Best Cost: 1.88 
+Iteration 52: Best Cost: 1.88 
+Iteration 53: Best Cost: 1.88 
+Iteration 54: Best Cost: 1.88 
+Iteration 55: Best Cost: 1.88 
+Iteration 56: Best Cost: 1.88 
+Iteration 57: Best Cost: 1.88 
+Iteration 58: Best Cost: 1.88 
+Iteration 59: Best Cost: 1.88 
+Iteration 60: Best Cost: 1.88 
+Iteration 61: Best Cost: 1.88 
+Iteration 62: Best Cost: 1.93 
+Iteration 63: Best Cost: 1.93 
+Iteration 64: Best Cost: 1.93 
+Iteration 65: Best Cost: 1.93 
+Iteration 66: Best Cost: 1.93 
+Iteration 67: Best Cost: 1.93 
+Iteration 68: Best Cost: 1.93 
+Iteration 69: Best Cost: 1.92 
+Iteration 70: Best Cost: 1.92 
+Iteration 71: Best Cost: 1.92 
+Iteration 72: Best Cost: 1.93 
+Iteration 73: Best Cost: 1.93 
+Iteration 74: Best Cost: 1.93 
+Iteration 75: Best Cost: 1.93 
+Iteration 76: Best Cost: 1.93 
+Iteration 77: Best Cost: 1.93 
+Iteration 78: Best Cost: 1.93 
+Iteration 79: Best Cost: 1.93 
+Iteration 80: Best Cost: 1.79 
+Iteration 81: Best Cost: 1.79 
+Iteration 82: Best Cost: 1.79 
+Iteration 83: Best Cost: 1.79 
+Iteration 84: Best Cost: 1.79 
+Iteration 85: Best Cost: 1.81 
+Iteration 86: Best Cost: 1.81 
+Iteration 87: Best Cost: 1.81 
+Iteration 88: Best Cost: 1.81 
+Iteration 89: Best Cost: 1.91 
+Iteration 90: Best Cost: 1.91 
+Iteration 91: Best Cost: 1.96 
+Iteration 92: Best Cost: 1.96 
+Iteration 93: Best Cost: 1.96 
+Iteration 94: Best Cost: 1.96 
+Iteration 95: Best Cost: 1.96 
+Iteration 96: Best Cost: 1.96 
+Iteration 97: Best Cost: 1.96 
+Iteration 98: Best Cost: 1.96 
+Iteration 99: Best Cost: 1.96 

@@ -16,6 +16,8 @@ from ypstruct import structure
 
 from .shared.gp import GI, GP
 from .shared.dataset_bfs import Dataset
+from .shared.profile import Profile
+from .shared import config as cfg
 
 
 class GradACO:
@@ -24,8 +26,8 @@ class GradACO:
         self.d_set = Dataset(f_path, min_supp)
         self.d_set.init_gp_attributes()
         self.attr_index = self.d_set.attr_cols
-        self.e_factor = 0.5  # evaporation factor
-        self.max_it = 100
+        self.e_factor = cfg.EVAPORATION_FACTOR  # evaporation factor
+        self.max_it = cfg.MAX_ITERATIONS
         self.iteration_count = 0
         self.d, self.attr_keys = self.generate_d()  # distance matrix (d) & attributes corresponding to d
 
@@ -77,7 +79,7 @@ class GradACO:
         pheromones = np.ones(self.d.shape, dtype=float)
 
         # Best Cost of Iteration
-        bestcost = np.empty(max_it)
+        best_cost_arr = np.empty(max_it)
         best_cost = np.inf
         str_plt = ''
 
@@ -113,15 +115,15 @@ class GradACO:
                     repeated += 1
             # it_count += 1
             # Show Iteration Information
-            bestcost[it_count] = best_cost
-            # print("Iteration {}: Best Cost: {}".format(it_count, bestcost[it_count]))
-            str_plt += "Iteration {}: Best Cost: {} \n".format(it_count, bestcost[it_count])
+            best_cost_arr[it_count] = best_cost
+            # print("Iteration {}: Best Cost: {}".format(it_count, best_cost_arr[it_count]))
+            str_plt += "Iteration {}: Best Cost: {} \n".format(it_count, best_cost_arr[it_count])
             it_count += 1
 
         # Output
         out = structure()
-        out.bestcost = bestcost
-        out.bestpattern = winner_gps
+        out.best_costs = best_cost_arr
+        out.best_patterns = winner_gps
         out.iterations = str_plt
 
         self.iteration_count = it_count
@@ -234,11 +236,11 @@ def init(f_path, min_supp, cores):
         ac = GradACO(f_path, min_supp)
         # list_gp = ac.run_ant_colony()
         out = ac.run_ant_colony()
-        list_gp = out.bestpattern
+        list_gp = out.best_patterns
 
         # Results
-        # plt.plot(out.bestcost)
-        # plt.semilogy(out.bestcost)
+        # plt.plot(out.best_costs)
+        # plt.semilogy(out.best_costs)
         # plt.xlim(0, ac.max_it)
         # plt.xlabel('Iterations')
         # plt.ylabel('Best Cost')
