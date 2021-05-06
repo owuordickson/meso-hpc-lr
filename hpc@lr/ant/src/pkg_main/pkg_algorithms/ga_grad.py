@@ -289,6 +289,7 @@ def init(f_path, min_supp, cores):
         wr_line += "No. of (dataset) attributes: " + str(ga.d_set.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(ga.d_set.row_count) + '\n'
         wr_line += "Population size: " + str(ga.n_pop) + '\n'
+        wr_line += "PC: " + str(ga.pc) + '\n'
 
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'

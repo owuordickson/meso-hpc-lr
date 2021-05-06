@@ -8,7 +8,7 @@
 #SBATCH --account=pgpm
 #SBATCH --mail-user=dickson-odhiambo.owuor@lirmm.fr
 
-module load python/3.8.2
+module load python/3.7.2
 python3 ant/src/pkg_main/main.py -a 'graank' -f data/breast_cancer.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'graank' -f data/c2k.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'graank' -f data/Directio_site6k.csv -c 28 -s 0.5
