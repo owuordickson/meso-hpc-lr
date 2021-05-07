@@ -1,0 +1,113 @@
+graank_path = "./raw_files/GRAANK/"
+graank_files = [f for f in listdir(graank_path) if isfile(join(graank_path, f))]
+
+lcm_path = "./raw_files/LCM/"
+lcm_files = [f for f in listdir(lcm_path) if isfile(join(lcm_path, f))]
+
+acolcm_path = "./raw_files/ACO_LCM/"
+acolcm_files = [f for f in listdir(acolcm_path) if isfile(join(acolcm_path, f))]
+
+
+
+# -------------------------------------------------------------------------------------
+# GRAANK - Data Frame
+column_names = ["Data-set", "Size", "Algorithm", "Support", "Run-time", "Memory", "Pattern-count"]
+df_graank = pd.DataFrame(columns = column_names)
+
+for file in graank_files:
+    f_path = join(graank_path,file)
+    # res = pd.read_csv(f_path, sep = ': ', header=None, engine='python', nrows=10)
+    res = pd.read_csv(f_path, names=["A","B"], sep = ':', header=None, engine='python')
+    run = float(res['B'][0][0:6]) # run-time
+    mem = float(res['B'][1][0:5]) # memory
+    alg = res['B'][2] # algorithm
+    att = int(res['B'][3]) # number of attributes in the data set
+    size = int(res['B'][4])  # data set size
+    sup = float(res['B'][5]) # minimum support
+    pat = float(res['B'][7]) # patterns
+
+    if att == 98:
+        col = "C2K"
+    elif att == 10:
+        col = "B & C"
+    elif att == 9:
+        col = "UCI"
+    elif att == 21:
+        col = "Buoys"
+    else:
+        col = ""
+
+    df_graank = df_graank.append({"Data-set": col, "Size": size, "Algorithm":alg, "Support": sup, "Run-time":run, "Memory":mem, "Pattern-count":pat}, ignore_index=True)
+
+
+
+
+
+# -------------------------------------------------------------------------------------
+# LCM - Data Frame
+# column_names = ["Data-set", "Size", "Algorithm", "Support", "Run-time", "Memory", "Pattern-count"]
+df_lcm = pd.DataFrame(columns = column_names)
+
+for file in lcm_files:
+    f_path = join(lcm_path,file)
+    # res = pd.read_csv(f_path, sep = ': ', header=None, engine='python', nrows=10)
+    res = pd.read_csv(f_path, names=["A","B"], sep = ':', header=None, engine='python')
+    run = float(res['B'][0][0:6]) # run-time
+    mem = float(res['B'][1][0:5]) # memory
+    alg = res['B'][2] # algorithm
+    att = int(res['B'][3]) # number of attributes in the data set
+    size = int(res['B'][4])  # data set size
+    sup = float(res['B'][5]) # minimum support
+    pat = float(res['B'][7]) # patterns
+
+    if att == 98:
+        col = "C2K"
+    elif att == 10:
+        col = "B & C"
+    elif att == 9:
+        col = "UCI"
+    elif att == 21:
+        col = "Buoys"
+    else:
+        col = ""
+
+    df_lcm = df_lcm.append({"Data-set": col, "Size": size, "Algorithm":alg, "Support": sup, "Run-time":run, "Memory":mem, "Pattern-count":pat}, ignore_index=True)
+
+
+
+
+
+
+# -------------------------------------------------------------------------------------
+# ACO-LCM - Data Frame
+# column_names = ["Data-set", "Size", "Algorithm", "Support", "Run-time", "Memory", "Pattern-count"]
+df_acolcm = pd.DataFrame(columns = column_names)
+
+
+for file in acolcm_files:
+    f_path = join(acolcm_path,file)
+    # res = pd.read_csv(f_path, sep = ': ', header=None, engine='python', nrows=10)
+    res = pd.read_csv(f_path, names=["A","B"], sep = ':', header=None, engine='python')
+    run = float(res['B'][0][0:6]) # run-time
+    mem = float(res['B'][1][0:5]) # memory
+    alg = res['B'][2] # algorithm
+    att = int(res['B'][3]) # number of attributes in the data set
+    size = int(res['B'][4])  # data set size
+    sup = float(res['B'][5]) # minimum support
+    pat = float(res['B'][7]) # patterns
+
+    if att == 98:
+        col = "C2K"
+    elif att == 10:
+        col = "B & C"
+    elif att == 9:
+        col = "UCI"
+    elif att == 21:
+        col = "Buoys"
+    else:
+        col = ""
+
+    df_acolcm = df_acolcm.append({"Data-set": col, "Size": size, "Algorithm":alg, "Support": sup, "Run-time":run, "Memory":mem, "Pattern-count":pat}, ignore_index=True)
+
+
+    

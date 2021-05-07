@@ -97,7 +97,9 @@ class GradGA:
         best_patterns = []
         str_plt = ''
 
-        while it_count < max_it:
+        # while it_count < max_it:
+        repeated = 0
+        while repeated < 1:
 
             c_pop = []
             for _ in range(nc // 2):
@@ -144,7 +146,9 @@ class GradGA:
             best_gp.support = float(1 / best_sol.cost)
             is_present = GradGA.is_duplicate(best_gp, best_patterns)
             is_sub = GradGA.check_anti_monotony(best_patterns, best_gp, subset=True)
-            if not (is_present or is_sub):
+            if is_present or is_sub:
+                repeated += 1
+            else:
                 best_patterns.append(best_gp)
 
             # Show Iteration Information
