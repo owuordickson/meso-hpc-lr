@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#SBATCH --job-name=swarm-gp
+#SBATCH --job-name=gps
 #SBATCH --output=res_main.txt
 #SBATCH -n 28
 #SBATCH --time=576:00:00
@@ -42,3 +42,7 @@ python3 ant/src/pkg_main/main.py -a 'graank' -f data/UCI_household_power_consump
 python3 ant/src/pkg_main/main.py -a 'acolcm' -f data/breast_cancer.csv -c 28 -s 0.5
 
 python3 ant/src/pkg_main/main.py -a 'lcm' -f data/breast_cancer.csv -c 28 -s 0.5
+
+
+python3 ant/src/pkg_main/main.py -a 'acolcm' -f data/c2k.csv -c 28 -s 0.5
+python3 ant/src/pkg_main/main.py -a 'acolcm' -f data/c2k.csv -c 28 -s 0.5

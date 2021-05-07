@@ -1,9 +1,10 @@
-Run-time: 916.2996706962585 seconds
-Total allocated memory size: 126.9 KiB
+Run-time: 1026.9674327373505 seconds
+Total allocated memory size: 124.7 KiB
 Algorithm: GA-GRAANK (v1.0)
 No. of (dataset) attributes: 98
 No. of (dataset) tuples: 3943
 Population size: 5
+PC: 0.5
 Minimum support: 0.5
 Number of cores: 28
 Number of patterns: 2
@@ -111,16 +112,16 @@ Number of iterations: 100
 File: data/c2k.csv
 
 Pattern : Support
-['2+', '7+', '8+'] : 0.5586592178770949
+['2+', '5+'] : 0.7042253521126761
 ['2+', '3+'] : 0.8264462809917356
 
 
 Iterations 
-Iteration 0: Best Cost: 1.79 
-Iteration 1: Best Cost: 1.55 
-Iteration 2: Best Cost: 1.55 
-Iteration 3: Best Cost: 1.55 
-Iteration 4: Best Cost: 1.21 
+Iteration 0: Best Cost: 1.42 
+Iteration 1: Best Cost: 1.42 
+Iteration 2: Best Cost: 1.42 
+Iteration 3: Best Cost: 1.42 
+Iteration 4: Best Cost: 1.42 
 Iteration 5: Best Cost: 1.21 
 Iteration 6: Best Cost: 1.21 
 Iteration 7: Best Cost: 1.21 

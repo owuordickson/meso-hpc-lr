@@ -1,12 +1,13 @@
-Run-time: 1.3691062927246094 seconds
-Total allocated memory size: 98.7 KiB
+Run-time: 0.5494403839111328 seconds
+Total allocated memory size: 96.3 KiB
 Algorithm: GA-GRAANK (v1.0)
 No. of (dataset) attributes: 10
 No. of (dataset) tuples: 116
 Population size: 5
+PC: 0.5
 Minimum support: 0.5
 Number of cores: 28
-Number of patterns: 4
+Number of patterns: 2
 Number of iterations: 100
 
 0. Age
@@ -23,48 +24,46 @@ Number of iterations: 100
 File: data/breast_cancer.csv
 
 Pattern : Support
-['0-', '6+'] : 0.5376344086021505
-['0-', '2-'] : 0.5434782608695652
-['2-', '3-'] : 0.6369426751592356
-['2+', '4+'] : 0.6993006993006994
+['3+', '5+'] : 0.6578947368421053
+['2-', '4-'] : 0.6993006993006994
 
 
 Iterations 
-Iteration 0: Best Cost: 1.86 
-Iteration 1: Best Cost: 1.86 
-Iteration 2: Best Cost: 1.86 
-Iteration 3: Best Cost: 1.86 
-Iteration 4: Best Cost: 1.84 
-Iteration 5: Best Cost: 1.84 
-Iteration 6: Best Cost: 1.84 
-Iteration 7: Best Cost: 1.84 
-Iteration 8: Best Cost: 1.57 
-Iteration 9: Best Cost: 1.57 
-Iteration 10: Best Cost: 1.43 
-Iteration 11: Best Cost: 1.43 
-Iteration 12: Best Cost: 1.43 
-Iteration 13: Best Cost: 1.43 
-Iteration 14: Best Cost: 1.43 
-Iteration 15: Best Cost: 1.43 
-Iteration 16: Best Cost: 1.43 
-Iteration 17: Best Cost: 1.43 
-Iteration 18: Best Cost: 1.43 
-Iteration 19: Best Cost: 1.43 
-Iteration 20: Best Cost: 1.43 
-Iteration 21: Best Cost: 1.43 
-Iteration 22: Best Cost: 1.43 
-Iteration 23: Best Cost: 1.43 
-Iteration 24: Best Cost: 1.43 
-Iteration 25: Best Cost: 1.43 
-Iteration 26: Best Cost: 1.43 
-Iteration 27: Best Cost: 1.43 
-Iteration 28: Best Cost: 1.43 
-Iteration 29: Best Cost: 1.43 
-Iteration 30: Best Cost: 1.43 
-Iteration 31: Best Cost: 1.43 
-Iteration 32: Best Cost: 1.43 
-Iteration 33: Best Cost: 1.43 
-Iteration 34: Best Cost: 1.43 
+Iteration 0: Best Cost: 1.52 
+Iteration 1: Best Cost: 1.52 
+Iteration 2: Best Cost: 1.52 
+Iteration 3: Best Cost: 1.52 
+Iteration 4: Best Cost: 1.52 
+Iteration 5: Best Cost: 1.52 
+Iteration 6: Best Cost: 1.52 
+Iteration 7: Best Cost: 1.52 
+Iteration 8: Best Cost: 1.52 
+Iteration 9: Best Cost: 1.52 
+Iteration 10: Best Cost: 1.52 
+Iteration 11: Best Cost: 1.52 
+Iteration 12: Best Cost: 1.52 
+Iteration 13: Best Cost: 1.52 
+Iteration 14: Best Cost: 1.52 
+Iteration 15: Best Cost: 1.52 
+Iteration 16: Best Cost: 1.52 
+Iteration 17: Best Cost: 1.52 
+Iteration 18: Best Cost: 1.52 
+Iteration 19: Best Cost: 1.52 
+Iteration 20: Best Cost: 1.52 
+Iteration 21: Best Cost: 1.52 
+Iteration 22: Best Cost: 1.52 
+Iteration 23: Best Cost: 1.52 
+Iteration 24: Best Cost: 1.52 
+Iteration 25: Best Cost: 1.52 
+Iteration 26: Best Cost: 1.52 
+Iteration 27: Best Cost: 1.52 
+Iteration 28: Best Cost: 1.52 
+Iteration 29: Best Cost: 1.52 
+Iteration 30: Best Cost: 1.52 
+Iteration 31: Best Cost: 1.52 
+Iteration 32: Best Cost: 1.52 
+Iteration 33: Best Cost: 1.52 
+Iteration 34: Best Cost: 1.52 
 Iteration 35: Best Cost: 1.43 
 Iteration 36: Best Cost: 1.43 
 Iteration 37: Best Cost: 1.43 
