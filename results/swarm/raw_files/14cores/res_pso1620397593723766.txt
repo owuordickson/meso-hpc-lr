@@ -1,0 +1,34 @@
+Run-time: 0.06669139862060547 seconds
+Total allocated memory size: 75.7 KiB
+Algorithm: PSO-GRAANK (v1.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Velocity coeff.: 0.5
+C1 coeff.: 0.5
+C2 coeff.: 0.9
+No. of particles: 5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 2
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['1+', '3+'] : 0.6134969325153374
+
+
+Iterations 
+Iteration 0: Best Position: 1.63 
+Iteration 1: Best Position: 1.63 

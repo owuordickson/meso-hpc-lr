@@ -1,0 +1,54 @@
+Run-time: 899.1899719238281 seconds
+Total allocated memory size: 134.7 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Evaporation factor: 0.9
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 7
+Number of iterations: 8
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site15k.csv
+
+Pattern : Support
+['9+', '4-'] : 0.523
+['13+', '12+', '18-'] : 0.504
+['12+', '8+', '13+', '7+', '10+'] : 0.658
+['7+', '15-', '10+', '13+', '12+'] : 0.513
+['8+', '11+', '10+', '3-', '2+'] : 0.525
+['10+', '8+', '14+', '2+', '7+', '11+', '5+', '12+'] : 0.569
+['10+', '11+', '8+', '9+', '2+', '7+'] : 0.547
+
+
+Iterations 
+Iteration 0: Best Cost: 1.91 
+Iteration 1: Best Cost: 1.98 
+Iteration 2: Best Cost: 1.52 
+Iteration 3: Best Cost: 1.95 
+Iteration 4: Best Cost: 1.9 
+Iteration 5: Best Cost: 1.76 
+Iteration 6: Best Cost: 1.83 
+Iteration 7: Best Cost: 1.83 

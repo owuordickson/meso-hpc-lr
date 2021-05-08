@@ -1,0 +1,30 @@
+Run-time: 657.6176943778992 seconds
+Total allocated memory size: 116.7 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 46774
+Evaporation factor: 0.9
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 2
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption50k.csv
+
+Pattern : Support
+['3+', '2+'] : 0.544
+
+
+Iterations 
+Iteration 0: Best Cost: 1.84 
+Iteration 1: Best Cost: 1.84 

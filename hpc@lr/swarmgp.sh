@@ -10,12 +10,6 @@
 
 module load python/3.8.2
 
-
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/breast_cancer.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/c2k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/Directio_site6k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/UCI_household_power_consumption19k.csv -c 28 -s 0.5
-
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/breast_cancer.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/c2k.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/Directio_site6k.csv -c 28 -s 0.5
@@ -23,26 +17,12 @@ python3 ant/src/pkg_main/main.py -a 'pso' -f data/UCI_household_power_consumptio
 
 
 
-
-
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/breast_cancer.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/c2k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/Directio_site6k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/UCI_household_power_consumption19k.csv -c 28 -s 0.5
-
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/breast_cancer.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/c2k.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/Directio_site6k.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/UCI_household_power_consumption19k.csv -c 28 -s 0.5
 
 
-
-
-
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/breast_cancer.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/c2k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/Directio_site6k.csv -c 28 -s 0.5
-python3 ant/src/pkg_main/main.py -a 'ga' -f data/UCI_household_power_consumption19k.csv -c 28 -s 0.5
 
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/breast_cancer.csv -c 28 -s 0.5
 python3 ant/src/pkg_main/main.py -a 'pso' -f data/c2k.csv -c 28 -s 0.5

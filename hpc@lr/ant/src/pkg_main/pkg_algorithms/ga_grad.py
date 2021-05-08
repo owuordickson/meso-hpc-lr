@@ -97,9 +97,9 @@ class GradGA:
         best_patterns = []
         str_plt = ''
 
-        # while it_count < max_it:
         repeated = 0
-        while repeated < 1:
+        while it_count < max_it:
+        # while repeated < 1:
 
             c_pop = []
             for _ in range(nc // 2):

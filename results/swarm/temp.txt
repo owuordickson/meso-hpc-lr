@@ -1,3 +1,14 @@
+# Remainder: pso 9 runs for 0.5; aco 8 runs for 0.9; ga 12 runs for 10
+# Remainder: pso 12 runs for 0.9
+
+
+
+
+
+
+
+
+
 graank_path = "./raw_files/GRAANK/"
 graank_files = [f for f in listdir(graank_path) if isfile(join(graank_path, f))]
 
@@ -108,6 +119,3 @@ for file in acolcm_files:
         col = ""
 
     df_acolcm = df_acolcm.append({"Data-set": col, "Size": size, "Algorithm":alg, "Support": sup, "Run-time":run, "Memory":mem, "Pattern-count":pat}, ignore_index=True)
-
-
-    
