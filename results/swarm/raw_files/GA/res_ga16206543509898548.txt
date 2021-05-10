@@ -1,0 +1,129 @@
+Run-time: 722.2921602725983 seconds
+Total allocated memory size: 103.0 KiB
+Algorithm: GA-GRAANK (v1.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 19443
+Population size: 5
+PC: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 100
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption19k.csv
+
+Pattern : Support
+['2+', '5+'] : 0.970873786407767
+
+
+Iterations 
+Iteration 0: Best Cost: 1.03 
+Iteration 1: Best Cost: 1.03 
+Iteration 2: Best Cost: 1.03 
+Iteration 3: Best Cost: 1.03 
+Iteration 4: Best Cost: 1.03 
+Iteration 5: Best Cost: 1.03 
+Iteration 6: Best Cost: 1.03 
+Iteration 7: Best Cost: 1.03 
+Iteration 8: Best Cost: 1.03 
+Iteration 9: Best Cost: 1.03 
+Iteration 10: Best Cost: 1.03 
+Iteration 11: Best Cost: 1.03 
+Iteration 12: Best Cost: 1.03 
+Iteration 13: Best Cost: 1.03 
+Iteration 14: Best Cost: 1.03 
+Iteration 15: Best Cost: 1.03 
+Iteration 16: Best Cost: 1.03 
+Iteration 17: Best Cost: 1.03 
+Iteration 18: Best Cost: 1.03 
+Iteration 19: Best Cost: 1.03 
+Iteration 20: Best Cost: 1.03 
+Iteration 21: Best Cost: 1.03 
+Iteration 22: Best Cost: 1.03 
+Iteration 23: Best Cost: 1.03 
+Iteration 24: Best Cost: 1.03 
+Iteration 25: Best Cost: 1.03 
+Iteration 26: Best Cost: 1.03 
+Iteration 27: Best Cost: 1.03 
+Iteration 28: Best Cost: 1.03 
+Iteration 29: Best Cost: 1.03 
+Iteration 30: Best Cost: 1.03 
+Iteration 31: Best Cost: 1.03 
+Iteration 32: Best Cost: 1.03 
+Iteration 33: Best Cost: 1.03 
+Iteration 34: Best Cost: 1.03 
+Iteration 35: Best Cost: 1.03 
+Iteration 36: Best Cost: 1.03 
+Iteration 37: Best Cost: 1.03 
+Iteration 38: Best Cost: 1.03 
+Iteration 39: Best Cost: 1.03 
+Iteration 40: Best Cost: 1.03 
+Iteration 41: Best Cost: 1.03 
+Iteration 42: Best Cost: 1.03 
+Iteration 43: Best Cost: 1.03 
+Iteration 44: Best Cost: 1.03 
+Iteration 45: Best Cost: 1.03 
+Iteration 46: Best Cost: 1.03 
+Iteration 47: Best Cost: 1.03 
+Iteration 48: Best Cost: 1.03 
+Iteration 49: Best Cost: 1.03 
+Iteration 50: Best Cost: 1.03 
+Iteration 51: Best Cost: 1.03 
+Iteration 52: Best Cost: 1.03 
+Iteration 53: Best Cost: 1.03 
+Iteration 54: Best Cost: 1.03 
+Iteration 55: Best Cost: 1.03 
+Iteration 56: Best Cost: 1.03 
+Iteration 57: Best Cost: 1.03 
+Iteration 58: Best Cost: 1.03 
+Iteration 59: Best Cost: 1.03 
+Iteration 60: Best Cost: 1.03 
+Iteration 61: Best Cost: 1.03 
+Iteration 62: Best Cost: 1.03 
+Iteration 63: Best Cost: 1.03 
+Iteration 64: Best Cost: 1.03 
+Iteration 65: Best Cost: 1.03 
+Iteration 66: Best Cost: 1.03 
+Iteration 67: Best Cost: 1.03 
+Iteration 68: Best Cost: 1.03 
+Iteration 69: Best Cost: 1.03 
+Iteration 70: Best Cost: 1.03 
+Iteration 71: Best Cost: 1.03 
+Iteration 72: Best Cost: 1.03 
+Iteration 73: Best Cost: 1.03 
+Iteration 74: Best Cost: 1.03 
+Iteration 75: Best Cost: 1.03 
+Iteration 76: Best Cost: 1.03 
+Iteration 77: Best Cost: 1.03 
+Iteration 78: Best Cost: 1.03 
+Iteration 79: Best Cost: 1.03 
+Iteration 80: Best Cost: 1.03 
+Iteration 81: Best Cost: 1.03 
+Iteration 82: Best Cost: 1.03 
+Iteration 83: Best Cost: 1.03 
+Iteration 84: Best Cost: 1.03 
+Iteration 85: Best Cost: 1.03 
+Iteration 86: Best Cost: 1.03 
+Iteration 87: Best Cost: 1.03 
+Iteration 88: Best Cost: 1.03 
+Iteration 89: Best Cost: 1.03 
+Iteration 90: Best Cost: 1.03 
+Iteration 91: Best Cost: 1.03 
+Iteration 92: Best Cost: 1.03 
+Iteration 93: Best Cost: 1.03 
+Iteration 94: Best Cost: 1.03 
+Iteration 95: Best Cost: 1.03 
+Iteration 96: Best Cost: 1.03 
+Iteration 97: Best Cost: 1.03 
+Iteration 98: Best Cost: 1.03 
+Iteration 99: Best Cost: 1.03 
