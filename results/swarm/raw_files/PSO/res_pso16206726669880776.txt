@@ -1,0 +1,133 @@
+Run-time: 0.42615818977355957 seconds
+Total allocated memory size: 84.5 KiB
+Algorithm: PSO-GRAANK (v1.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Velocity coeff.: 0.5
+C1 coeff.: 0.5
+C2 coeff.: 0.5
+No. of particles: 5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 2
+Number of iterations: 100
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['0+', '8-'] : 0.5128205128205129
+['1-', '4-'] : 0.6134969325153374
+
+
+Iterations 
+Iteration 0: Best Position: 1.95 
+Iteration 1: Best Position: 1.63 
+Iteration 2: Best Position: 1.63 
+Iteration 3: Best Position: 1.63 
+Iteration 4: Best Position: 1.63 
+Iteration 5: Best Position: 1.63 
+Iteration 6: Best Position: 1.63 
+Iteration 7: Best Position: 1.63 
+Iteration 8: Best Position: 1.63 
+Iteration 9: Best Position: 1.63 
+Iteration 10: Best Position: 1.63 
+Iteration 11: Best Position: 1.63 
+Iteration 12: Best Position: 1.63 
+Iteration 13: Best Position: 1.63 
+Iteration 14: Best Position: 1.63 
+Iteration 15: Best Position: 1.63 
+Iteration 16: Best Position: 1.63 
+Iteration 17: Best Position: 1.63 
+Iteration 18: Best Position: 1.63 
+Iteration 19: Best Position: 1.63 
+Iteration 20: Best Position: 1.63 
+Iteration 21: Best Position: 1.63 
+Iteration 22: Best Position: 1.63 
+Iteration 23: Best Position: 1.63 
+Iteration 24: Best Position: 1.63 
+Iteration 25: Best Position: 1.63 
+Iteration 26: Best Position: 1.63 
+Iteration 27: Best Position: 1.63 
+Iteration 28: Best Position: 1.63 
+Iteration 29: Best Position: 1.63 
+Iteration 30: Best Position: 1.63 
+Iteration 31: Best Position: 1.63 
+Iteration 32: Best Position: 1.63 
+Iteration 33: Best Position: 1.63 
+Iteration 34: Best Position: 1.63 
+Iteration 35: Best Position: 1.63 
+Iteration 36: Best Position: 1.63 
+Iteration 37: Best Position: 1.63 
+Iteration 38: Best Position: 1.63 
+Iteration 39: Best Position: 1.63 
+Iteration 40: Best Position: 1.63 
+Iteration 41: Best Position: 1.63 
+Iteration 42: Best Position: 1.63 
+Iteration 43: Best Position: 1.63 
+Iteration 44: Best Position: 1.63 
+Iteration 45: Best Position: 1.63 
+Iteration 46: Best Position: 1.63 
+Iteration 47: Best Position: 1.63 
+Iteration 48: Best Position: 1.63 
+Iteration 49: Best Position: 1.63 
+Iteration 50: Best Position: 1.63 
+Iteration 51: Best Position: 1.63 
+Iteration 52: Best Position: 1.63 
+Iteration 53: Best Position: 1.63 
+Iteration 54: Best Position: 1.63 
+Iteration 55: Best Position: 1.63 
+Iteration 56: Best Position: 1.63 
+Iteration 57: Best Position: 1.63 
+Iteration 58: Best Position: 1.63 
+Iteration 59: Best Position: 1.63 
+Iteration 60: Best Position: 1.63 
+Iteration 61: Best Position: 1.63 
+Iteration 62: Best Position: 1.63 
+Iteration 63: Best Position: 1.63 
+Iteration 64: Best Position: 1.63 
+Iteration 65: Best Position: 1.63 
+Iteration 66: Best Position: 1.63 
+Iteration 67: Best Position: 1.63 
+Iteration 68: Best Position: 1.63 
+Iteration 69: Best Position: 1.63 
+Iteration 70: Best Position: 1.63 
+Iteration 71: Best Position: 1.63 
+Iteration 72: Best Position: 1.63 
+Iteration 73: Best Position: 1.63 
+Iteration 74: Best Position: 1.63 
+Iteration 75: Best Position: 1.63 
+Iteration 76: Best Position: 1.63 
+Iteration 77: Best Position: 1.63 
+Iteration 78: Best Position: 1.63 
+Iteration 79: Best Position: 1.63 
+Iteration 80: Best Position: 1.63 
+Iteration 81: Best Position: 1.63 
+Iteration 82: Best Position: 1.63 
+Iteration 83: Best Position: 1.63 
+Iteration 84: Best Position: 1.63 
+Iteration 85: Best Position: 1.63 
+Iteration 86: Best Position: 1.63 
+Iteration 87: Best Position: 1.63 
+Iteration 88: Best Position: 1.63 
+Iteration 89: Best Position: 1.63 
+Iteration 90: Best Position: 1.63 
+Iteration 91: Best Position: 1.63 
+Iteration 92: Best Position: 1.63 
+Iteration 93: Best Position: 1.63 
+Iteration 94: Best Position: 1.63 
+Iteration 95: Best Position: 1.63 
+Iteration 96: Best Position: 1.63 
+Iteration 97: Best Position: 1.63 
+Iteration 98: Best Position: 1.63 
+Iteration 99: Best Position: 1.63 
