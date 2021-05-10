@@ -1,0 +1,11 @@
+Data fetched from CSV file
+Traceback (most recent call last):
+  File "ant/src/pkg_main/mainc.py", line 112, in <module>
+    res_text = graank_v2.init(filePath, minSup, numCores)
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/graank_v2.py", line 128, in init
+    d_set, list_gp = graank(f_path, min_supp, eq)
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/graank_v2.py", line 85, in graank
+    valid_bins = gen_apriori_candidates(valid_bins, min_sup, n)
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/graank_v2.py", line 63, in gen_apriori_candidates
+    m = R[i][1] * R[j][1]
+MemoryError
