@@ -1,0 +1,16 @@
+/var/spool/slurmd/job3301680/slurm_script: line 23: 25807 Killed                  python3 ant/src/pkg_main/mainc.py -a 'acolcm' -f data/c2k.csv -c 14 -s 0.5
+LcmACO: Version 1.0
+Data fetched from CSV file
+Traceback (most recent call last):
+  File "ant/src/pkg_main/mainc.py", line 126, in <module>
+    res_text = aco_lcm.init(filePath, minSup, numCores)
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/aco_lcm.py", line 175, in init
+    ac = LcmACO(f_path, min_supp, n_jobs=num_cores)
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/aco_lcm.py", line 42, in __init__
+    self.item_to_tids = self._fit()
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/aco_lcm.py", line 63, in _fit
+    low_supp_items = [k for k, v in item_to_tids.items()
+  File "/lustre/owuord/ant/src/pkg_main/pkg_algorithms/aco_lcm.py", line 64, in <listcomp>
+    if len(np.unique(np.array(list(v))[:, 0], axis=0))
+MemoryError
+/var/spool/slurmd/job3301680/slurm_script: line 25: 32530 Killed                  python3 ant/src/pkg_main/mainc.py -a 'acolcm' -f data/c2k.csv -c 14 -s 0.5

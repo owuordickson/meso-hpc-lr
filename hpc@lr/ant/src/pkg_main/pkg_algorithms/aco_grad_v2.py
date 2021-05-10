@@ -80,8 +80,8 @@ class GradACO:
         str_plt = ''
 
         # Iterations for ACO
-        while it_count < max_it:
-        # while repeated < 1:
+        # while it_count < max_it:
+        while repeated < 2:
             rand_gp = self.generate_aco_gp()
             if len(rand_gp.gradual_items) > 1:
                 # print(rand_gp.get_pattern())

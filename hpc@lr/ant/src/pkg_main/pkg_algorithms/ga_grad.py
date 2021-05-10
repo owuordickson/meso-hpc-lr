@@ -71,8 +71,8 @@ class GradGA:
         str_plt = ''
 
         repeated = 0
-        while it_count < max_it:
-        # while repeated < 1:
+        # while it_count < max_it:
+        while repeated < 2:
 
             c_pop = []
             for _ in range(nc // 2):
