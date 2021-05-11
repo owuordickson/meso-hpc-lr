@@ -59,7 +59,7 @@ class GradPSO:
 
         repeated = 0
         # while it_count < max_it:
-        while repeated < 2 or it_count < max_it:
+        while repeated < 2 and it_count < max_it:
             for i in range(n_particles):
                 fitness_candidate = self.fitness_function(self.decode_gp(particle_position_vector[i]))
 
