@@ -1,0 +1,98 @@
+Run-time: 0.16530394554138184 seconds
+Total allocated memory size: 106.0 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Evaporation factor: 0.5
+Minimum support: 0.8
+Number of cores: 14
+Number of patterns: 0
+Number of iterations: 70
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+
+
+Iterations 
+Iteration 0: Best Cost: inf 
+Iteration 1: Best Cost: inf 
+Iteration 2: Best Cost: inf 
+Iteration 3: Best Cost: inf 
+Iteration 4: Best Cost: inf 
+Iteration 5: Best Cost: inf 
+Iteration 6: Best Cost: inf 
+Iteration 7: Best Cost: inf 
+Iteration 8: Best Cost: inf 
+Iteration 9: Best Cost: inf 
+Iteration 10: Best Cost: inf 
+Iteration 11: Best Cost: inf 
+Iteration 12: Best Cost: inf 
+Iteration 13: Best Cost: inf 
+Iteration 14: Best Cost: inf 
+Iteration 15: Best Cost: inf 
+Iteration 16: Best Cost: inf 
+Iteration 17: Best Cost: inf 
+Iteration 18: Best Cost: inf 
+Iteration 19: Best Cost: inf 
+Iteration 20: Best Cost: inf 
+Iteration 21: Best Cost: inf 
+Iteration 22: Best Cost: inf 
+Iteration 23: Best Cost: inf 
+Iteration 24: Best Cost: inf 
+Iteration 25: Best Cost: inf 
+Iteration 26: Best Cost: inf 
+Iteration 27: Best Cost: inf 
+Iteration 28: Best Cost: inf 
+Iteration 29: Best Cost: inf 
+Iteration 30: Best Cost: inf 
+Iteration 31: Best Cost: inf 
+Iteration 32: Best Cost: inf 
+Iteration 33: Best Cost: inf 
+Iteration 34: Best Cost: inf 
+Iteration 35: Best Cost: inf 
+Iteration 36: Best Cost: inf 
+Iteration 37: Best Cost: inf 
+Iteration 38: Best Cost: inf 
+Iteration 39: Best Cost: inf 
+Iteration 40: Best Cost: inf 
+Iteration 41: Best Cost: inf 
+Iteration 42: Best Cost: inf 
+Iteration 43: Best Cost: inf 
+Iteration 44: Best Cost: inf 
+Iteration 45: Best Cost: inf 
+Iteration 46: Best Cost: inf 
+Iteration 47: Best Cost: inf 
+Iteration 48: Best Cost: inf 
+Iteration 49: Best Cost: inf 
+Iteration 50: Best Cost: inf 
+Iteration 51: Best Cost: inf 
+Iteration 52: Best Cost: inf 
+Iteration 53: Best Cost: inf 
+Iteration 54: Best Cost: inf 
+Iteration 55: Best Cost: inf 
+Iteration 56: Best Cost: inf 
+Iteration 57: Best Cost: inf 
+Iteration 58: Best Cost: inf 
+Iteration 59: Best Cost: inf 
+Iteration 60: Best Cost: inf 
+Iteration 61: Best Cost: inf 
+Iteration 62: Best Cost: inf 
+Iteration 63: Best Cost: inf 
+Iteration 64: Best Cost: inf 
+Iteration 65: Best Cost: inf 
+Iteration 66: Best Cost: inf 
+Iteration 67: Best Cost: inf 
+Iteration 68: Best Cost: inf 
+Iteration 69: Best Cost: inf 

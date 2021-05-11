@@ -1,0 +1,109 @@
+Run-time: 110.23414874076843 seconds
+Total allocated memory size: 146.0 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Evaporation factor: 0.5
+Minimum support: 0.6
+Number of cores: 14
+Number of patterns: 16
+Number of iterations: 54
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site15k.csv
+
+Pattern : Support
+['12-', '15+'] : 0.664
+['2-', '16+'] : 0.604
+['7+', '11+'] : 0.787
+['10+', '3-'] : 0.676
+['9+', '8+', '14+', '7+'] : 0.612
+['13-', '14-'] : 0.846
+['16+', '14-'] : 0.653
+['6-', '16-'] : 0.761
+['8-', '11-'] : 0.872
+['3+', '16+'] : 0.642
+['5+', '3-'] : 0.656
+['6+', '8+'] : 0.61
+['3-', '4+'] : 0.605
+['10+', '8+'] : 0.945
+['12-', '14-'] : 0.823
+['16+', '13-'] : 0.654
+
+
+Iterations 
+Iteration 0: Best Cost: 1.51 
+Iteration 1: Best Cost: 1.66 
+Iteration 2: Best Cost: 1.27 
+Iteration 3: Best Cost: 1.48 
+Iteration 4: Best Cost: 1.48 
+Iteration 5: Best Cost: 1.63 
+Iteration 6: Best Cost: 1.18 
+Iteration 7: Best Cost: 1.53 
+Iteration 8: Best Cost: 1.31 
+Iteration 9: Best Cost: 1.31 
+Iteration 10: Best Cost: 1.31 
+Iteration 11: Best Cost: 1.31 
+Iteration 12: Best Cost: 1.15 
+Iteration 13: Best Cost: 1.56 
+Iteration 14: Best Cost: 1.52 
+Iteration 15: Best Cost: 1.52 
+Iteration 16: Best Cost: 1.52 
+Iteration 17: Best Cost: 1.64 
+Iteration 18: Best Cost: 1.65 
+Iteration 19: Best Cost: 1.65 
+Iteration 20: Best Cost: 1.65 
+Iteration 21: Best Cost: 1.06 
+Iteration 22: Best Cost: 1.06 
+Iteration 23: Best Cost: 1.06 
+Iteration 24: Best Cost: 1.06 
+Iteration 25: Best Cost: 1.06 
+Iteration 26: Best Cost: 1.06 
+Iteration 27: Best Cost: 1.06 
+Iteration 28: Best Cost: 1.06 
+Iteration 29: Best Cost: 1.06 
+Iteration 30: Best Cost: 1.06 
+Iteration 31: Best Cost: 1.06 
+Iteration 32: Best Cost: 1.06 
+Iteration 33: Best Cost: 1.06 
+Iteration 34: Best Cost: 1.06 
+Iteration 35: Best Cost: 1.06 
+Iteration 36: Best Cost: 1.06 
+Iteration 37: Best Cost: 1.22 
+Iteration 38: Best Cost: 1.22 
+Iteration 39: Best Cost: 1.22 
+Iteration 40: Best Cost: 1.22 
+Iteration 41: Best Cost: 1.22 
+Iteration 42: Best Cost: 1.22 
+Iteration 43: Best Cost: 1.22 
+Iteration 44: Best Cost: 1.22 
+Iteration 45: Best Cost: 1.22 
+Iteration 46: Best Cost: 1.22 
+Iteration 47: Best Cost: 1.22 
+Iteration 48: Best Cost: 1.53 
+Iteration 49: Best Cost: 1.53 
+Iteration 50: Best Cost: 1.53 
+Iteration 51: Best Cost: 1.53 
+Iteration 52: Best Cost: 1.53 
+Iteration 53: Best Cost: 1.53 

@@ -1,0 +1,86 @@
+Run-time: 0.1617898941040039 seconds
+Total allocated memory size: 105.2 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Evaporation factor: 0.5
+Minimum support: 0.6
+Number of cores: 14
+Number of patterns: 5
+Number of iterations: 53
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['2+', '4+'] : 0.697
+['2-', '3-'] : 0.637
+['4-', '5-'] : 0.659
+['7-', '8-'] : 0.672
+['3+', '5+'] : 0.659
+
+
+Iterations 
+Iteration 0: Best Cost: inf 
+Iteration 1: Best Cost: 1.43 
+Iteration 2: Best Cost: 1.57 
+Iteration 3: Best Cost: 1.57 
+Iteration 4: Best Cost: 1.57 
+Iteration 5: Best Cost: 1.57 
+Iteration 6: Best Cost: 1.57 
+Iteration 7: Best Cost: 1.57 
+Iteration 8: Best Cost: 1.57 
+Iteration 9: Best Cost: 1.57 
+Iteration 10: Best Cost: 1.52 
+Iteration 11: Best Cost: 1.52 
+Iteration 12: Best Cost: 1.52 
+Iteration 13: Best Cost: 1.52 
+Iteration 14: Best Cost: 1.49 
+Iteration 15: Best Cost: 1.49 
+Iteration 16: Best Cost: 1.49 
+Iteration 17: Best Cost: 1.49 
+Iteration 18: Best Cost: 1.49 
+Iteration 19: Best Cost: 1.49 
+Iteration 20: Best Cost: 1.49 
+Iteration 21: Best Cost: 1.49 
+Iteration 22: Best Cost: 1.49 
+Iteration 23: Best Cost: 1.49 
+Iteration 24: Best Cost: 1.49 
+Iteration 25: Best Cost: 1.49 
+Iteration 26: Best Cost: 1.49 
+Iteration 27: Best Cost: 1.49 
+Iteration 28: Best Cost: 1.49 
+Iteration 29: Best Cost: 1.49 
+Iteration 30: Best Cost: 1.49 
+Iteration 31: Best Cost: 1.49 
+Iteration 32: Best Cost: 1.49 
+Iteration 33: Best Cost: 1.49 
+Iteration 34: Best Cost: 1.52 
+Iteration 35: Best Cost: 1.52 
+Iteration 36: Best Cost: 1.52 
+Iteration 37: Best Cost: 1.52 
+Iteration 38: Best Cost: 1.52 
+Iteration 39: Best Cost: 1.52 
+Iteration 40: Best Cost: 1.52 
+Iteration 41: Best Cost: 1.52 
+Iteration 42: Best Cost: 1.52 
+Iteration 43: Best Cost: 1.52 
+Iteration 44: Best Cost: 1.52 
+Iteration 45: Best Cost: 1.52 
+Iteration 46: Best Cost: 1.52 
+Iteration 47: Best Cost: 1.52 
+Iteration 48: Best Cost: 1.52 
+Iteration 49: Best Cost: 1.52 
+Iteration 50: Best Cost: 1.52 
+Iteration 51: Best Cost: 1.52 
+Iteration 52: Best Cost: 1.52 

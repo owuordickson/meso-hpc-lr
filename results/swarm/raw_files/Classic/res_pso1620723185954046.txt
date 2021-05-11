@@ -1,0 +1,48 @@
+Run-time: 130.04240345954895 seconds
+Total allocated memory size: 94.3 KiB
+Algorithm: PSO-GRAANK (v1.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Velocity coeff.: 0.5
+C1 coeff.: 0.5
+C2 coeff.: 0.9
+No. of particles: 5
+Minimum support: 0.8
+Number of cores: 14
+Number of patterns: 2
+Number of iterations: 4
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site15k.csv
+
+Pattern : Support
+['2+', '8+'] : 0.8
+['5+', '8+'] : 0.9615384615384615
+
+
+Iterations 
+Iteration 0: Best Position: 1.25 
+Iteration 1: Best Position: 1.04 
+Iteration 2: Best Position: 1.04 
+Iteration 3: Best Position: 1.04 

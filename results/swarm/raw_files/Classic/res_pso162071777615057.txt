@@ -1,0 +1,33 @@
+Run-time: 167.29843068122864 seconds
+Total allocated memory size: 84.3 KiB
+Algorithm: PSO-GRAANK (v1.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 46774
+Velocity coeff.: 0.5
+C1 coeff.: 0.5
+C2 coeff.: 0.9
+No. of particles: 5
+Minimum support: 0.7
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 2
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption50k.csv
+
+Pattern : Support
+['2+', '5+'] : 0.970873786407767
+
+
+Iterations 
+Iteration 0: Best Position: 1.03 
+Iteration 1: Best Position: 1.03 
