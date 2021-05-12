@@ -1,0 +1,33 @@
+Run-time: 0.03474617004394531 seconds
+Total allocated memory size: 84.9 KiB
+Algorithm: GA-GRAANK (v1.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Population size: 5
+PC: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 3
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['0+', '2+'] : 0.5434782608695652
+
+
+Iterations 
+Iteration 0: Best Cost: 1.84 
+Iteration 1: Best Cost: 1.84 
+Iteration 2: Best Cost: 1.84 

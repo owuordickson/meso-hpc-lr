@@ -1,0 +1,70 @@
+Run-time: 0.14935636520385742 seconds
+Total allocated memory size: 103.8 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Evaporation factor: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 12
+Number of iterations: 30
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['0-', '4-'] : 0.507
+['2-', '4-'] : 0.697
+['2+', '5+'] : 0.562
+['7+', '2+'] : 0.52
+['7+', '0-'] : 0.523
+['8+', '0-'] : 0.513
+['1+', '4+'] : 0.614
+['8+', '1+'] : 0.587
+['0+', '2+'] : 0.544
+['8+', '4+'] : 0.533
+['1+', '6-'] : 0.581
+['2+', '1+'] : 0.525
+
+
+Iterations 
+Iteration 0: Best Cost: 1.97 
+Iteration 1: Best Cost: 1.43 
+Iteration 2: Best Cost: 1.43 
+Iteration 3: Best Cost: 1.78 
+Iteration 4: Best Cost: 1.78 
+Iteration 5: Best Cost: 1.92 
+Iteration 6: Best Cost: 1.91 
+Iteration 7: Best Cost: 1.91 
+Iteration 8: Best Cost: 1.91 
+Iteration 9: Best Cost: 1.91 
+Iteration 10: Best Cost: 1.91 
+Iteration 11: Best Cost: 1.91 
+Iteration 12: Best Cost: 1.91 
+Iteration 13: Best Cost: 1.95 
+Iteration 14: Best Cost: 1.63 
+Iteration 15: Best Cost: 1.63 
+Iteration 16: Best Cost: 1.7 
+Iteration 17: Best Cost: 1.84 
+Iteration 18: Best Cost: 1.88 
+Iteration 19: Best Cost: 1.88 
+Iteration 20: Best Cost: 1.72 
+Iteration 21: Best Cost: 1.72 
+Iteration 22: Best Cost: 1.9 
+Iteration 23: Best Cost: 1.9 
+Iteration 24: Best Cost: 1.9 
+Iteration 25: Best Cost: 1.9 
+Iteration 26: Best Cost: 1.9 
+Iteration 27: Best Cost: 1.9 
+Iteration 28: Best Cost: 1.9 
+Iteration 29: Best Cost: 1.9 
