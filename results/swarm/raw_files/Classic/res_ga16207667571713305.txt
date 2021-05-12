@@ -1,0 +1,46 @@
+Run-time: 111.36426448822021 seconds
+Total allocated memory size: 103.7 KiB
+Algorithm: GA-GRAANK (v1.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Population size: 5
+PC: 0.5
+Minimum support: 0.9
+Number of cores: 14
+Number of patterns: 2
+Number of iterations: 4
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/Directio_site15k.csv
+
+Pattern : Support
+[] : 0.0
+['5-', '10-'] : 0.9090909090909091
+
+
+Iterations 
+Iteration 0: Best Cost: inf 
+Iteration 1: Best Cost: inf 
+Iteration 2: Best Cost: 1.1 
+Iteration 3: Best Cost: 1.1 

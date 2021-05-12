@@ -1,0 +1,216 @@
+Run-time: 15.51198697090149 seconds
+Total allocated memory size: 199.4 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 98
+No. of (dataset) tuples: 3943
+Evaporation factor: 0.5
+Minimum support: 0.9
+Number of cores: 14
+Number of patterns: 0
+Number of iterations: 100
+
+0. nr
+1. i1_legid
+2. i1_rcs_p
+3. i1_rcs_e
+4. i1_dep_1_p
+5. i1_dep_1_e
+6. i1_dep_1_place
+7. i1_rcf_1_p
+8. i1_rcf_1_e
+9. i1_rcf_1_place
+10. i1_dep_2_p
+11. i1_dep_2_e
+12. i1_dep_2_place
+13. i1_rcf_2_p
+14. i1_rcf_2_e
+15. i1_rcf_2_place
+16. i1_dep_3_p
+17. i1_dep_3_e
+18. i1_dep_3_place
+19. i1_rcf_3_p
+20. i1_rcf_3_e
+21. i1_rcf_3_place
+22. i1_dlv_p
+23. i1_dlv_e
+24. i1_hops
+25. i2_legid
+26. i2_rcs_p
+27. i2_rcs_e
+28. i2_dep_1_p
+29. i2_dep_1_e
+30. i2_dep_1_place
+31. i2_rcf_1_p
+32. i2_rcf_1_e
+33. i2_rcf_1_place
+34. i2_dep_2_p
+35. i2_dep_2_e
+36. i2_dep_2_place
+37. i2_rcf_2_p
+38. i2_rcf_2_e
+39. i2_rcf_2_place
+40. i2_dep_3_p
+41. i2_dep_3_e
+42. i2_dep_3_place
+43. i2_rcf_3_p
+44. i2_rcf_3_e
+45. i2_rcf_3_place
+46. i2_dlv_p
+47. i2_dlv_e
+48. i2_hops
+49. i3_legid
+50. i3_rcs_p
+51. i3_rcs_e
+52. i3_dep_1_p
+53. i3_dep_1_e
+54. i3_dep_1_place
+55. i3_rcf_1_p
+56. i3_rcf_1_e
+57. i3_rcf_1_place
+58. i3_dep_2_p
+59. i3_dep_2_e
+60. i3_dep_2_place
+61. i3_rcf_2_p
+62. i3_rcf_2_e
+63. i3_rcf_2_place
+64. i3_dep_3_p
+65. i3_dep_3_e
+66. i3_dep_3_place
+67. i3_rcf_3_p
+68. i3_rcf_3_e
+69. i3_rcf_3_place
+70. i3_dlv_p
+71. i3_dlv_e
+72. i3_hops
+73. o_legid
+74. o_rcs_p
+75. o_rcs_e
+76. o_dep_1_p
+77. o_dep_1_e
+78. o_dep_1_place
+79. o_rcf_1_p
+80. o_rcf_1_e
+81. o_rcf_1_place
+82. o_dep_2_p
+83. o_dep_2_e
+84. o_dep_2_place
+85. o_rcf_2_p
+86. o_rcf_2_e
+87. o_rcf_2_place
+88. o_dep_3_p
+89. o_dep_3_e
+90. o_dep_3_place
+91. o_rcf_3_p
+92. o_rcf_3_e
+93. o_rcf_3_place
+94. o_dlv_p
+95. o_dlv_e
+96. o_hops
+97. legs
+
+File: data/c2k.csv
+
+Pattern : Support
+
+
+Iterations 
+Iteration 0: Best Cost: inf 
+Iteration 1: Best Cost: inf 
+Iteration 2: Best Cost: inf 
+Iteration 3: Best Cost: inf 
+Iteration 4: Best Cost: inf 
+Iteration 5: Best Cost: inf 
+Iteration 6: Best Cost: inf 
+Iteration 7: Best Cost: inf 
+Iteration 8: Best Cost: inf 
+Iteration 9: Best Cost: inf 
+Iteration 10: Best Cost: inf 
+Iteration 11: Best Cost: inf 
+Iteration 12: Best Cost: inf 
+Iteration 13: Best Cost: inf 
+Iteration 14: Best Cost: inf 
+Iteration 15: Best Cost: inf 
+Iteration 16: Best Cost: inf 
+Iteration 17: Best Cost: inf 
+Iteration 18: Best Cost: inf 
+Iteration 19: Best Cost: inf 
+Iteration 20: Best Cost: inf 
+Iteration 21: Best Cost: inf 
+Iteration 22: Best Cost: inf 
+Iteration 23: Best Cost: inf 
+Iteration 24: Best Cost: inf 
+Iteration 25: Best Cost: inf 
+Iteration 26: Best Cost: inf 
+Iteration 27: Best Cost: inf 
+Iteration 28: Best Cost: inf 
+Iteration 29: Best Cost: inf 
+Iteration 30: Best Cost: inf 
+Iteration 31: Best Cost: inf 
+Iteration 32: Best Cost: inf 
+Iteration 33: Best Cost: inf 
+Iteration 34: Best Cost: inf 
+Iteration 35: Best Cost: inf 
+Iteration 36: Best Cost: inf 
+Iteration 37: Best Cost: inf 
+Iteration 38: Best Cost: inf 
+Iteration 39: Best Cost: inf 
+Iteration 40: Best Cost: inf 
+Iteration 41: Best Cost: inf 
+Iteration 42: Best Cost: inf 
+Iteration 43: Best Cost: inf 
+Iteration 44: Best Cost: inf 
+Iteration 45: Best Cost: inf 
+Iteration 46: Best Cost: inf 
+Iteration 47: Best Cost: inf 
+Iteration 48: Best Cost: inf 
+Iteration 49: Best Cost: inf 
+Iteration 50: Best Cost: inf 
+Iteration 51: Best Cost: inf 
+Iteration 52: Best Cost: inf 
+Iteration 53: Best Cost: inf 
+Iteration 54: Best Cost: inf 
+Iteration 55: Best Cost: inf 
+Iteration 56: Best Cost: inf 
+Iteration 57: Best Cost: inf 
+Iteration 58: Best Cost: inf 
+Iteration 59: Best Cost: inf 
+Iteration 60: Best Cost: inf 
+Iteration 61: Best Cost: inf 
+Iteration 62: Best Cost: inf 
+Iteration 63: Best Cost: inf 
+Iteration 64: Best Cost: inf 
+Iteration 65: Best Cost: inf 
+Iteration 66: Best Cost: inf 
+Iteration 67: Best Cost: inf 
+Iteration 68: Best Cost: inf 
+Iteration 69: Best Cost: inf 
+Iteration 70: Best Cost: inf 
+Iteration 71: Best Cost: inf 
+Iteration 72: Best Cost: inf 
+Iteration 73: Best Cost: inf 
+Iteration 74: Best Cost: inf 
+Iteration 75: Best Cost: inf 
+Iteration 76: Best Cost: inf 
+Iteration 77: Best Cost: inf 
+Iteration 78: Best Cost: inf 
+Iteration 79: Best Cost: inf 
+Iteration 80: Best Cost: inf 
+Iteration 81: Best Cost: inf 
+Iteration 82: Best Cost: inf 
+Iteration 83: Best Cost: inf 
+Iteration 84: Best Cost: inf 
+Iteration 85: Best Cost: inf 
+Iteration 86: Best Cost: inf 
+Iteration 87: Best Cost: inf 
+Iteration 88: Best Cost: inf 
+Iteration 89: Best Cost: inf 
+Iteration 90: Best Cost: inf 
+Iteration 91: Best Cost: inf 
+Iteration 92: Best Cost: inf 
+Iteration 93: Best Cost: inf 
+Iteration 94: Best Cost: inf 
+Iteration 95: Best Cost: inf 
+Iteration 96: Best Cost: inf 
+Iteration 97: Best Cost: inf 
+Iteration 98: Best Cost: inf 
+Iteration 99: Best Cost: inf 

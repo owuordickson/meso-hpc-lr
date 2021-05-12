@@ -1,0 +1,73 @@
+Run-time: 363.9773643016815 seconds
+Total allocated memory size: 117.0 KiB
+Algorithm: ACO-GRAANK (v2.0)
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 46774
+Evaporation factor: 0.5
+Minimum support: 0.9
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 45
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/UCI_household_power_consumption50k.csv
+
+Pattern : Support
+['5+', '2+'] : 0.971
+
+
+Iterations 
+Iteration 0: Best Cost: inf 
+Iteration 1: Best Cost: inf 
+Iteration 2: Best Cost: inf 
+Iteration 3: Best Cost: inf 
+Iteration 4: Best Cost: inf 
+Iteration 5: Best Cost: inf 
+Iteration 6: Best Cost: inf 
+Iteration 7: Best Cost: inf 
+Iteration 8: Best Cost: 1.03 
+Iteration 9: Best Cost: 1.03 
+Iteration 10: Best Cost: 1.03 
+Iteration 11: Best Cost: 1.03 
+Iteration 12: Best Cost: 1.03 
+Iteration 13: Best Cost: 1.03 
+Iteration 14: Best Cost: 1.03 
+Iteration 15: Best Cost: 1.03 
+Iteration 16: Best Cost: 1.03 
+Iteration 17: Best Cost: 1.03 
+Iteration 18: Best Cost: 1.03 
+Iteration 19: Best Cost: 1.03 
+Iteration 20: Best Cost: 1.03 
+Iteration 21: Best Cost: 1.03 
+Iteration 22: Best Cost: 1.03 
+Iteration 23: Best Cost: 1.03 
+Iteration 24: Best Cost: 1.03 
+Iteration 25: Best Cost: 1.03 
+Iteration 26: Best Cost: 1.03 
+Iteration 27: Best Cost: 1.03 
+Iteration 28: Best Cost: 1.03 
+Iteration 29: Best Cost: 1.03 
+Iteration 30: Best Cost: 1.03 
+Iteration 31: Best Cost: 1.03 
+Iteration 32: Best Cost: 1.03 
+Iteration 33: Best Cost: 1.03 
+Iteration 34: Best Cost: 1.03 
+Iteration 35: Best Cost: 1.03 
+Iteration 36: Best Cost: 1.03 
+Iteration 37: Best Cost: 1.03 
+Iteration 38: Best Cost: 1.03 
+Iteration 39: Best Cost: 1.03 
+Iteration 40: Best Cost: 1.03 
+Iteration 41: Best Cost: 1.03 
+Iteration 42: Best Cost: 1.03 
+Iteration 43: Best Cost: 1.03 
+Iteration 44: Best Cost: 1.03 
