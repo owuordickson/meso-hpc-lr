@@ -1,3 +1,0 @@
-scikit-fuzzy
-numpy
-python-dateutil
