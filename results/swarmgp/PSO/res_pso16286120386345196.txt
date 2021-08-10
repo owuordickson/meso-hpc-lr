@@ -1,0 +1,45 @@
+Run-time: 0.08257818222045898 seconds
+Total allocated memory size: 71.8 KiB
+Algorithm: PSO-GRAANK (v2.0)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+Velocity coeff.: 0.1
+C1 coeff.: 0.1
+C2 coeff.: 0.9
+No. of particles: 5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 2
+Number of iterations: 2
+Number of cost evaluations: 10
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['0+', '2+'] : 0.546
+['0+', '4+'] : 0.509
+
+
+Evaluation: Cost
+1: 0.0015408320493066256 
+2: 0.0015408320493066256 
+3: 0.0002157497303128371 
+4: 0.0008361204013377926 
+5: 0.004694835680751174 
+6: 0.0016835016835016834 
+7: 0.0002157497303128371 
+8: 0.0002157497303128371 
+9: 0.00045392646391284613 
+10: 5.8115883070843265e-05 
