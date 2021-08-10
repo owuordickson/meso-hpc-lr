@@ -1,0 +1,41 @@
+Run-time: 0.10868167877197266 seconds
+Total allocated memory size: 132.8 KiB
+Algorithm: PLS-GRAANK (v1.0)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+Step size: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 10
+Number of cost evaluations: 10
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['0+', '6-'] : 0.502
+
+
+Evaluation: Cost
+1: 8.842514811212309e-05 
+2: 8.842514811212309e-05 
+3: 8.842514811212309e-05 
+4: 8.842514811212309e-05 
+5: 8.842514811212309e-05 
+6: 8.842514811212309e-05 
+7: 8.842514811212309e-05 
+8: 8.842514811212309e-05 
+9: 8.842514811212309e-05 
+10: 8.842514811212309e-05 
