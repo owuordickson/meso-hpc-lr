@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#SBATCH --job-name=swarm-gp
+#SBATCH --job-name=aco-gp
 #SBATCH --output=res_main.txt
 #SBATCH -n 14
 #SBATCH --time=576:00:00
