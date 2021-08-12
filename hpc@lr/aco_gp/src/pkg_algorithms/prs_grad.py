@@ -3,20 +3,22 @@
 @author: "Dickson Owuor"
 @credits: "Thomas Runkler, and Anne Laurent,"
 @license: "MIT"
-@version: "2.0"
+@version: "1.0"
 @email: "owuordickson@gmail.com"
-@created: "29 April 2021"
-@modified: "23 July 2021"
+@created: "26 July 2021"
 
-Breath-First Search for gradual patterns using Genetic Algorithm (GA-GRAD).
-GA is used to learn gradual pattern candidates.
+Breath-First Search for gradual patterns using Pure Random Search (PRS-GRAD).
+PRS is used to learn gradual pattern candidates.
+
+Adopted: https://medium.com/analytics-vidhya/how-does-random-search-algorithm-work-python-implementation-b69e779656d6
 
 CHANGES:
-1. uses normal functions
-2. updated cost function to use Binary Array of GPs
-3. used decimal <-> binary conversion for best_position <-> best_gradual_pattern (item-set combination)
+1.
 
 """
+
+
+import random
 import numpy as np
 from ypstruct import structure
 
@@ -24,103 +26,50 @@ from .shared.gp import GI, GP
 from .shared.dataset_bfs import Dataset
 from .shared.profile import Profile
 
-max_evals = 0
-eval_count = 0
-str_eval = ''
 
-
-def run_genetic_algorithm(f_path, min_supp, max_iteration, max_evaluations, n_pop, pc, gamma, mu, sigma, nvar):
-    global max_evals
-    max_evals = max_evaluations
-
+def run_pure_random_search(f_path, min_supp, max_iteration, max_evaluations, nvar):
     # Prepare data set
     d_set = Dataset(f_path, min_supp)
     d_set.init_gp_attributes()
     attr_keys = [GI(x[0], x[1].decode()).as_string() for x in d_set.valid_bins[:, 0]]
+    attr_keys_spl = [attr_keys[x:x + 2] for x in range(0, len(attr_keys), 2)]
 
     if d_set.no_bins:
         return []
 
-    # Problem Information
-    # cost_func
-
     # Parameters
-    # pc: Proportion of children (if its 1, then nc == npop
     it_count = 0
-    var_min = 0
-    var_max = int(''.join(['1'] * len(attr_keys)), 2)
-
-    nc = int(np.round(pc * n_pop / 2) * 2)  # Number of children. np.round is used to get even number of children
+    eval_count = 0
 
     # Empty Individual Template
-    empty_individual = structure()
-    empty_individual.position = None
-    empty_individual.cost = None
+    candidate = structure()
+    candidate.position = None
+    candidate.cost = float('inf')
 
-    # Initialize Population
-    pop = empty_individual.repeat(n_pop)
-    for i in range(n_pop):
-        pop[i].position = np.random.randint(var_min, var_max)
-        pop[i].cost = 1  # cost_func(pop[i].position, attr_keys, d_set)
-        # if pop[i].cost < best_sol.cost:
-        #    best_sol = pop[i].deepcopy()
-
-    # Best Solution Ever Found
-    best_sol = empty_individual.deepcopy()
-    best_sol.position = pop[0].position
-    best_sol.cost = cost_func(best_sol.position, attr_keys, d_set)
+    # INITIALIZE
+    best_sol = candidate.deepcopy()
+    best_sol.position = build_gp_gene(attr_keys_spl)
+    best_sol.cost = cost_func(best_sol.position, attr_keys_spl, d_set)
 
     # Best Cost of Iteration
     best_costs = np.empty(max_iteration)
     best_patterns = []
     str_iter = ''
+    str_eval = ''
 
     repeated = 0
     while eval_count < max_evaluations:
         # while it_count < max_iteration:
-        # while repeated < 1:
 
-        c_pop = []  # Children population
-        for _ in range(nc // 2):
-            # Select Parents
-            q = np.random.permutation(n_pop)
-            p1 = pop[q[0]]
-            p2 = pop[q[1]]
+        candidate.position =  random.random() * build_gp_gene(attr_keys_spl)  # ((var_min + random.random()) * (var_max - var_min))
+        candidate.cost = cost_func(candidate.position, attr_keys_spl, d_set)
+        eval_count += 1
 
-            # Perform Crossover
-            c1, c2 = crossover(p1, p2, gamma)
+        if candidate.cost < best_sol.cost:
+            best_sol = candidate.deepcopy()
+        str_eval += "{}: {} \n".format(eval_count, best_sol.cost)
 
-            # Perform Mutation
-            c1 = mutate(c1, mu, sigma)
-            c2 = mutate(c2, mu, sigma)
-
-            # Apply Bound
-            apply_bound(c1, var_min, var_max)
-            apply_bound(c2, var_min, var_max)
-
-            # Evaluate First Offspring
-            c1.cost = cost_func(c1.position, attr_keys, d_set)
-            if c1.cost < best_sol.cost:
-                best_sol = c1.deepcopy()
-            # Add Offsprings to c_pop
-            c_pop.append(c1)
-
-            # if eval_count >= max_evaluations:
-            #    break
-
-            # Evaluate Second Offspring
-            c2.cost = cost_func(c2.position, attr_keys, d_set)
-            if c2.cost < best_sol.cost:
-                best_sol = c2.deepcopy()
-            # Add Offsprings to c_pop
-            c_pop.append(c2)
-
-        # Merge, Sort and Select
-        pop += c_pop
-        pop = sorted(pop, key=lambda x: x.cost)
-        pop = pop[0:n_pop]
-
-        best_gp = validate_gp(d_set, decode_gp(attr_keys, best_sol.position))
+        best_gp = validate_gp(d_set, decode_gp(attr_keys_spl, best_sol.position))
         is_present = is_duplicate(best_gp, best_patterns)
         is_sub = check_anti_monotony(best_patterns, best_gp, subset=True)
         if is_present or is_sub:
@@ -142,17 +91,14 @@ def run_genetic_algorithm(f_path, min_supp, max_iteration, max_evaluations, n_po
 
     # Output
     out = structure()
-    out.pop = pop
     out.best_sol = best_sol
     out.best_costs = best_costs
     out.best_patterns = best_patterns
     out.str_iterations = str_iter
-    out.str_evaluations = str_eval
     out.iteration_count = it_count
     out.max_iteration = max_iteration
+    out.str_evaluations = str_eval
     out.cost_evaluations = eval_count
-    out.n_pop = n_pop
-    out.pc = pc
     out.titles = d_set.titles
     out.col_count = d_set.col_count
     out.row_count = d_set.row_count
@@ -178,51 +124,27 @@ def cost_func(position, attr_keys, d_set):
     else:
         cost = 1
 
-    global str_eval
-    global eval_count
-    if eval_count < max_evals:
-        eval_count += 1
-        str_eval += "{}: {} \n".format(eval_count, cost)
-
     return cost
 
 
-def crossover(p1, p2, gamma=0.1):
-    c1 = p1.deepcopy()
-    c2 = p2.deepcopy()
-    alpha = np.random.uniform(-gamma, 1+gamma, 1)
-    c1.position = alpha*p1.position + (1-alpha)*p2.position
-    c2.position = alpha*p2.position + (1-alpha)*p1.position
-    return c1, c2
+def build_gp_gene(attr_keys):
+    a = attr_keys
+    temp_gene = np.random.choice(a=[0, 1], size=(len(a), 2))
+    return temp_gene
 
 
-def mutate(x, mu, sigma):
-    y = x.deepcopy()
-    flag = np.random.rand(*x.position.shape) <= mu
-    ind = np.argwhere(flag)
-    y.position[ind] += sigma*np.random.rand(*ind.shape)
-    return y
-
-
-def apply_bound(x, var_min, var_max):
-    x.position = np.maximum(x.position, var_min)
-    x.position = np.minimum(x.position, var_max)
-
-
-def decode_gp(attr_keys, position):
+def decode_gp(attr_keys, gene):
     temp_gp = GP()
-    if position is None:
+    if gene is None:
         return temp_gp
-
-    bin_str = bin(int(position))[2:]
-    bin_arr = np.array(list(bin_str), dtype=int)
-
-    for i in range(bin_arr.size):
-        bin_val = bin_arr[i]
-        if bin_val == 1:
-            gi = GI.parse_gi(attr_keys[i])
-            if not temp_gp.contains_attr(gi):
-                temp_gp.add_gradual_item(gi)
+    for a in range(gene.shape[0]):
+        gi = None
+        if gene[a][0] > gene[a][1]:
+            gi = GI.parse_gi(attr_keys[a][0])
+        elif gene[a][1] > gene[a][0]:
+            gi = GI.parse_gi(attr_keys[a][1])
+        if not(gi is None) and (not temp_gp.contains_attr(gi)):
+            temp_gp.add_gradual_item(gi)
     return temp_gp
 
 
@@ -283,24 +205,24 @@ def is_duplicate(pattern, lst_winners):
     return False
 
 
-def execute(f_path, min_supp, cores, max_iteration, max_evaluations, n_pop, pc, gamma, mu, sigma, nvar):
+def execute(f_path, min_supp, cores, max_iteration, max_evaluations, nvar):
     try:
         if cores > 1:
             num_cores = cores
         else:
             num_cores = Profile.get_num_cores()
 
-        out = run_genetic_algorithm(f_path, min_supp, max_iteration, max_evaluations, n_pop, pc, gamma, mu, sigma, nvar)
+        out = run_pure_random_search(f_path, min_supp, max_iteration, max_evaluations, nvar)
         list_gp = out.best_patterns
 
         # Results
-        Profile.plot_curve(out, 'Genetic Algorithm (GA)')
+        Profile.plot_curve(out, 'Pure Random Search Algorithm (PRS)')
 
-        wr_line = "Algorithm: GA-GRAANK (v2.0)\n"
+        wr_line = "Algorithm: PRS-GRAANK (v1.0)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
-        wr_line += "Population size: " + str(out.n_pop) + '\n'
-        wr_line += "PC: " + str(out.pc) + '\n'
+        # wr_line += "Population size: " + str(out.n_pop) + '\n'
+        # wr_line += "PC: " + str(out.pc) + '\n'
 
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'

@@ -10,8 +10,9 @@
 import numpy as np
 import gc
 
+from .shared.fuzzy_mf import calculate_time_lag
 from .shared.dataset_bfs import Dataset
-from .shared.gp import GI, GP
+from .shared.gp import GI, GP, TGP
 from .shared.profile import Profile
 
 
@@ -68,7 +69,7 @@ def gen_apriori_candidates(R, sup, n):
     return res
 
 
-def graank(f_path=None, min_sup=None, eq=False, d_set=None):
+def graank(f_path=None, min_sup=None, eq=False, t_diffs=None, d_set=None):
     if d_set is None:
         d_set = Dataset(f_path, min_sup, eq)
         d_set.init_gp_attributes()
@@ -98,19 +99,31 @@ def graank(f_path=None, min_sup=None, eq=False, d_set=None):
                         del patterns[z]
                     else:
                         z = z + 1
-
-                gp = GP()
-                for obj in valid_bins[i][0]:
-                    gi = GI(obj[0], obj[1].decode())
-                    gp.add_gradual_item(gi)
-                gp.set_support(sup)
-                patterns.append(gp)
+                if t_diffs is not None:
+                    t_lag = calculate_time_lag(bin_data, t_diffs)
+                    if t_lag.valid:
+                        gp = GP()
+                        for obj in valid_bins[i][0]:
+                            gi = GI(obj[0], obj[1].decode())
+                            gp.add_gradual_item(gi)
+                        gp.set_support(sup)
+                        tgp = TGP(gp=gp, t_lag=t_lag)
+                        patterns.append(tgp)
+                else:
+                    gp = GP()
+                    for obj in valid_bins[i][0]:
+                        gi = GI(obj[0], obj[1].decode())
+                        gp.add_gradual_item(gi)
+                    gp.set_support(sup)
+                    patterns.append(gp)
                 i += 1
+    if t_diffs is None:
+        return d_set, patterns
+    else:
+        return patterns
 
-    return d_set, patterns
 
-
-def execute(f_path, min_supp, cores, eq=False):
+def init(f_path, min_supp, cores, eq=False):
     try:
         d_set, list_gp = graank(f_path, min_supp, eq)
 
@@ -133,7 +146,7 @@ def execute(f_path, min_supp, cores, eq=False):
         wr_line += str("\nPattern : Support" + '\n')
 
         for gp in list_gp:
-            wr_line += (str(gp.to_string()) + ' : ' + str(round(gp.support, 3)) + '\n')
+            wr_line += (str(gp.to_string()) + ' : ' + str(gp.support) + '\n')
 
         return wr_line
     except ArithmeticError as error:
