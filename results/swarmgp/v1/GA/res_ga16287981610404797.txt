@@ -1,0 +1,42 @@
+Run-time: 0.08232927322387695 seconds
+Total allocated memory size: 80.9 KiB
+Algorithm: GA-GRAANK (v1.0)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+Population size: 5
+PC: 0.5
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of iterations: 5
+Number of cost evaluations: 10
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['6+', '9+'] : 0.565
+
+
+Evaluation: Cost
+1: 1.607846289894686e-05 
+2: 0.05263157894736842 
+3: 0.015384615384615385 
+4: 0.007874015748031496 
+5: 0.0022935779816513763 
+6: 0.02857142857142857 
+7: 0.01639344262295082 
+8: 0.01639344262295082 
+9: 0.01639344262295082 
+10: 0.000942507068803016 
