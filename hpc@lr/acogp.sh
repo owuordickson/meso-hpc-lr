@@ -10,502 +10,502 @@
 
 module load python/3.8.2
 
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
-
-python3 aco_gp/src/main.py -a 'ga' -c 14
-python3 aco_gp/src/main.py -a 'pso' -c 14
-python3 aco_gp/src/main.py -a 'pls' -c 14
-python3 aco_gp/src/main.py -a 'prs' -c 14
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/c2k_06k.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/c2k_06k.csv
