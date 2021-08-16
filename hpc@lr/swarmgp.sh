@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=swarm-gp
-#SBATCH --output=res_main.txt
+#SBATCH --output=res_swarmgp.txt
 #SBATCH -n 14
 #SBATCH --time=576:00:00
 #SBATCH --partition=lirmm

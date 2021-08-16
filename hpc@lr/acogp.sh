@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=aco-gp
-#SBATCH --output=res_main.txt
+#SBATCH --output=res_acogp.txt
 #SBATCH -n 14
 #SBATCH --time=576:00:00
 #SBATCH --partition=lirmm
