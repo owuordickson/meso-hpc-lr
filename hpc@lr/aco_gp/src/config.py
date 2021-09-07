@@ -2,18 +2,18 @@
 
 # Configurations for Gradual Patterns:
 # INITIALIZATIONS = 3
-ALGORITHM = 'ga'
+ALGORITHM = 'aco'  # aco, ga, pso, graank, acolcm, lcm, prs, pls
 MIN_SUPPORT = 0.5
-CPU_CORES = 4
+CPU_CORES = 4  # Depends on your computer
 
 # DATASET = "../../data/DATASET.csv"
 # DATASET = "../../data/hcv_data.csv"
 
 # Uncomment for Main:
-# DATASET = "../data/hcv_data.csv"
+# DATASET = "../data/DATASET.csv"
 
 # Uncomment for Terminal:
-DATASET = "data/hcv_data.csv"
+DATASET = "data/DATASET.csv"
 
 # Global Swarm Configurations
 MAX_ITERATIONS = 1000
@@ -40,3 +40,8 @@ N_PARTICLES = 5
 
 # PLS-GRAD Configurations
 STEP_SIZE = 0.5
+
+# VISUALIZATIONS
+SHOW_P_MATRIX = False  # ONLY FOR: aco
+SHOW_EVALUATIONS = False  # FOR aco, prs, pls, pso
+SHOW_ITERATIONS = False  # FOR aco, prs, pls, pso

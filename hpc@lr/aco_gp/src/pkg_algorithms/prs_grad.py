@@ -61,12 +61,12 @@ def run_pure_random_search(f_path, min_supp, max_iteration, max_evaluations, nva
     while it_count < max_iteration:
         # while eval_count < max_evaluations:
 
-        candidate.position =  random.random() * build_gp_gene(attr_keys_spl)  # ((var_min + random.random()) * (var_max - var_min))
+        candidate.position = random.random() * build_gp_gene(attr_keys_spl)
         candidate.cost = cost_func(candidate.position, attr_keys_spl, d_set)
-        eval_count += 1
 
         if candidate.cost < best_sol.cost:
             best_sol = candidate.deepcopy()
+        eval_count += 1
         str_eval += "{}: {} \n".format(eval_count, best_sol.cost)
 
         best_gp = validate_gp(d_set, decode_gp(attr_keys_spl, best_sol.position))
@@ -102,7 +102,6 @@ def run_pure_random_search(f_path, min_supp, max_iteration, max_evaluations, nva
     out.titles = d_set.titles
     out.col_count = d_set.col_count
     out.row_count = d_set.row_count
-
     return out
 
 
@@ -205,7 +204,7 @@ def is_duplicate(pattern, lst_winners):
     return False
 
 
-def execute(f_path, min_supp, cores, max_iteration, max_evaluations, nvar):
+def execute(f_path, min_supp, cores, max_iteration, max_evaluations, nvar, visuals):
     try:
         if cores > 1:
             num_cores = cores
@@ -242,10 +241,12 @@ def execute(f_path, min_supp, cores, max_iteration, max_evaluations, nvar):
         for gp in list_gp:
             wr_line += (str(gp.to_string()) + ' : ' + str(round(gp.support, 3)) + '\n')
 
-        wr_line += '\n\n' + "Iteration: Cost" + '\n'
-        wr_line += out.str_iterations
-        # wr_line += '\n\n' + "Evaluation: Cost" + '\n'
-        # wr_line += out.str_evaluations
+        if visuals[1]:
+            wr_line += '\n\n' + "Evaluation: Cost" + '\n'
+            wr_line += out.str_evaluations
+        if visuals[2]:
+            wr_line += '\n\n' + "Iteration: Best Cost" + '\n'
+            wr_line += out.str_iterations
         return wr_line
     except ArithmeticError as error:
         wr_line = "Failed: " + str(error)

@@ -2,17 +2,11 @@
 """
 @author: "Dickson Owuor"
 @created: "03 May 2021"
-@modified: "21 July 2021"
-
-
 Usage:
-    $python main.py -f ../data/DATASET.csv
-
+    $python init_acograd.py -f ../data/DATASET.csv -s 0.5
 Description:
-    a -> algorithm (aco, ga, pso,wso, prs, pls)
     f -> file path (CSV)
     s -> minimum support
-
 """
 
 import sys
@@ -87,16 +81,23 @@ if __name__ == "__main__":
         vFactor = options.vFactor
         stepVal = options.stepVal
 
+    VISUAL = [0, 0, 0]
+    if cfg.SHOW_P_MATRIX:
+        VISUAL[0] = True
+    if cfg.SHOW_EVALUATIONS:
+        VISUAL[1] = True
+    if cfg.SHOW_ITERATIONS:
+        VISUAL[2] = True
+
     import time
     import tracemalloc
     from pkg_algorithms.shared.profile import Profile
 
-    # for i in range(cfg.INITIALIZATIONS):
     if algChoice == 'aco':
         # ACO-GRAANK
         start = time.time()
         tracemalloc.start()
-        res_text = aco_grad.execute(filePath, minSup, numCores, eVal, cfg.MAX_ITERATIONS)
+        res_text = aco_grad.execute(filePath, minSup, numCores, eVal, cfg.MAX_ITERATIONS, VISUAL)
         snapshot = tracemalloc.take_snapshot()
         end = time.time()
 
@@ -104,14 +105,14 @@ if __name__ == "__main__":
         wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
         f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
-        Profile.write_file(wr_text, f_name)
+        Profile.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     elif algChoice == 'ga':
         # GA-GRAANK
         start = time.time()
         tracemalloc.start()
         res_text = ga_grad.execute(filePath, minSup, numCores, cfg.MAX_ITERATIONS, cfg.MAX_EVALUATIONS,
-                                   cfg.N_POPULATION, pcVal, cfg.GAMMA, cfg.MU, cfg.SIGMA, cfg.N_VAR)
+                                   cfg.N_POPULATION, pcVal, cfg.GAMMA, cfg.MU, cfg.SIGMA, VISUAL)
         snapshot = tracemalloc.take_snapshot()
         end = time.time()
 
@@ -119,14 +120,14 @@ if __name__ == "__main__":
         wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
         f_name = str('res_ga' + str(end).replace('.', '', 1) + '.txt')
-        Profile.write_file(wr_text, f_name)
+        Profile.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     elif algChoice == 'pso':
         # PSO-GRAANK
         start = time.time()
         tracemalloc.start()
         res_text = pso_grad.execute(filePath, minSup, numCores, cfg.MAX_ITERATIONS, cfg.MAX_EVALUATIONS,
-                                    cfg.N_PARTICLES, vFactor, cfg.PERSONAL_COEFF, cfg.GLOBAL_COEFF, cfg.N_VAR)
+                                    cfg.N_PARTICLES, vFactor, cfg.PERSONAL_COEFF, cfg.GLOBAL_COEFF, VISUAL)
         snapshot = tracemalloc.take_snapshot()
         end = time.time()
 
@@ -134,13 +135,14 @@ if __name__ == "__main__":
         wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
         f_name = str('res_pso' + str(end).replace('.', '', 1) + '.txt')
-        Profile.write_file(wr_text, f_name)
+        Profile.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     elif algChoice == 'prs':
         # PSO-GRAANK
         start = time.time()
         tracemalloc.start()
-        res_text = prs_grad.execute(filePath, minSup, numCores, cfg.MAX_ITERATIONS, cfg.MAX_EVALUATIONS, cfg.N_VAR)
+        res_text = prs_grad.execute(filePath, minSup, numCores, cfg.MAX_ITERATIONS, cfg.MAX_EVALUATIONS, cfg.N_VAR,
+                                    VISUAL)
         snapshot = tracemalloc.take_snapshot()
         end = time.time()
 
@@ -148,14 +150,14 @@ if __name__ == "__main__":
         wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
         f_name = str('res_prs' + str(end).replace('.', '', 1) + '.txt')
-        Profile.write_file(wr_text, f_name)
+        Profile.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     elif algChoice == 'pls':
         # PSO-GRAANK
         start = time.time()
         tracemalloc.start()
         res_text = pls_grad.execute(filePath, minSup, numCores, cfg.MAX_ITERATIONS, cfg.MAX_EVALUATIONS, stepVal,
-                                    cfg.N_VAR)
+                                    cfg.N_VAR, VISUAL)
         snapshot = tracemalloc.take_snapshot()
         end = time.time()
 
@@ -163,7 +165,7 @@ if __name__ == "__main__":
         wr_text += (Profile.get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
         f_name = str('res_pls' + str(end).replace('.', '', 1) + '.txt')
-        Profile.write_file(wr_text, f_name)
+        Profile.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     else:
         print("Invalid Algorithm Choice!")
