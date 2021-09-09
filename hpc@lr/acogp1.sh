@@ -10,502 +10,502 @@
 
 module load python/3.8.2
 
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
-
-python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI.csv
-python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI.csv
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
+
+python3 aco_gp/src/main.py -a 'ga' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pso' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'pls' -c 14 -f data/AirQualityUCI_1K.csv
+python3 aco_gp/src/main.py -a 'prs' -c 14 -f data/AirQualityUCI_1K.csv
