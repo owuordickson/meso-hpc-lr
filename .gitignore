@@ -1,5 +1,4 @@
 # ignore data folder
-data/
 wait/
 .DS_Store
 .ipynb_checkpoints
