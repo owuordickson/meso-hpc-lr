@@ -72,12 +72,12 @@ if __name__ == "__main__":
 
     import time
     from memory_profiler import memory_usage
-    from pkg_algorithms import clu_grad, aco_grad, graank
+    from pkg_algorithms import clu_grad, aco_grad, graank, clu_grad_v3
 
     if algChoice == 'clugrad':
         # CLU-GRAD
         start = time.time()
-        res_text = clu_grad.execute(filePath, minSup, eProb, itMax, numCores)
+        res_text = clu_grad_v3.execute(filePath, minSup, eProb, itMax, numCores)
         # res_text = cluster_gps_v1.execute(filePath, minSup, eProb, itMax, numCores)
         end = time.time()
         mem_usage = memory_usage((clu_grad.execute, (filePath, minSup, eProb, itMax, numCores)))
