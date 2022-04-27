@@ -91,9 +91,9 @@ if __name__ == "__main__":
     elif algChoice == 'acograd':
         # ACO-GRAANK
         start = time.time()
-        res_text = aco_grad.execute(filePath, minSup, numCores, eProb, cfg.MAX_ITERATIONS)
+        res_text = aco_grad.execute(filePath, minSup, numCores, cfg.EVAPORATION_FACTOR, cfg.MAX_ITERATIONS)
         end = time.time()
-        mem_usage = memory_usage((aco_grad.execute, (filePath, minSup, numCores, eProb, cfg.MAX_ITERATIONS)))
+        mem_usage = memory_usage((aco_grad.execute, (filePath, minSup, numCores, cfg.EVAPORATION_FACTOR, cfg.MAX_ITERATIONS)))
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
         wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
