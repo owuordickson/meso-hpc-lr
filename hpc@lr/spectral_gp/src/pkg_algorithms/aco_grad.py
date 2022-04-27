@@ -15,6 +15,7 @@ def execute(f_path, min_supp, cores,  evaporation_factor, max_iteration):
         wr_line += "No. of (dataset) attributes: " + str(d_set.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(d_set.row_count) + '\n'
         wr_line += "Evaporation factor: " + str(evaporation_factor) + '\n'
+        wr_line += "Number of iterations: " + str(max_iteration) + '\n'
 
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
