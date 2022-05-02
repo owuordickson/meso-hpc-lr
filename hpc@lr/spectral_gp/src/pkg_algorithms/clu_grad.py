@@ -6,7 +6,7 @@
 
 @license: MIT
 
-@version: 0.1.3
+@version: 0.1.4
 
 @email: owuordickson@gmail.com
 
@@ -282,7 +282,7 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         out = clugps(f_path, min_supp, e_prob, max_iter, testing=True)
         list_gp = out.estimated_gps
 
-        wr_line = "Algorithm: Clu-GRAD (v1.3)\n"
+        wr_line = "Algorithm: Clu-GRAD (v1.4)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
         wr_line += "Erasure probability: " + str(out.e_prob) + '\n'
@@ -304,8 +304,8 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         for gp in list_gp:
             wr_line += (str(gp.to_string()) + ' : ' + str(round(gp.support, 3)) + '\n')
 
-        return wr_line
+        return wr_line, list_gp
     except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
-        return wr_line
+        return wr_line, None
