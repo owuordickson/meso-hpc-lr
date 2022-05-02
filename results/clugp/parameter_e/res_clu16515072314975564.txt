@@ -1,0 +1,35 @@
+Run-time: 0.7658085823059082 seconds
+Memory Usage (MiB): [106.18359375, 106.20703125, 106.26171875, 106.38671875, 106.38671875, 106.38671875, 106.38671875, 106.38671875, 106.38671875, 106.38671875, 106.3984375] 
+Algorithm: Clu-GRAD (v1.4)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Erasure probability: 0.5
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 4
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['3-', '4-'] : 0.913
+['2+', '3+', '4+'] : 0.637
+['1-', '5-'] : 0.729
+['2-', '9-'] : 0.526
+
+
+Comparison : Estimated Support, True Support
+['3-', '4-'] : 0.913, 0.94
+['2+', '3+', '4+'] : 0.637, 0.637
+['1-', '5-'] : 0.729, 0.732
+['2-', '9-'] : 0.526, -1
