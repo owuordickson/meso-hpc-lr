@@ -9,8 +9,8 @@ CPU_CORES = 1  # Depends on your computer
 # DATASET = "../../data/hcv_data.csv"
 
 # Uncomment for Main:
-# DATASET = "../data/DATASET.csv"
-DATASET = '../data/breast_cancer.csv'
+DATASET = "../data/DATASET.csv"
+# DATASET = '../data/breast_cancer.csv'
 # DATASET = '../data/air_quality.csv'
 # DATASET = '../data/air_quality1k.csv'
 # DATASET = '../data/power_consumption19k.csv'
