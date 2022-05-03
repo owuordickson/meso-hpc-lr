@@ -10,10 +10,4 @@
 
 module load python/3.8.2
 
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.75
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.75
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.75
-
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.9
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.9
-python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/c2k_1k.csv -e 0.9
+python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/air_quality.csv
