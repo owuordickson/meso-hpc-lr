@@ -98,11 +98,11 @@ if __name__ == "__main__":
         start = time.time()
         res_text, gps = clu_grad.execute(filePath, minSup, eProb, itMax, numCores)
         end = time.time()
-        mem_usage = memory_usage((clu_grad.execute, (filePath, minSup, eProb, itMax, numCores)))
+        # mem_usage = memory_usage((clu_grad.execute, (filePath, minSup, eProb, itMax, numCores)), interval=10)
         res_compare = compare_gps(filePath, minSup, gps)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
-        wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
+        # wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
         wr_text += str(res_text)
         wr_text += str(res_compare)
         f_name = str('res_clu' + str(end).replace('.', '', 1) + '.txt')
@@ -114,7 +114,7 @@ if __name__ == "__main__":
         res_text = aco_grad.execute(filePath, minSup, numCores, cfg.EVAPORATION_FACTOR, cfg.MAX_ITERATIONS)
         end = time.time()
         mem_usage = memory_usage((aco_grad.execute, (filePath, minSup, numCores, cfg.EVAPORATION_FACTOR,
-                                                     cfg.MAX_ITERATIONS)))
+                                                     cfg.MAX_ITERATIONS)), interval=10)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
         wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
@@ -127,7 +127,7 @@ if __name__ == "__main__":
         start = time.time()
         res_text = graank.execute(filePath, minSup, numCores)
         end = time.time()
-        mem_usage = memory_usage((graank.execute, (filePath, minSup, numCores)))
+        mem_usage = memory_usage((graank.execute, (filePath, minSup, numCores)), interval=10)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
         wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")

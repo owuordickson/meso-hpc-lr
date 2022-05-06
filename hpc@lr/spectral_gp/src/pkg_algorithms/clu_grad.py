@@ -6,7 +6,7 @@
 
 @license: MIT
 
-@version: 0.1.4
+@version: 0.1.5
 
 @email: owuordickson@gmail.com
 
@@ -255,19 +255,13 @@ def estimate_score_vector(n, c_wins, arr_ij, max_iter):
 
 def estimate_support(n, score_vectors):
     # Estimate support - use different score-vectors to construct pairs
-    sim_pairs = 0
-    is_common = False
-    for i in range(n):
-        for j in range(n):
-            if is_common:
-                sim_pairs += 1
-            is_common = True
-            for s_vec in score_vectors:
-                prob = math.exp(s_vec[i]) / (math.exp(s_vec[i]) + math.exp(s_vec[j]))
-                if prob <= 0.5:
-                    is_common = False
-    est_sup = sim_pairs / (n * (n - 1) / 2)
-    # print(sim_pairs)
+    bin_mat = np.ones((n, n), dtype=np.bool)
+    for vec in score_vectors:
+        temp_bin = vec < vec[:, np.newaxis]
+        bin_mat = np.multiply(bin_mat, temp_bin)
+
+    est_sup = float(np.sum(bin_mat)) / float(n * (n - 1.0) / 2.0)
+    # print(est_sup)
     return est_sup
 
 
@@ -282,7 +276,7 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         out = clugps(f_path, min_supp, e_prob, max_iter, testing=True)
         list_gp = out.estimated_gps
 
-        wr_line = "Algorithm: Clu-GRAD (v1.4)\n"
+        wr_line = "Algorithm: Clu-GRAD (v1.5)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
         wr_line += "Erasure probability: " + str(out.e_prob) + '\n'
