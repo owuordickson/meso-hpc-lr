@@ -6,7 +6,7 @@
 
 @license: MIT
 
-@version: 0.1.5
+@version: 0.1.6
 
 @email: owuordickson@gmail.com
 
@@ -35,6 +35,8 @@ the same cluster should have almost similar score vector.
 """
 import json
 import math
+
+import faiss
 import numpy as np
 from ypstruct import structure
 from sklearn.cluster import KMeans
@@ -67,9 +69,16 @@ def clugps(f_path, min_sup=MIN_SUPPORT, e_probability=ERASURE_PROBABILITY,
     # 3c. Spectral Clustering: rank approximation
     s_matrix_approx = u[:, :r] @ np.diag(s[:r]) @ vt[:r, :]
 
-    # 3d. Clustering using K-Means
-    kmeans = KMeans(n_clusters=r, random_state=0)
-    y_pred = kmeans.fit_predict(s_matrix_approx)
+    # 3d. Clustering using K-Means (using sklearn library)
+    # kmeans = KMeans(n_clusters=r, random_state=0)
+    # y_pred = kmeans.fit_predict(s_matrix_approx)
+
+    # 3d. Clustering using K-Means (using faiss library)
+    kmeans = faiss.Kmeans(d=s_matrix_approx.shape[1], k=int(r))
+    kmeans.train(s_matrix_approx.astype(np.float32))
+    y_pred = kmeans.index.search(s_matrix_approx.astype(np.float32), 1)[1]
+    y_pred = np.ravel(y_pred)
+    # print(y_pred.shape)
 
     # 4. Infer GPs
     str_gps, gps = infer_gps(y_pred, d_gp, mat_obj, sv_max_iter)
@@ -276,7 +285,7 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         out = clugps(f_path, min_supp, e_prob, max_iter, testing=True)
         list_gp = out.estimated_gps
 
-        wr_line = "Algorithm: Clu-GRAD (v1.5)\n"
+        wr_line = "Algorithm: Clu-GRAD (v1.6)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
         wr_line += "Erasure probability: " + str(out.e_prob) + '\n'
