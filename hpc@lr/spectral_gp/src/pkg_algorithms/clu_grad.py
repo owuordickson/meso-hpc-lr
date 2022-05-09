@@ -6,7 +6,7 @@
 
 @license: MIT
 
-@version: 0.1.6
+@version: 0.1.9
 
 @email: owuordickson@gmail.com
 
@@ -36,12 +36,13 @@ the same cluster should have almost similar score vector.
 import json
 import math
 
-import faiss
 import numpy as np
 from ypstruct import structure
 from sklearn.cluster import KMeans
+# import faiss
 
 import so4gp as sgp
+import time  # TO BE REMOVED
 
 # Clustering Configurations
 MIN_SUPPORT = 0.5
@@ -56,10 +57,12 @@ def clugps(f_path, min_sup=MIN_SUPPORT, e_probability=ERASURE_PROBABILITY,
     """:type d_gp: DataGP"""
 
     # 2. Generate net-win matrices
+    # e_prob = (0.5 if e_probability < 0.5 else e_probability)  # erasure-probability has to be 0.5 or greater
     mat_obj = construct_matrices(d_gp, e=e_probability)
     s_matrix = mat_obj.nwin_matrix  # Net-win matrix (S)
     # print(s_matrix)
 
+    start = time.time()  # TO BE REMOVED
     # 3a. Spectral Clustering: perform SVD to determine the independent rows
     u, s, vt = np.linalg.svd(s_matrix)
 
@@ -70,15 +73,16 @@ def clugps(f_path, min_sup=MIN_SUPPORT, e_probability=ERASURE_PROBABILITY,
     s_matrix_approx = u[:, :r] @ np.diag(s[:r]) @ vt[:r, :]
 
     # 3d. Clustering using K-Means (using sklearn library)
-    # kmeans = KMeans(n_clusters=r, random_state=0)
-    # y_pred = kmeans.fit_predict(s_matrix_approx)
+    kmeans = KMeans(n_clusters=r, random_state=0)
+    y_pred = kmeans.fit_predict(s_matrix_approx)
 
     # 3d. Clustering using K-Means (using faiss library)
-    kmeans = faiss.Kmeans(d=s_matrix_approx.shape[1], k=int(r))
-    kmeans.train(s_matrix_approx.astype(np.float32))
-    y_pred = kmeans.index.search(s_matrix_approx.astype(np.float32), 1)[1]
-    y_pred = np.ravel(y_pred)
-    # print(y_pred.shape)
+    # kmeans = faiss.Kmeans(d=s_matrix_approx.shape[1], k=int(r))
+    # kmeans.train(s_matrix_approx.astype(np.float32))
+    # y_pred = kmeans.index.search(s_matrix_approx.astype(np.float32), 1)[1]
+    # y_pred = np.ravel(y_pred)
+
+    end = time.time()  # TO BE REMOVED
 
     # 4. Infer GPs
     str_gps, gps = infer_gps(y_pred, d_gp, mat_obj, sv_max_iter)
@@ -92,6 +96,7 @@ def clugps(f_path, min_sup=MIN_SUPPORT, e_probability=ERASURE_PROBABILITY,
     out.col_count = d_gp.col_count
     out.row_count = d_gp.row_count
     out.e_prob = e_probability
+    out.cluster_time = (end - start)  # TO BE REMOVED
     if testing:
         return out
 
@@ -106,50 +111,42 @@ def clugps(f_path, min_sup=MIN_SUPPORT, e_probability=ERASURE_PROBABILITY,
 
 def construct_matrices(d_gp, e):
 
-    # 1. Sample pairs using erasure-probability
     n = d_gp.row_count
-    total_pair_count = int(n * (n - 1) * 0.5)
     prob = 1 - e  # Sample probability
-    sampled_idx = np.random.choice(total_pair_count, int(prob*total_pair_count), replace=False)  # Sampled pairs
-    # sampled_idx = np.array([0, 9, 6, 7, 3])  # For testing
+
+    # 1a. Generate random pairs using erasure-probability
+    total_pair_count = int(n * (n - 1) * 0.5)
+    rand_1d = np.random.choice(n, int(prob*total_pair_count)*2, replace=True)
+    pair_ij = np.reshape(rand_1d, (-1, 2))
+
+    # 1b. Remove duplicates
+    pair_ij = pair_ij[np.argwhere(pair_ij[:, 0] != pair_ij[:, 1])[:, 0]]
+    # pair_ij = np.array([[0, 4], [3, 4], [2, 0], [4, 1], [2, 4], [1, 0]])  # For testing
 
     # 2. Variable declarations
     attr_data = d_gp.data.T  # Feature data objects
     lst_gis = []  # List of GIs
     s_mat = []  # S-Matrix (made up of S-Vectors)
     cum_wins = []  # Cumulative wins
-    pair_count = sampled_idx.shape[0]  # Number of sampled pairs
-    get_ij = np.zeros((pair_count, 2), dtype=np.int)  # ij pair values
 
-    # 3. Compute i and j values from sampled indices
-    for k in range(pair_count):
-        idx = sampled_idx[k]
-        g, i_g = get_pair_partition(n, idx)
-        i = (g - 1)
-        j = (g + i_g)
-        get_ij[k][0] = i
-        get_ij[k][1] = j
-
-    # 4. Construct S matrix from data set
-    for col in d_gp.attr_cols:
+    # st = time.time()
+    # 3. Construct S matrix from data set
+    for col in np.nditer(d_gp.attr_cols):
+        # Feature data objects
         col_data = np.array(attr_data[col], dtype=np.float)  # Feature data objects
-        s_vec = np.zeros((n,), dtype=np.int)  # S-vector
-        temp_cum_wins = np.zeros((pair_count, ), dtype=np.int)  # Cumulative wins
 
-        for k in range(pair_count):
-            i = get_ij[k][0]
-            j = get_ij[k][1]
-            # print(str(i) + "," + str(j))
+        # Cumulative Wins: for estimation of score-vector
+        temp_cum_wins = np.where(col_data[pair_ij[:, 0]] < col_data[pair_ij[:, 1]], 1,
+                                 np.where(col_data[pair_ij[:, 0]] > col_data[pair_ij[:, 1]], -1, 0))
 
-            # Construct S-vector (net-win vector)
-            if col_data[i] < col_data[j]:
-                s_vec[i] += 1  # i wins
-                s_vec[j] += -1  # j loses
-                temp_cum_wins[k] = 1  # For estimation of score-vector
-            elif col_data[i] > col_data[j]:
-                s_vec[i] += -1  # i loses
-                s_vec[j] += 1  # j wins
-                temp_cum_wins[k] = -1  # For estimation of score-vector
+        # S-vector
+        s_vec = np.zeros((n,), dtype=np.int32)
+        for w in [1, -1]:
+            positions = np.flatnonzero(temp_cum_wins == w)
+            i, counts_i = np.unique(pair_ij[positions, 0], return_counts=True)
+            j, counts_j = np.unique(pair_ij[positions, 1], return_counts=True)
+            s_vec[i] += w * counts_i  # i wins/loses (1/-1)
+            s_vec[j] += -w * counts_j  # j loses/wins (1/-1)
 
         # Normalize S-vector
         if np.count_nonzero(s_vec) > 0:
@@ -163,32 +160,19 @@ def construct_matrices(d_gp, e):
             lst_gis.append(sgp.GI(col, '-'))
             cum_wins.append(-temp_cum_wins)
             s_mat.append(-s_vec)
+    # end = time.time()
+    # print((end - st))
 
     res = structure()
     res.gradual_items = np.array(lst_gis)
     res.cum_wins = np.array(cum_wins)
     res.nwin_matrix = np.array(s_mat)
-    res.ij = get_ij
+    res.ij = pair_ij
     # print(get_ij)
     # print(np.array(cum_wins).T)
     # print(np.array(s_mat))
     # print(sampled_idx)
     return res
-
-
-def get_pair_partition(n, i):
-    # Retrieve group from: (n-1), (n-2), (n-3) ..., (n-(n-1)) using index i
-    lb = 0
-    k = 1
-    x = n - k
-    while k < n:
-        if i < x:
-            return k, (i-lb)
-        else:
-            lb = x
-            k += 1
-            x += (n - k)
-    return -1, -1
 
 
 def infer_gps(clusters, d_gp, mat_obj, max_iter):
@@ -285,7 +269,7 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         out = clugps(f_path, min_supp, e_prob, max_iter, testing=True)
         list_gp = out.estimated_gps
 
-        wr_line = "Algorithm: Clu-GRAD (v1.6)\n"
+        wr_line = "Algorithm: Clu-GRAD (v1.9)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
         wr_line += "Erasure probability: " + str(out.e_prob) + '\n'
@@ -294,6 +278,7 @@ def execute(f_path, min_supp, e_prob, max_iter, cores):
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
+        wr_line += "Cluster time: " + str(out.cluster_time) + '\n'
 
         for txt in out.titles:
             try:
