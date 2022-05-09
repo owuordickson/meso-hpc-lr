@@ -82,3 +82,8 @@ python3 spectral_gp/src/main1.py -a 'acograd' -c 14 -f data/c2k.csv -e 0.75
 python3 spectral_gp/src/main1.py -a 'acograd' -c 14 -f data/breast_cancer.csv -e 0.9
 python3 spectral_gp/src/main1.py -a 'acograd' -c 14 -f data/air_quality.csv -e 0.9
 python3 spectral_gp/src/main1.py -a 'acograd' -c 14 -f data/c2k.csv -e 0.9
+
+python3 spectral_gp/src/main.py -a 'acograd' -c 14 -f data/power_consumption50k.csv
+python3 spectral_gp/src/main.py -a 'acograd' -c 14 -f data/power_consumption50k.csv
+python3 spectral_gp/src/main.py -a 'acograd' -c 14 -f data/power_consumption50k.csv
+python3 spectral_gp/src/main.py -a 'acograd' -c 14 -f data/power_consumption50k.csv
