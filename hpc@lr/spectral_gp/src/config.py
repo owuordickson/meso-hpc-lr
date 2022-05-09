@@ -23,7 +23,7 @@ DATASET = "../data/DATASET.csv"
 
 # ACO-GRAD Configurations:
 EVAPORATION_FACTOR = 0.5
-MAX_ITERATIONS = 500
+MAX_ITERATIONS = 1
 
 # Clustering Configurations
 CLUSTER_ALGORITHM = 'kmeans'  # selects algorithm to be used for clustering the net-win matrices
