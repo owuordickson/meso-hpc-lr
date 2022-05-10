@@ -1,0 +1,39 @@
+Run-time: 186.37548685073853 seconds
+Memory Usage (MiB): [108.9453125, 108.89453125, 1186.41796875, 1209.33203125, 1209.33203125, 1154.41796875, 1192.41796875, 1209.33203125, 1152.41796875, 1192.41796875, 1209.33203125, 1150.41796875, 1190.41796875, 1209.33203125, 1184.41796875, 1209.33203125, 1209.33203125, 1182.41796875, 1209.33203125, 1333.90234375, 110.21484375] 
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 8074
+Evaporation factor: 0.5
+Number of iterations: 1
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 4
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio8k.csv
+
+Pattern : Support
+['11+', '15+'] : 0.522
+['14+', '3-', '10+', '8+'] : 0.619
+['5+', '8+', '11+', '9+', '14+', '7+'] : 0.588
+['3-', '5+', '11+'] : 0.606

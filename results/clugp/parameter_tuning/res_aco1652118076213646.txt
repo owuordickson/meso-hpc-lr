@@ -1,0 +1,27 @@
+Run-time: 0.09189295768737793 seconds
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Evaporation factor: 0.5
+Number of iterations: 1
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 4
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['6-', '8+'] : 0.575
+['5+', '7+'] : 0.548
+['2+', '3+'] : 0.637
+['2+', '4+', '3+'] : 0.637
