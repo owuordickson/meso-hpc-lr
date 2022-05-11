@@ -1,0 +1,2 @@
+/var/spool/slurmd/job7799301/slurm_script: line 13: 169210 Segmentation fault      (core dumped) python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/power_consumption50k.csv -e 0.9
+/var/spool/slurmd/job7799301/slurm_script: line 14: 169765 Segmentation fault      (core dumped) python3 spectral_gp/src/main.py -a 'clugrad' -c 14 -f data/power_consumption50k.csv -e 0.9
