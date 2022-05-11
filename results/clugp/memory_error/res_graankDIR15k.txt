@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 128, in <module>
+    res_text = graank.execute(filePath, minSup, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/graank.py", line 7, in execute
+    out_json, list_gp = sgp.graank(f_path, min_supp, eq, return_gps=True)
+  File "/trinity/shared/apps/local/Python/3.8.2/lib/python3.8/site-packages/so4gp/so4gp.py", line 906, in graank
+    valid_bins = genapri(valid_bins, min_sup, n)
+  File "/trinity/shared/apps/local/Python/3.8.2/lib/python3.8/site-packages/so4gp/so4gp.py", line 869, in genapri
+    m = R[i][1] * R[j][1]
+numpy.core._exceptions.MemoryError: Unable to allocate 226. MiB for an array with shape (15402, 15402) and data type bool
