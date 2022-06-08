@@ -20,6 +20,8 @@ CHANGES:
 """
 import numpy as np
 import random
+
+from bayes_opt import BayesianOptimization
 from ypstruct import structure
 
 from .shared.gp import GI, GP
@@ -27,7 +29,10 @@ from .shared.dataset_bfs import Dataset
 from .shared.profile import Profile
 
 
-def run_particle_swarm(data_src, min_supp, max_iteration, max_evaluations, n_particles, velocity, coef_p, coef_g):
+def run_particle_swarm(data_src, min_supp, max_iteration, n_particles, velocity, coef_p, coef_g):
+    max_iteration = int(max_iteration)
+    n_particles = int(n_particles)
+
     # Prepare data set
     d_set = Dataset(data_src, min_supp)
     d_set.init_gp_attributes()
@@ -117,6 +122,10 @@ def run_particle_swarm(data_src, min_supp, max_iteration, max_evaluations, n_par
         except IndexError:
             pass
         it_count += 1
+
+    # Parameter Tuning - Output
+    if data_src == 0.0:
+        return 1/best_particle.fitness
 
     # Output
     out = structure()
@@ -250,10 +259,11 @@ def execute(f_path, min_supp, cores, max_iteration, max_evaluations, n_particles
         wr_line = "Algorithm: PSO-GRAANK (v2.0)\n"
         wr_line += "No. of (dataset) attributes: " + str(out.col_count) + '\n'
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
+        wr_line += "Particle population: " + str(out.n_particles) + '\n'
         wr_line += "Velocity coeff.: " + str(out.W) + '\n'
-        wr_line += "C1 coeff.: " + str(out.c1) + '\n'
-        wr_line += "C2 coeff.: " + str(out.c2) + '\n'
-        wr_line += "No. of particles: " + str(out.n_particles) + '\n'
+        wr_line += "Personal coeff.: " + str(out.c1) + '\n'
+        wr_line += "Global coeff.: " + str(out.c2) + '\n'
+
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
@@ -283,3 +293,20 @@ def execute(f_path, min_supp, cores, max_iteration, max_evaluations, n_particles
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line
+
+
+def parameter_tuning():
+    pbounds = {'data_src': (0, 0), 'min_supp': (0.5, 0.5), 'max_iteration': (1, 10), 'n_particles': (1, 20),
+               'velocity': (0.1, 1), 'coef_p': (0.1, 0.9), 'coef_g': (0.1, 0.9)}
+
+    optimizer = BayesianOptimization(
+        f= run_particle_swarm,
+        pbounds=pbounds,
+        random_state=1,
+    )
+
+    optimizer.maximize(
+        init_points=10,
+        n_iter=0,
+    )
+    return optimizer.max

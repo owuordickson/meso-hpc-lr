@@ -21,6 +21,7 @@ CHANGES:
 
 import random
 import numpy as np
+from bayes_opt import BayesianOptimization
 from ypstruct import structure
 
 from .shared.gp import GI, GP
@@ -28,7 +29,10 @@ from .shared.dataset_bfs import Dataset
 from .shared.profile import Profile
 
 
-def run_genetic_algorithm(data_src, min_supp, max_iteration, max_evaluations, n_pop, pc, gamma, mu, sigma):
+def run_genetic_algorithm(data_src, min_supp, max_iteration, n_pop, pc, gamma, mu, sigma):
+    max_iteration = int(max_iteration)
+    n_pop = int(n_pop)
+
     # Prepare data set
     d_set = Dataset(data_src, min_supp)
     d_set.init_gp_attributes()
@@ -156,6 +160,10 @@ def run_genetic_algorithm(data_src, min_supp, max_iteration, max_evaluations, n_
         except IndexError:
             pass
         it_count += 1
+
+    # Parameter Tuning - Output
+    if data_src == 0.0:
+        return 1/best_sol.cost
 
     # Output
     out = structure()
@@ -323,6 +331,9 @@ def execute(f_path, min_supp, cores, max_iteration, max_evaluations, n_pop, pc, 
         wr_line += "No. of (dataset) tuples: " + str(out.row_count) + '\n'
         wr_line += "Population size: " + str(out.n_pop) + '\n'
         wr_line += "PC: " + str(out.pc) + '\n'
+        wr_line += "Gamma: " + str(gamma) + '\n'
+        wr_line += "Mu: " + str(mu) + '\n'
+        wr_line += "Sigma: " + str(sigma) + '\n'
 
         wr_line += "Minimum support: " + str(min_supp) + '\n'
         wr_line += "Number of cores: " + str(num_cores) + '\n'
@@ -353,3 +364,20 @@ def execute(f_path, min_supp, cores, max_iteration, max_evaluations, n_pop, pc, 
         wr_line = "Failed: " + str(error)
         print(error)
         return wr_line
+
+
+def parameter_tuning():
+    pbounds = {'data_src': (0, 0), 'min_supp': (0.5, 0.5), 'max_iteration': (1, 10), 'n_pop': (1, 20), 'pc': (0.1, 1),
+               'gamma': (0.1, 0.9), 'mu': (0.1, 0.9), 'sigma': (0.1, 0.9)}
+
+    optimizer = BayesianOptimization(
+        f= run_genetic_algorithm,
+        pbounds=pbounds,
+        random_state=1,
+    )
+
+    optimizer.maximize(
+        init_points=10,
+        n_iter=0,
+    )
+    return optimizer.max

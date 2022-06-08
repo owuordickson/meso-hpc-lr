@@ -2,22 +2,22 @@
 
 # Configurations for Gradual Patterns:
 # INITIALIZATIONS = 3
-ALGORITHM = 'prs'  # aco, ga, pso, prs, pls
+ALGORITHM = 'pls'  # aco, ga, pso, prs, pls
 MIN_SUPPORT = 0.5
 CPU_CORES = 4
 
 # Uncomment for Main:
-# DATASET = "../data/DATASET.csv"
+DATASET = "../data/DATASET.csv"
 # DATASET = "../data/hcv_data.csv"
 # DATASET = "../data/hungary_chickenpox.csv"
 # DATASET = "../data/AirQualityUCI.csv"
 # DATASET = "../data/c2k.csv"
 
 # Uncomment for Terminal:
-DATASET = "data/hcv_data.csv"
+# DATASET = "data/hcv_data.csv"
 
 # Global Swarm Configurations
-MAX_ITERATIONS = 1000
+MAX_ITERATIONS = 5
 MAX_EVALUATIONS = 10
 N_VAR = 1  # DO NOT CHANGE
 
@@ -25,11 +25,11 @@ N_VAR = 1  # DO NOT CHANGE
 EVAPORATION_FACTOR = 0.5
 
 # GA-GRAD Configurations:
-N_POPULATION = 5
-PC = 0.5
-GAMMA = 1  # Cross-over
-MU = 0.9  # Mutation
-SIGMA = 0.9  # Mutation
+N_POPULATION = 1
+PC = 0.1
+GAMMA = 0.1  # Cross-over
+MU = 0.1  # Mutation
+SIGMA = 0.1  # Mutation
 
 # PSO-GRAD Configurations:
 VELOCITY = 0.9  # higher values helps to move to next number in search space
@@ -47,3 +47,5 @@ SHOW_P_MATRIX = False  # ONLY FOR: aco
 SHOW_EVALUATIONS = False  # FOR aco, prs, pls, pso
 SHOW_ITERATIONS = True  # FOR aco, prs, pls, pso
 SAVE_RESULTS = True  # FOR aco, prs, pls, pso
+
+TUNE_VAL = 1
