@@ -1,0 +1,3 @@
+{'target': 1679.9999999999998, 'params': {'data_src': 0.0, 'max_iteration': 8.903282530864718, 'min_supp': 0.5, 'nvar': 1.0}}
+
+File: data/breast_cancer.csv

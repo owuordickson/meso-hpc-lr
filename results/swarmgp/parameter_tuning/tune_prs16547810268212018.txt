@@ -1,0 +1,3 @@
+{'target': 16037928.000000002, 'params': {'data_src': 0.0, 'max_iteration': 5.798487564757154, 'min_supp': 0.5, 'nvar': 1.0}}
+
+File: data/air_quality.csv
