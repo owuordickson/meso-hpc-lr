@@ -8,6 +8,8 @@
 @created: "12 July 2019"
 @modified: "06 Sep 2021"
 
+Data set class that implements breadth-first search.
+
 Changes
 -------
 1. Fetch all binaries during initialization
@@ -25,16 +27,7 @@ import pandas as pd
 import gc
 
 
-CONF_SOURCE = 'data/c2k.csv'
-#CONF_SOURCE = 'data/directio8k.csv'
-#CONF_SOURCE = 'data/power_consumption10k.csv'
-#CONF_SOURCE = 'data/aps_2k.csv'
-#CONF_SOURCE = 'data/breast_cancer.csv'
-#CONF_SOURCE = 'data/air_quality.csv'
-#CONF_SOURCE = 'data/hcv_data.csv'
-#CONF_SOURCE = 'data/Omnidir_site2k.csv'
-#CONF_SOURCE = 'data/hungary_chickenpox.csv'
-#CONF_SOURCE = 'data/x_data15k.csv'
+CONF_SOURCE = '../data/hungary_chickenpox.csv'
 
 
 class Dataset:

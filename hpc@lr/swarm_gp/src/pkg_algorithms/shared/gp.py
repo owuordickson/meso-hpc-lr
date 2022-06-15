@@ -155,3 +155,60 @@ class GP:
         for gi in self.gradual_items:
             gi_dict.update({gi.as_string(): 0})
         return gi_dict
+
+
+def validate_gp(d_set, pattern):
+
+    # pattern = [('2', '+'), ('4', '+')]
+    min_supp = d_set.thd_supp
+    n = d_set.attr_size
+    gen_pattern = GP()
+    bin_arr = np.array([])
+
+    for gi in pattern.gradual_items:
+        arg = np.argwhere(np.isin(d_set.valid_bins[:, 0], gi.gradual_item))
+        if len(arg) > 0:
+            i = arg[0][0]
+            valid_bin = d_set.valid_bins[i]
+            if bin_arr.size <= 0:
+                bin_arr = np.array([valid_bin[1], valid_bin[1]])
+                gen_pattern.add_gradual_item(gi)
+            else:
+                bin_arr[1] = valid_bin[1].copy()
+                temp_bin = np.multiply(bin_arr[0], bin_arr[1])
+                supp = float(np.sum(temp_bin)) / float(n * (n - 1.0) / 2.0)
+                if supp >= min_supp:
+                    bin_arr[0] = temp_bin.copy()
+                    gen_pattern.add_gradual_item(gi)
+                    gen_pattern.set_support(supp)
+    if len(gen_pattern.gradual_items) <= 1:
+        return pattern
+    else:
+        return gen_pattern
+
+
+def check_anti_monotony(lst_p, pattern, subset=True):
+    result = False
+    if subset:
+        for pat in lst_p:
+            result1 = set(pattern.get_pattern()).issubset(set(pat.get_pattern()))
+            result2 = set(pattern.inv_pattern()).issubset(set(pat.get_pattern()))
+            if result1 or result2:
+                result = True
+                break
+    else:
+        for pat in lst_p:
+            result1 = set(pattern.get_pattern()).issuperset(set(pat.get_pattern()))
+            result2 = set(pattern.inv_pattern()).issuperset(set(pat.get_pattern()))
+            if result1 or result2:
+                result = True
+                break
+    return result
+
+
+def is_duplicate(pattern, lst_winners):
+    for pat in lst_winners:
+        if set(pattern.get_pattern()) == set(pat.get_pattern()) or \
+                set(pattern.inv_pattern()) == set(pat.get_pattern()):
+            return True
+    return False
