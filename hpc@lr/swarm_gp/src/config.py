@@ -45,7 +45,7 @@ STEP_SIZE = 0.5
 SHOW_P_MATRIX = False  # ONLY FOR: aco
 SHOW_EVALUATIONS = False  # FOR aco, prs, pls, pso
 SHOW_ITERATIONS = True  # FOR aco, prs, pls, pso
-SAVE_RESULTS = False  # FOR aco, prs, pls, pso
+SAVE_RESULTS = True  # FOR aco, prs, pls, pso
 
 TUNE_VAL = 0
 
