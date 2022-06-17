@@ -1,5 +1,5 @@
-Run-time: 17.00731921195984 seconds
-Total allocated memory size: 246.7 KiB
+Run-time: 11.185832023620605 seconds
+Total allocated memory size: 245.8 KiB
 Algorithm: PLS-GRAANK (v1.0)
 Search Space: Bitmap
 No. of (dataset) attributes: 9
@@ -8,7 +8,7 @@ Step size: 0.5
 N-var: 1
 Number of iterations: 20
 Number of cost evaluations: 20
-Candidates: [170.0, 149.0, 170.0, 170.0, 170.0, 149.0, 149.0, 149.0, 170.0, 170.0, 170.0, 149.0, 149.0, 149.0, 85.0, 170.0, 149.0, 170.0, 170.0, 170.0]
+Candidates: [136.0, 136.0, 132.0, 136.0, 136.0, 132.0, 136.0, 136.0, 136.0, 72.0, 132.0, 68.0, 132.0, 68.0, 132.0, 132.0, 136.0, 132.0, 68.0, 68.0]
 Minimum support: 0.5
 Number of cores: 14
 Number of patterns: 0
