@@ -1,0 +1,43 @@
+Run-time: 199.6210753917694 seconds
+Total allocated memory size: 318.4 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Evaporation factor: 0.5
+Number of iterations: 20
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 12
+Number of invalid patterns: 0
+
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+['14-', '3-', '11-'] : 0.504
+['7+', '9+', '14-'] : 0.52
+['8-', '10+', '3+', '11+', '6+', '5+'] : 0.529
+['9+', '5+', '8-', '11+'] : 0.51
+['10+', '9+'] : 0.505
+['7+', '5+', '8-', '11+'] : 0.533
+['5+', '6+', '7+', '11+', '9+'] : 0.546
+['14-', '10-', '11-'] : 0.518
+['10+', '2+', '11+'] : 0.506
+['11+', '6+', '14+'] : 0.507
+['11+', '9+', '5+', '7+', '3+'] : 0.516
+['10+', '5+', '14+', '3+'] : 0.502

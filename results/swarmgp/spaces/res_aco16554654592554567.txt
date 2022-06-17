@@ -1,0 +1,54 @@
+Run-time: 224.22120714187622 seconds
+Total allocated memory size: 335.1 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 8074
+Evaporation factor: 0.5
+Number of iterations: 20
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 17
+Number of invalid patterns: 0
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio8k.csv
+
+Pattern : Support
+['9+', '11+', '14+', '8+'] : 0.637
+['15-', '11-'] : 0.522
+['13+', '15-', '7+', '2+'] : 0.503
+['15-', '9-'] : 0.553
+['7+', '10+', '8+', '11+', '9+', '2+', '5+'] : 0.553
+['10+', '16-', '7+', '11+'] : 0.527
+['11+', '7+', '10+', '2+', '12+', '14+'] : 0.598
+['7+', '18-'] : 0.521
+['7+', '12+', '9+', '11+', '5+'] : 0.53
+['10+', '6+', '9+', '11+'] : 0.502
+['13+', '11+', '7+'] : 0.645
+['11+', '4+'] : 0.515
+['10+', '5+', '13+', '12+'] : 0.624
+['9+', '4-'] : 0.52
+['14+', '4+'] : 0.537
+['11+', '10+', '14+', '9+', '12+', '5+', '7+'] : 0.507
+['14+', '8+', '9+', '12+', '11+', '7+'] : 0.507
