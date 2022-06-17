@@ -1,0 +1,56 @@
+Run-time: 1.6901280879974365 seconds
+Total allocated memory size: 258.6 KiB
+Algorithm: PLS-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 1999
+Step size: 0.278
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [41872, 42803, 47349, 62767, 53594, 54575, 54362, 56240, 50245, 52542, 54198, 56421, 51001, 63995, 62329, 50435, 55400, 56010, 62346, 55535]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 2
+Number of invalid patterns: 2
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site2k.csv
+
+Pattern : Support
+['3+', '4+', '7+'] : 0.527
+['3+', '4+', '5+', '7+'] : 0.526
+
+
+Iteration: Best Cost
+0: 8.057368463459834e-05 
+1: 8.057368463459834e-05 
+2: 3.3225019768886764e-06 
+3: 3.3225019768886764e-06 
+4: 3.3225019768886764e-06 
+5: 3.3225019768886764e-06 
+6: 3.3225019768886764e-06 
+7: 3.3225019768886764e-06 
+8: 3.3225019768886764e-06 
+9: 3.3225019768886764e-06 
+10: 3.3225019768886764e-06 
+11: 3.3225019768886764e-06 
+12: 3.3225019768886764e-06 
+13: 3.3225019768886764e-06 
+14: 3.3225019768886764e-06 
+15: 3.3225019768886764e-06 
+16: 3.3225019768886764e-06 
+17: 3.3225019768886764e-06 
+18: 3.3225019768886764e-06 
+19: 3.3225019768886764e-06 

@@ -1,0 +1,57 @@
+Run-time: 53.69202637672424 seconds
+Total allocated memory size: 265.6 KiB
+Algorithm: GA-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 10001
+Population size: 17
+PC: 0.116
+Gamma: 0.527
+Mu: 0.649
+Sigma: 0.7
+Number of iterations: 20
+Number of cost evaluations: 80
+Candidates: [894, 818, 844, 188, 578, 468, 778, 488, 488, 585, 888, 855, 624, 667, 224, 667, 597, 617, 977, 617, 223, 446, 233, 466, 942, 889, 442, 899, 445, 851, 455, 851, 780, 529, 800, 229, 881, 939, 811, 399, 744, 760, 444, 660, 475, 812, 755, 0, 746, 592, 446, 0, 775, 514, 775, 114, 741, 703, 411, 33, 620, 403, 200, 433, 256, 398, 266, 398, 788, 888, 788, 888, 490, 631, 990, 331, 505, 649, 55, 499]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 2
+Number of invalid patterns: 2
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/power_consumption10k.csv
+
+Pattern : Support
+['2+', '5+'] : 0.97
+['2+', '3+'] : 0.544
+
+
+Iteration: Best Cost
+0: 5.395286181625403e-08 
+1: 4.449554708587761e-08 
+2: 4.449554708587761e-08 
+3: 3.678685779205059e-08 
+4: 3.678685779205059e-08 
+5: 3.678685779205059e-08 
+6: 3.678685779205059e-08 
+7: 3.678685779205059e-08 
+8: 2.0622650190791478e-08 
+9: 2.0622650190791478e-08 
+10: 2.0622650190791478e-08 
+11: 2.0622650190791478e-08 
+12: 2.0622650190791478e-08 
+13: 2.0622650190791478e-08 
+14: 2.0622650190791478e-08 
+15: 2.0622650190791478e-08 
+16: 2.0027145995310804e-08 
+17: 2.0027145995310804e-08 
+18: 2.0027145995310804e-08 
+19: 2.0027145995310804e-08 
