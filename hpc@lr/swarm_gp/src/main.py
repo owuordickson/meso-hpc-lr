@@ -416,7 +416,7 @@ if __name__ == "__main__":
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
         wr_text += (get_quick_mem_use(snapshot) + "\n")
         wr_text += str(res_text)
-        f_name = str('res_graank' + str(end).replace('.', '', 1) + '.txt')
+        f_name = str('res_lcm' + str(end).replace('.', '', 1) + '.txt')
         sgp.write_file(wr_text, f_name, cfg.SAVE_RESULTS)
         print(wr_text)
     else:
