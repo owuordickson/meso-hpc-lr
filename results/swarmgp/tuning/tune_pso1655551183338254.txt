@@ -1,0 +1,3 @@
+{'target': 188811344.0, 'params': {'coef_g': 0.23586433565165513, 'coef_p': 0.8025140027435306, 'data_src': 0.0, 'max_iteration': 4.78996862504547, 'min_supp': 0.5, 'n_particles': 11.130140414487325, 'velocity': 0.722689402555426}}
+
+File: data/power_consumption19k.csv

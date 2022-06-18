@@ -1,0 +1,3 @@
+{'target': 6467.999999999999, 'params': {'data_src': 0.0, 'max_iteration': 8.511631047076357, 'min_supp': 0.5, 'nvar': 1.0}}
+
+File: data/aps_5k.csv

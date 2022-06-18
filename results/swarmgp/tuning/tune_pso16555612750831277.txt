@@ -1,0 +1,3 @@
+{'target': 185052.0, 'params': {'coef_g': 0.4313434156215221, 'coef_p': 0.13996276715686973, 'data_src': 0.0, 'max_iteration': 6.974151806978099, 'min_supp': 0.5, 'n_particles': 18.947300363825452, 'velocity': 0.6278995364517936}}
+
+File: data/aps_5k.csv

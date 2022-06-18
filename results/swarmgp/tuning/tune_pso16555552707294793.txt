@@ -1,0 +1,3 @@
+{'target': 13493856.999999998, 'params': {'coef_g': 0.5592940843936105, 'coef_p': 0.21738285992464812, 'data_src': 0.0, 'max_iteration': 7.297825240188381, 'min_supp': 0.5, 'n_particles': 8.867063768571798, 'velocity': 0.7249601419549706}}
+
+File: data/directio15k.csv

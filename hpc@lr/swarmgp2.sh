@@ -16,8 +16,8 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hungary_chickenpox.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/air_quality.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/air_quality.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_5k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_5k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
@@ -25,17 +25,17 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/c2k.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/c2k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio8k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio8k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio15k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio15k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/hcv_data.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hcv_data.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site10k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site10k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption10k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption10k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption19k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption19k.csv
 
 
 
@@ -47,8 +47,8 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hungary_chickenpox.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/air_quality.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/air_quality.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_5k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_5k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
@@ -56,17 +56,17 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/c2k.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/c2k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio8k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio8k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio15k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio15k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/hcv_data.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hcv_data.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site10k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site10k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption10k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption10k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption19k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption19k.csv
 
 
 
@@ -79,8 +79,8 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hungary_chickenpox.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/air_quality.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/air_quality.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_5k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_5k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
@@ -88,17 +88,17 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/c2k.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/c2k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio8k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio8k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio15k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio15k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/hcv_data.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hcv_data.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site10k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site10k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption10k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption10k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption19k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption19k.csv
 
 
 
@@ -110,8 +110,8 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hungary_chickenpox.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/air_quality.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/air_quality.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/aps_5k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/aps_5k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
@@ -119,14 +119,14 @@ python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/breast_cancer.csv
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/c2k.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/c2k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio8k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio8k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/directio15k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/directio15k.csv
 
 python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/hcv_data.csv
 python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/hcv_data.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site2k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site2k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/Omnidir_site10k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/Omnidir_site10k.csv
 
-python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption10k.csv
-python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption10k.csv
+python3 swarm_gp/src/main.py -a 'gra' -c 14 -f data/power_consumption19k.csv
+python3 swarm_gp/src/main.py -a 'aco' -c 14 -f data/power_consumption19k.csv

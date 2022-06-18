@@ -1,0 +1,3 @@
+{'target': 29246746.0, 'params': {'data_src': 0.0, 'max_iteration': 7.733490889418555, 'min_supp': 0.5, 'nvar': 1.0, 'step_size': 0.1929034059198778}}
+
+File: data/Omnidir_site10k.csv
