@@ -1,0 +1,65 @@
+Run-time: 347.5431447029114 seconds
+Total allocated memory size: 263.0 KiB
+Algorithm: PLS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Step size: 0.125
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[2821302569.0, 'True'], [2551540005.0, 'True'], [2551540005.0, 'True'], [2551540005.0, 'True'], [2551540005.0, 'True'], [2551540005.0, 'True'], [2821302569.0, 'True'], [2821302569.0, 'True'], [2551540005.0, 'True'], [2821302569.0, 'True'], [2551540005.0, 'True'], [1410684181.0, 'True'], [1410749974.0, 'True'], [2821368362.0, 'True'], [1410684181.0, 'True'], [1410684181.0, 'True'], [1410684181.0, 'True'], [1410684181.0, 'True'], [1410684181.0, 'True'], [1410684181.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio15k.csv
+
+Pattern : Support
+['2+', '4+'] : 0.521
+
+
+Iteration: Best Cost
+0: 4.274783054759971e-05 
+1: 4.274783054759971e-05 
+2: 4.274783054759971e-05 
+3: 4.274783054759971e-05 
+4: 4.274783054759971e-05 
+5: 4.274783054759971e-05 
+6: 4.274783054759971e-05 
+7: 4.274783054759971e-05 
+8: 4.274783054759971e-05 
+9: 4.274783054759971e-05 
+10: 4.274783054759971e-05 
+11: 5.1660364102246195e-06 
+12: 5.1660364102246195e-06 
+13: 5.1660364102246195e-06 
+14: 5.1660364102246195e-06 
+15: 5.1660364102246195e-06 
+16: 5.1660364102246195e-06 
+17: 5.1660364102246195e-06 
+18: 5.1660364102246195e-06 
+19: 5.1660364102246195e-06 

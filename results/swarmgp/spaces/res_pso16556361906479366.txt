@@ -1,0 +1,54 @@
+Run-time: 692.1154937744141 seconds
+Total allocated memory size: 259.4 KiB
+Algorithm: PSO-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 19443
+Particle population: 12
+Velocity coeff.: 0.723
+Personal coeff.: 0.803
+Global coeff.: 0.236
+Number of iterations: 20
+Number of cost evaluations: 240
+Candidates: [[1018, 'True'], [451, 'True'], [182, 'True'], [273, 'True'], [748, 'True'], [475, 'True'], [1015, 'True'], [980, 'True'], [797, 'True'], [308, 'True'], [660, 'True'], [974, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True'], [511.0, 'True'], [511.0, 'True'], [438.0, 'True'], [477.0, 'True'], [751.0, 'True'], [475.0, 'True'], [503.0, 'True'], [471.0, 'True'], [477.0, 'True'], [503.0, 'True'], [663.0, 'True'], [510.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Number of invalid patterns: 0
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/power_consumption19k.csv
+
+Pattern : Support
+
+
+Iteration: Best Cost
+0: 5.296291943136637e-09 
+1: 5.296291943136637e-09 
+2: 5.296291943136637e-09 
+3: 5.296291943136637e-09 
+4: 5.296291943136637e-09 
+5: 5.296291943136637e-09 
+6: 5.296291943136637e-09 
+7: 5.296291943136637e-09 
+8: 5.296291943136637e-09 
+9: 5.296291943136637e-09 
+10: 5.296291943136637e-09 
+11: 5.296291943136637e-09 
+12: 5.296291943136637e-09 
+13: 5.296291943136637e-09 
+14: 5.296291943136637e-09 
+15: 5.296291943136637e-09 
+16: 5.296291943136637e-09 
+17: 5.296291943136637e-09 
+18: 5.296291943136637e-09 
+19: 5.296291943136637e-09 

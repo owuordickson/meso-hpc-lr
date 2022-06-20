@@ -1,0 +1,60 @@
+Run-time: 47.15727472305298 seconds
+Total allocated memory size: 263.8 KiB
+Algorithm: PRS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[11179484.0, 'True'], [8404708.0, 'True'], [10529880.0, 'True'], [3381916.0, 'True'], [7655811.0, 'True'], [3789626.0, 'False'], [9672430.0, 'True'], [11044708.0, 'True'], [6681925.0, 'True'], [178815.0, 'True'], [15339554.0, 'True'], [8100138.0, 'True'], [5362511.0, 'True'], [712151.0, 'True'], [12918475.0, 'True'], [180289.0, 'True'], [6946620.0, 'False'], [2398751.0, 'True'], [13409831.0, 'True'], [1415586.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 3
+Number of invalid patterns: 2
+
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+['6-', '9-'] : 0.646
+['2+', '10+'] : 0.58
+['3+', '5+', '6+', '8-'] : 0.703
+
+
+Iteration: Best Cost
+0: 2.273394307284251e-07 
+1: 9.290877491790117e-08 
+2: 9.290877491790117e-08 
+3: 9.290877491790117e-08 
+4: 9.290877491790117e-08 
+5: 9.290877491790117e-08 
+6: 9.290877491790117e-08 
+7: 9.290877491790117e-08 
+8: 9.290877491790117e-08 
+9: 9.290877491790117e-08 
+10: 7.166307861575884e-08 
+11: 7.166307861575884e-08 
+12: 7.166307861575884e-08 
+13: 7.166307861575884e-08 
+14: 7.166307861575884e-08 
+15: 7.166307861575884e-08 
+16: 7.166307861575884e-08 
+17: 7.166307861575884e-08 
+18: 7.166307861575884e-08 
+19: 7.166307861575884e-08 

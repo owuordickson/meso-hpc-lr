@@ -1,0 +1,39 @@
+Run-time: 0.7266955375671387 seconds
+Total allocated memory size: 301.5 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+Evaporation factor: 0.5
+Number of iterations: 20
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 12
+Number of invalid patterns: 0
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['7+', '3+'] : 0.568
+['2+', '6+'] : 0.541
+['2+', '3+'] : 0.574
+['10-', '9-'] : 0.55
+['1-', '9-'] : 0.515
+['3-', '8-'] : 0.601
+['4+', '10+'] : 0.546
+['4+', '3+'] : 0.687
+['4+', '1+'] : 0.511
+['6-', '4-'] : 0.545
+['7+', '10+'] : 0.559
+['2+', '4+'] : 0.52

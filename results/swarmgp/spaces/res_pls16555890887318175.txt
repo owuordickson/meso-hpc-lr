@@ -1,0 +1,57 @@
+Run-time: 32.84219145774841 seconds
+Total allocated memory size: 261.8 KiB
+Algorithm: PLS-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 10000
+Step size: 0.193
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[10978, 'True'], [14614, 'True'], [16476, 'True'], [28981, 'True'], [19035, 'True'], [22774, 'True'], [24389, 'True'], [26042, 'True'], [25616, 'True'], [35555, 'True'], [37212, 'True'], [33715, 'True'], [35910, 'True'], [33944, 'True'], [26714, 'True'], [34264, 'True'], [34418, 'True'], [38255, 'True'], [35794, 'True'], [30124, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 3
+Number of invalid patterns: 0
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site10k.csv
+
+Pattern : Support
+['3+', '4+', '5+', '6+', '7+'] : 0.593
+['3+', '7+', '8+', '9+'] : 0.503
+['3+', '5+', '8+'] : 0.7
+
+
+Iteration: Best Cost
+0: 4.6404127888477145e-08 
+1: 4.6404127888477145e-08 
+2: 3.9727396958454595e-08 
+3: 3.9727396958454595e-08 
+4: 3.9727396958454595e-08 
+5: 3.9727396958454595e-08 
+6: 3.9727396958454595e-08 
+7: 3.9727396958454595e-08 
+8: 2.858450067193586e-08 
+9: 2.858450067193586e-08 
+10: 2.858450067193586e-08 
+11: 2.858450067193586e-08 
+12: 2.858450067193586e-08 
+13: 2.858450067193586e-08 
+14: 2.858450067193586e-08 
+15: 2.858450067193586e-08 
+16: 2.858450067193586e-08 
+17: 2.858450067193586e-08 
+18: 2.858450067193586e-08 
+19: 2.858450067193586e-08 

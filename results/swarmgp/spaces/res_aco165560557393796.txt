@@ -1,0 +1,35 @@
+Run-time: 106.16764616966248 seconds
+Total allocated memory size: 301.8 KiB
+Algorithm: ACO-GRAANK (v4.0)
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 10000
+Evaporation factor: 0.5
+Number of iterations: 20
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 8
+Number of invalid patterns: 0
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site10k.csv
+
+Pattern : Support
+['4+', '3+', '8+'] : 0.61
+['4+', '3+', '6+'] : 0.608
+['6+', '3+', '7+', '5+'] : 0.674
+['5+', '3+', '4+', '8+'] : 0.598
+['5+', '6+', '8+', '3+'] : 0.665
+['5+', '3+', '6+', '4+'] : 0.596
+['5+', '3+', '8+', '7+', '9+'] : 0.503
+['5+', '7+', '4+'] : 0.668

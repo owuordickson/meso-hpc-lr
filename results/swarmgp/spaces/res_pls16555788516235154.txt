@@ -1,0 +1,54 @@
+Run-time: 0.0805821418762207 seconds
+Total allocated memory size: 244.7 KiB
+Algorithm: PLS-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Step size: 0.278
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[60365, 'True'], [125742, 'False'], [64152, 'True'], [120120, 'True'], [113293, 'True'], [89024, 'True'], [132565, 'True'], [115159, 'True'], [99862, 'True'], [141675, 'False'], [117895, 'True'], [123607, 'True'], [132586, 'True'], [149270, 'True'], [170270, 'True'], [135844, 'True'], [146758, 'False'], [118424, 'True'], [123655, 'True'], [143678, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 3
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['0+', '2+'] : 0.544
+
+
+Iteration: Best Cost
+0: 0.0031847133757961785 
+1: 0.0031847133757961785 
+2: 0.0031847133757961785 
+3: 0.0031847133757961785 
+4: 0.0031847133757961785 
+5: 0.0031847133757961785 
+6: 0.0031847133757961785 
+7: 0.0031847133757961785 
+8: 0.0017452006980802793 
+9: 0.0017452006980802793 
+10: 0.0017452006980802793 
+11: 0.0017452006980802793 
+12: 0.0017452006980802793 
+13: 0.0017452006980802793 
+14: 0.0017452006980802793 
+15: 0.0017452006980802793 
+16: 0.0017452006980802793 
+17: 0.0017452006980802793 
+18: 0.0017452006980802793 
+19: 0.0017452006980802793 

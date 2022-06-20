@@ -1,0 +1,55 @@
+Run-time: 0.19980883598327637 seconds
+Total allocated memory size: 243.5 KiB
+Algorithm: PLS-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+Step size: 0.89
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[3984445, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4194303, 'True'], [4161229, 'True'], [4194303, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['0+', '9+'] : 0.517
+
+
+Iteration: Best Cost
+0: 0.0002922267679719462 
+1: 0.0002922267679719462 
+2: 0.0002922267679719462 
+3: 0.0002922267679719462 
+4: 0.0002922267679719462 
+5: 0.0002922267679719462 
+6: 0.0002922267679719462 
+7: 0.0002922267679719462 
+8: 0.0002922267679719462 
+9: 0.0002922267679719462 
+10: 0.0002922267679719462 
+11: 0.0002922267679719462 
+12: 0.0002922267679719462 
+13: 0.0002922267679719462 
+14: 0.0002922267679719462 
+15: 0.0002922267679719462 
+16: 0.0002922267679719462 
+17: 0.0002922267679719462 
+18: 0.0002922267679719462 
+19: 0.0002922267679719462 

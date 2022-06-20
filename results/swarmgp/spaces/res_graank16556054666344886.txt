@@ -1,0 +1,39 @@
+Run-time: 112.760573387146 seconds
+Total allocated memory size: 265.8 KiB
+Algorithm: GRAANK 
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 10000
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 14
+Number of invalid patterns: 88
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site10k.csv
+
+Pattern : Support
+['9+', '4+'] : 0.532
+['9-', '4-'] : 0.532
+['6+', '9+'] : 0.519
+['9-', '6-'] : 0.519
+['9+', '10+'] : 0.582
+['9-', '10-'] : 0.582
+['6+', '10-', '8+', '4+'] : 0.68
+['4-', '6-', '10+', '8-'] : 0.68
+['7+', '8+', '3+', '5+', '9+'] : 0.503
+['9-', '7-', '8-', '3-', '5-'] : 0.503
+['7+', '8+', '3+', '5+', '6+', '4+'] : 0.584
+['7+', '8+', '3+', '5+', '6+', '10-'] : 0.532
+['4-', '7-', '8-', '3-', '5-', '6-'] : 0.584
+['7-', '10+', '8-', '3-', '5-', '6-'] : 0.532

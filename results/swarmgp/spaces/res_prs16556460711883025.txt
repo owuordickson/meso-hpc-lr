@@ -1,0 +1,54 @@
+Run-time: 0.13682222366333008 seconds
+Total allocated memory size: 243.5 KiB
+Algorithm: PRS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 589
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[1869804.0, 'True'], [485066.0, 'True'], [1179696.0, 'True'], [2661634.0, 'True'], [3196030.0, 'True'], [3403236.0, 'True'], [2973954.0, 'True'], [3434313.0, 'True'], [2314623.0, 'True'], [2936418.0, 'True'], [3248979.0, 'True'], [825725.0, 'True'], [2062778.0, 'True'], [1878719.0, 'True'], [2314478.0, 'True'], [117232.0, 'True'], [1261137.0, 'True'], [1139287.0, 'True'], [3251941.0, 'True'], [2321383.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. Age
+1. ALB
+2. ALP
+3. ALT
+4. AST
+5. BIL
+6. CHE
+7. CHOL
+8. CREA
+9. GGT
+10. PROT
+
+File: data/hcv_data.csv
+
+Pattern : Support
+['0-', '3+'] : 0.504
+
+
+Iteration: Best Cost
+0: 4.3784754148605455e-05 
+1: 4.3784754148605455e-05 
+2: 1.359415994888596e-05 
+3: 1.359415994888596e-05 
+4: 1.359415994888596e-05 
+5: 1.359415994888596e-05 
+6: 1.359415994888596e-05 
+7: 1.359415994888596e-05 
+8: 1.359415994888596e-05 
+9: 1.359415994888596e-05 
+10: 1.359415994888596e-05 
+11: 1.359415994888596e-05 
+12: 1.359415994888596e-05 
+13: 1.359415994888596e-05 
+14: 1.359415994888596e-05 
+15: 1.359415994888596e-05 
+16: 1.359415994888596e-05 
+17: 1.359415994888596e-05 
+18: 1.359415994888596e-05 
+19: 1.359415994888596e-05 

@@ -1,0 +1,55 @@
+Run-time: 75.34050297737122 seconds
+Total allocated memory size: 255.2 KiB
+Algorithm: PLS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 11
+No. of (dataset) tuples: 10000
+Step size: 0.193
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[37985.0, 'True'], [21585.0, 'True'], [43170.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [21585.0, 'True'], [37985.0, 'True'], [21585.0, 'True'], [37985.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. date_time
+1. id_site
+2. Rx
+3. Hmax
+4. Thmax
+5. H1/3
+6. Th1/3
+7. Hmoy
+8. Tmoy
+9. Cambrure
+10. Nb_Vagues
+
+File: data/Omnidir_site10k.csv
+
+Pattern : Support
+['4-', '5-', '7-'] : 0.668
+
+
+Iteration: Best Cost
+0: 1.0952588217074165e-07 
+1: 1.0952588217074165e-07 
+2: 1.0952588217074165e-07 
+3: 1.0952588217074165e-07 
+4: 1.0952588217074165e-07 
+5: 1.0952588217074165e-07 
+6: 1.0952588217074165e-07 
+7: 1.0952588217074165e-07 
+8: 1.0952588217074165e-07 
+9: 1.0952588217074165e-07 
+10: 1.0952588217074165e-07 
+11: 1.0952588217074165e-07 
+12: 1.0952588217074165e-07 
+13: 1.0952588217074165e-07 
+14: 1.0952588217074165e-07 
+15: 1.0952588217074165e-07 
+16: 1.0952588217074165e-07 
+17: 1.0952588217074165e-07 
+18: 1.0952588217074165e-07 
+19: 1.0952588217074165e-07 

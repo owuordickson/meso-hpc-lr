@@ -1,0 +1,53 @@
+Run-time: 0.06445741653442383 seconds
+Total allocated memory size: 244.2 KiB
+Algorithm: PRS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[238972.0, 'True'], [66597.0, 'True'], [241471.0, 'True'], [166151.0, 'True'], [67973.0, 'True'], [33074.0, 'True'], [76742.0, 'True'], [253431.0, 'True'], [39814.0, 'True'], [183817.0, 'True'], [54755.0, 'True'], [21258.0, 'True'], [60243.0, 'True'], [102820.0, 'True'], [235298.0, 'True'], [93563.0, 'True'], [134416.0, 'True'], [177958.0, 'True'], [31526.0, 'True'], [202057.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['1+', '2+'] : 0.525
+
+
+Iteration: Best Cost
+0: 0.0006684491978609625 
+1: 0.0006684491978609625 
+2: 0.0002857959416976279 
+3: 0.0002857959416976279 
+4: 0.0002857959416976279 
+5: 0.0002857959416976279 
+6: 0.0002857959416976279 
+7: 0.0002857959416976279 
+8: 0.0002857959416976279 
+9: 0.0002857959416976279 
+10: 0.0002857959416976279 
+11: 0.0002857959416976279 
+12: 0.0002857959416976279 
+13: 0.0002857959416976279 
+14: 0.0002857959416976279 
+15: 0.0002857959416976279 
+16: 0.0002857959416976279 
+17: 0.0002857959416976279 
+18: 0.0002857959416976279 
+19: 0.0002857959416976279 

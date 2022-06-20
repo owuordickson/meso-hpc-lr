@@ -1,0 +1,56 @@
+Run-time: 574.8910534381866 seconds
+Total allocated memory size: 273.8 KiB
+Algorithm: GA-GRAANK (v2.0)
+Search Space: Numeric
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 19443
+Population size: 10
+PC: 0.918
+Gamma: 0.699
+Mu: 0.183
+Sigma: 0.335
+Number of iterations: 20
+Number of cost evaluations: 400
+Candidates: [[655, 'True'], [926, 'True'], [555, 'True'], [0, 'False'], [307, 'True'], [513, 'True'], [307, 'True'], [0, 'False'], [936, 'True'], [885, 'True'], [936, 'True'], [0, 'False'], [221, 'True'], [434, 'True'], [0, 'False'], [0, 'False'], [906, 'True'], [150, 'True'], [0, 'False'], [0, 'False'], [354, 'True'], [895, 'True'], [344, 'True'], [0, 'False'], [921, 'True'], [900, 'True'], [0, 'False'], [900, 'True'], [709, 'True'], [768, 'True'], [799, 'True'], [668, 'True'], [937, 'True'], [941, 'True'], [337, 'True'], [0, 'False'], [576, 'True'], [416, 'True'], [576, 'True'], [0, 'False'], [801, 'True'], [841, 'True'], [811, 'True'], [811, 'True'], [468, 'True'], [451, 'True'], [0, 'False'], [551, 'True'], [502, 'True'], [770, 'True'], [22, 'True'], [700, 'True'], [342, 'True'], [308, 'True'], [0, 'False'], [0, 'False'], [867, 'True'], [867, 'True'], [0, 'False'], [877, 'True'], [701, 'True'], [809, 'True'], [0, 'False'], [809, 'True'], [91, 'True'], [506, 'True'], [0, 'False'], [0, 'False'], [613, 'True'], [630, 'True'], [113, 'True'], [0, 'False'], [200, 'True'], [376, 'True'], [0, 'False'], [0, 'False'], [802, 'True'], [807, 'True'], [0, 'False'], [807, 'True'], [496, 'True'], [646, 'True'], [0, 'False'], [0, 'False'], [639, 'True'], [636, 'True'], [0, 'False'], [666, 'True'], [403, 'True'], [495, 'True'], [0, 'False'], [0, 'False'], [236, 'True'], [129, 'True'], [266, 'True'], [0, 'False'], [361, 'True'], [306, 'True'], [611, 'True'], [0, 'False'], [122, 'True'], [599, 'True'], [0, 'False'], [0, 'False'], [633, 'True'], [720, 'True'], [633, 'True'], [700, 'True'], [686, 'True'], [667, 'True'], [886, 'True'], [667, 'True'], [747, 'True'], [751, 'True'], [0, 'False'], [0, 'False'], [788, 'True'], [815, 'True'], [888, 'True'], [0, 'False'], [352, 'True'], [691, 'True'], [0, 'False'], [611, 'True'], [112, 'True'], [253, 'True'], [122, 'True'], [233, 'True'], [592, 'True'], [650, 'True'], [0, 'False'], [650, 'True'], [666, 'True'], [666, 'True'], [0, 'False'], [666, 'True'], [859, 'True'], [744, 'True'], [0, 'False'], [444, 'True'], [133, 'True'], [554, 'True'], [0, 'False'], [554, 'True'], [666, 'True'], [666, 'True'], [666, 'True'], [0, 'False'], [493, 'True'], [287, 'True'], [993, 'True'], [0, 'False'], [778, 'True'], [596, 'True'], [788, 'True'], [0, 'False'], [653, 'True'], [590, 'True'], [553, 'True'], [0, 'False'], [508, 'True'], [179, 'True'], [508, 'True'], [779, 'True'], [666, 'True'], [666, 'True'], [0, 'False'], [0, 'False'], [611, 'True'], [614, 'True'], [0, 'False'], [114, 'True'], [82, 'True'], [61, 'True'], [0, 'False'], [0, 'False'], [589, 'True'], [200, 'True'], [599, 'True'], [0, 'False'], [695, 'True'], [753, 'True'], [995, 'True'], [753, 'True'], [713, 'True'], [735, 'True'], [133, 'True'], [0, 'False'], [116, 'True'], [119, 'True'], [0, 'False'], [119, 'True'], [383, 'True'], [288, 'True'], [0, 'False'], [0, 'False'], [360, 'True'], [420, 'True'], [660, 'True'], [0, 'False'], [466, 'True'], [315, 'True'], [666, 'True'], [115, 'True'], [172, 'True'], [515, 'True'], [0, 'False'], [555, 'True'], [113, 'True'], [113, 'True'], [0, 'False'], [0, 'False'], [498, 'True'], [393, 'True'], [0, 'False'], [0, 'False'], [343, 'True'], [344, 'True'], [0, 'False'], [0, 'False'], [756, 'True'], [710, 'True'], [0, 'False'], [710, 'True'], [113, 'True'], [114, 'True'], [113, 'True'], [114, 'True'], [263, 'True'], [434, 'True'], [263, 'True'], [334, 'True'], [344, 'True'], [418, 'True'], [0, 'False'], [118, 'True'], [533, 'True'], [157, 'True'], [333, 'True'], [177, 'True'], [562, 'True'], [219, 'True'], [0, 'False'], [119, 'True'], [358, 'True'], [339, 'True'], [558, 'True'], [0, 'False'], [538, 'True'], [242, 'True'], [538, 'True'], [222, 'True'], [33, 'True'], [101, 'True'], [33, 'True'], [111, 'True'], [474, 'True'], [215, 'True'], [774, 'True'], [0, 'False'], [730, 'True'], [624, 'True'], [730, 'True'], [644, 'True'], [96, 'True'], [49, 'True'], [96, 'True'], [99, 'True'], [181, 'True'], [203, 'True'], [0, 'False'], [0, 'False'], [114, 'True'], [114, 'True'], [0, 'False'], [144, 'True'], [747, 'True'], [607, 'True'], [447, 'True'], [0, 'False'], [260, 'True'], [115, 'True'], [600, 'True'], [0, 'False'], [398, 'True'], [440, 'True'], [0, 'False'], [440, 'True'], [101, 'True'], [110, 'True'], [0, 'False'], [110, 'True'], [99, 'True'], [112, 'True'], [0, 'False'], [0, 'False'], [401, 'True'], [410, 'True'], [0, 'False'], [400, 'True'], [543, 'True'], [176, 'True'], [0, 'False'], [166, 'True'], [254, 'True'], [104, 'True'], [0, 'False'], [0, 'False'], [397, 'True'], [322, 'True'], [997, 'True'], [0, 'False'], [479, 'True'], [412, 'True'], [779, 'True'], [0, 'False'], [582, 'True'], [309, 'True'], [0, 'False'], [0, 'False'], [247, 'True'], [37, 'True'], [0, 'False'], [37, 'True'], [80, 'True'], [204, 'True'], [0, 'False'], [4, 'True'], [104, 'True'], [41, 'True'], [0, 'False'], [0, 'False'], [444, 'True'], [356, 'True'], [0, 'False'], [0, 'False'], [103, 'True'], [105, 'True'], [0, 'False'], [0, 'False'], [262, 'True'], [629, 'True'], [262, 'True'], [299, 'True'], [97, 'True'], [111, 'True'], [0, 'False'], [0, 'False'], [48, 'True'], [80, 'True'], [0, 'False'], [0, 'False'], [557, 'True'], [484, 'True'], [0, 'False'], [484, 'True'], [495, 'True'], [287, 'True'], [495, 'True'], [0, 'False'], [14, 'True'], [22, 'True'], [0, 'False'], [0, 'False'], [306, 'True'], [273, 'True'], [0, 'False'], [0, 'False'], [43, 'True'], [88, 'True'], [0, 'False'], [0, 'False'], [77, 'True'], [22, 'True'], [0, 'False'], [22, 'True'], [115, 'True'], [696, 'True'], [0, 'False'], [0, 'False'], [52, 'True'], [82, 'True'], [0, 'False'], [22, 'True'], [227, 'True'], [147, 'True'], [227, 'True'], [0, 'False'], [72, 'True'], [56, 'True'], [0, 'False'], [0, 'False'], [107, 'True'], [104, 'True'], [7, 'True'], [0, 'False'], [213, 'True'], [147, 'True'], [0, 'False'], [0, 'False']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 113
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/power_consumption19k.csv
+
+Pattern : Support
+['2+', '4-', '5+'] : 0.708
+
+
+Iteration: Best Cost
+0: 1.8545014536324195e-08 
+1: 5.296291943136637e-09 
+2: 5.296291943136637e-09 
+3: 5.296291943136637e-09 
+4: 5.296291943136637e-09 
+5: 5.296291943136637e-09 
+6: 5.296291943136637e-09 
+7: 5.296291943136637e-09 
+8: 5.296291943136637e-09 
+9: 5.296291943136637e-09 
+10: 5.296291943136637e-09 
+11: 5.296291943136637e-09 
+12: 5.296291943136637e-09 
+13: 5.296291943136637e-09 
+14: 5.296291943136637e-09 
+15: 5.296291943136637e-09 
+16: 5.296291943136637e-09 
+17: 5.296291943136637e-09 
+18: 5.296291943136637e-09 
+19: 5.296291943136637e-09 

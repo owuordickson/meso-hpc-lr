@@ -1,0 +1,53 @@
+Run-time: 137.72874903678894 seconds
+Total allocated memory size: 251.7 KiB
+Algorithm: PLS-GRAANK (v1.0)
+Search Space: Bitmap
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 19443
+Step size: 0.89
+N-var: 1
+Number of iterations: 20
+Number of cost evaluations: 20
+Candidates: [[290.0, 'True'], [529.0, 'True'], [546.0, 'True'], [529.0, 'True'], [290.0, 'True'], [273.0, 'True'], [273.0, 'True'], [529.0, 'True'], [273.0, 'True'], [546.0, 'True'], [290.0, 'True'], [529.0, 'True'], [546.0, 'True'], [529.0, 'True'], [529.0, 'True'], [273.0, 'True'], [529.0, 'True'], [529.0, 'True'], [546.0, 'True'], [273.0, 'True']]
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Number of invalid patterns: 0
+
+0. Date
+1. Time
+2. Global_active_power
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/power_consumption19k.csv
+
+Pattern : Support
+['2+', '4-'] : 0.719
+
+
+Iteration: Best Cost
+0: 5.073222582516853e-08 
+1: 5.073222582516853e-08 
+2: 5.073222582516853e-08 
+3: 5.073222582516853e-08 
+4: 5.073222582516853e-08 
+5: 5.073222582516853e-08 
+6: 5.073222582516853e-08 
+7: 5.073222582516853e-08 
+8: 5.073222582516853e-08 
+9: 5.073222582516853e-08 
+10: 5.073222582516853e-08 
+11: 5.073222582516853e-08 
+12: 5.073222582516853e-08 
+13: 5.073222582516853e-08 
+14: 5.073222582516853e-08 
+15: 5.073222582516853e-08 
+16: 5.073222582516853e-08 
+17: 5.073222582516853e-08 
+18: 5.073222582516853e-08 
+19: 5.073222582516853e-08 
