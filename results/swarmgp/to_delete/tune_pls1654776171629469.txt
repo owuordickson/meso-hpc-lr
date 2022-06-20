@@ -1,3 +1,0 @@
-{'target': 2865170.0, 'params': {'data_src': 0.0, 'max_iteration': 9.17735952783786, 'min_supp': 0.5, 'nvar': 1.0, 'step_size': 0.2170257149064499}}
-
-File: data/directio8k.csv

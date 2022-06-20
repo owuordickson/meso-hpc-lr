@@ -1,3 +1,0 @@
-{'target': 49932227.0, 'params': {'data_src': 0.0, 'max_iteration': 9.714354181474578, 'min_supp': 0.5, 'nvar': 1.0}}
-
-File: data/power_consumption10k.csv

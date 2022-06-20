@@ -1,3 +1,0 @@
-{'target': 49932227.0, 'params': {'data_src': 0.0, 'gamma': 0.5265322279784137, 'max_iteration': 7.226894025554261, 'min_supp': 0.5, 'mu': 0.6492007421452669, 'n_pop': 16.857887766050084, 'pc': 0.11645944960977263, 'sigma': 0.700115451955974}}
-
-File: data/power_consumption10k.csv

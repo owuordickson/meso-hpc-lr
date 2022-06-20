@@ -1,3 +1,0 @@
-{'target': 5818852.0, 'params': {'coef_g': 0.3524125048048504, 'coef_p': 0.6492007421452669, 'data_src': 0.0, 'max_iteration': 1.1645944960977261, 'min_supp': 0.5, 'n_particles': 19.7883606892234, 'velocity': 0.7733490889418555}}
-
-File: data/directio8k.csv
