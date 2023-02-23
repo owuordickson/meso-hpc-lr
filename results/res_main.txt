@@ -1,0 +1,8 @@
+/var/spool/slurmd/job11905262/slurm_script: line 14: 39543 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/air_quality.csv
+/var/spool/slurmd/job11905384/slurm_script: line 13: 175320 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/directio8k.csv
+/var/spool/slurmd/job11905384/slurm_script: line 14: 175510 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/directio15k.csv
+/var/spool/slurmd/job11905262/slurm_script: line 15: 40105 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/c2k.csv
+/var/spool/slurmd/job11905384/slurm_script: line 15: 175600 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/aps_2k.csv
+slurmstepd: error: Detected 3 oom-kill event(s) in StepId=11905384.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
+/var/spool/slurmd/job11905262/slurm_script: line 16: 40309 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/directio8k.csv
+/var/spool/slurmd/job11905262/slurm_script: line 17: 40544 Killed                  python3 gp_labelling/src/main.py -a 'lblgp' -c 14 -f data/directio15k.csv
