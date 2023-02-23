@@ -81,7 +81,7 @@ if __name__ == "__main__":
         end = time.time()
         # mem_usage = memory_usage((label_gp.execute, (filePath, mineObj, numCores)), interval=10)
         sup = minSup/2
-        res_compare = analyze_gps(filePath, sup, est_gps, approach='dfs')
+        res_compare = analyze_gps(filePath, sup, est_gps, approach='bfs')
 
         wr_text += ("Mining Run-time: " + str(end - start) + " seconds\n")
         # wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")

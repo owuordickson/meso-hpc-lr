@@ -13,22 +13,24 @@ Description:
 """
 
 import sys
-import so4gp
 from optparse import OptionParser
 import config as cfg
+
+#import so4gp
+from .pkg_algorithms import so4gp
 
 
 def compare_gps(file, min_sup,  est_gps):
     d_set = so4gp.DataGP(file, min_sup)
-    d_set.init_attributes()
+    d_set.fit_bitmap()  # d_set.init_attributes()
     wr_line = "\n\nComparison : Estimated Support, True Support" + '\n'
     for est_gp in est_gps:
         est_sup = est_gp.support
         est_gp.set_support(0)
-        true_gp = so4gp.validategp(d_set, est_gp)
+        true_gp = est_gp.validate_graank(d_set)  # so4gp.validategp(d_set, est_gp)
         true_sup = true_gp.support
-        if true_sup == 0:
-            true_sup = -1
+        # if true_sup == 0:
+        #    true_sup = -1
         if len(true_gp.gradual_items) == len(est_gp.gradual_items):
             wr_line += (str(est_gp.to_string()) + ' : ' + str(round(est_sup, 3)) + ', ' + str(round(true_sup, 3)) + '\n')
         else:
@@ -43,7 +45,8 @@ if __name__ == "__main__":
         algChoice = sys.argv[2]
         eProb = sys.argv[3]
         itMax = sys.argv[4]
-        numCores = sys.argv[5]
+        clusterAlg = sys.argv[5]
+        numCores = sys.argv[6]
     else:
         optparser = OptionParser()
         optparser.add_option('-f', '--inputFile',
@@ -58,7 +61,7 @@ if __name__ == "__main__":
                              type='float')
         optparser.add_option('-a', '--algorithmChoice',
                              dest='algChoice',
-                             help='select algorithm for clustering',
+                             help='select GP algorithm',
                              default=cfg.ALGORITHM,
                              type='string')
         optparser.add_option('-e', '--eProb',
@@ -71,6 +74,11 @@ if __name__ == "__main__":
                              help='maximum iteration for score vector estimation',
                              default=cfg.SCORE_VECTOR_ITERATIONS,
                              type='int')
+        optparser.add_option('-k', '--clusteringAlgorithm',
+                             dest='clusterAlg',
+                             help='select clustering algorithm',
+                             default=cfg.CLUSTER_ALGORITHM,
+                             type='string')
         optparser.add_option('-c', '--cores',
                              dest='numCores',
                              help='number of cores',
@@ -87,6 +95,7 @@ if __name__ == "__main__":
         algChoice = options.algChoice
         eProb = options.eProb
         itMax = options.itMax
+        clusterAlg = options.clusterAlg
         numCores = options.numCores
 
     import time
@@ -96,9 +105,10 @@ if __name__ == "__main__":
     if algChoice == 'clugrad':
         # CLU-GRAD
         start = time.time()
-        res_text, gps = clu_grad.execute(filePath, minSup, eProb, itMax, numCores)
+        res_text, gps = clu_grad.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
         end = time.time()
-        mem_usage = memory_usage((clu_grad.execute, (filePath, minSup, eProb, itMax, numCores)), interval=10)
+        mem_usage = ""
+        # = memory_usage((clu_grad.execute, (filePath, minSup, eProb, itMax, clusterAlg, numCores)), interval=10)
         res_compare = compare_gps(filePath, minSup, gps)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
@@ -113,11 +123,11 @@ if __name__ == "__main__":
         start = time.time()
         res_text = aco_grad.execute(filePath, minSup, numCores, cfg.EVAPORATION_FACTOR, cfg.MAX_ITERATIONS)
         end = time.time()
-        mem_usage = memory_usage((aco_grad.execute, (filePath, minSup, numCores, cfg.EVAPORATION_FACTOR,
-                                                     cfg.MAX_ITERATIONS)), interval=10)
+        mem_use = memory_usage((aco_grad.execute, (filePath, minSup, numCores, cfg.EVAPORATION_FACTOR,
+                                                   cfg.MAX_ITERATIONS)), interval=10)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
-        wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
+        wr_text += ("Memory Usage (MiB): " + str(mem_use) + " \n")
         wr_text += str(res_text)
         f_name = str('res_aco' + str(end).replace('.', '', 1) + '.txt')
         so4gp.write_file(wr_text, f_name, wr=True)
@@ -127,10 +137,10 @@ if __name__ == "__main__":
         start = time.time()
         res_text = graank.execute(filePath, minSup, numCores)
         end = time.time()
-        mem_usage = memory_usage((graank.execute, (filePath, minSup, numCores)), interval=10)
+        mem_use = memory_usage((graank.execute, (filePath, minSup, numCores)), interval=10)
 
         wr_text = ("Run-time: " + str(end - start) + " seconds\n")
-        wr_text += ("Memory Usage (MiB): " + str(mem_usage) + " \n")
+        wr_text += ("Memory Usage (MiB): " + str(mem_use) + " \n")
         wr_text += str(res_text)
         f_name = str('res_graank' + str(end).replace('.', '', 1) + '.txt')
         so4gp.write_file(wr_text, f_name, wr=True)
