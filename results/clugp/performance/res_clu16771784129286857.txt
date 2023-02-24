@@ -1,0 +1,54 @@
+Run-time: 368.6184606552124 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v1.9)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 8074
+Erasure probability: 0.9
+Score vector iterations: 2
+Clustering Algorithm: agglo
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 7
+Cluster time: 2.1761224269866943
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio8k.csv
+
+Pattern : Support
+['2+', '5+', '8+', '10+', '11+', '14+'] : 0.677
+['2-', '5-', '8-', '10-', '11-', '14-'] : 0.677
+['7+', '12+', '13+'] : 0.795
+['6+', '16+'] : 0.745
+['6-', '16-'] : 0.746
+['7-', '12-', '13-'] : 0.795
+['17+', '17-'] : 0.0
+
+
+Comparison : Estimated Support, True Support
+['2+', '5+', '8+', '10+', '11+', '14+'] : 0.677, 0.668
+['2-', '5-', '8-', '10-', '11-', '14-'] : 0.677, 0.668
+['7+', '12+', '13+'] : 0.795, 0.796
+['6+', '16+'] : 0.745, 0.741
+['6-', '16-'] : 0.746, 0.741
+['7-', '12-', '13-'] : 0.795, 0.796
+['17+', '17-'] : 0.0, 0
