@@ -3,10 +3,10 @@
 @author: Dickson Owuor
 @credits: Thomas Runkler, Edmond Menya, and Anne Laurent
 @license: MIT
-@version: 0.3.8
+@version: 0.4.1
 @email: owuordickson@gmail.com
 @created: 21 July 2021
-@modified: 27 October 2022
+@modified: 06 September 2023
 
 SO4GP
 ------
@@ -453,7 +453,8 @@ class DataGP:
             except ValueError:
                 # Keep time columns
                 try:
-                    ok, stamp = DataGP.test_time(str(df[col][0]))
+                    ok, stamp = DataGP.test_time(str(df[col].iloc[0]))
+                    # print(df)
                     if not ok:
                         cols_to_remove.append(col)
                 except ValueError:
@@ -541,7 +542,7 @@ def analyze_gps(data_src, min_sup, est_gps, approach='bfs'):
             percentage_error = np.inf
             st_dev = np.inf
         else:
-            percentage_error = ((est_sup - true_sup) / true_sup) * 100
+            percentage_error = (abs(est_sup - true_sup) / true_sup) * 100
             st_dev = statistics.stdev([est_sup, true_sup])
 
         if len(true_gp.gradual_items) == len(est_gp.gradual_items):
@@ -1259,6 +1260,9 @@ class NumericSS:
 
     """
 
+    def __init__(self):
+        pass
+
     @staticmethod
     def decode_gp(attr_keys, position):
         """Description
@@ -1427,7 +1431,7 @@ class AntGRAANK(DataGP):
     >>> mine_obj = sgp.AntGRAANK(dummy_df, 0.5, max_iter=3, e_factor=0.5)
     >>> result_json = mine_obj.discover()
     >>> print(result_json) # doctest: +SKIP
-    {"Algorithm": "ACO-GRAANK", "Best Patterns": [[["Expenses-", "Age+"], 1.0]], "Invalid Count": 1, "Iterations": 3}
+    {"Algorithm": "ACO-GRAANK", "Patterns": [[["Expenses-", "Age+"], 1.0]], "Invalid Count": 1, "Iterations": 3}
 
     """
 
@@ -1634,7 +1638,7 @@ class AntGRAANK(DataGP):
             else:
                 counter = it_count
         # Output
-        out = json.dumps({"Algorithm": "ACO-GRAANK", "Best Patterns": str_winner_gps, "Invalid Count": invalid_count,
+        out = json.dumps({"Algorithm": "ACO-GRAANK", "Patterns": str_winner_gps, "Invalid Count": invalid_count,
                           "Iterations": it_count})
         """:type out: object"""
         return out
@@ -1787,7 +1791,7 @@ class ClusterGP(DataGP):
         # 3. Construct S matrix from data set
         for col in np.nditer(self.attr_cols):
             # Feature data objects
-            col_data = np.array(attr_data[col], dtype=np.float)  # Feature data objects
+            col_data = np.array(attr_data[col], dtype=float)  # Feature data objects
 
             # Cumulative Wins: for estimation of score-vector
             temp_cum_wins = np.where(col_data[pair_ij[:, 0]] < col_data[pair_ij[:, 1]], 1,
@@ -1848,7 +1852,7 @@ class ClusterGP(DataGP):
         # 3. Construct S matrix from data set
         for col in np.nditer(self.attr_cols):
             # Feature data objects
-            col_data = np.array(attr_data[col], dtype=np.float)  # Feature data objects
+            col_data = np.array(attr_data[col], dtype=float)  # Feature data objects
 
             # Cumulative Wins: for estimation of score-vector
             temp_cum_wins = np.where(col_data[pair_ij[:, 0]] < col_data[pair_ij[:, 1]], 1,
@@ -1973,7 +1977,7 @@ class ClusterGP(DataGP):
         pair_count = arr_ij.shape[0]
 
         # Compute score vector
-        for k in range(self.max_iteration):
+        for _ in range(self.max_iteration):
             if np.count_nonzero(score_vector == 0) > 1:
                 break
             else:
@@ -2005,7 +2009,7 @@ class ClusterGP(DataGP):
 
         # Estimate support - use different score-vectors to construct pairs
         n = self.row_count
-        bin_mat = np.ones((n, n), dtype=np.bool)
+        bin_mat = np.ones((n, n), dtype=bool)
         for vec in score_vectors:
             temp_bin = vec < vec[:, np.newaxis]
             bin_mat = np.multiply(bin_mat, temp_bin)
@@ -2014,7 +2018,7 @@ class ClusterGP(DataGP):
         """:type est_sup: float"""
         return est_sup
 
-    def discover(self, testing=False):
+    def discover(self):
         """Description
 
         Applies spectral clustering to determine which gradual items belong to the same group based on the similarity
@@ -2034,7 +2038,6 @@ class ClusterGP(DataGP):
             raise Exception("Erasure probability is too high, consider reducing it.")
         # print(s_matrix)
 
-        start = time.time()  # TO BE REMOVED
         # 2a. Spectral Clustering: perform SVD to determine the independent rows
         u, s, vt = np.linalg.svd(s_matrix)
 
@@ -2048,22 +2051,8 @@ class ClusterGP(DataGP):
         kmeans = KMeans(n_clusters=r, random_state=0)
         y_predicted = kmeans.fit_predict(s_matrix_approx)
 
-        end = time.time()  # TO BE REMOVED
-
         # 3. Infer GPs
         str_gps, estimated_gps = self._infer_gps(y_predicted)
-
-        # 4. Output - DO NOT ADD TO PyPi Package
-        out = structure()
-        out.estimated_gps = estimated_gps
-        out.max_iteration = self.max_iteration
-        out.titles = self.titles
-        out.col_count = self.col_count
-        out.row_count = self.row_count
-        out.e_prob = self.erasure_probability
-        out.cluster_time = (end - start)  # TO BE REMOVED
-        if testing:
-            return out
 
         # Output
         out = json.dumps({"Algorithm": "Clu-GRAANK", "Patterns": str_gps, "Invalid Count": 0})
@@ -2108,7 +2097,7 @@ class GeneticGRAANK(DataGP):
     >>> mine_obj = sgp.GeneticGRAANK(dummy_df, 0.5, max_iter=3, n_pop=10)
     >>> result_json = mine_obj.discover()
     >>> print(result_json) # doctest: +SKIP
-    {"Algorithm": "GA-GRAANK", "Best Patterns": [[["Age+", "Salary+", "Expenses-"], 0.6]], "Invalid Count": 12,
+    {"Algorithm": "GA-GRAANK", "Patterns": [[["Age+", "Salary+", "Expenses-"], 0.6]], "Invalid Count": 12,
     "Iterations": 2}
 
     """
@@ -2376,7 +2365,7 @@ class GeneticGRAANK(DataGP):
             else:
                 counter = it_count
         # Output
-        out = json.dumps({"Algorithm": "GA-GRAANK", "Best Patterns": str_best_gps, "Invalid Count": invalid_count,
+        out = json.dumps({"Algorithm": "GA-GRAANK", "Patterns": str_best_gps, "Invalid Count": invalid_count,
                           "Iterations": it_count})
         """:type out: object"""
         self.gradual_patterns = best_patterns
@@ -2503,8 +2492,8 @@ class GRAANK(DataGP):
                         else:
                             z = z + 1
 
-                    gp = GP()
-                    """:type gp: GP"""
+                    gp = ExtGP()
+                    """:type gp: ExtGP"""
                     for obj in valid_bins[i][0]:
                         gi = GI(obj[0], obj[1].decode())
                         """:type gi: GI"""
@@ -2547,7 +2536,7 @@ class HillClimbingGRAANK(DataGP):
     >>> mine_obj = sgp.HillClimbingGRAANK(dummy_df, 0.5, max_iter=3, step_size=0.5)
     >>> result_json = mine_obj.discover()
     >>> print(result_json) # doctest: +SKIP
-    {"Algorithm": "LS-GRAANK", "Best Patterns": [[["Age+", "Expenses-"], 1.0]], "Invalid Count": 2, "Iterations": 2}
+    {"Algorithm": "LS-GRAANK", "Patterns": [[["Age+", "Expenses-"], 1.0]], "Invalid Count": 2, "Iterations": 2}
 
     """
 
@@ -2676,7 +2665,7 @@ class HillClimbingGRAANK(DataGP):
             else:
                 counter = it_count
         # Output
-        out = json.dumps({"Algorithm": "LS-GRAANK", "Best Patterns": str_best_gps, "Invalid Count": invalid_count,
+        out = json.dumps({"Algorithm": "LS-GRAANK", "Patterns": str_best_gps, "Invalid Count": invalid_count,
                           "Iterations": it_count})
         """:type out: object"""
         self.gradual_patterns = best_patterns
@@ -2717,7 +2706,7 @@ class ParticleGRAANK(DataGP):
     >>> mine_obj = sgp.ParticleGRAANK(dummy_df, 0.5, max_iter=3, n_particle=10)
     >>> result_json = mine_obj.discover()
     >>> print(result_json) # doctest: +SKIP
-    {"Algorithm": "PSO-GRAANK", "Best Patterns": [], "Invalid Count": 12, "Iterations": 2}
+    {"Algorithm": "PSO-GRAANK", "Patterns": [], "Invalid Count": 12, "Iterations": 2}
 
 
     """
@@ -2885,7 +2874,7 @@ class ParticleGRAANK(DataGP):
             else:
                 counter = it_count
         # Output
-        out = json.dumps({"Algorithm": "PSO-GRAANK", "Best Patterns": str_best_gps, "Invalid Count": invalid_count,
+        out = json.dumps({"Algorithm": "PSO-GRAANK", "Patterns": str_best_gps, "Invalid Count": invalid_count,
                           "Iterations": it_count})
         """:type out: object"""
         self.gradual_patterns = best_patterns
@@ -2919,7 +2908,7 @@ class RandomGRAANK(DataGP):
     >>> mine_obj = sgp.RandomGRAANK(dummy_df, 0.5, max_iter=3)
     >>> result_json = mine_obj.discover()
     >>> print(result_json) # doctest: +SKIP
-    {"Algorithm": "RS-GRAANK", "Best Patterns": [[["Age+", "Salary+", "Expenses-"], 0.6]], "Invalid Count": 1,
+    {"Algorithm": "RS-GRAANK", "Patterns": [[["Age+", "Salary+", "Expenses-"], 0.6]], "Invalid Count": 1,
     "Iterations": 3}
 
     """
@@ -3041,7 +3030,7 @@ class RandomGRAANK(DataGP):
             else:
                 counter = it_count
         # Output
-        out = json.dumps({"Algorithm": "RS-GRAANK", "Best Patterns": str_best_gps, "Invalid Count": invalid_count,
+        out = json.dumps({"Algorithm": "RS-GRAANK", "Patterns": str_best_gps, "Invalid Count": invalid_count,
                           "Iterations": it_count})
         """:type out: object"""
         self.gradual_patterns = best_patterns
