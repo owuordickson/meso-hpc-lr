@@ -102,4 +102,3 @@ if __name__ == "__main__":
     except ArithmeticError as error:
         wr_line = "Failed: " + str(error)
         print(error)
-
