@@ -269,7 +269,7 @@ class DataGP:
         else:
             attr_data = self.data.T
             # n = d_set.row_count
-            col_data = np.array(attr_data[col], dtype=float)
+            col_data = np.array(attr_data[col], dtype=np.float64)
             with np.errstate(invalid='ignore'):
                 temp_pos = np.where(col_data < col_data[:, np.newaxis], 1, 0)
             return temp_pos
@@ -297,7 +297,7 @@ class DataGP:
         n = self.attr_size
         valid_bins = list()
         for col in self.attr_cols:
-            col_data = np.array(attr_data[col], dtype=float)
+            col_data = np.array(attr_data[col], dtype=np.float64)
             incr = np.array((col, '+'), dtype='i, S1')
             decr = np.array((col, '-'), dtype='i, S1')
 
@@ -362,7 +362,7 @@ class DataGP:
                 _ = data_src.columns.astype(float)
 
                 # Add column values
-                data_src.loc[-1] = data_src.columns.to_numpy(dtype=float)  # adding a row
+                data_src.loc[-1] = data_src.columns.to_numpy(dtype=np.float64)  # adding a row
                 data_src.index = data_src.index + 1  # shifting index
                 data_src.sort_index(inplace=True)
 
@@ -1280,7 +1280,7 @@ class NumericSS:
             return temp_gp
 
         bin_str = bin(int(position))[2:]
-        bin_arr = np.array(list(bin_str), dtype=int)
+        bin_arr = np.array(list(bin_str), dtype=np.int32)
 
         for i in range(bin_arr.size):
             bin_val = bin_arr[i]
@@ -1595,7 +1595,7 @@ class AntGRAANK(DataGP):
         d[d < fr_count] = 0
 
         # 3. Initialize pheromones (p_matrix)
-        pheromones = np.ones(d.shape, dtype=float)
+        pheromones = np.ones(d.shape, dtype=np.float64)
 
         invalid_count = 0
         # 4. Iterations for ACO
@@ -1791,7 +1791,7 @@ class ClusterGP(DataGP):
         # 3. Construct S matrix from data set
         for col in np.nditer(self.attr_cols):
             # Feature data objects
-            col_data = np.array(attr_data[col], dtype=float)  # Feature data objects
+            col_data = np.array(attr_data[col], dtype=np.float64)  # Feature data objects
 
             # Cumulative Wins: for estimation of score-vector
             temp_cum_wins = np.where(col_data[pair_ij[:, 0]] < col_data[pair_ij[:, 1]], 1,
@@ -2009,7 +2009,7 @@ class ClusterGP(DataGP):
 
         # Estimate support - use different score-vectors to construct pairs
         n = self.row_count
-        bin_mat = np.ones((n, n), dtype=bool)
+        bin_mat = np.ones((n, n), dtype=np.bool8)
         for vec in score_vectors:
             temp_bin = vec < vec[:, np.newaxis]
             bin_mat = np.multiply(bin_mat, temp_bin)

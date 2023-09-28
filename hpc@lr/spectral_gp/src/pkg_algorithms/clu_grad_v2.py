@@ -39,7 +39,7 @@ import numpy as np
 from ypstruct import structure
 from sklearn.cluster import KMeans
 from fcmeans import FCM
-from pdc_dp_means import DPMeans
+# from pdc_dp_means import DPMeans
 import persistable
 # import so4gp as sgp
 from .so4gp_update import DataGP, GI, ExtGP, get_num_cores
@@ -74,10 +74,11 @@ def clugps(f_path, min_sup, e_probability, sv_max_iter, algorithm, return_gps=Fa
         y_pred = kmeans.fit_predict(s_matrix_approx)
     elif algorithm == 2:
         # 2: Parallel Delayed Cluster DP-Means (improved KMeans)
-        dpmeans = DPMeans(n_clusters=r, n_init=10, delta=10)  # n_init and delta parameters
-        dpmeans.fit(s_matrix_approx)
+        # dpmeans = DPMeans(n_clusters=r, n_init=10, delta=10)  # n_init and delta parameters
+        # dpmeans.fit(s_matrix_approx)
         # Predict the cluster for each data point
-        y_pred = dpmeans.predict(s_matrix_approx)
+        # y_pred = dpmeans.predict(s_matrix_approx)
+        pass
     elif algorithm == 3:
         # 3: Fuzzy C-Means
         fcm = FCM(n_clusters=r)
@@ -157,7 +158,7 @@ def construct_matrices(d_gp, e):
     # 3. Construct S matrix from data set
     for col in np.nditer(d_gp.attr_cols):
         # Feature data objects
-        col_data = np.array(attr_data[col], dtype=float)  # Feature data objects
+        col_data = np.array(attr_data[col], dtype=np.float64)  # Feature data objects
 
         # Cumulative Wins: for estimation of score-vector
         temp_cum_wins = np.where(col_data[pair_ij[:, 0]] < col_data[pair_ij[:, 1]], 1,
@@ -280,7 +281,7 @@ def estimate_score_vector(n, c_wins, arr_ij, max_iter):
 
 def estimate_support(n, score_vectors):
     # Estimate support - use different score-vectors to construct pairs
-    bin_mat = np.ones((n, n), dtype=np)
+    bin_mat = np.ones((n, n), dtype=np.bool8)
     for vec in score_vectors:
         temp_bin = vec < vec[:, np.newaxis]
         bin_mat = np.multiply(bin_mat, temp_bin)
