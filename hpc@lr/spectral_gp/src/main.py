@@ -77,7 +77,7 @@ if __name__ == "__main__":
                              dest='clusterAlg',
                              help='select clustering algorithm',
                              default=cfg.CLUSTER_ALGORITHM,
-                             type='string')
+                             type='int')
         optparser.add_option('-c', '--cores',
                              dest='numCores',
                              help='number of cores',
