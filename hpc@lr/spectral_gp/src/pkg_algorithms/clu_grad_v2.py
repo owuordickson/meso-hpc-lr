@@ -88,7 +88,6 @@ def clugps(f_path, min_sup, e_probability, sv_max_iter, algorithm, return_gps=Fa
         # 4: Persistable Clustering (density-based clustering algorithm)
         p = persistable.Persistable(s_matrix_approx)
         y_pred = p.quick_cluster()
-        pass
     # print(y_pred)
 
     """
