@@ -90,6 +90,9 @@ def clugps(f_path, min_sup, e_probability, sv_max_iter, algorithm, return_gps=Fa
         y_pred = p.quick_cluster()
     # print(y_pred)
 
+    # np.savetxt("SApprox.csv", s_matrix_approx, delimiter=',')
+    # np.savetxt("YPred.csv", y_pred, delimiter=',')
+
     """
     if algorithm == "agglo":
         agglo = AgglomerativeClustering(n_clusters=r)

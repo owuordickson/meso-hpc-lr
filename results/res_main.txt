@@ -1,0 +1,425 @@
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running Persistable Clustering
+Traceback (most recent call last):
+  File "spectral_gp/src/main.py", line 106, in <module>
+    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
+    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
+  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
+    p = persistable.Persistable(s_matrix_approx)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
+    self._mpspace = _MetricProbabilitySpace(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
+    _MetricSpace.__init__(
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
+    self._fit_metric(X, metric, leaf_size, **kwargs)
+  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
+    if metric in kdtree_valid_metrics + balltree_valid_metrics:
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
