@@ -1,0 +1,7 @@
+# FCM on APS data set
+pydantic.error_wrappers.ValidationError: 1 validation error for FCM
+n_clusters
+  ensure this value is less than or equal to 100 (type=value_error.number.not_le; limit_value=100)
+
+
+  

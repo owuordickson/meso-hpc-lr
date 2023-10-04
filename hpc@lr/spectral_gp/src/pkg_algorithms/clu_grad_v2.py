@@ -39,7 +39,7 @@ import numpy as np
 from ypstruct import structure
 from sklearn.cluster import KMeans
 from fcmeans import FCM
-# from pdc_dp_means import DPMeans
+from pdc_dp_means import DPMeans
 import persistable
 # import so4gp as sgp
 from .so4gp_update import DataGP, GI, ExtGP, get_num_cores
@@ -70,28 +70,31 @@ def clugps(f_path, min_sup, e_probability, sv_max_iter, algorithm, return_gps=Fa
     # 3d. Clustering using K-Means (using sklearn library)
     if algorithm == 1:
         # 1: Standard-Kmeans
+        print("running K-Means")
         kmeans = KMeans(n_clusters=r, random_state=0)
         y_pred = kmeans.fit_predict(s_matrix_approx)
     elif algorithm == 2:
         # 2: Parallel Delayed Cluster DP-Means (improved KMeans)
-        # dpmeans = DPMeans(n_clusters=r, n_init=10, delta=10)  # n_init and delta parameters
-        # dpmeans.fit(s_matrix_approx)
+        print("running DP-Means")
+        dpmeans = DPMeans(n_clusters=r, n_init=10, delta=10)  # n_init and delta parameters
+        dpmeans.fit(s_matrix_approx)
         # Predict the cluster for each data point
-        # y_pred = dpmeans.predict(s_matrix_approx)
-        pass
+        y_pred = dpmeans.predict(s_matrix_approx)
     elif algorithm == 3:
         # 3: Fuzzy C-Means
+        print("running Fuzzy C-Means")
         fcm = FCM(n_clusters=r)
         fcm.fit(s_matrix_approx)
         y_pred = fcm.predict(s_matrix_approx)
     else:
         # 4: Persistable Clustering (density-based clustering algorithm)
+        print("running Persistable Clustering")
         p = persistable.Persistable(s_matrix_approx)
         y_pred = p.quick_cluster()
     # print(y_pred)
 
-    # np.savetxt("SApprox.csv", s_matrix_approx, delimiter=',')
-    # np.savetxt("YPred.csv", y_pred, delimiter=',')
+    np.savetxt("SApprox.csv", s_matrix_approx, delimiter=',')
+    np.savetxt("YPred.csv", y_pred, delimiter=',')
 
     """
     if algorithm == "agglo":
@@ -295,10 +298,10 @@ def estimate_support(n, score_vectors):
 
 # DO NOT ADD TO PyPi Package
 clus_alg_names = {
-            '1': 'Standard KMeans',
-            '2': 'PDC DP-Means',    # improved KMeans
-            '3': 'Fuzzy CMeans',
-            '4': 'PC'  # density-based clustering
+            1: 'Standard KMeans',
+            2: 'PDC DP-Means',    # improved KMeans
+            3: 'Fuzzy CMeans',
+            4: 'PC'  # density-based clustering
 }
 
 def execute(f_path, min_supp, e_prob, max_iter, algorithm, cores):
@@ -320,7 +323,7 @@ def execute(f_path, min_supp, e_prob, max_iter, algorithm, cores):
         wr_line += "Number of cores: " + str(num_cores) + '\n'
         wr_line += "Number of patterns: " + str(len(list_gp)) + '\n'
         wr_line += "Cluster time: " + str(out.cluster_time) + '\n'
-        wr_line += "Clustering Algorithm: " + str(clus_alg_names.get(str(algorithm))) + '\n'
+        wr_line += "Clustering Algorithm: " + str(clus_alg_names.get(algorithm)) + '\n'
 
         for txt in out.titles:
             try:
