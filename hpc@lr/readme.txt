@@ -27,10 +27,3 @@ scp -r x_Projects/meso-hpc-lr/hpc@lr/swarmgp1.sh owuord@muse-login.hpc-lr.univ-m
     source owuor_env/bin/activate
     python main.py
     deactivate
-
-
-python spectral_gp/src/main.py -a 'clugrad' -k 1 -f data/breast_cancer.csv -e 0.8
-python spectral_gp/src/main.py -a 'clugrad' -k 1 -f data/air_quality.csv -e 0.8
-python spectral_gp/src/main.py -a 'clugrad' -k 1 -f data/c2k.csv -e 0.8
-python spectral_gp/src/main.py -a 'clugrad' -k 1 -f data/directio15k.csv -e 0.8
-python spectral_gp/src/main.py -a 'clugrad' -k 1 -f data/aps_16k.csv -e 0.95
