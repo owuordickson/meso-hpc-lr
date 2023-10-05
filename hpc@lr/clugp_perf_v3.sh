@@ -12,17 +12,25 @@
 source owuor_env/bin/activate
 
 
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/breast_cancer.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/air_quality.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/c2k.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/directio15k.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/aps_16k.csv -e 0.95
 
-python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/air_quality.csv -e 0.8
-python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/directio15k.csv -e 0.8
 
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/breast_cancer.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/air_quality.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/c2k.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/directio15k.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/aps_16k.csv -e 0.95
 
+
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/breast_cancer.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/air_quality.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/c2k.csv -e 0.8
 python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/directio15k.csv -e 0.8
+python spectral_gp/src/main.py -a 'clugrad' -k 2 -c 14 -f data/aps_16k.csv -e 0.95
 
 deactivate
 
