@@ -1,7 +1,13 @@
-# FCM on APS data set
+# 1. FCM on APS data set
 pydantic.error_wrappers.ValidationError: 1 validation error for FCM
 n_clusters
   ensure this value is less than or equal to 100 (type=value_error.number.not_le; limit_value=100)
+
+
+# 2. rounded the predicted cluster values down so that we could get the selected attributes.
+
+# 3. For PDC each GI in S_approx is placed in different cluster such that NO GP can be formed by grouping two or more GIs.
+     Each GI has different cluster label.
 
 
   

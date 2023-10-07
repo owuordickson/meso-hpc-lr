@@ -1,425 +1,1443 @@
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
-running Persistable Clustering
-Traceback (most recent call last):
-  File "spectral_gp/src/main.py", line 106, in <module>
-    res_text, gps = clu_grad_v2.execute(filePath, minSup, eProb, itMax, clusterAlg, numCores)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 311, in execute
-    out = clugps(f_path, min_supp, e_prob, max_iter, algorithm, dev=True)
-  File "/lustre/owuord/spectral_gp/src/pkg_algorithms/clu_grad_v2.py", line 92, in clugps
-    p = persistable.Persistable(s_matrix_approx)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 197, in __init__
-    self._mpspace = _MetricProbabilitySpace(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 1130, in __init__
-    _MetricSpace.__init__(
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 848, in __init__
-    self._fit_metric(X, metric, leaf_size, **kwargs)
-  File "/lustre/owuord/owuor_env/lib/python3.8/site-packages/persistable/persistable.py", line 862, in _fit_metric
-    if metric in kdtree_valid_metrics + balltree_valid_metrics:
-TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'builtin_function_or_method'
+running DP-Means
+Run-time: 2.832014322280884 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['3+', '4+'] : 0.891
+
+
+Comparison : Estimated Support, True Support
+['3+', '4+'] : 0.891, 0.94
+
+running DP-Means
+Run-time: 31.112030029296875 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 331.39974331855774 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 98
+No. of (dataset) tuples: 3942
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 18
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. nr
+1. i1_legid
+2. i1_rcs_p
+3. i1_rcs_e
+4. i1_dep_1_p
+5. i1_dep_1_e
+6. i1_dep_1_place
+7. i1_rcf_1_p
+8. i1_rcf_1_e
+9. i1_rcf_1_place
+10. i1_dep_2_p
+11. i1_dep_2_e
+12. i1_dep_2_place
+13. i1_rcf_2_p
+14. i1_rcf_2_e
+15. i1_rcf_2_place
+16. i1_dep_3_p
+17. i1_dep_3_e
+18. i1_dep_3_place
+19. i1_rcf_3_p
+20. i1_rcf_3_e
+21. i1_rcf_3_place
+22. i1_dlv_p
+23. i1_dlv_e
+24. i1_hops
+25. i2_legid
+26. i2_rcs_p
+27. i2_rcs_e
+28. i2_dep_1_p
+29. i2_dep_1_e
+30. i2_dep_1_place
+31. i2_rcf_1_p
+32. i2_rcf_1_e
+33. i2_rcf_1_place
+34. i2_dep_2_p
+35. i2_dep_2_e
+36. i2_dep_2_place
+37. i2_rcf_2_p
+38. i2_rcf_2_e
+39. i2_rcf_2_place
+40. i2_dep_3_p
+41. i2_dep_3_e
+42. i2_dep_3_place
+43. i2_rcf_3_p
+44. i2_rcf_3_e
+45. i2_rcf_3_place
+46. i2_dlv_p
+47. i2_dlv_e
+48. i2_hops
+49. i3_legid
+50. i3_rcs_p
+51. i3_rcs_e
+52. i3_dep_1_p
+53. i3_dep_1_e
+54. i3_dep_1_place
+55. i3_rcf_1_p
+56. i3_rcf_1_e
+57. i3_rcf_1_place
+58. i3_dep_2_p
+59. i3_dep_2_e
+60. i3_dep_2_place
+61. i3_rcf_2_p
+62. i3_rcf_2_e
+63. i3_rcf_2_place
+64. i3_dep_3_p
+65. i3_dep_3_e
+66. i3_dep_3_place
+67. i3_rcf_3_p
+68. i3_rcf_3_e
+69. i3_rcf_3_place
+70. i3_dlv_p
+71. i3_dlv_e
+72. i3_hops
+73. o_legid
+74. o_rcs_p
+75. o_rcs_e
+76. o_dep_1_p
+77. o_dep_1_e
+78. o_dep_1_place
+79. o_rcf_1_p
+80. o_rcf_1_e
+81. o_rcf_1_place
+82. o_dep_2_p
+83. o_dep_2_e
+84. o_dep_2_place
+85. o_rcf_2_p
+86. o_rcf_2_e
+87. o_rcf_2_place
+88. o_dep_3_p
+89. o_dep_3_e
+90. o_dep_3_place
+91. o_rcf_3_p
+92. o_rcf_3_e
+93. o_rcf_3_place
+94. o_dlv_p
+95. o_dlv_e
+96. o_hops
+97. legs
+
+File: data/c2k.csv
+
+Pattern : Support
+['16-', '17-', '18-', '19-', '20-', '21-'] : 0.012
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.764
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.792
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.852
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329
+['82+', '84+', '85+', '86+', '87+', '96+'] : 0.744
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.434
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.86
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.932
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.183
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007
+['40+', '41+', '42+', '43+', '44+', '45+'] : 0.828
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.87
+
+
+Comparison : Estimated Support, True Support
+['16-', '17-', '18-', '19-', '20-', '21-'] : 0.012, 0
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.764, 0
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454, -1
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.792, -1
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903, 0
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.852, -1
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515, -1
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329, 0
+['82+', '84+', '85+', '86+', '87+', '96+'] : 0.744, -1
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.434, -1
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.86, 0
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.932, 0
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.183, 0
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004, 0
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007, 0
+['40+', '41+', '42+', '43+', '44+', '45+'] : 0.828, 0
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013, 0
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.87, 0
+
+running DP-Means
+Run-time: 100.54531145095825 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio15k.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 1070.3095560073853 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 170
+No. of (dataset) tuples: 16000
+Erasure probability: 0.95
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 12
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. aa_000
+1. ab_000
+2. ac_000
+3. ad_000
+4. ae_000
+5. af_000
+6. ag_000
+7. ag_001
+8. ag_002
+9. ag_003
+10. ag_004
+11. ag_005
+12. ag_006
+13. ag_007
+14. ag_008
+15. ag_009
+16. ah_000
+17. ai_000
+18. aj_000
+19. ak_000
+20. al_000
+21. am_0
+22. an_000
+23. ao_000
+24. ap_000
+25. aq_000
+26. ar_000
+27. as_000
+28. at_000
+29. au_000
+30. av_000
+31. ax_000
+32. ay_000
+33. ay_001
+34. ay_002
+35. ay_003
+36. ay_004
+37. ay_005
+38. ay_006
+39. ay_007
+40. ay_008
+41. ay_009
+42. az_000
+43. az_001
+44. az_002
+45. az_003
+46. az_004
+47. az_005
+48. az_006
+49. az_007
+50. az_008
+51. az_009
+52. ba_000
+53. ba_001
+54. ba_002
+55. ba_003
+56. ba_004
+57. ba_005
+58. ba_006
+59. ba_007
+60. ba_008
+61. ba_009
+62. bb_000
+63. bc_000
+64. bd_000
+65. be_000
+66. bf_000
+67. bg_000
+68. bh_000
+69. bi_000
+70. bj_000
+71. bk_000
+72. bl_000
+73. bm_000
+74. bn_000
+75. bo_000
+76. bp_000
+77. bq_000
+78. br_000
+79. bs_000
+80. bt_000
+81. bu_000
+82. bv_000
+83. bx_000
+84. by_000
+85. bz_000
+86. ca_000
+87. cb_000
+88. cc_000
+89. cd_000
+90. ce_000
+91. cf_000
+92. cg_000
+93. ch_000
+94. ci_000
+95. cj_000
+96. ck_000
+97. cl_000
+98. cm_000
+99. cn_000
+100. cn_001
+101. cn_002
+102. cn_003
+103. cn_004
+104. cn_005
+105. cn_006
+106. cn_007
+107. cn_008
+108. cn_009
+109. co_000
+110. cp_000
+111. cq_000
+112. cr_000
+113. cs_000
+114. cs_001
+115. cs_002
+116. cs_003
+117. cs_004
+118. cs_005
+119. cs_006
+120. cs_007
+121. cs_008
+122. cs_009
+123. ct_000
+124. cu_000
+125. cv_000
+126. cx_000
+127. cy_000
+128. cz_000
+129. da_000
+130. db_000
+131. dc_000
+132. dd_000
+133. de_000
+134. df_000
+135. dg_000
+136. dh_000
+137. di_000
+138. dj_000
+139. dk_000
+140. dl_000
+141. dm_000
+142. dn_000
+143. do_000
+144. dp_000
+145. dq_000
+146. dr_000
+147. ds_000
+148. dt_000
+149. du_000
+150. dv_000
+151. dx_000
+152. dy_000
+153. dz_000
+154. ea_000
+155. eb_000
+156. ec_00
+157. ed_000
+158. ee_000
+159. ee_001
+160. ee_002
+161. ee_003
+162. ee_004
+163. ee_005
+164. ee_006
+165. ee_007
+166. ee_008
+167. ee_009
+168. ef_000
+169. eg_000
+
+File: data/aps_16k.csv
+
+Pattern : Support
+['81-', '82-', '111-'] : 0.999
+['127-', '129-'] : 0.858
+['1-', '112-'] : 0.394
+['134+', '138+', '139+', '140+', '141+'] : 0.23
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928
+['127+', '129+'] : 0.676
+['1+', '112+'] : 0.953
+['81+', '82+', '111+'] : 0.999
+['0-', '80-'] : 0.998
+['0+', '80+'] : 0.998
+['153-', '154-', '168-', '169-'] : 0.94
+['153+', '154+', '168+', '169+'] : 0.33
+
+
+Comparison : Estimated Support, True Support
+['81-', '82-', '111-'] : 0.999, 1.0
+['127-', '129-'] : 0.858, 0
+['1-', '112-'] : 0.394, 0
+['134+', '138+', '139+', '140+', '141+'] : 0.23, 0
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928, 0
+['127+', '129+'] : 0.676, 0
+['1+', '112+'] : 0.953, 0
+['81+', '82+', '111+'] : 0.999, 1.0
+['0-', '80-'] : 0.998, 0.998
+['0+', '80+'] : 0.998, 0.998
+['153-', '154-', '168-', '169-'] : 0.94, 0
+['153+', '154+', '168+', '169+'] : 0.33, 0
+
+running DP-Means
+Run-time: 0.4963264465332031 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['3-', '4-'] : 0.894
+
+
+Comparison : Estimated Support, True Support
+['3-', '4-'] : 0.894, 0.94
+
+running DP-Means
+Run-time: 25.09496760368347 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 381.01835012435913 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 98
+No. of (dataset) tuples: 3942
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 18
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. nr
+1. i1_legid
+2. i1_rcs_p
+3. i1_rcs_e
+4. i1_dep_1_p
+5. i1_dep_1_e
+6. i1_dep_1_place
+7. i1_rcf_1_p
+8. i1_rcf_1_e
+9. i1_rcf_1_place
+10. i1_dep_2_p
+11. i1_dep_2_e
+12. i1_dep_2_place
+13. i1_rcf_2_p
+14. i1_rcf_2_e
+15. i1_rcf_2_place
+16. i1_dep_3_p
+17. i1_dep_3_e
+18. i1_dep_3_place
+19. i1_rcf_3_p
+20. i1_rcf_3_e
+21. i1_rcf_3_place
+22. i1_dlv_p
+23. i1_dlv_e
+24. i1_hops
+25. i2_legid
+26. i2_rcs_p
+27. i2_rcs_e
+28. i2_dep_1_p
+29. i2_dep_1_e
+30. i2_dep_1_place
+31. i2_rcf_1_p
+32. i2_rcf_1_e
+33. i2_rcf_1_place
+34. i2_dep_2_p
+35. i2_dep_2_e
+36. i2_dep_2_place
+37. i2_rcf_2_p
+38. i2_rcf_2_e
+39. i2_rcf_2_place
+40. i2_dep_3_p
+41. i2_dep_3_e
+42. i2_dep_3_place
+43. i2_rcf_3_p
+44. i2_rcf_3_e
+45. i2_rcf_3_place
+46. i2_dlv_p
+47. i2_dlv_e
+48. i2_hops
+49. i3_legid
+50. i3_rcs_p
+51. i3_rcs_e
+52. i3_dep_1_p
+53. i3_dep_1_e
+54. i3_dep_1_place
+55. i3_rcf_1_p
+56. i3_rcf_1_e
+57. i3_rcf_1_place
+58. i3_dep_2_p
+59. i3_dep_2_e
+60. i3_dep_2_place
+61. i3_rcf_2_p
+62. i3_rcf_2_e
+63. i3_rcf_2_place
+64. i3_dep_3_p
+65. i3_dep_3_e
+66. i3_dep_3_place
+67. i3_rcf_3_p
+68. i3_rcf_3_e
+69. i3_rcf_3_place
+70. i3_dlv_p
+71. i3_dlv_e
+72. i3_hops
+73. o_legid
+74. o_rcs_p
+75. o_rcs_e
+76. o_dep_1_p
+77. o_dep_1_e
+78. o_dep_1_place
+79. o_rcf_1_p
+80. o_rcf_1_e
+81. o_rcf_1_place
+82. o_dep_2_p
+83. o_dep_2_e
+84. o_dep_2_place
+85. o_rcf_2_p
+86. o_rcf_2_e
+87. o_rcf_2_place
+88. o_dep_3_p
+89. o_dep_3_e
+90. o_dep_3_place
+91. o_rcf_3_p
+92. o_rcf_3_e
+93. o_rcf_3_place
+94. o_dlv_p
+95. o_dlv_e
+96. o_hops
+97. legs
+
+File: data/c2k.csv
+
+Pattern : Support
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.783
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.182
+['83+', '84+', '85+', '86+', '87+', '96+'] : 0.745
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.852
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.433
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.93
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.771
+['40+', '41+', '42+', '43+', '44+', '45+'] : 0.82
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007
+['16-', '17-', '18-', '19-', '20-', '21-'] : 0.012
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.862
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.869
+
+
+Comparison : Estimated Support, True Support
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.783, -1
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.182, 0
+['83+', '84+', '85+', '86+', '87+', '96+'] : 0.745, -1
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454, -1
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515, -1
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.852, -1
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004, 0
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.433, -1
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903, 0
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329, 0
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013, 0
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.93, 0
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.771, 0
+['40+', '41+', '42+', '43+', '44+', '45+'] : 0.82, 0
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007, 0
+['16-', '17-', '18-', '19-', '20-', '21-'] : 0.012, 0
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.862, 0
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.869, 0
+
+running DP-Means
+Run-time: 87.52108788490295 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio15k.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 932.3344299793243 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 170
+No. of (dataset) tuples: 16000
+Erasure probability: 0.95
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 11
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. aa_000
+1. ab_000
+2. ac_000
+3. ad_000
+4. ae_000
+5. af_000
+6. ag_000
+7. ag_001
+8. ag_002
+9. ag_003
+10. ag_004
+11. ag_005
+12. ag_006
+13. ag_007
+14. ag_008
+15. ag_009
+16. ah_000
+17. ai_000
+18. aj_000
+19. ak_000
+20. al_000
+21. am_0
+22. an_000
+23. ao_000
+24. ap_000
+25. aq_000
+26. ar_000
+27. as_000
+28. at_000
+29. au_000
+30. av_000
+31. ax_000
+32. ay_000
+33. ay_001
+34. ay_002
+35. ay_003
+36. ay_004
+37. ay_005
+38. ay_006
+39. ay_007
+40. ay_008
+41. ay_009
+42. az_000
+43. az_001
+44. az_002
+45. az_003
+46. az_004
+47. az_005
+48. az_006
+49. az_007
+50. az_008
+51. az_009
+52. ba_000
+53. ba_001
+54. ba_002
+55. ba_003
+56. ba_004
+57. ba_005
+58. ba_006
+59. ba_007
+60. ba_008
+61. ba_009
+62. bb_000
+63. bc_000
+64. bd_000
+65. be_000
+66. bf_000
+67. bg_000
+68. bh_000
+69. bi_000
+70. bj_000
+71. bk_000
+72. bl_000
+73. bm_000
+74. bn_000
+75. bo_000
+76. bp_000
+77. bq_000
+78. br_000
+79. bs_000
+80. bt_000
+81. bu_000
+82. bv_000
+83. bx_000
+84. by_000
+85. bz_000
+86. ca_000
+87. cb_000
+88. cc_000
+89. cd_000
+90. ce_000
+91. cf_000
+92. cg_000
+93. ch_000
+94. ci_000
+95. cj_000
+96. ck_000
+97. cl_000
+98. cm_000
+99. cn_000
+100. cn_001
+101. cn_002
+102. cn_003
+103. cn_004
+104. cn_005
+105. cn_006
+106. cn_007
+107. cn_008
+108. cn_009
+109. co_000
+110. cp_000
+111. cq_000
+112. cr_000
+113. cs_000
+114. cs_001
+115. cs_002
+116. cs_003
+117. cs_004
+118. cs_005
+119. cs_006
+120. cs_007
+121. cs_008
+122. cs_009
+123. ct_000
+124. cu_000
+125. cv_000
+126. cx_000
+127. cy_000
+128. cz_000
+129. da_000
+130. db_000
+131. dc_000
+132. dd_000
+133. de_000
+134. df_000
+135. dg_000
+136. dh_000
+137. di_000
+138. dj_000
+139. dk_000
+140. dl_000
+141. dm_000
+142. dn_000
+143. do_000
+144. dp_000
+145. dq_000
+146. dr_000
+147. ds_000
+148. dt_000
+149. du_000
+150. dv_000
+151. dx_000
+152. dy_000
+153. dz_000
+154. ea_000
+155. eb_000
+156. ec_00
+157. ed_000
+158. ee_000
+159. ee_001
+160. ee_002
+161. ee_003
+162. ee_004
+163. ee_005
+164. ee_006
+165. ee_007
+166. ee_008
+167. ee_009
+168. ef_000
+169. eg_000
+
+File: data/aps_16k.csv
+
+Pattern : Support
+['81+', '82+', '111+'] : 0.999
+['134+', '135+', '138+', '139+', '140+', '141+'] : 0.214
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928
+['153+', '154+', '168+', '169+'] : 0.336
+['127+', '129+'] : 0.672
+['1-', '112-'] : 0.393
+['1+', '112+'] : 0.953
+['127-', '129-'] : 0.855
+['81-', '82-', '111-'] : 0.999
+['0+', '80+'] : 0.998
+['153-', '154-', '168-', '169-'] : 0.941
+
+
+Comparison : Estimated Support, True Support
+['81+', '82+', '111+'] : 0.999, 1.0
+['134+', '135+', '138+', '139+', '140+', '141+'] : 0.214, 0
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928, 0
+['153+', '154+', '168+', '169+'] : 0.336, 0
+['127+', '129+'] : 0.672, 0
+['1-', '112-'] : 0.393, 0
+['1+', '112+'] : 0.953, 0
+['127-', '129-'] : 0.855, 0
+['81-', '82-', '111-'] : 0.999, 1.0
+['0+', '80+'] : 0.998, 0.998
+['153-', '154-', '168-', '169-'] : 0.941, 0
+
+running DP-Means
+Run-time: 0.24371004104614258 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 10
+No. of (dataset) tuples: 116
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 1
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Age
+1. BMI
+2. Glucose
+3. Insulin
+4. HOMA
+5. Leptin
+6. Adiponectin
+7. Resistin
+8. MCP.1
+9. Classification
+
+File: data/breast_cancer.csv
+
+Pattern : Support
+['3-', '4-'] : 0.891
+
+
+Comparison : Estimated Support, True Support
+['3-', '4-'] : 0.891, 0.94
+
+running DP-Means
+Run-time: 24.817387104034424 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 344.2886025905609 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 98
+No. of (dataset) tuples: 3942
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 19
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. nr
+1. i1_legid
+2. i1_rcs_p
+3. i1_rcs_e
+4. i1_dep_1_p
+5. i1_dep_1_e
+6. i1_dep_1_place
+7. i1_rcf_1_p
+8. i1_rcf_1_e
+9. i1_rcf_1_place
+10. i1_dep_2_p
+11. i1_dep_2_e
+12. i1_dep_2_place
+13. i1_rcf_2_p
+14. i1_rcf_2_e
+15. i1_rcf_2_place
+16. i1_dep_3_p
+17. i1_dep_3_e
+18. i1_dep_3_place
+19. i1_rcf_3_p
+20. i1_rcf_3_e
+21. i1_rcf_3_place
+22. i1_dlv_p
+23. i1_dlv_e
+24. i1_hops
+25. i2_legid
+26. i2_rcs_p
+27. i2_rcs_e
+28. i2_dep_1_p
+29. i2_dep_1_e
+30. i2_dep_1_place
+31. i2_rcf_1_p
+32. i2_rcf_1_e
+33. i2_rcf_1_place
+34. i2_dep_2_p
+35. i2_dep_2_e
+36. i2_dep_2_place
+37. i2_rcf_2_p
+38. i2_rcf_2_e
+39. i2_rcf_2_place
+40. i2_dep_3_p
+41. i2_dep_3_e
+42. i2_dep_3_place
+43. i2_rcf_3_p
+44. i2_rcf_3_e
+45. i2_rcf_3_place
+46. i2_dlv_p
+47. i2_dlv_e
+48. i2_hops
+49. i3_legid
+50. i3_rcs_p
+51. i3_rcs_e
+52. i3_dep_1_p
+53. i3_dep_1_e
+54. i3_dep_1_place
+55. i3_rcf_1_p
+56. i3_rcf_1_e
+57. i3_rcf_1_place
+58. i3_dep_2_p
+59. i3_dep_2_e
+60. i3_dep_2_place
+61. i3_rcf_2_p
+62. i3_rcf_2_e
+63. i3_rcf_2_place
+64. i3_dep_3_p
+65. i3_dep_3_e
+66. i3_dep_3_place
+67. i3_rcf_3_p
+68. i3_rcf_3_e
+69. i3_rcf_3_place
+70. i3_dlv_p
+71. i3_dlv_e
+72. i3_hops
+73. o_legid
+74. o_rcs_p
+75. o_rcs_e
+76. o_dep_1_p
+77. o_dep_1_e
+78. o_dep_1_place
+79. o_rcf_1_p
+80. o_rcf_1_e
+81. o_rcf_1_place
+82. o_dep_2_p
+83. o_dep_2_e
+84. o_dep_2_place
+85. o_rcf_2_p
+86. o_rcf_2_e
+87. o_rcf_2_place
+88. o_dep_3_p
+89. o_dep_3_e
+90. o_dep_3_place
+91. o_rcf_3_p
+92. o_rcf_3_e
+93. o_rcf_3_place
+94. o_dlv_p
+95. o_dlv_e
+96. o_hops
+97. legs
+
+File: data/c2k.csv
+
+Pattern : Support
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.787
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.182
+['83+', '84+', '85+', '86+', '87+', '96+'] : 0.746
+['16-', '18-', '20-'] : 0.012
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.872
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.434
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.85
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.926
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.761
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007
+['40+', '42+', '43+', '44+', '45+'] : 0.822
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.862
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013
+['17-', '19-', '21-'] : 0.012
+
+
+Comparison : Estimated Support, True Support
+['49+', '50+', '51+', '52+', '53+', '54+', '55+', '56+', '57+', '70+', '71+', '72+'] : 0.787, -1
+['58-', '59-', '60-', '61-', '62-', '63-'] : 0.182, 0
+['83+', '84+', '85+', '86+', '87+', '96+'] : 0.746, -1
+['16-', '18-', '20-'] : 0.012, 0
+['88+', '89+', '90+', '91+', '92+', '93+'] : 0.872, 0
+['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '70-', '71-', '72-'] : 0.454, -1
+['82-', '83-', '84-', '85-', '86-', '87-', '96-'] : 0.515, -1
+['10-', '11-', '12-', '13-', '14-', '15-', '24-'] : 0.434, -1
+['34+', '35+', '36+', '37+', '38+', '39+'] : 0.903, 0
+['10+', '11+', '12+', '13+', '14+', '15+', '24+'] : 0.85, -1
+['34-', '35-', '36-', '37-', '38-', '39-'] : 0.329, 0
+['58+', '59+', '60+', '61+', '62+', '63+'] : 0.926, 0
+['64+', '65+', '66+', '67+', '68+', '69+'] : 0.761, 0
+['64-', '65-', '66-', '67-', '68-', '69-'] : 0.004, 0
+['40-', '41-', '42-', '43-', '44-', '45-'] : 0.007, 0
+['40+', '42+', '43+', '44+', '45+'] : 0.822, 0
+['16+', '17+', '18+', '19+', '20+', '21+'] : 0.862, 0
+['88-', '89-', '90-', '91-', '92-', '93-'] : 0.013, 0
+['17-', '19-', '21-'] : 0.012, 0
+
+running DP-Means
+Run-time: 85.68788886070251 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 21
+No. of (dataset) tuples: 15402
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 0
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. date_time
+1. id_site
+2. Tpic
+3. Dir
+4. Etal
+5. Tz
+6. Hm0
+7. Ts1
+8. Ts2
+9. Tc
+10. Tav
+11. Tint
+12. Tp
+13. EPS2
+14. EPS4
+15. Qp
+16. S2
+17. Tref
+18. Tw
+19. Batt
+20. timestamp
+
+File: data/directio15k.csv
+
+Pattern : Support
+
+
+Comparison : Estimated Support, True Support
+
+running DP-Means
+Run-time: 943.6125166416168 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 170
+No. of (dataset) tuples: 16000
+Erasure probability: 0.95
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 12
+Cluster time: None
+Clustering Algorithm: PDC DP-Means
+0. aa_000
+1. ab_000
+2. ac_000
+3. ad_000
+4. ae_000
+5. af_000
+6. ag_000
+7. ag_001
+8. ag_002
+9. ag_003
+10. ag_004
+11. ag_005
+12. ag_006
+13. ag_007
+14. ag_008
+15. ag_009
+16. ah_000
+17. ai_000
+18. aj_000
+19. ak_000
+20. al_000
+21. am_0
+22. an_000
+23. ao_000
+24. ap_000
+25. aq_000
+26. ar_000
+27. as_000
+28. at_000
+29. au_000
+30. av_000
+31. ax_000
+32. ay_000
+33. ay_001
+34. ay_002
+35. ay_003
+36. ay_004
+37. ay_005
+38. ay_006
+39. ay_007
+40. ay_008
+41. ay_009
+42. az_000
+43. az_001
+44. az_002
+45. az_003
+46. az_004
+47. az_005
+48. az_006
+49. az_007
+50. az_008
+51. az_009
+52. ba_000
+53. ba_001
+54. ba_002
+55. ba_003
+56. ba_004
+57. ba_005
+58. ba_006
+59. ba_007
+60. ba_008
+61. ba_009
+62. bb_000
+63. bc_000
+64. bd_000
+65. be_000
+66. bf_000
+67. bg_000
+68. bh_000
+69. bi_000
+70. bj_000
+71. bk_000
+72. bl_000
+73. bm_000
+74. bn_000
+75. bo_000
+76. bp_000
+77. bq_000
+78. br_000
+79. bs_000
+80. bt_000
+81. bu_000
+82. bv_000
+83. bx_000
+84. by_000
+85. bz_000
+86. ca_000
+87. cb_000
+88. cc_000
+89. cd_000
+90. ce_000
+91. cf_000
+92. cg_000
+93. ch_000
+94. ci_000
+95. cj_000
+96. ck_000
+97. cl_000
+98. cm_000
+99. cn_000
+100. cn_001
+101. cn_002
+102. cn_003
+103. cn_004
+104. cn_005
+105. cn_006
+106. cn_007
+107. cn_008
+108. cn_009
+109. co_000
+110. cp_000
+111. cq_000
+112. cr_000
+113. cs_000
+114. cs_001
+115. cs_002
+116. cs_003
+117. cs_004
+118. cs_005
+119. cs_006
+120. cs_007
+121. cs_008
+122. cs_009
+123. ct_000
+124. cu_000
+125. cv_000
+126. cx_000
+127. cy_000
+128. cz_000
+129. da_000
+130. db_000
+131. dc_000
+132. dd_000
+133. de_000
+134. df_000
+135. dg_000
+136. dh_000
+137. di_000
+138. dj_000
+139. dk_000
+140. dl_000
+141. dm_000
+142. dn_000
+143. do_000
+144. dp_000
+145. dq_000
+146. dr_000
+147. ds_000
+148. dt_000
+149. du_000
+150. dv_000
+151. dx_000
+152. dy_000
+153. dz_000
+154. ea_000
+155. eb_000
+156. ec_00
+157. ed_000
+158. ee_000
+159. ee_001
+160. ee_002
+161. ee_003
+162. ee_004
+163. ee_005
+164. ee_006
+165. ee_007
+166. ee_008
+167. ee_009
+168. ef_000
+169. eg_000
+
+File: data/aps_16k.csv
+
+Pattern : Support
+['0-', '80-'] : 0.998
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928
+['153+', '154+', '168+', '169+'] : 0.331
+['81+', '82+', '111+'] : 0.999
+['153-', '154-', '168-', '169-'] : 0.941
+['81-', '82-', '111-'] : 0.999
+['127-', '129-'] : 0.856
+['1-', '112-'] : 0.393
+['1+', '112+'] : 0.953
+['127+', '129+'] : 0.673
+['134+', '138+', '139+', '140+', '141+'] : 0.232
+['0+', '80+'] : 0.998
+
+
+Comparison : Estimated Support, True Support
+['0-', '80-'] : 0.998, 0.998
+['134-', '135-', '138-', '139-', '140-', '141-'] : 0.928, 0
+['153+', '154+', '168+', '169+'] : 0.331, 0
+['81+', '82+', '111+'] : 0.999, 1.0
+['153-', '154-', '168-', '169-'] : 0.941, 0
+['81-', '82-', '111-'] : 0.999, 1.0
+['127-', '129-'] : 0.856, 0
+['1-', '112-'] : 0.393, 0
+['1+', '112+'] : 0.953, 0
+['127+', '129+'] : 0.673, 0
+['134+', '138+', '139+', '140+', '141+'] : 0.232, 0
+['0+', '80+'] : 0.998, 0.998
+

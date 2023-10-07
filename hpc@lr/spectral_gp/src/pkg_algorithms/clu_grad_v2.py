@@ -68,52 +68,61 @@ def clugps(f_path, min_sup, e_probability, sv_max_iter, algorithm, return_gps=Fa
     s_matrix_approx = u[:, :r] @ np.diag(s[:r]) @ vt[:r, :]
 
     # 3d. Clustering using K-Means (using sklearn library)
+    aname = ""  # TO BE REMOVED
     if algorithm == 1:
         # 1: Standard-Kmeans
         print("running K-Means")
         kmeans = KMeans(n_clusters=r, random_state=0)
-        y_pred = kmeans.fit_predict(s_matrix_approx)
+        y_temp = kmeans.fit_predict(s_matrix_approx)
+        y_pred = np.array(y_temp).astype(int)
+        aname = "SKM"  # TO BE REMOVED
     elif algorithm == 2:
         # 2: Parallel Delayed Cluster DP-Means (improved KMeans)
         print("running DP-Means")
         dpmeans = DPMeans(n_clusters=r, n_init=10, delta=10)  # n_init and delta parameters
         dpmeans.fit(s_matrix_approx)
         # Predict the cluster for each data point
-        y_pred = dpmeans.predict(s_matrix_approx)
+        y_temp = dpmeans.predict(s_matrix_approx)
+        y_pred = np.array(y_temp).astype(int)
+        aname = "PDM"  # TO BE REMOVED
     elif algorithm == 3:
         # 3: Fuzzy C-Means
         print("running Fuzzy C-Means")
         fcm = FCM(n_clusters=r)
         fcm.fit(s_matrix_approx)
-        y_pred = fcm.predict(s_matrix_approx)
+        y_temp = fcm.predict(s_matrix_approx)
+        y_pred = np.array(y_temp).astype(int)
+        aname = "FCM"  # TO BE REMOVED
     else:
         # 4: Persistable Clustering (density-based clustering algorithm)
         print("running Persistable Clustering")
         p = persistable.Persistable(s_matrix_approx)
-        y_pred = p.quick_cluster()
+        y_temp = p.quick_cluster()
+        y_pred = np.array(y_temp).astype(int)
+        aname = "PC"  # TO BE REMOVED
     # print(y_pred)
 
-    np.savetxt("SApprox.csv", s_matrix_approx, delimiter=',')
-    np.savetxt("YPred.csv", y_pred, delimiter=',')
-
-    """
-    if algorithm == "agglo":
-        agglo = AgglomerativeClustering(n_clusters=r)
-        y_pred = agglo.fit_predict(s_matrix_approx)
-    elif algorithm == "spectral":
-        sc = SpectralClustering(n_clusters=r)
-        y_pred = sc.fit_predict(s_matrix_approx)
-    elif algorithm == "dbscan":
-        dbscan = DBSCAN()
-        y_pred = dbscan.fit_predict(s_matrix_approx)
-    elif algorithm == "birch":
-        birch = Birch(n_clusters=r)
-        y_pred = birch.fit_predict(s_matrix_approx)
+    # --- TO BE REMOVED ---
+    if d_gp.col_count == 10:
+        dname = "BCR"
+    elif d_gp.col_count == 15:
+        dname = "AQY"
+    elif d_gp.col_count == 98:
+        dname = "C2K"
+    elif d_gp.col_count == 21:
+        if d_gp.row_count == 15402:
+            dname = "DIR_15k"
+        else:
+            dname = "DIR_8k"
+    elif d_gp.col_count == 170:
+        dname = "APS"
     else:
-        # kmeans (default)
-        kmeans = KMeans(n_clusters=r, random_state=0)
-        y_pred = kmeans.fit_predict(s_matrix_approx)
-    """
+        dname = ""
+    fname = str(dname + '_' + aname + '_')
+    np.savetxt(str(fname+"SApprox.csv"), s_matrix_approx, delimiter=',')
+    np.savetxt(str(fname+"YPred.csv"), y_pred, fmt='%s', delimiter=',')
+
+    # --- TO BE REMOVED ---
 
     # 4. Infer GPs
     str_gps, gps = infer_gps(y_pred, d_gp, mat_obj, sv_max_iter, dev)
@@ -301,8 +310,9 @@ clus_alg_names = {
             1: 'Standard KMeans',
             2: 'PDC DP-Means',    # improved KMeans
             3: 'Fuzzy CMeans',
-            4: 'PC'  # density-based clustering
+            4: 'Persistable Clustering'  # density-based clustering
 }
+
 
 def execute(f_path, min_supp, e_prob, max_iter, algorithm, cores):
     try:
