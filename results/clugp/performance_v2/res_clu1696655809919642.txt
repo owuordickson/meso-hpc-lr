@@ -1,0 +1,54 @@
+Run-time: 751.6939420700073 seconds
+Memory Usage (MiB):  
+Algorithm: Clu-GRAD (v2.0)
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Erasure probability: 0.8
+Score vector iterations: 2
+Minimum support: 0.5
+Number of cores: 14
+Number of patterns: 10
+Cluster time: None
+Clustering Algorithm: Fuzzy CMeans
+0. Date
+1. Time
+2. CO(GT)
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+['8-', '10+'] : 0.638
+['3+', '11+'] : 0.867
+['4+', '4-', '13+', '13-'] : 0.0
+['5-', '6-'] : 0.996
+['8+', '10-', '11-'] : 0.569
+['5+', '6+'] : 0.998
+['12+', '14+'] : 0.77
+['7+', '9+'] : 0.879
+['7-', '9-'] : 0.851
+['12-', '14-'] : 0.771
+
+
+Comparison : Estimated Support, True Support
+['8-', '10+'] : 0.638, 0.637
+['3+', '11+'] : 0.867, 0.865
+['4+', '4-', '13+', '13-'] : 0.0, 0
+['5-', '6-'] : 0.996, 0.994
+['8+', '10-', '11-'] : 0.569, 0.568
+['5+', '6+'] : 0.998, 0.994
+['12+', '14+'] : 0.77, 0.769
+['7+', '9+'] : 0.879, 0.849
+['7-', '9-'] : 0.851, 0.849
+['12-', '14-'] : 0.771, 0.769
