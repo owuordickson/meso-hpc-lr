@@ -9,7 +9,8 @@ scp -r x_Projects/meso-hpc-lr/hpc@lr/swarmgp1.sh owuord@muse-login.hpc-lr.univ-m
 
 
 1. Create a virtual environment using your desired version of Python:
-    python3.8 -m venv owuor_env
+    module load python/3.9.13
+    python3.9.13 -m venv owuor_env
 
 2. Activate the virtual environment:
     source owuor_env/bin/activate
