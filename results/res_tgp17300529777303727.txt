@@ -1,0 +1,59 @@
+Run-time: 13715.435873746872 seconds
+Algorithm: T-GRAANK AMI
+No. of (dataset) attributes: 15
+No. of (dataset) tuples: 9357
+Minimum support: 0.5
+Minimum representativity: 0.25
+Multi-core execution: True
+Number of cores: 14
+Number of tasks: 7018
+
+0. Date
+1. Time
+2. CO(GT)**
+3. PT08.S1(CO)
+4. NMHC(GT)
+5. C6H6(GT)
+6. PT08.S2(NMHC)
+7. NOx(GT)
+8. PT08.S3(NOx)
+9. NO2(GT)
+10. PT08.S4(NO2)
+11. PT08.S5(O3)
+12. T
+13. RH
+14. AH
+
+File: data/air_quality.csv
+
+Pattern : Support
+['2-', ['(12+) +7.0 months']] :  0.538
+['2-', ['(13+) +7.0 months']] :  0.516
+['2-', ['(14+) +2.0 months']] :  0.52
+['2-', ['(9-) +1.0 hours'], ['(8+) +1.0 hours'], ['(7-) +1.0 hours']] :  0.533
+['2-', ['(10-) +1.0 hours'], ['(8+) +1.0 hours'], ['(7-) +1.0 hours']] :  0.505
+['2-', ['(10-) +1.0 hours'], ['(11-) +1.0 hours'], ['(8+) +1.0 hours']] :  0.506
+['2-', ['(3-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(8+) +1.0 hours']] :  0.509
+['2-', ['(3-) +1.0 hours'], ['(6-) +1.0 hours'], ['(9-) +1.0 hours'], ['(11-) +1.0 hours']] :  0.5
+['2-', ['(3-) +1.0 hours'], ['(9-) +1.0 hours'], ['(11-) +1.0 hours'], ['(7-) +1.0 hours']] :  0.507
+['2-', ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(8+) +1.0 hours'], ['(7-) +1.0 hours']] :  0.521
+['2-', ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(9-) +1.0 hours'], ['(8+) +1.0 hours']] :  0.513
+['2-', ['(10-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(8+) +1.0 hours']] :  0.529
+['2-', ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(11-) +1.0 hours'], ['(8+) +1.0 hours']] :  0.517
+['2-', ['(3-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(9-) +1.0 hours'], ['(7-) +1
+.0 hours']] :  0.527
+['2-', ['(3-) +1.0 hours'], ['(10-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(7-) +
+1.0 hours']] :  0.502
+['2-', ['(3-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(11-) +1.0 hours'], ['(7-) +
+1.0 hours']] :  0.514
+['2-', ['(3-) +1.0 hours'], ['(10-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(11-) 
++1.0 hours']] :  0.505
+['2-', ['(10-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(9-) +1.0 hours'], ['(7-) +
+1.0 hours']] :  0.515
+['2-', ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(9-) +1.0 hours'], ['(11-) +1.0 hours'], ['(7-) +
+1.0 hours']] :  0.525
+['2-', ['(10-) +1.0 hours'], ['(5-) +1.0 hours'], ['(6-) +1.0 hours'], ['(11-) +1.0 hours'], ['(7-) 
++1.0 hours']] :  0.505
+
+
+ Number of patterns: 20

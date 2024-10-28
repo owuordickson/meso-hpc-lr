@@ -1,0 +1,28 @@
+Run-time: 13993.216129541397 seconds
+Algorithm: T-GRAANK AMI
+No. of (dataset) attributes: 9
+No. of (dataset) tuples: 10001
+Minimum support: 0.5
+Minimum representativity: 0.25
+Multi-core execution: True
+Number of cores: 14
+Number of tasks: 7501
+
+0. Date
+1. Time
+2. Global_active_power**
+3. Global_reactive_power
+4. Voltage
+5. Global_intensity
+6. Sub_metering_1
+7. Sub_metering_2
+8. Sub_metering_3
+
+File: data/power_consumption10k.csv
+
+Pattern : Support
+['2-', ['(3-) +1.0 minutes']] :  0.532
+['2-', ['(4+) +1.0 minutes'], ['(5-) +1.0 minutes']] :  0.707
+
+
+ Number of patterns: 2
